@@ -43,3 +43,9 @@ public sealed partial class MagbootsComponent : Component
     [DataField]
     public string? EnabledPrefix = "on";
 }
+
+// Corvax-Wega-AdvMagboots-start
+[RegisterComponent, NetworkedComponent]
+[Access(typeof(SharedMagbootsSystem))]
+public sealed partial class MagbootsUserComponent : Component;
+// Corvax-Wega-AdvMagboots-end
