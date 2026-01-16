@@ -69,12 +69,6 @@ marking-SlimeBonelegright-bone = Плавающие кости (правая н�
 marking-SlimeBonelegleft = Плавающие кости (левая нога)
 marking-SlimeBonelegleft-bone = Плавающие кости (левая нога)
 
-# UndergarmentBottom
-
-
-# UndergarmentTop
-
-
 # LFoot
 
 marking-SlimeBonefootleft = Плавающие кости (левая ступня)

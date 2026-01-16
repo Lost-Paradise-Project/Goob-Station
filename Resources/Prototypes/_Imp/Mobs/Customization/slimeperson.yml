@@ -293,10 +293,6 @@
   - sprite: _Impstation/Mobs/Customization/SlimePerson/lleg.rsi
     state: bone
 
-# UndergarmentBottom
-
-# UndergarmentTop
-
 # LFoot
 
 - type: marking

@@ -10,8 +10,6 @@ markings-category-RightLeg = Right Leg
 markings-category-RightFoot = Right Foot
 markings-category-LeftLeg = Left Leg
 markings-category-LeftFoot = Left Foot
-markings-category-Undershirt = Undershirt
-markings-category-Underwear = Underwear
 
 # Everything using these should, ideally, be split into separate left+right markings.
 # That will require migrating anything using the old 'combined' markings over to the split ones though,

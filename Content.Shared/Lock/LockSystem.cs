@@ -182,7 +182,7 @@ public sealed class LockSystem : EntitySystem
 
     private void OnExamined(EntityUid uid, LockComponent lockComp, ExaminedEvent args)
     {
-        args.PushText(Loc.GetString(lockComp.Locked
+        args.PushMarkup(Loc.GetString(lockComp.Locked // LP edit
                 ? "lock-comp-on-examined-is-locked"
                 : "lock-comp-on-examined-is-unlocked",
             ("entityName", Identity.Name(uid, EntityManager))));
@@ -504,7 +504,7 @@ public sealed class LockSystem : EntitySystem
 
         _activatableUI.CloseAll(uid);
     }
-    
+
     private void OnActivateAttempt(EntityUid uid, ItemToggleRequiresLockComponent component, ref ItemToggleActivateAttemptEvent args)
     {
         if (args.Cancelled)

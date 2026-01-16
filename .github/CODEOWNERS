@@ -1,18 +1,22 @@
 # Last match in file takes precedence.
 
-# Ping for all PRs
-* @KillanGenifer
+# Ping for all PR's
+* @BL02DL
 
-# Locale
-/Resources/Locale @Ko4ergaPunk
+# Prototypes
+*.yml @MegaDaimond @BL02DL
 
-# Textures
-/Resources/Textures/_CorvaxGoob @SonicHDC
+# C#
+*.cs @BL02DL @SpicyDarkFox
+*.xaml @BL02DL @SpicyDarkFox
 
 # Map files
-/Resources/Prototypes/_CorvaxGoob/Entities/Stations @kvant8
-/Resources/Prototypes/_CorvaxGoob/Maps @kvant8
-/Resources/Maps/_CorvaxGoob @kvant8
+/Resources/Prototypes/Maps/** @PowerKAT1 @BL02DL
+/Resources/Prototypes/**/Maps/** @PowerKAT1 @BL02DL
+/Resources/Maps/** @PowerKAT1 @BL02DL
 
-# TTS
-/Content.*/_CorvaxGoob/TTS @Morb0
+# Translations
+*.ftl @PowerKAT1 @Evgencheg
+
+# Guides
+*.xml @PowerKAT1 @BL02DL

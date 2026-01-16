@@ -50,8 +50,6 @@ marking-BadMoltLArm-badmolt = Scar (Bad Molt L)
 
 # LLeg
 
-# UndergarmentTop
-
 # LFoot
 
 # RFoot

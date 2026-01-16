@@ -40,8 +40,6 @@ namespace Content.Shared.Humanoid
         FacialHair,
         Face, // EE Plasmeme Port
         Chest,
-        Underwear,
-        Undershirt,
         Groin,
         Head,
         Snout,

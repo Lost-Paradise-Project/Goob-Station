@@ -935,6 +935,7 @@
     knockdownTimeDelta: -3
   - type: StaticPrice
     price: 5000
+  - type: DNALocker # ADT edit
 
 # Syndicate Medic Hardsuit
 - type: entity
@@ -959,6 +960,7 @@
     knockdownTimeDelta: -3
   - type: StaminaResistance # Goobstation
     damageCoefficient: 0.5
+  - type: DNALocker # ADT edit
 
 #Syndicate Elite Hardsuit
 - type: entity
@@ -1012,6 +1014,7 @@
   - type: ToggleableClothing # Goobstation - Modsuits change
     clothingPrototypes:
       head: ClothingHeadHelmetHardsuitSyndieElite
+  - type: DNALocker # ADT edit
 
 - type: entity
   parent: [ClothingOuterHardsuitBase, BaseSyndicateContraband]
@@ -1060,6 +1063,7 @@
     - CorgiWearable
     - Hardsuit
     - WhitelistChameleon
+  - type: DNALocker # ADT edit
 
 #Cybersun Juggernaut Hardsuit
 - type: entity
@@ -1110,6 +1114,7 @@
     - CorgiWearable
     - Hardsuit
     - WhitelistChameleon
+  - type: DNALocker # ADT edit
 
 #Wizard Hardsuit
 - type: entity
@@ -1290,6 +1295,10 @@
   - type: ToggleableClothing # Goobstation - Modsuits change
     clothingPrototypes:
       head: ClothingHeadHelmetHardsuitERTLeader
+    # ADT edit start
+  - type: DNALocker
+    enabled: false
+    # ADT edit end
 
 #ERT Chaplain Hardsuit
 - type: entity
@@ -1305,6 +1314,10 @@
   - type: ToggleableClothing # Goobstation - Modsuits change
     clothingPrototypes:
       head: ClothingHeadHelmetHardsuitERTChaplain
+    # ADT edit start
+  - type: DNALocker
+    enabled: false
+    # ADT edit end
 
 #ERT Engineer Hardsuit
 - type: entity
@@ -1322,6 +1335,10 @@
       head: ClothingHeadHelmetHardsuitERTEngineer
   - type: FireProtection
     reduction: 0.8
+    # ADT edit start
+  - type: DNALocker
+    enabled: false
+    # ADT edit end
 
 #ERT Medic Hardsuit
 - type: entity
@@ -1337,6 +1354,10 @@
   - type: ToggleableClothing # Goobstation - Modsuits change
     clothingPrototypes:
       head: ClothingHeadHelmetHardsuitERTMedical
+    # ADT edit start
+  - type: DNALocker
+    enabled: false
+    # ADT edit end
 
 #ERT Security Hardsuit
 - type: entity
@@ -1356,6 +1377,10 @@
     tags:
     - Hardsuit
     - WhitelistChameleon
+    # ADT edit start
+  - type: DNALocker
+    enabled: false
+    # ADT edit end
 
 #ERT Janitor Hardsuit
 - type: entity
@@ -1371,6 +1396,10 @@
   - type: ToggleableClothing # Goobstation - Modsuits change
     clothingPrototypes:
       head: ClothingHeadHelmetHardsuitERTJanitor
+    # ADT edit start
+  - type: DNALocker
+    enabled: false
+    # ADT edit end
 
 #Deathsquad
 - type: entity # Goobstation - Start
@@ -1429,6 +1458,7 @@
     cancel: true
   - type: Tag
     tags: [] # ignore "WhitelistChameleon" tag
+  - type: DNALocker # ADT edit
 
 #CBURN Hardsuit
 - type: entity
@@ -1474,6 +1504,10 @@
     knockdownTimeDelta: -3
   - type: StaminaResistance # Goobstation
     damageCoefficient: 0.5
+    # ADT edit start
+  - type: DNALocker
+    enabled: false
+    # ADT edit end
 
 #MISC. HARDSUITS
 #Clown Hardsuit

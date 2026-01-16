@@ -23,14 +23,16 @@ SPDX-License-Identifier: AGPL-3.0-or-later
 
     <BoxContainer Orientation="Vertical" SeparationOverride="4" MinWidth="150">
         <!-- CorvaxGoob-Coins-start
-        <Button Access="Public" Name="PatronPerksButton" Text="{Loc 'rmc-ui-patron-perks'}" StyleClasses="Caution" Visible="False" /> 
+        <Button Access="Public" Name="PatronPerksButton" Text="{Loc 'rmc-ui-patron-perks'}" StyleClasses="Caution" Visible="False" />
         CorvaxGoob-Coins-end -->
         <changelog:ChangelogButton Access="Public" Name="ChangelogButton"/>
         <ui:VoteCallMenuButton />
         <PanelContainer StyleClasses="LowDivider" Margin="0 2.5 0 2.5" />
-        <Button Access="Public" Name="RulesButton" Text="{Loc 'ui-escape-rules'}" />
-        <Button Access="Public" Name="GuidebookButton" Text="{Loc 'ui-escape-guidebook'}" />
+        <!-- <Button Access="Public" Name="RulesButton" Text="{Loc 'ui-escape-rules'}" /> --> <!-- LP edit -->
+        <!-- <Button Access="Public" Name="GuidebookButton" Text="{Loc 'ui-escape-guidebook'}" /> --> <!-- LP edit -->
         <Button Access="Public" Name="WikiButton" Text="{Loc 'ui-escape-wiki'}" />
+        <Button Access="Public" Name="OpenDiscordButton" Text="{Loc 'info-link-discord'}" /> <!-- LP edit -->
+        <Button Access="Public" Name="OpenBoostyButton" Text="{Loc 'info-link-website'}" /> <!-- LP edit -->
         <PanelContainer StyleClasses="LowDivider" Margin="0 2.5 0 2.5" />
         <Button Access="Public" Name="OptionsButton" Text="{Loc 'ui-escape-options'}" />
         <PanelContainer StyleClasses="LowDivider" Margin="0 2.5 0 2.5" />

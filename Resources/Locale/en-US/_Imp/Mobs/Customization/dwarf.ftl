@@ -51,11 +51,6 @@ marking-DwarfConstellationRLeg-constellation = Leg Constellation (Right)
 marking-DwarfConstellationLLeg = Leg Constellation (Left)
 marking-DwarfConstellationLLeg-constellation = Leg Constellation (Left)
 
-
-# UndergarmentBottom
-
-# UndergarmentTop
-
 # LFoot
 
 marking-DwarfConstellationLFoot = Foot Constellation (Left)

@@ -29,7 +29,7 @@ concurrency:
 jobs:
   build:
     name: YAML Linter
-    if: github.event.pull_request.draft == false
+    if: github.event.pull_request.draft == false && github.actor != 'Lost-Paradise-Bot'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4.2.2

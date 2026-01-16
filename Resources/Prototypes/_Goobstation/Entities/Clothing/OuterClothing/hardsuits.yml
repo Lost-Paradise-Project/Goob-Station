@@ -122,6 +122,10 @@
     knockdownTimeDelta: -2
   - type: StaminaResistance
     damageCoefficient: 0.6
+    # ADT edit start
+  - type: DNALocker
+    enabled: false
+    # ADT edit end
 
 # Cybersun Stealth
 
@@ -179,6 +183,7 @@
     knockdownTimeDelta: -3
   - type: StaminaResistance
     damageCoefficient: 0.5
+  - type: DNALocker # ADT edit
 
 # cybersun dreadnought suit
 
@@ -241,6 +246,7 @@
     damageCoefficient: 0.1
   - type: ModifyDelayedKnockdown
     cancel: true
+  - type: DNALocker # ADT edit
 
 # Security voidsuit - used this instead of security hardsuit
 - type: entity

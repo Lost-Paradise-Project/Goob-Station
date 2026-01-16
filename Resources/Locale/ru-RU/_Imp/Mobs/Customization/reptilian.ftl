@@ -46,9 +46,6 @@ marking-BadMoltLArm-badmolt = Шрам (Плохая линька, левая р
 # LLeg
 
 
-# UndergarmentTop
-
-
 # LFoot
 
 

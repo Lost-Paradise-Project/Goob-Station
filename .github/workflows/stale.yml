@@ -9,11 +9,6 @@ on:
 jobs:
   stale:
     runs-on: ubuntu-latest
-    permissions:
-      # Currently we are not planning on marking issues as stale, so this permission is read only.
-      # Just gonna leave this in here in case we need it in the future.
-      issues: read
-      pull-requests: write # Required to add labels, comment, close PRs.
 
     steps:
       - name: Mark and Close Stale Pull Requests
@@ -58,8 +53,8 @@ jobs:
 
           # Set to true to ignore PRs in a milestone (defaults to false)
           exempt-all-pr-milestones: true
-          
+
           # Remove stale label from PRs on update (default is true)
           remove-pr-stale-when-updated: true
-          
+
           ascending: true

@@ -34,6 +34,3 @@ markings-category-LeftLeg = Левая нога
 markings-category-LeftFoot = Левая стопа
 markings-category-Legs = Ноги
 markings-category-Tail = Хвост
-markings-category-Undershirt = Майка
-markings-category-Underwear = Нижнее белье
-markings-category-Overlay = Наложение
