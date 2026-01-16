@@ -134,6 +134,7 @@
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
+using Content.Server._Goobstation.Antag;
 using Content.Server.Acz;
 using Content.Server.Administration;
 using Content.Server.Administration.Logs;
@@ -176,6 +177,7 @@ namespace Content.Server.Entry
         internal const string ConfigPresetsDir = "/ConfigPresets/";
         private const string ConfigPresetsDirBuild = $"{ConfigPresetsDir}Build/";
 
+        private LastRolledAntagManager? _lastAntagManager; // Goobstation
         private EuiManager _euiManager = default!;
         private IVoteManager _voteManager = default!;
         private ServerUpdateManager _updateManager = default!;
@@ -253,6 +255,8 @@ namespace Content.Server.Entry
                 _watchlistWebhookManager.Initialize();
                 IoCManager.Resolve<JobWhitelistManager>().Initialize();
                 IoCManager.Resolve<PlayerRateLimitManager>().Initialize();
+                _lastAntagManager = IoCManager.Resolve<LastRolledAntagManager>(); // Goobstation
+                _lastAntagManager.Initialize(); // Goobstation
             }
         }
 

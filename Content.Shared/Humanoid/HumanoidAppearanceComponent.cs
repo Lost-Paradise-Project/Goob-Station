@@ -14,6 +14,7 @@
 //
 // SPDX-License-Identifier: MIT
 
+using Content.Goobstation.Common.Barks;
 using Content.Shared._CorvaxGoob.TTS;
 using Content.Shared.DisplacementMap;
 using Content.Shared.Humanoid.Markings;
@@ -49,9 +50,8 @@ public sealed partial class HumanoidAppearanceComponent : Component
     [DataField, AutoNetworkedField]
     public int Age = 18;
 
-    // CorvaxGoob-Revert : DB conflicts
-    // [DataField] // Goob Station - Barks
-    // public ProtoId<BarkPrototype> BarkVoice { get; set; } = SharedHumanoidAppearanceSystem.DefaultBarkVoice; // Goob Station - Barks
+    [DataField] // Goob Station - Barks
+    public ProtoId<BarkPrototype> BarkVoice { get; set; } = SharedHumanoidAppearanceSystem.DefaultBarkVoice; // Goob Station - Barks
 
     /// <summary>
     ///     Any custom base layers this humanoid might have. See:

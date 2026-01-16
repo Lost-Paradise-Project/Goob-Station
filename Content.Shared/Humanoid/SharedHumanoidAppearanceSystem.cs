@@ -581,8 +581,7 @@ public abstract class SharedHumanoidAppearanceSystem : EntitySystem
 
         EnsureDefaultMarkings(uid, humanoid);
         SetTTSVoice(uid, profile.Voice, humanoid); // CorvaxGoob-TTS
-        // CorvaxGoob-Revert : DB conflicts
-        // SetBarkVoice(uid, profile.BarkVoice, humanoid); // Goob Station - Barks
+        SetBarkVoice(uid, profile.BarkVoice, humanoid); // Goob Station - Barks
 
         humanoid.Gender = profile.Gender;
         if (TryComp<GrammarComponent>(uid, out var grammar))
@@ -592,8 +591,7 @@ public abstract class SharedHumanoidAppearanceSystem : EntitySystem
 
         humanoid.Age = profile.Age;
 
-        // CorvaxGoob-Clearing
-/*        // begin Goobstation: port EE height/width sliders
+        // begin Goobstation: port EE height/width sliders
         var species = _proto.Index(humanoid.Species);
 
         if (profile.Height <= 0 || profile.Width <= 0)
@@ -602,7 +600,7 @@ public abstract class SharedHumanoidAppearanceSystem : EntitySystem
             SetScale(uid, new Vector2(profile.Width, profile.Height), true, humanoid);
 
         _heightAdjust.SetScale(uid, new Vector2(humanoid.Width, humanoid.Height));
-        // end Goobstation: port EE height/width sliders*/
+        // end Goobstation: port EE height/width sliders
 
         RaiseLocalEvent(uid, new ProfileLoadFinishedEvent()); // Shitmed Change
         Dirty(uid, humanoid);
@@ -710,7 +708,7 @@ public abstract class SharedHumanoidAppearanceSystem : EntitySystem
 
         EnsureComp<SpeechSynthesisComponent>(uid, out var comp);
         comp.VoicePrototypeId = voicePrototypeId;
-        // humanoid.BarkVoice = voicePrototypeId; // CorvaxGoob-Revert : DB conflicts
+        humanoid.BarkVoice = voicePrototypeId;
         Dirty(uid, comp);
     }
     #endregion
