@@ -26,7 +26,6 @@ rules_file = "LPPRuleset"
 tags = "lang:ru,region:eu_e,rp:med,18+"
 
 [shuttle]
-auto_call_time = 90
 arrivals_planet = false
 emergency_early_launch_allowed = true
 # arrivals_map = "/Maps/_LP/Misc/paradise_terminal.yml"
@@ -42,7 +41,6 @@ limit = 25.0
 admins_count_in_playercount = true
 see_own_notes = true
 discord_reply_prefix = "(ДС) "
-bwoink_use_admin_ooc_color = true
 
 [ahelp]
 rate_limit_count = 2
@@ -57,8 +55,8 @@ enabled = false
 enabled = true
 same_type_timeout = 300.0
 timerrestart = 30
-map_enabled = true
-preset_enabled = true
+map_enabled = false
+preset_enabled = false
 restart_enabled = true
 
 [build]
