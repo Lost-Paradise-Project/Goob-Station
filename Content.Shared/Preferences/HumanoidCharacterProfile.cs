@@ -198,6 +198,8 @@ namespace Content.Shared.Preferences
             string flavortext,
             string species,
             string voice, // CorvaxGoob-TTS
+            float height, // Goobstation: port EE height/width sliders
+            float width, // Goobstation: port EE height/width sliders
             int age,
             Sex sex,
             Gender gender,
@@ -214,6 +216,8 @@ namespace Content.Shared.Preferences
             FlavorText = flavortext;
             Species = species;
             Voice = voice; // CorvaxGoob-TTS
+            Height = height; // Goobstation: port EE height/width sliders
+            Width = width; // Goobstation: port EE height/width sliders
             Age = age;
             Sex = sex;
             Gender = gender;
@@ -247,6 +251,8 @@ namespace Content.Shared.Preferences
                 other.FlavorText,
                 other.Species,
                 other.Voice, // CorvaxGoob-TTS
+                other.Height, // Goobstation: port EE height/width sliders
+                other.Width, // Goobstation: port EE height/width sliders
                 other.Age,
                 other.Sex,
                 other.Gender,
@@ -356,6 +362,8 @@ namespace Content.Shared.Preferences
                 Gender = gender,
                 Species = species,
                 Voice = voiceId, // CorvaxGoob-TTS
+                Width = width, // Goobstation: port EE height/width sliders
+                Height = height, // Goobstation: port EE height/width sliders
                 Appearance = HumanoidCharacterAppearance.Random(species, sex),
                 BarkVoice = barkvoiceId, // Goob Station - Barks
             };

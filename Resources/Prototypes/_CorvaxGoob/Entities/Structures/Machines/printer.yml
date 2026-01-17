@@ -27,9 +27,6 @@
     runningState: building
     staticPacks:
     - CorvaxDocumentsPack
-  - type: EmagLatheRecipes
-    emagStaticPacks:
-    - CorvaxEmagDocumentsPack
   - type: Fixtures
     fixtures:
       fix1:
