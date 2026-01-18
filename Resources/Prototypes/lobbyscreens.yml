@@ -116,11 +116,13 @@
   name: Atmos
   artist: asardonicsailor
 
-- type: lobbyBackground
-  id: cburn
-  background: /Textures/LobbyScreens/cburn.webp
-  name: Cburn
-  artist: PubliclyExecutedPig
+# LP edit start
+#- type: lobbyBackground
+#  id: cburn
+#  background: /Textures/LobbyScreens/cburn.webp
+#  name: Cburn
+#  artist: PubliclyExecutedPig
+# LP edit end
 
 - type: lobbyBackground
   id: clown
@@ -128,23 +130,25 @@
   name: Clown
   artist: Unknown
 
-- type: lobbyBackground
-  id: captaintheresnukies
-  background: /Textures/LobbyScreens/CAPTAINTHERE'SNUKIES.webp
-  name: Captain there's Nukies!
-  artist: Zethine
+# LP edit start
+#- type: lobbyBackground
+#  id: captaintheresnukies
+#  background: /Textures/LobbyScreens/CAPTAINTHERE'SNUKIES.webp
+#  name: Captain there's Nukies!
+#  artist: Zethine
 
-- type: lobbyBackground
-  id: clownassassin
-  background: /Textures/LobbyScreens/clownassassin.webp
-  name: Clown Assassin
-  artist: ka2220
+#- type: lobbyBackground
+#  id: clownassassin
+#  background: /Textures/LobbyScreens/clownassassin.webp
+#  name: Clown Assassin
+#  artist: ka2220
 
-- type: lobbyBackground
-  id: clownhell
-  background: /Textures/LobbyScreens/clownhell.webp
-  name: Clown Hell
-  artist: kA2220
+#- type: lobbyBackground
+#  id: clownhell
+#  background: /Textures/LobbyScreens/clownhell.webp
+#  name: Clown Hell
+#  artist: kA2220
+# LP edit end
 
 - type: lobbyBackground
   id: cqcm
@@ -152,29 +156,31 @@
   name: CQCM
   artist: blooodyspy
 
-- type: lobbyBackground
-  id: cqcm1
-  background: /Textures/LobbyScreens/cqcm1.webp
-  name: CQCM 1
-  artist: blooodyspy
+# LP edit start
+#- type: lobbyBackground
+#  id: cqcm1
+#  background: /Textures/LobbyScreens/cqcm1.webp
+#  name: CQCM 1
+#  artist: blooodyspy
 
-- type: lobbyBackground
-  id: cqcm2
-  background: /Textures/LobbyScreens/cqcm2.webp
-  name: CQCM 2
-  artist: blooodyspy
+#- type: lobbyBackground
+#  id: cqcm2
+#  background: /Textures/LobbyScreens/cqcm2.webp
+#  name: CQCM 2
+#  artist: blooodyspy
 
-- type: lobbyBackground
-  id: cqcm3
-  background: /Textures/LobbyScreens/cqcm3.webp
-  name: CQCM 3
-  artist: blooodyspy
+#- type: lobbyBackground
+#  id: cqcm3
+#  background: /Textures/LobbyScreens/cqcm3.webp
+#  name: CQCM 3
+#  artist: blooodyspy
 
-- type: lobbyBackground
-  id: foundinghonkers
-  background: /Textures/LobbyScreens/foundinghonkers.webp
-  name: Founding Honkers
-  artist: Piras314
+#- type: lobbyBackground
+#  id: foundinghonkers
+#  background: /Textures/LobbyScreens/foundinghonkers.webp
+#  name: Founding Honkers
+#  artist: Piras314
+# LP edit end
 
 - type: lobbyBackground
   id: goob
@@ -188,17 +194,19 @@
   name: Goob Nukie
   artist: Cheeki
 
-- type: lobbyBackground
-  id: grandtheftgoob
-  background: /Textures/LobbyScreens/grandtheftgoob.webp
-  name: Grand Theft Goob
-  artist: Piras314
+# LP edit start
+#- type: lobbyBackground
+#  id: grandtheftgoob
+#  background: /Textures/LobbyScreens/grandtheftgoob.webp
+#  name: Grand Theft Goob
+#  artist: Piras314
 
-- type: lobbyBackground
-  id: greytideworldwide
-  background: /Textures/LobbyScreens/greytideworldwide.webp
-  name: Greytide Worldwide
-  artist: Piras314
+#- type: lobbyBackground
+#  id: greytideworldwide
+#  background: /Textures/LobbyScreens/greytideworldwide.webp
+#  name: Greytide Worldwide
+#  artist: Piras314
+# LP edit end
 
 - type: lobbyBackground
   id: heretic
@@ -242,20 +250,22 @@
   name: Lost pAI
   artist: Cattom
 
-- type: lobbyBackground
-  id: moneyspread-bingle
-  background: /Textures/LobbyScreens/binglemoneyspread.webp
-  name: Bingle Flex
-  artist: LFMoth
+# LP edit start
+#- type: lobbyBackground
+#  id: moneyspread-bingle
+#  background: /Textures/LobbyScreens/binglemoneyspread.webp
+#  name: Bingle Flex
+#  artist: LFMoth
 
-- type: lobbyBackground
-  id: stargoob
-  background: /Textures/LobbyScreens/StarGoob.webp
-  name: GoobWars
-  artist: Jvne
+#- type: lobbyBackground
+#  id: stargoob
+#  background: /Textures/LobbyScreens/StarGoob.webp
+#  name: GoobWars
+#  artist: Jvne
 
-- type: lobbyBackground
-  id: enlist-lavaland
-  background: /Textures/LobbyScreens/enlist.webp
-  name: Nanotrasen wants YOU.
-  artist: thebiggestbruh
+#- type: lobbyBackground
+#  id: enlist-lavaland
+#  background: /Textures/LobbyScreens/enlist.webp
+#  name: Nanotrasen wants YOU.
+#  artist: thebiggestbruh
+# LP edit end

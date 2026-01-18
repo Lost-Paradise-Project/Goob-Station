@@ -38,9 +38,11 @@
   id: Kosmologistika
   background: /Textures/_CorvaxGoob/LobbyScreens/kosmologistika.webp
 
-- type: lobbyBackground
-  id: LizardBar
-  background: /Textures/_CorvaxGoob/LobbyScreens/lizard-bar.webp
+# LP edit start
+#- type: lobbyBackground
+#  id: LizardBar
+#  background: /Textures/_CorvaxGoob/LobbyScreens/lizard-bar.webp
+# LP edit end
 
 - type: lobbyBackground
   id: Lofi
@@ -114,9 +116,11 @@
   id: ClownSpider
   background: /Textures/_CorvaxGoob/LobbyScreens/clownspider.webp
 
-- type: lobbyBackground
-  id: AIMia
-  background: /Textures/_CorvaxGoob/LobbyScreens/ai-mia.webp
+# LP edit start
+#- type: lobbyBackground
+#  id: AIMia
+#  background: /Textures/_CorvaxGoob/LobbyScreens/ai-mia.webp
+# LP edit end
 
 - type: lobbyBackground
   id: XenoAttack
@@ -150,9 +154,11 @@
   id: NewYearComfort
   background: /Textures/_CorvaxGoob/LobbyScreens/new-year-comfort.webp
 
-- type: lobbyBackground
-  id: NewYearParty
-  background: /Textures/_CorvaxGoob/LobbyScreens/new-year-party.webp
+# LP edit start
+#- type: lobbyBackground
+#  id: NewYearParty
+#  background: /Textures/_CorvaxGoob/LobbyScreens/new-year-party.webp
+# LP edit end
 
 - type: lobbyBackground
   id: NewYearPine
@@ -194,9 +200,11 @@
   id: SillyIsland
   background: /Textures/_CorvaxGoob/LobbyScreens/silly-island.webp
 
-- type: lobbyBackground
-  id: EchoTeam
-  background: /Textures/_CorvaxGoob/LobbyScreens/echo-team.webp
+# LP edit start
+#- type: lobbyBackground
+#  id: EchoTeam
+#  background: /Textures/_CorvaxGoob/LobbyScreens/echo-team.webp
+# LP edit end
 
 - type: lobbyBackground
   id: YouAreNotFunny
