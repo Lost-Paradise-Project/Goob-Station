@@ -159,6 +159,14 @@
    - flaps her wings
    - flaps their wings
    - flaps its wings
+   # LP edit start
+   - хлопает крыльями
+   - хлопает своими крыльями
+   - хлопает крыльями.
+   - хлопает своими крыльями.
+   - хлопает крыльями!
+   - хлопает своими крыльями!
+   # LP edit end
 
 - type: emote
   id: Trill
@@ -178,6 +186,11 @@
     - trills
     - trilling
     - trilled
+    # LP edit start
+    - дрожжит
+    - дрожжит.
+    - дрожжит!
+    # LP edit end
 
 - type: emote
   id: Warble
@@ -197,6 +210,11 @@
     - warbles
     - warbling
     - warbled
+    # LP edit start
+    - поёт
+    - поёт.
+    - поёт!
+    # LP edit end
 
 - type: emote
   id: Wurble
@@ -219,6 +237,11 @@
     - wurbles
     - wurbling
     - wurbled
+    # LP edit start
+    - журчит.
+    - журчит!
+    - журчит
+    # LP edit end
 
 - type: emote # Mono
   id: Bagawk
@@ -238,6 +261,11 @@
   - bagawks
   - bawk
   - bawks
+  # LP edit start
+  - багавкает
+  - багавкает.
+  - багавкает!
+  # LP edit end
 
 - type: emote
   id: Gulp
@@ -254,6 +282,14 @@
   chatTriggers:
     - gulps
     - gulp
+    # LP edit start
+    - сглатывает.
+    - сглатывает!
+    - сглатывает
+    - глотает
+    - глотает.
+    - глотает!
+    # LP edit end
 
 # Removed by CorvaxGoob
 # - type: emote

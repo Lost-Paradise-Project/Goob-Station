@@ -90,7 +90,7 @@
     # whitelist:
     #   tags:
     #     - underwear
-    - name: socks
+  - name: socks
     slotTexture: socks
     slotFlags: SOCKS
     stripTime: 6

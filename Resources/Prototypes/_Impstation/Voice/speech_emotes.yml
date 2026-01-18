@@ -25,6 +25,15 @@
     - bubbling
     - bubbled
     # End Frontier: emote consistency
+    # LP edit start
+    - пускает пузыри
+    - булькает
+    - пускает пузыри!
+    - булькает!
+    - пускает пузыри.
+    - булькает.
+    # LP edit end
+
 
 - type: emote
   id: Pop
@@ -47,6 +56,11 @@
     - popping
     - popped
     # End Frontier: emote consistency
+    # LP edit start
+    - попс.
+    - попс
+    - попс!
+    # LP edit end
 
 # hand emotes
 - type: emote
@@ -70,3 +84,14 @@
     - cracks her knuckles
     - cracks his knuckles
     - cracks its knuckles
+    # LP edit start
+    - хрутсит костяшками
+    - хрустит кулаками
+    - хрустит суставами
+    - хрутсит костяшками.
+    - хрустит кулаками.
+    - хрустит суставами.
+    - хрутсит костяшками!
+    - хрустит кулаками!
+    - хрустит суставами!
+    # LP edit end
