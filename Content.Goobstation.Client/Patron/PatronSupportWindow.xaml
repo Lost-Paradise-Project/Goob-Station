@@ -26,6 +26,7 @@
         <BoxContainer Orientation="Vertical" VerticalExpand="True">
             <ui:NanoHeading Text="{Loc 'patron-support-window-tiers-header'}" />
             <Control MinSize="0 4" />
+            <!-- LP edit start -->
 
             <ScrollContainer HorizontalExpand="True" VerticalExpand="True">
                 <BoxContainer Orientation="Vertical" SeparationOverride="10" Margin="8 4">
@@ -37,6 +38,7 @@
                             <RichTextLabel Text="{Loc 'patron-support-window-tier1-perk1'}" HorizontalExpand="True" />
                             <RichTextLabel Text="{Loc 'patron-support-window-tier1-perk2'}" HorizontalExpand="True" />
                             <RichTextLabel Text="{Loc 'patron-support-window-tier1-perk3'}" HorizontalExpand="True" />
+                            <RichTextLabel Text="{Loc 'patron-support-window-tier1-perk4'}" HorizontalExpand="True" />
                         </BoxContainer>
                     </PanelContainer>
 
@@ -49,8 +51,6 @@
                             <RichTextLabel Text="{Loc 'patron-support-window-tier2-perk2'}" HorizontalExpand="True" />
                             <RichTextLabel Text="{Loc 'patron-support-window-tier2-perk3'}" HorizontalExpand="True" />
                             <RichTextLabel Text="{Loc 'patron-support-window-tier2-perk4'}" HorizontalExpand="True" />
-                            <RichTextLabel Text="{Loc 'patron-support-window-tier2-perk5'}" HorizontalExpand="True" />
-                            <RichTextLabel Text="{Loc 'patron-support-window-tier2-perk6'}" HorizontalExpand="True" />
                         </BoxContainer>
                     </PanelContainer>
 
@@ -63,6 +63,7 @@
                             <RichTextLabel Text="{Loc 'patron-support-window-tier3-perk2'}" HorizontalExpand="True" />
                             <RichTextLabel Text="{Loc 'patron-support-window-tier3-perk3'}" HorizontalExpand="True" />
                             <RichTextLabel Text="{Loc 'patron-support-window-tier3-perk4'}" HorizontalExpand="True" />
+                            <RichTextLabel Text="{Loc 'patron-support-window-tier3-perk5'}" HorizontalExpand="True" />
                         </BoxContainer>
                     </PanelContainer>
 
@@ -75,6 +76,7 @@
                             <RichTextLabel Text="{Loc 'patron-support-window-tier4-perk2'}" HorizontalExpand="True" />
                             <RichTextLabel Text="{Loc 'patron-support-window-tier4-perk3'}" HorizontalExpand="True" />
                             <RichTextLabel Text="{Loc 'patron-support-window-tier4-perk4'}" HorizontalExpand="True" />
+                            <RichTextLabel Text="{Loc 'patron-support-window-tier4-perk5'}" HorizontalExpand="True" />
                         </BoxContainer>
                     </PanelContainer>
 
@@ -85,33 +87,15 @@
                             <Control MinSize="0 2" />
                             <RichTextLabel Text="{Loc 'patron-support-window-tier5-perk1'}" HorizontalExpand="True" />
                             <RichTextLabel Text="{Loc 'patron-support-window-tier5-perk2'}" HorizontalExpand="True" />
-                        </BoxContainer>
-                    </PanelContainer>
-
-                    <PanelContainer StyleClasses="AngleRect" HorizontalExpand="True">
-                        <BoxContainer Orientation="Vertical" Margin="8 6" HorizontalExpand="True">
-                            <Label Text="{Loc 'patron-support-window-tier6-name'}" StyleClasses="LabelHeading" />
-                            <cc:HSeparator />
-                            <Control MinSize="0 2" />
-                            <RichTextLabel Text="{Loc 'patron-support-window-tier6-perk1'}" HorizontalExpand="True" />
-                            <RichTextLabel Text="{Loc 'patron-support-window-tier6-perk2'}" HorizontalExpand="True" />
-                            <RichTextLabel Text="{Loc 'patron-support-window-tier6-perk3'}" HorizontalExpand="True" />
-                            <RichTextLabel Text="{Loc 'patron-support-window-tier6-perk4'}" HorizontalExpand="True" />
-                            <RichTextLabel Text="{Loc 'patron-support-window-tier6-perk5'}" HorizontalExpand="True" />
-                        </BoxContainer>
-                    </PanelContainer>
-
-                    <PanelContainer StyleClasses="AngleRect" HorizontalExpand="True">
-                        <BoxContainer Orientation="Vertical" Margin="8 6" HorizontalExpand="True">
-                            <Label Text="{Loc 'patron-support-window-tier7-name'}" StyleClasses="LabelHeading" />
-                            <cc:HSeparator />
-                            <Control MinSize="0 2" />
-                            <RichTextLabel Text="{Loc 'patron-support-window-tier7-perk1'}" HorizontalExpand="True" />
+                            <RichTextLabel Text="{Loc 'patron-support-window-tier5-perk3'}" HorizontalExpand="True" />
+                            <RichTextLabel Text="{Loc 'patron-support-window-tier5-perk4'}" HorizontalExpand="True" />
+                            <RichTextLabel Text="{Loc 'patron-support-window-tier5-perk5'}" HorizontalExpand="True" />
                         </BoxContainer>
                     </PanelContainer>
                 </BoxContainer>
             </ScrollContainer>
         </BoxContainer>
+        <!-- LP edit end -->
 
         <Control MinSize="0 4" />
 
