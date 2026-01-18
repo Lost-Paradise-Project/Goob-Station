@@ -17,6 +17,7 @@ using Robust.Client.UserInterface.XAML;
 using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
 using System.Linq;
+using Content.Client._LP.Sponsors;  //LP edit
 
 namespace Content.Client.Lobby.UI.Loadouts;
 
@@ -239,7 +240,7 @@ public sealed partial class LoadoutGroupContainer : BoxContainer
 
         var pressed = selected.Any(e => e.Prototype == proto.ID);
 
-        var enabled = loadout.IsValid(profile, session, proto.ID, collection, out var reason);
+        var enabled = loadout.IsValid(profile, session, proto.ID, collection, out var reason, SponsorSimpleManager.GetTier(), SponsorSimpleManager.GetUUID());  //LP edit
 
         var cont = new LoadoutContainer(proto, !enabled, reason);
 

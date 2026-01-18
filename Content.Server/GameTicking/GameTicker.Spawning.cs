@@ -84,6 +84,7 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
 using Content.Server._CorvaxGoob.Skills;
+using Content.Server._LP.Sponsors;              //LP edit
 using Content.Server.Administration.Managers;
 using Content.Server.Administration.Systems;
 using Content.Server.GameTicking.Events;
@@ -353,7 +354,7 @@ namespace Content.Server.GameTicking
 
             _playTimeTrackings.PlayerRolesChanged(player);
 
-            var mobMaybe = _stationSpawning.SpawnPlayerCharacterOnStation(station, jobId, character);
+            var mobMaybe = _stationSpawning.SpawnPlayerCharacterOnStation(station, jobId, character, sponsorTier: SponsorSimpleManager.GetTier(player.UserId), uuid: SponsorSimpleManager.GetUUID(player.UserId));   //LP edit
             DebugTools.AssertNotNull(mobMaybe);
             var mob = mobMaybe!.Value;
 

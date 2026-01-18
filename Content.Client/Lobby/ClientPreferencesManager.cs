@@ -18,6 +18,7 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
 using System.Linq;
+using Content.Client._LP.Sponsors;  //LP edit
 using Content.Corvax.Interfaces.Shared;
 using Content.Shared.Construction.Prototypes;
 using Content.Shared.Preferences;
@@ -86,9 +87,9 @@ namespace Content.Client.Lobby
             var collection = IoCManager.Instance!;
             // CorvaxGoob-Sponsors-Start
             var sponsorPrototypes = _sponsorsManager?.GetClientPrototypes().ToArray() ?? [];
-            profile.EnsureValid(_playerManager.LocalSession!, collection, sponsorPrototypes);
+            profile.EnsureValid(_playerManager.LocalSession!, collection, sponsorPrototypes, SponsorSimpleManager.GetTier(), SponsorSimpleManager.GetUUID());   //LP edit
             // CorvaxGoob-Sponsors-End
-            var characters = new Dictionary<int, ICharacterProfile>(Preferences.Characters) {[slot] = profile};
+            var characters = new Dictionary<int, ICharacterProfile>(Preferences.Characters) { [slot] = profile };
             Preferences = new PlayerPreferences(characters, Preferences.SelectedCharacterIndex, Preferences.AdminOOCColor, Preferences.ConstructionFavorites);
             var msg = new MsgUpdateCharacter
             {

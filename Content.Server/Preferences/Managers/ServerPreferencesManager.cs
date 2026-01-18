@@ -37,6 +37,7 @@ using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using Content.Corvax.Interfaces.Shared;
+using Content.Server._LP.Sponsors;      //LP edit
 using Content.Server.Database;
 using Content.Shared.CCVar;
 using Content.Shared.Construction.Prototypes;
@@ -146,7 +147,7 @@ namespace Content.Server.Preferences.Managers
             var sponsorPrototypes = _sponsors != null && _sponsors.TryGetServerPrototypes(session.UserId, out var prototypes)
                 ? prototypes.ToArray()
                 : [];
-            profile.EnsureValid(session, _dependencies, sponsorPrototypes);
+            profile.EnsureValid(session, _dependencies, sponsorPrototypes, SponsorSimpleManager.GetTier(userId), SponsorSimpleManager.GetUUID(userId));   //LP edit
             // CorvaxGoob-Sponsors-End
 
             var profiles = new Dictionary<int, ICharacterProfile>(curPrefs.Characters)
@@ -291,12 +292,18 @@ namespace Content.Server.Preferences.Managers
                     var prefs = await GetOrCreatePreferencesAsync(session.UserId, cancel);
                     // CorvaxGoob-Sponsors-Start: Remove sponsor markings from expired sponsors
                     var collection = IoCManager.Instance!;
+
+                    //LP edit start
+                    var sponsorTier = SponsorSimpleManager.GetTier(session.UserId);
+                    var uuid = SponsorSimpleManager.GetUUID(session.UserId);
+                    //LP edit end
+
                     foreach (var (_, profile) in prefs.Characters)
                     {
                         var sponsorPrototypes = _sponsors != null && _sponsors.TryGetServerPrototypes(session.UserId, out var prototypes)
                             ? prototypes.ToArray()
                             : [];
-                        profile.EnsureValid(session, collection, sponsorPrototypes);
+                        profile.EnsureValid(session, collection, sponsorPrototypes, sponsorTier, uuid);   //LP edit
                     }
                     // CorvaxGoob-Sponsors-End
                     prefsData.Prefs = prefs;
@@ -315,6 +322,11 @@ namespace Content.Server.Preferences.Managers
 
             prefsData.PrefsLoaded = true;
 
+            //LP edit start
+            var sponsorTier = SponsorSimpleManager.GetTier(session.UserId);
+            var uuid = SponsorSimpleManager.GetUUID(session.UserId);
+            //LP edit end
+
             // Corvax-Sponsors-Start: Remove sponsor markings from expired sponsors
             var collection = IoCManager.Instance!;
             foreach (var (_, profile) in prefsData.Prefs.Characters)
@@ -322,7 +334,7 @@ namespace Content.Server.Preferences.Managers
                 var sponsorPrototypes = _sponsors != null && _sponsors.TryGetServerPrototypes(session.UserId, out var prototypes)
                     ? prototypes.ToArray()
                     : [];
-                profile.EnsureValid(session, collection, sponsorPrototypes);
+                profile.EnsureValid(session, collection, sponsorPrototypes, sponsorTier, uuid);   //LP edit
             }
             // Corvax-Sponsors-End
 
@@ -421,7 +433,7 @@ namespace Content.Server.Preferences.Managers
 
             return new PlayerPreferences(prefs.Characters.Select(p =>
             {
-                return new KeyValuePair<int, ICharacterProfile>(p.Key, p.Value.Validated(session, collection, sponsorPrototypes));
+                return new KeyValuePair<int, ICharacterProfile>(p.Key, p.Value.Validated(session, collection, sponsorPrototypes, SponsorSimpleManager.GetTier(session.UserId), SponsorSimpleManager.GetUUID(session.UserId)));  //LP edit
             }), prefs.SelectedCharacterIndex, prefs.AdminOOCColor, prefs.ConstructionFavorites);
         }
 

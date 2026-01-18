@@ -1,9 +1,11 @@
-player-uuid-requirement = It do {$inverted ->
-    [true]{" "} not
+player-uuid-requirement = Это {$inverted ->
+    [true]{" "} не
     *[other]{""}
-} belong to you
+} принадлежит вам
 
-player-sponsortier-requirement = You must have a subscription {$inverted ->
-    [true]{" "} lower
-    *[other]{""} higher
-} than {$tier} level
+player-sponsortier-requirement = Вы должны обладать подпиской {$inverted ->
+    [true]{" "} не
+    *[other]{""}
+} выше {$tier} уровня
+
+player-sponsor-job-fail = Недостаточный уровень подписки. Требуется 4-й уровень

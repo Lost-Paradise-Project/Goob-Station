@@ -581,7 +581,7 @@ namespace Content.Shared.Preferences
             return Appearance.MemberwiseEquals(other.Appearance);
         }
 
-        public void EnsureValid(ICommonSession session, IDependencyCollection collection, string[] sponsorPrototypes)
+        public void EnsureValid(ICommonSession session, IDependencyCollection collection, string[] sponsorPrototypes, int sponsorTier = 0, string uuid = "")   //LP edit
         {
             var configManager = collection.Resolve<IConfigurationManager>();
             var prototypeManager = collection.Resolve<IPrototypeManager>();
@@ -758,7 +758,7 @@ namespace Content.Shared.Preferences
                 }
 
                 loadouts.Role = roleName;
-                loadouts.EnsureValid(this, session, collection);
+                loadouts.EnsureValid(this, session, collection, sponsorTier, uuid);    //LP edit
             }
 
             foreach (var value in toRemove)
@@ -813,10 +813,10 @@ namespace Content.Shared.Preferences
             return voice.RoundStart && sex == Sex.Unsexed || (voice.Sex == sex || voice.Sex == Sex.Unsexed);
         }
         // CorvaxGoob-TTS-End
-        public ICharacterProfile Validated(ICommonSession session, IDependencyCollection collection, string[] sponsorPrototypes)
+        public ICharacterProfile Validated(ICommonSession session, IDependencyCollection collection, string[] sponsorPrototypes, int sponsorTier = 0, string uuid = "")    //LP edit
         {
             var profile = new HumanoidCharacterProfile(this);
-            profile.EnsureValid(session, collection, sponsorPrototypes);
+            profile.EnsureValid(session, collection, sponsorPrototypes, sponsorTier, uuid); //LP edit
             return profile;
         }
 
@@ -879,15 +879,15 @@ namespace Content.Shared.Preferences
             return profile;
         }
 
-        public RoleLoadout GetLoadoutOrDefault(string id, ICommonSession? session, ProtoId<SpeciesPrototype>? species, IEntityManager entManager, IPrototypeManager protoManager)
+        public RoleLoadout GetLoadoutOrDefault(string id, ICommonSession? session, ProtoId<SpeciesPrototype>? species, IEntityManager entManager, IPrototypeManager protoManager, int sponsorTier = 0, string uuid = "")   //LP edit
         {
             if (!_loadouts.TryGetValue(id, out var loadout))
             {
                 loadout = new RoleLoadout(id);
-                loadout.SetDefault(this, session, protoManager, force: true);
+                loadout.SetDefault(this, session, protoManager, force: true, sponsorTier, uuid);   //LP edit
             }
 
-            loadout.SetDefault(this, session, protoManager);
+            loadout.SetDefault(this, session, protoManager, false, sponsorTier, uuid);  //LP edit
             return loadout;
         }
 

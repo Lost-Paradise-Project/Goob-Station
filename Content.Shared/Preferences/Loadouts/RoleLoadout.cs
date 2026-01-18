@@ -131,7 +131,7 @@ public sealed partial class RoleLoadout : IEquatable<RoleLoadout>
     /// <summary>
     /// Ensures all prototypes exist and effects can be applied.
     /// </summary>
-    public void EnsureValid(HumanoidCharacterProfile profile, ICommonSession session, IDependencyCollection collection)
+    public void EnsureValid(HumanoidCharacterProfile profile, ICommonSession session, IDependencyCollection collection, int sponsorTier = 0, string uuid = "") //LP edit
     {
         var groupRemove = new ValueList<string>();
         var protoManager = collection.Resolve<IPrototypeManager>();
@@ -237,7 +237,7 @@ public sealed partial class RoleLoadout : IEquatable<RoleLoadout>
                 }
 
                 // Validate the loadout can be applied (e.g. points).
-                if (!IsValid(profile, session, loadout.Prototype, collection, out _))
+                if (!IsValid(profile, session, loadout.Prototype, collection, out _, sponsorTier, uuid))    //LP edit
                 {
                     loadouts.RemoveAt(i);
                     continue;
@@ -268,7 +268,7 @@ public sealed partial class RoleLoadout : IEquatable<RoleLoadout>
                         continue;
 
                     // Not valid so don't default to it anyway.
-                    if (!IsValid(profile, session, defaultLoadout.Prototype, collection, out _))
+                    if (!IsValid(profile, session, defaultLoadout.Prototype, collection, out _, sponsorTier, uuid)) //LP edit
                         continue;
 
                     loadouts.Add(defaultLoadout);
@@ -296,7 +296,7 @@ public sealed partial class RoleLoadout : IEquatable<RoleLoadout>
     /// <summary>
     /// Resets the selected loadouts to default if no data is present.
     /// </summary>
-    public void SetDefault(HumanoidCharacterProfile? profile, ICommonSession? session, IPrototypeManager protoManager, bool force = false)
+    public void SetDefault(HumanoidCharacterProfile? profile, ICommonSession? session, IPrototypeManager protoManager, bool force = false, int sponsorTier = 0, string uuid = "")  //LP edit
     {
         if (profile == null)
             return;
@@ -338,7 +338,7 @@ public sealed partial class RoleLoadout : IEquatable<RoleLoadout>
                     };
 
                     // Not valid so don't default to it anyway.
-                    if (!IsValid(profile, session, defaultLoadout.Prototype, collection, out _))
+                    if (!IsValid(profile, session, defaultLoadout.Prototype, collection, out _, sponsorTier, uuid)) //LP edit
                         continue;
 
                     loadouts.Add(defaultLoadout);
@@ -351,7 +351,7 @@ public sealed partial class RoleLoadout : IEquatable<RoleLoadout>
     /// <summary>
     /// Returns whether a loadout is valid or not.
     /// </summary>
-    public bool IsValid(HumanoidCharacterProfile profile, ICommonSession? session, ProtoId<LoadoutPrototype> loadout, IDependencyCollection collection, [NotNullWhen(false)] out FormattedMessage? reason)
+    public bool IsValid(HumanoidCharacterProfile profile, ICommonSession? session, ProtoId<LoadoutPrototype> loadout, IDependencyCollection collection, [NotNullWhen(false)] out FormattedMessage? reason, int sponsorTier = 0, string uuid = "")  //LP edit
     {
         reason = null;
 
@@ -374,7 +374,7 @@ public sealed partial class RoleLoadout : IEquatable<RoleLoadout>
 
         foreach (var effect in loadoutProto.Effects)
         {
-            valid = valid && effect.Validate(profile, this, loadoutProto, session, collection, out reason); // CorvaxGoob-Sponsors
+            valid = valid && effect.Validate(profile, this, loadoutProto, session, collection, out reason, sponsorTier, uuid); // LP edit
         }
 
         return valid;

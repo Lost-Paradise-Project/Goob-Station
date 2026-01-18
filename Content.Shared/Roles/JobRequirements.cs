@@ -96,8 +96,17 @@ public static class JobRequirements
         [NotNullWhen(false)] out FormattedMessage? reason,
         IEntityManager entManager,
         IPrototypeManager protoManager,
-        HumanoidCharacterProfile? profile)
+        HumanoidCharacterProfile? profile,
+        int sponsorTier = 0,    //LP edit
+        string uuid = ""        //LP edit
+    )
     {
+        if (job.sponsorOnly && sponsorTier < 4)
+        {
+            reason = FormattedMessage.FromMarkupPermissive(Loc.GetString("player-sponsor-job-fail"));
+            return false;
+        }
+
         var sys = entManager.System<SharedRoleSystem>();
         var requirements = sys.GetJobRequirement(job);
         reason = null;
@@ -106,7 +115,7 @@ public static class JobRequirements
 
         foreach (var requirement in requirements)
         {
-            if (!requirement.Check(entManager, protoManager, profile, playTimes, out reason))
+            if (!requirement.Check(entManager, protoManager, profile, playTimes, out reason, sponsorTier, uuid))
                 return false;
         }
 
@@ -129,5 +138,7 @@ public abstract partial class JobRequirement
         IPrototypeManager protoManager,
         HumanoidCharacterProfile? profile,
         IReadOnlyDictionary<string, TimeSpan> playTimes,
-        [NotNullWhen(false)] out FormattedMessage? reason);
+        [NotNullWhen(false)] out FormattedMessage? reason,
+        int sponsorTier = 0,  //LP edit
+        string uuid = "");  //LP edit
 }

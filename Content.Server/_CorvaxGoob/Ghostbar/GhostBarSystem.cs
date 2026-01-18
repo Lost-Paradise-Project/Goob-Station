@@ -1,5 +1,6 @@
 using Content.Server._CorvaxGoob.Ghostbar.Components;
 using Content.Server._CorvaxGoob.Objectives.Components;
+using Content.Server._LP.Sponsors;  //LP edit
 using Content.Server.Actions;
 using Content.Server.Antag.Components;
 using Content.Server.GameTicking;
@@ -112,7 +113,7 @@ public sealed class GhostBarSystem : EntitySystem
         var randomSpawnPoint = _random.Pick(spawnPoints);
         var randomJob = _random.Pick(_jobComponents);
         var profile = _ticker.GetPlayerProfile(args.SenderSession);
-        var mobUid = _spawningSystem.SpawnPlayerMob(randomSpawnPoint, randomJob, profile, null);
+        var mobUid = _spawningSystem.SpawnPlayerMob(randomSpawnPoint, randomJob, profile, null, sponsorTier: SponsorSimpleManager.GetTier(player.UserId), uuid: SponsorSimpleManager.GetUUID(player.UserId));   //LP edit
 
         var ghostBarPlayer = _entityManager.EnsureComponent<GhostBarPlayerComponent>(mobUid);
         _entityManager.EnsureComponent<MindShieldComponent>(mobUid);

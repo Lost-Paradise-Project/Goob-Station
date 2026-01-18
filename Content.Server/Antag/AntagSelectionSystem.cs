@@ -95,6 +95,7 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
 using Content.Server._CorvaxGoob.Skills;
+using Content.Server._LP.Sponsors;      //LP edit
 using Content.Server.Antag.Components;
 using Content.Server.Chat.Managers;
 using Content.Server.GameTicking;
@@ -591,7 +592,7 @@ public sealed partial class AntagSelectionSystem : GameRuleSystem<AntagSelection
         if (def.StartingGear is not null)
             gear.Add(def.StartingGear.Value);
 
-        _loadout.Equip(player, gear, def.RoleLoadout);
+        _loadout.Equip(player, gear, def.RoleLoadout, SponsorSimpleManager.GetTier(player), SponsorSimpleManager.GetUUID(player));  //LP edit
 
         if (session != null)
         {
