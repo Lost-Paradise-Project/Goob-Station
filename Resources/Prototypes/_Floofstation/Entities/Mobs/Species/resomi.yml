@@ -83,6 +83,18 @@
   - type: Inventory
     speciesId: resomi
     displacements:
+      # LP edit start
+      socks:
+        sizeMaps:
+          32:
+            sprite: _Floofstation/Mobs/Species/Resomi/displacement.rsi
+            state: shoes
+      underwear:
+        sizeMaps:
+          32:
+            sprite: _Floofstation/Mobs/Species/Resomi/displacement.rsi
+            state: jumpsuit
+      # LP edit end
       jumpsuit:
         sizeMaps:
           32:
@@ -144,6 +156,18 @@
             sprite: _Floofstation/Mobs/Species/Resomi/displacement.rsi
             state: belt
     femaleDisplacements: # Goobstation - splitting up the genders broke displacements, apparently it won't just apply the same displacement to both genders :|
+      # LP edit start
+      socks:
+        sizeMaps:
+          32:
+            sprite: _Floofstation/Mobs/Species/Resomi/displacement.rsi
+            state: shoes
+      underwear:
+        sizeMaps:
+          32:
+            sprite: _Floofstation/Mobs/Species/Resomi/displacement.rsi
+            state: jumpsuit
+      # LP edit end
       jumpsuit:
         sizeMaps:
           32:
@@ -308,6 +332,18 @@
   - type: Inventory
     speciesId: resomi
     displacements:
+      # LP edit start
+      socks:
+        sizeMaps:
+          32:
+            sprite: _Floofstation/Mobs/Species/Resomi/displacement.rsi
+            state: shoes
+      underwear:
+        sizeMaps:
+          32:
+            sprite: _Floofstation/Mobs/Species/Resomi/displacement.rsi
+            state: jumpsuit
+      # LP edit end
       jumpsuit:
         sizeMaps:
           32:
