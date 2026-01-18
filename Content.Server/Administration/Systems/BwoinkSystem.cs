@@ -896,6 +896,11 @@ namespace Content.Server.Administration.Systems
                     bwoinkText = $"[color={sponsorColor}]{bwoinkParams.SenderName}[/color]";    //ставим цвет нику игрока, если спонсор
             }
 #endif
+
+            if (_config.GetCVar(CCVars.AhelpAdminPrefix) && bwoinkParams.SenderAdmin is not null && bwoinkParams.SenderAdmin.Title is not null)
+            {
+                adminPrefix = $"[bold][color={adminColor}]\\[{bwoinkParams.SenderAdmin.Title}\\][/color][/bold] "; // LOP edit
+            }
             //LP edit end
 
             if (bwoinkParams.SenderAdmin is not null)
