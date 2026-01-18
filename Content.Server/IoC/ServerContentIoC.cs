@@ -196,6 +196,13 @@ using Content.Shared.Chat;
 using Content.Shared.Kitchen;
 using Content.Shared.Players.PlayTimeTracking;
 using Content.Shared.Players.RateLimiting;
+//LP edit start
+#if LP
+using Content.Server._LP.Sponsors;
+using Content.Server._NC.DiscordAuth;
+using Content.Server._NC.JoinQueue;
+#endif
+//LP eedit end
 
 namespace Content.Server.IoC
 {
@@ -248,6 +255,13 @@ namespace Content.Server.IoC
             // IoCManager.Register<LastRolledAntagManager>(); // Goobstation - antag pity
             // IoCManager.Register<LinkAccountManager>(); // RMC - Patreon; Deleted by CorvaxGoob
             IoCManager.Register<TTSManager>(); // CorvaxGoob-TTS
+            // LP edit start
+#if LP
+            IoCManager.Register<SponsorsManager>();
+            IoCManager.Register<DiscordAuthManager>();
+            IoCManager.Register<JoinQueueManager>();
+#endif
+            // LP edit end
         }
     }
 }
