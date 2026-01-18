@@ -22,12 +22,17 @@
   blacklist:
     components:
     - BorgChassis
-  chatMessages: [hisses.]
+  chatMessages: [шипит.] # LP edit
   chatTriggers:
     - hiss
     - hisses
     - hissing
     - hissed
+    # LP edit start
+    - шипит.
+    - шипит!
+    - шипит
+    # LP edit end
 
 - type: emote
   id: Meow
@@ -41,7 +46,7 @@
   blacklist:
     components:
     - BorgChassis
-  chatMessages: [meows.]
+  chatMessages: [мяукает.] # LP edit
   chatTriggers:
     - meow
     - meows
@@ -53,6 +58,11 @@
     - nyas
     - mraow
     - mraows
+    # LP edit start
+    - мяукает
+    - мяукает.
+    - мяукает!
+    # LP edit end
 
 - type: emote
   id: Mew
@@ -66,12 +76,17 @@
   blacklist:
     components:
     - BorgChassis
-  chatMessages: [mews.]
+  chatMessages: [мявкает.] # LP edit
   chatTriggers:
     - mew
     - mews
     - mewing
     - mewed
+    # LP edit start
+    - мявкает
+    - мявкает.
+    - мявкает!
+    # LP edit end
 
 - type: emote
   id: Growl
@@ -85,12 +100,17 @@
   blacklist:
     components:
     - BorgChassis
-  chatMessages: [growls.]
+  chatMessages: [рычит.] # LP edit
   chatTriggers:
     - growl
     - growls
     - growling
     - growled
+    # LP edit start
+    - рычит
+    - рычит!
+    - рычит.
+    # LP edit end
 
 - type: emote
   id: Purr
@@ -104,9 +124,17 @@
   blacklist:
     components:
     - BorgChassis
-  chatMessages: [purrs.]
+  chatMessages: [мурчит.] # LP edit
   chatTriggers:
     - purr
     - purrs
     - purring
     - purred
+    # LP edit start
+    - мурчит
+    - мурлыкает
+    - мурчит!
+    - мурлыкает!
+    - мурчит.
+    - мурлыкает.
+    # LP edit end

@@ -27,6 +27,17 @@
   - does a flip
   - does a flip.
   - does a flip!
+  # LP edit start
+  - делает сальто
+  - сальто
+  - крутиться
+  - делает сальто.
+  - сальто.
+  - крутиться.
+  - делает сальто!
+  - сальто!
+  - крутиться!
+  # LP edit end
   event: !type:AnimationFlipEmoteEvent
 
 # Corvax Goob-start
@@ -61,6 +72,14 @@
   - shows off muscles
   - shows off its muscles
   - intimidates
+  # LP edit start
+  - флексит
+  - показывает свои мускулы
+  - флексит.
+  - показывает свои мускулы.
+  - флексит!
+  - показывает свои мускулы!
+  # LP edit end
   event: !type:AnimationFlexEmoteEvent
 
 - type: emote
@@ -73,6 +92,11 @@
   - spins
   - spins.
   - spins!
+  # LP edit start
+  - крутиться
+  - крутиться.
+  - крутиться!
+  # LP edit end
   event: !type:AnimationSpinEmoteEvent
 
 - type: emote
@@ -84,4 +108,9 @@
   - jumps
   - jumps.
   - jumps!
+  # LP edit start
+  - прыгает
+  - прыгает!
+  - прыгает.
+  # LP edit end
   event: !type:AnimationJumpEmoteEvent
