@@ -17,18 +17,22 @@ public static class SponsorSimpleManager
 
     public static int GetTier(EntityUid uid)
     {
-        if (IoCManager.Resolve<EntityManager>().TryGetComponent<MindComponent>(uid, out var mindcomp) && mindcomp != null && mindcomp.Session != null)
-            return GetTier(mindcomp.Session.UserId);
+        if (IoCManager.Resolve<EntityManager>().TryGetComponent(uid, out MindComponent? mind) && mind.UserId is NetUserId userId)
+        {
+            return GetTier(userId);
+        }
+
         return 0;
     }
 
     public static string GetUUID(EntityUid uid)
     {
-        if (IoCManager.Resolve<EntityManager>().TryGetComponent<MindComponent>(uid, out var mindcomp) && mindcomp != null && mindcomp.Session != null)
+        if (IoCManager.Resolve<EntityManager>().TryGetComponent(uid, out MindComponent? mind) && mind.UserId is NetUserId userId)
         {
-            var result = mindcomp.Session.UserId;
-            return result.ToString();
+            return userId.ToString();
         }
-        return "";
+
+        return string.Empty;
     }
+
 }

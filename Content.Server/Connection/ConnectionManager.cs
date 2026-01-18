@@ -128,6 +128,7 @@ using Content.Goobstation.Common.CCVar;
 using Content.Corvax.Interfaces.Shared;
 using Content.Corvax.Interfaces.Server;
 using Content.Shared._CorvaxGoob.CCCVars; // CorvaxGoob - Queue
+using Content.Server._LP.Sponsors;  //LP edit
 
 /*
  * TODO: Remove baby jail code once a more mature gateway process is established. This code is only being issued as a stopgap to help with potential tiding in the immediate future.
@@ -172,7 +173,6 @@ namespace Content.Server.Connection
         [Dependency] private readonly IChatManager _chatManager = default!;
         [Dependency] private readonly IHttpClientHolder _http = default!;
         [Dependency] private readonly IAdminManager _adminManager = default!;
-        private ISharedSponsorsManager? _sponsorsMgr; // CorvaxGoob-Sponsors
         private IServerVPNGuardManager? _vpnGuardMgr; // Corvax-VPNGuard
 
         private GameTicker? _ticker; // CorvaxGoob-Queue
@@ -190,8 +190,6 @@ namespace Content.Server.Connection
             _sawmill = _logManager.GetSawmill("connections");
 
             _ipintel = new IPIntel.IPIntel(new IPIntelApi(_http, _cfg), _db, _cfg, _logManager, _chatManager, _gameTiming);
-
-            IoCManager.Instance!.TryResolveType(out _sponsorsMgr); // CorvaxGoob-Sponsors
 
             _netMgr.Connecting += NetMgrOnConnecting;
             _netMgr.AssignUserIdCallback = AssignUserIdCallback;
@@ -384,7 +382,7 @@ namespace Content.Server.Connection
                 }
 
                 var minOverallMinutes = _cfg.GetCVar(CCVars.PanicBunkerMinOverallMinutes);
-                var overallTime = ( await _db.GetPlayTimes(e.UserId)).Find(p => p.Tracker == PlayTimeTrackingShared.TrackerOverall);
+                var overallTime = (await _db.GetPlayTimes(e.UserId)).Find(p => p.Tracker == PlayTimeTrackingShared.TrackerOverall);
                 var haveMinOverallTime = overallTime != null && overallTime.TimeSpent.TotalMinutes > minOverallMinutes;
 
                 // Use the custom reason if it exists & they don't have the minimum time
@@ -527,13 +525,13 @@ namespace Content.Server.Connection
         public async Task<bool> HavePrivilegedJoin(NetUserId userId)
         {
             var adminBypass = _cfg.GetCVar(CCVars.AdminBypassMaxPlayers) && await _db.GetAdminDataForAsync(userId) != null;
-            var havePriorityJoin = _sponsorsMgr != null && _sponsorsMgr.HaveServerPriorityJoin(userId); // CorvaxGoob-Sponsors
             var wasInGame = EntitySystem.TryGet<GameTicker>(out var ticker) &&
                             ticker.PlayerGameStatuses.TryGetValue(userId, out var status) &&
                             status == PlayerGameStatus.JoinedGame;
+            var isSponsor = SponsorSimpleManager.GetTier(userId) > 2;   //LP edit
             return adminBypass ||
-                   havePriorityJoin || // CorvaxGoob-Sponsors
-                   wasInGame;
+                   wasInGame ||
+                   isSponsor;   //LP edit
         }
         // CorvaxGoob-Queue-End
     }
