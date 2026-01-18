@@ -280,5 +280,16 @@
             sprite: _White/Mobs/Species/displacement.rsi
             state: shoes
     # WWDP-Edit-End
-
+      # LP edit start
+      socks:
+        sizeMaps:
+          32:
+            sprite: _CorvaxGoob/Mobs/Species/displacement.rsi
+            state: shoes
+      underwear:
+        sizeMaps:
+          32:
+            sprite: _CorvaxGoob/Mobs/Species/displacement.rsi
+            state: jumpsuit
+      # LP edit end
 #Weh

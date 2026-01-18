@@ -188,3 +188,15 @@
           32:
             sprite: _CorvaxGoob/Mobs/Species/displacement.rsi
             state: shoes
+      # LP edit start
+      socks:
+        sizeMaps:
+          32:
+            sprite: _CorvaxGoob/Mobs/Species/displacement.rsi
+            state: shoes
+      underwear:
+        sizeMaps:
+          32:
+            sprite: _CorvaxGoob/Mobs/Species/displacement.rsi
+            state: jumpsuit
+      # LP edit end
