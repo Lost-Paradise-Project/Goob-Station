@@ -30,13 +30,10 @@
   # LP edit start
   - делает сальто
   - сальто
-  - крутиться
   - делает сальто.
   - сальто.
-  - крутиться.
   - делает сальто!
   - сальто!
-  - крутиться!
   # LP edit end
   event: !type:AnimationFlipEmoteEvent
 
