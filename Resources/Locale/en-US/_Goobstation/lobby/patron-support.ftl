@@ -1,32 +1,34 @@
-patron-support-window-title = Support Goob Station
-patron-support-window-header = Thank you for playing on Goob Station!
-patron-support-window-description1 = If you're enjoying your time here, please consider supporting us on Patreon!
-patron-support-window-description2 = Your support helps us keep the servers running, fund development, and continue improving the game. We're currently working on opening a US-East server in Virginia and doing a major rebase to clean up our codebase.
-
-patron-support-window-tiers-header = Patron Tiers and Rewards
-
-patron-support-window-tier1-name = Assistant ($5/month)
-patron-support-window-tier1-perk1 = • 2x Goob Coin earnings
-patron-support-window-tier1-perk2 = • Priority role queue access
-patron-support-window-tier1-perk3 = • Purple OOC name color
-patron-support-window-tier1-perk4 = • Thanks in the credits in-game
-patron-support-window-tier1-perk5 = • Special Discord role
-patron-support-window-tier1-perk6 = • Access to members-only Discord channel
-
-patron-support-window-tier2-name = Janitor ($10/month)
-patron-support-window-tier2-perk1 = • Custom ghost color
-patron-support-window-tier2-perk2 = • All previous tier benefits
-
-patron-support-window-tier3-name = Station AI ($20/month)
-patron-support-window-tier3-perk1 = • Custom lobby message
-patron-support-window-tier3-perk2 = • All previous tier benefits
-
-patron-support-window-tier4-name = Captain ($50/month)
-patron-support-window-tier4-perk1 = • Round-end shoutout
-patron-support-window-tier4-perk2 = • All previous tier benefits
-
-patron-support-window-tier5-name = Central Command ($100/month)
-patron-support-window-tier5-perk1 = • Our undying love
-patron-support-window-tier5-perk2 = • All previous tier benefits
-
-patron-support-window-button = Visit our Patreon
+patron-support-window-title = Поддержите Lost Paradise
+patron-support-window-header = Благодарим вас за то, что играете на наших серверах!
+patron-support-window-description1 = Если вам по-настоящему нравится играть на Lost Paradise, настоятельно просим поддержать нас на нашем Boosty.
+patron-support-window-description2 = Ваша помощь поможет нам оплачивать серверное содержание и улучшать существующий контент!
+patron-support-window-tiers-header = Уровни поддержки и награды
+patron-support-window-tier1-name = 🗲 Первый (200RUB/месяц)
+patron-support-window-tier1-perk1 = • 👾 Роль спонсора в Discord
+patron-support-window-tier1-perk2 = • 🟡 Желтый цвет в чате
+patron-support-window-tier1-perk3 = • 🌈 Доступ к уникальным призракам
+patron-support-window-tier1-perk4 = • 🦐 10 слотов персонажей
+patron-support-window-tier2-name = ⛤ Второй (500RUB/месяц)
+patron-support-window-tier2-perk1 = • 👾 Роль спонсора в Discord
+patron-support-window-tier2-perk2 = • 🟢 Зеленый цвет в чате
+patron-support-window-tier2-perk3 = • 🔑 Проход на сервер без очереди
+patron-support-window-tier2-perk4 = • 🦐 15 слотов персонажей
+patron-support-window-tier3-name = ⚗ Третий (700RUB/месяц)
+patron-support-window-tier3-perk1 = • 👾 Роль спонсора в Discord
+patron-support-window-tier3-perk2 = • 🟣 Фиолетовый цвет в чате
+patron-support-window-tier3-perk3 = • 🎒 Доступ к уникальным косметическим предметам
+patron-support-window-tier3-perk4 = • 🐾 Доступ к уникальным чертам внешности
+patron-support-window-tier3-perk5 = • 🦐 20 слотов персонажей
+patron-support-window-tier4-name = 🩸 Четвёртый (1000RUB/месяц)
+patron-support-window-tier4-perk1 = • 👾 Роль спонсора в Discord
+patron-support-window-tier4-perk2 = • 🟠 Оранжевый цвет в чате
+patron-support-window-tier4-perk3 = • 🐈 Доступ к уникальной расе (СКОРО!!!)
+patron-support-window-tier4-perk4 = • 💼 Доступ к уникальной роли (СКОРО!!!)
+patron-support-window-tier4-perk5 = • 🦐 25 слотов персонажей
+patron-support-window-tier5-name = 🙪 Пятый (1800RUB/месяц)
+patron-support-window-tier5-perk1 = • 👾 Роль спонсора в Discord
+patron-support-window-tier5-perk2 = • 🔵 Синий цвет в чате
+patron-support-window-tier5-perk3 = • 🪪 Открытие всех ролей и лодаутов за время(Не относиться к белому списку)
+patron-support-window-tier5-perk4 = • 📦 Один личный предмет и/или личный призрак
+patron-support-window-tier5-perk5 = • 🦐 30 слотов персонажей
+patron-support-window-button = Посетить наш Boosty
