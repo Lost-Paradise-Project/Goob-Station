@@ -34,26 +34,26 @@
     - звенит!
     # LP edit end
 
-- type: emote
-  id: Pew
-  name: Pew
-  category: Vocal
-  icon: _Goobstation/Interface/Emotes/pew.png
-  whitelist:
-    tags:
-    - HarpyEmotes
-  blacklist:
-    components:
-    - BorgChassis
-  chatMessages: [чирикает.] # LP edit
-  chatTriggers:
-    - pew
-    - pews
-    # LP edit start
-    - чирикает
-    - чирикает.
-    - чирикает!
-    # LP edit end
+#- type: emote
+#  id: Pew
+#  name: Pew
+#  category: Vocal
+#  icon: _Goobstation/Interface/Emotes/pew.png
+#  whitelist:
+#    tags:
+#    - HarpyEmotes
+#  blacklist:
+#    components:
+#    - BorgChassis
+#  chatMessages: [чирикает.] # LP edit
+#  chatTriggers:
+#    - pew
+#    - pews
+#    # LP edit start
+#    - чирикает
+#    - чирикает.
+#    - чирикает!
+#    # LP edit end
 
 - type: emote
   id: Bang
