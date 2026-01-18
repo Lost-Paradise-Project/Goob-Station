@@ -243,7 +243,7 @@
     - state: icon
       color: "#77F3B7"
   - type: Clothing
-    sprite: _NewParadise/Clothing/Socks/Pantyhose/white.rsi
+    sprite: _LP/Clothing/Socks/Pantyhose/white.rsi
     clothingVisuals:
       socks:
       - state: equipped-SOCKS
@@ -256,12 +256,12 @@
   description:
   components:
   - type: Sprite
-    sprite: _NewParadise/Clothing/Socks/Pantyhose/white.rsi
+    sprite: _LP/Clothing/Socks/Pantyhose/white.rsi
     layers:
     - state: icon
       color: "#FBC72D"
   - type: Clothing
-    sprite: _NewParadise/Clothing/Socks/Pantyhose/white.rsi
+    sprite: _LP/Clothing/Socks/Pantyhose/white.rsi
     clothingVisuals:
       socks:
       - state: equipped-SOCKS
@@ -276,7 +276,7 @@
   description:
   components:
   - type: Sprite
-    sprite: _NewParadise/Clothing/Socks/rainbow_knee.rsi
+    sprite: _LP/Clothing/Socks/rainbow_knee.rsi
 
 - type: entity
   parent: LPPClothingUnderwearSocksBase
@@ -285,7 +285,7 @@
   description:
   components:
   - type: Sprite
-    sprite: _NewParadise/Clothing/Socks/rainbow_thigh.rsi
+    sprite: _LP/Clothing/Socks/rainbow_thigh.rsi
 
 
 #------------------Socks------------------------
@@ -297,12 +297,12 @@
   description:
   components:
   - type: Sprite
-    sprite: _NewParadise/Clothing/Socks/Socks/SocksKnee/white.rsi
+    sprite: _LP/Clothing/Socks/Socks/SocksKnee/white.rsi
     layers:
     - state: icon
       color: "#0C0C0C"
   - type: Clothing
-    sprite: _NewParadise/Clothing/Socks/Socks/SocksKnee/white.rsi
+    sprite: _LP/Clothing/Socks/Socks/SocksKnee/white.rsi
     clothingVisuals:
       socks:
       - state: equipped-SOCKS
@@ -315,12 +315,12 @@
   description:
   components:
   - type: Sprite
-    sprite: _NewParadise/Clothing/Socks/Socks/SocksKnee/white.rsi
+    sprite: _LP/Clothing/Socks/Socks/SocksKnee/white.rsi
     layers:
     - state: icon
       color: "#52AECC"
   - type: Clothing
-    sprite: _NewParadise/Clothing/Socks/Socks/SocksKnee/white.rsi
+    sprite: _LP/Clothing/Socks/Socks/SocksKnee/white.rsi
     clothingVisuals:
       socks:
       - state: equipped-SOCKS
@@ -333,12 +333,12 @@
   description:
   components:
   - type: Sprite
-    sprite: _NewParadise/Clothing/Socks/Socks/SocksKnee/white.rsi
+    sprite: _LP/Clothing/Socks/Socks/SocksKnee/white.rsi
     layers:
     - state: icon
       color: "#A17229"
   - type: Clothing
-    sprite: _NewParadise/Clothing/Socks/Socks/SocksKnee/white.rsi
+    sprite: _LP/Clothing/Socks/Socks/SocksKnee/white.rsi
     clothingVisuals:
       socks:
       - state: equipped-SOCKS
@@ -351,12 +351,12 @@
   description:
   components:
   - type: Sprite
-    sprite: _NewParadise/Clothing/Socks/Socks/SocksKnee/white.rsi
+    sprite: _LP/Clothing/Socks/Socks/SocksKnee/white.rsi
     layers:
     - state: icon
       color: "#6FBC22"
   - type: Clothing
-    sprite: _NewParadise/Clothing/Socks/Socks/SocksKnee/white.rsi
+    sprite: _LP/Clothing/Socks/Socks/SocksKnee/white.rsi
     clothingVisuals:
       socks:
       - state: equipped-SOCKS
@@ -369,12 +369,12 @@
   description:
   components:
   - type: Sprite
-    sprite: _NewParadise/Clothing/Socks/Socks/SocksKnee/white.rsi
+    sprite: _LP/Clothing/Socks/Socks/SocksKnee/white.rsi
     layers:
     - state: icon
       color: "#B3B3B3"
   - type: Clothing
-    sprite: _NewParadise/Clothing/Socks/Socks/SocksKnee/white.rsi
+    sprite: _LP/Clothing/Socks/Socks/SocksKnee/white.rsi
     clothingVisuals:
       socks:
       - state: equipped-SOCKS
@@ -387,12 +387,12 @@
   description:
   components:
   - type: Sprite
-    sprite: _NewParadise/Clothing/Socks/Socks/SocksKnee/white.rsi
+    sprite: _LP/Clothing/Socks/Socks/SocksKnee/white.rsi
     layers:
     - state: icon
       color: "#944DFE"
   - type: Clothing
-    sprite: _NewParadise/Clothing/Socks/Socks/SocksKnee/white.rsi
+    sprite: _LP/Clothing/Socks/Socks/SocksKnee/white.rsi
     clothingVisuals:
       socks:
       - state: equipped-SOCKS
@@ -405,12 +405,12 @@
   description:
   components:
   - type: Sprite
-    sprite: _NewParadise/Clothing/Socks/Socks/SocksKnee/white.rsi
+    sprite: _LP/Clothing/Socks/Socks/SocksKnee/white.rsi
     layers:
     - state: icon
       color: "#BE273E"
   - type: Clothing
-    sprite: _NewParadise/Clothing/Socks/Socks/SocksKnee/white.rsi
+    sprite: _LP/Clothing/Socks/Socks/SocksKnee/white.rsi
     clothingVisuals:
       socks:
       - state: equipped-SOCKS
@@ -423,12 +423,12 @@
   description:
   components:
   - type: Sprite
-    sprite: _NewParadise/Clothing/Socks/Socks/SocksKnee/white.rsi
+    sprite: _LP/Clothing/Socks/Socks/SocksKnee/white.rsi
     layers:
     - state: icon
       color: "#FF8C19"
   - type: Clothing
-    sprite: _NewParadise/Clothing/Socks/Socks/SocksKnee/white.rsi
+    sprite: _LP/Clothing/Socks/Socks/SocksKnee/white.rsi
     clothingVisuals:
       socks:
       - state: equipped-SOCKS
@@ -441,12 +441,12 @@
   description:
   components:
   - type: Sprite
-    sprite: _NewParadise/Clothing/Socks/Socks/SocksKnee/white.rsi
+    sprite: _LP/Clothing/Socks/Socks/SocksKnee/white.rsi
     layers:
     - state: icon
       color: "#FFFFFF"
   - type: Clothing
-    sprite: _NewParadise/Clothing/Socks/Socks/SocksKnee/white.rsi
+    sprite: _LP/Clothing/Socks/Socks/SocksKnee/white.rsi
     clothingVisuals:
       socks:
       - state: equipped-SOCKS
@@ -459,12 +459,12 @@
   description:
   components:
   - type: Sprite
-    sprite: _NewParadise/Clothing/Socks/Socks/SocksKnee/white.rsi
+    sprite: _LP/Clothing/Socks/Socks/SocksKnee/white.rsi
     layers:
     - state: icon
       color: "#EE1511"
   - type: Clothing
-    sprite: _NewParadise/Clothing/Socks/Socks/SocksKnee/white.rsi
+    sprite: _LP/Clothing/Socks/Socks/SocksKnee/white.rsi
     clothingVisuals:
       socks:
       - state: equipped-SOCKS
@@ -477,12 +477,12 @@
   description:
   components:
   - type: Sprite
-    sprite: _NewParadise/Clothing/Socks/Socks/SocksKnee/white.rsi
+    sprite: _LP/Clothing/Socks/Socks/SocksKnee/white.rsi
     layers:
     - state: icon
       color: "#77F3B7"
   - type: Clothing
-    sprite: _NewParadise/Clothing/Socks/Socks/SocksKnee/white.rsi
+    sprite: _LP/Clothing/Socks/Socks/SocksKnee/white.rsi
     clothingVisuals:
       socks:
       - state: equipped-SOCKS
@@ -495,12 +495,12 @@
   description:
   components:
   - type: Sprite
-    sprite: _NewParadise/Clothing/Socks/Socks/SocksKnee/white.rsi
+    sprite: _LP/Clothing/Socks/Socks/SocksKnee/white.rsi
     layers:
     - state: icon
       color: "#FBC72D"
   - type: Clothing
-    sprite: _NewParadise/Clothing/Socks/Socks/SocksKnee/white.rsi
+    sprite: _LP/Clothing/Socks/Socks/SocksKnee/white.rsi
     clothingVisuals:
       socks:
       - state: equipped-SOCKS
@@ -515,12 +515,12 @@
   description:
   components:
   - type: Sprite
-    sprite: _NewParadise/Clothing/Socks/Socks/SocksNorm/white.rsi
+    sprite: _LP/Clothing/Socks/Socks/SocksNorm/white.rsi
     layers:
     - state: icon
       color: "#0C0C0C"
   - type: Clothing
-    sprite: _NewParadise/Clothing/Socks/Socks/SocksNorm/white.rsi
+    sprite: _LP/Clothing/Socks/Socks/SocksNorm/white.rsi
     clothingVisuals:
       socks:
       - state: equipped-SOCKS
@@ -533,12 +533,12 @@
   description:
   components:
   - type: Sprite
-    sprite: _NewParadise/Clothing/Socks/Socks/SocksNorm/white.rsi
+    sprite: _LP/Clothing/Socks/Socks/SocksNorm/white.rsi
     layers:
     - state: icon
       color: "#52AECC"
   - type: Clothing
-    sprite: _NewParadise/Clothing/Socks/Socks/SocksNorm/white.rsi
+    sprite: _LP/Clothing/Socks/Socks/SocksNorm/white.rsi
     clothingVisuals:
       socks:
       - state: equipped-SOCKS
@@ -551,12 +551,12 @@
   description:
   components:
   - type: Sprite
-    sprite: _NewParadise/Clothing/Socks/Socks/SocksNorm/white.rsi
+    sprite: _LP/Clothing/Socks/Socks/SocksNorm/white.rsi
     layers:
     - state: icon
       color: "#A17229"
   - type: Clothing
-    sprite: _NewParadise/Clothing/Socks/Socks/SocksNorm/white.rsi
+    sprite: _LP/Clothing/Socks/Socks/SocksNorm/white.rsi
     clothingVisuals:
       socks:
       - state: equipped-SOCKS
@@ -569,12 +569,12 @@
   description:
   components:
   - type: Sprite
-    sprite: _NewParadise/Clothing/Socks/Socks/SocksNorm/white.rsi
+    sprite: _LP/Clothing/Socks/Socks/SocksNorm/white.rsi
     layers:
     - state: icon
       color: "#6FBC22"
   - type: Clothing
-    sprite: _NewParadise/Clothing/Socks/Socks/SocksNorm/white.rsi
+    sprite: _LP/Clothing/Socks/Socks/SocksNorm/white.rsi
     clothingVisuals:
       socks:
       - state: equipped-SOCKS
@@ -587,12 +587,12 @@
   description:
   components:
   - type: Sprite
-    sprite: _NewParadise/Clothing/Socks/Socks/SocksNorm/white.rsi
+    sprite: _LP/Clothing/Socks/Socks/SocksNorm/white.rsi
     layers:
     - state: icon
       color: "#B3B3B3"
   - type: Clothing
-    sprite: _NewParadise/Clothing/Socks/Socks/SocksNorm/white.rsi
+    sprite: _LP/Clothing/Socks/Socks/SocksNorm/white.rsi
     clothingVisuals:
       socks:
       - state: equipped-SOCKS
@@ -605,12 +605,12 @@
   description:
   components:
   - type: Sprite
-    sprite: _NewParadise/Clothing/Socks/Socks/SocksNorm/white.rsi
+    sprite: _LP/Clothing/Socks/Socks/SocksNorm/white.rsi
     layers:
     - state: icon
       color: "#944DFE"
   - type: Clothing
-    sprite: _NewParadise/Clothing/Socks/Socks/SocksNorm/white.rsi
+    sprite: _LP/Clothing/Socks/Socks/SocksNorm/white.rsi
     clothingVisuals:
       socks:
       - state: equipped-SOCKS
@@ -623,12 +623,12 @@
   description:
   components:
   - type: Sprite
-    sprite: _NewParadise/Clothing/Socks/Socks/SocksNorm/white.rsi
+    sprite: _LP/Clothing/Socks/Socks/SocksNorm/white.rsi
     layers:
     - state: icon
       color: "#BE273E"
   - type: Clothing
-    sprite: _NewParadise/Clothing/Socks/Socks/SocksNorm/white.rsi
+    sprite: _LP/Clothing/Socks/Socks/SocksNorm/white.rsi
     clothingVisuals:
       socks:
       - state: equipped-SOCKS
@@ -641,12 +641,12 @@
   description:
   components:
   - type: Sprite
-    sprite: _NewParadise/Clothing/Socks/Socks/SocksNorm/white.rsi
+    sprite: _LP/Clothing/Socks/Socks/SocksNorm/white.rsi
     layers:
     - state: icon
       color: "#FF8C19"
   - type: Clothing
-    sprite: _NewParadise/Clothing/Socks/Socks/SocksNorm/white.rsi
+    sprite: _LP/Clothing/Socks/Socks/SocksNorm/white.rsi
     clothingVisuals:
       socks:
       - state: equipped-SOCKS
@@ -659,12 +659,12 @@
   description:
   components:
   - type: Sprite
-    sprite: _NewParadise/Clothing/Socks/Socks/SocksNorm/white.rsi
+    sprite: _LP/Clothing/Socks/Socks/SocksNorm/white.rsi
     layers:
     - state: icon
       color: "#FFFFFF"
   - type: Clothing
-    sprite: _NewParadise/Clothing/Socks/Socks/SocksNorm/white.rsi
+    sprite: _LP/Clothing/Socks/Socks/SocksNorm/white.rsi
     clothingVisuals:
       socks:
       - state: equipped-SOCKS
@@ -677,12 +677,12 @@
   description:
   components:
   - type: Sprite
-    sprite: _NewParadise/Clothing/Socks/Socks/SocksNorm/white.rsi
+    sprite: _LP/Clothing/Socks/Socks/SocksNorm/white.rsi
     layers:
     - state: icon
       color: "#EE1511"
   - type: Clothing
-    sprite: _NewParadise/Clothing/Socks/Socks/SocksNorm/white.rsi
+    sprite: _LP/Clothing/Socks/Socks/SocksNorm/white.rsi
     clothingVisuals:
       socks:
       - state: equipped-SOCKS
@@ -695,12 +695,12 @@
   description:
   components:
   - type: Sprite
-    sprite: _NewParadise/Clothing/Socks/Socks/SocksNorm/white.rsi
+    sprite: _LP/Clothing/Socks/Socks/SocksNorm/white.rsi
     layers:
     - state: icon
       color: "#77F3B7"
   - type: Clothing
-    sprite: _NewParadise/Clothing/Socks/Socks/SocksNorm/white.rsi
+    sprite: _LP/Clothing/Socks/Socks/SocksNorm/white.rsi
     clothingVisuals:
       socks:
       - state: equipped-SOCKS
@@ -713,12 +713,12 @@
   description:
   components:
   - type: Sprite
-    sprite: _NewParadise/Clothing/Socks/Socks/SocksNorm/white.rsi
+    sprite: _LP/Clothing/Socks/Socks/SocksNorm/white.rsi
     layers:
     - state: icon
       color: "#FBC72D"
   - type: Clothing
-    sprite: _NewParadise/Clothing/Socks/Socks/SocksNorm/white.rsi
+    sprite: _LP/Clothing/Socks/Socks/SocksNorm/white.rsi
     clothingVisuals:
       socks:
       - state: equipped-SOCKS
@@ -733,12 +733,12 @@
   description:
   components:
   - type: Sprite
-    sprite: _NewParadise/Clothing/Socks/Socks/SocksShort/white.rsi
+    sprite: _LP/Clothing/Socks/Socks/SocksShort/white.rsi
     layers:
     - state: icon
       color: "#0C0C0C"
   - type: Clothing
-    sprite: _NewParadise/Clothing/Socks/Socks/SocksShort/white.rsi
+    sprite: _LP/Clothing/Socks/Socks/SocksShort/white.rsi
     clothingVisuals:
       socks:
       - state: equipped-SOCKS
@@ -751,12 +751,12 @@
   description:
   components:
   - type: Sprite
-    sprite: _NewParadise/Clothing/Socks/Socks/SocksShort/white.rsi
+    sprite: _LP/Clothing/Socks/Socks/SocksShort/white.rsi
     layers:
     - state: icon
       color: "#52AECC"
   - type: Clothing
-    sprite: _NewParadise/Clothing/Socks/Socks/SocksShort/white.rsi
+    sprite: _LP/Clothing/Socks/Socks/SocksShort/white.rsi
     clothingVisuals:
       socks:
       - state: equipped-SOCKS
@@ -769,12 +769,12 @@
   description:
   components:
   - type: Sprite
-    sprite: _NewParadise/Clothing/Socks/Socks/SocksShort/white.rsi
+    sprite: _LP/Clothing/Socks/Socks/SocksShort/white.rsi
     layers:
     - state: icon
       color: "#A17229"
   - type: Clothing
-    sprite: _NewParadise/Clothing/Socks/Socks/SocksShort/white.rsi
+    sprite: _LP/Clothing/Socks/Socks/SocksShort/white.rsi
     clothingVisuals:
       socks:
       - state: equipped-SOCKS
@@ -787,12 +787,12 @@
   description:
   components:
   - type: Sprite
-    sprite: _NewParadise/Clothing/Socks/Socks/SocksShort/white.rsi
+    sprite: _LP/Clothing/Socks/Socks/SocksShort/white.rsi
     layers:
     - state: icon
       color: "#6FBC22"
   - type: Clothing
-    sprite: _NewParadise/Clothing/Socks/Socks/SocksShort/white.rsi
+    sprite: _LP/Clothing/Socks/Socks/SocksShort/white.rsi
     clothingVisuals:
       socks:
       - state: equipped-SOCKS
@@ -805,12 +805,12 @@
   description:
   components:
   - type: Sprite
-    sprite: _NewParadise/Clothing/Socks/Socks/SocksShort/white.rsi
+    sprite: _LP/Clothing/Socks/Socks/SocksShort/white.rsi
     layers:
     - state: icon
       color: "#B3B3B3"
   - type: Clothing
-    sprite: _NewParadise/Clothing/Socks/Socks/SocksShort/white.rsi
+    sprite: _LP/Clothing/Socks/Socks/SocksShort/white.rsi
     clothingVisuals:
       socks:
       - state: equipped-SOCKS
@@ -823,12 +823,12 @@
   description:
   components:
   - type: Sprite
-    sprite: _NewParadise/Clothing/Socks/Socks/SocksShort/white.rsi
+    sprite: _LP/Clothing/Socks/Socks/SocksShort/white.rsi
     layers:
     - state: icon
       color: "#944DFE"
   - type: Clothing
-    sprite: _NewParadise/Clothing/Socks/Socks/SocksShort/white.rsi
+    sprite: _LP/Clothing/Socks/Socks/SocksShort/white.rsi
     clothingVisuals:
       socks:
       - state: equipped-SOCKS
@@ -841,12 +841,12 @@
   description:
   components:
   - type: Sprite
-    sprite: _NewParadise/Clothing/Socks/Socks/SocksShort/white.rsi
+    sprite: _LP/Clothing/Socks/Socks/SocksShort/white.rsi
     layers:
     - state: icon
       color: "#BE273E"
   - type: Clothing
-    sprite: _NewParadise/Clothing/Socks/Socks/SocksShort/white.rsi
+    sprite: _LP/Clothing/Socks/Socks/SocksShort/white.rsi
     clothingVisuals:
       socks:
       - state: equipped-SOCKS
@@ -859,12 +859,12 @@
   description:
   components:
   - type: Sprite
-    sprite: _NewParadise/Clothing/Socks/Socks/SocksShort/white.rsi
+    sprite: _LP/Clothing/Socks/Socks/SocksShort/white.rsi
     layers:
     - state: icon
       color: "#FF8C19"
   - type: Clothing
-    sprite: _NewParadise/Clothing/Socks/Socks/SocksShort/white.rsi
+    sprite: _LP/Clothing/Socks/Socks/SocksShort/white.rsi
     clothingVisuals:
       socks:
       - state: equipped-SOCKS
@@ -877,12 +877,12 @@
   description:
   components:
   - type: Sprite
-    sprite: _NewParadise/Clothing/Socks/Socks/SocksShort/white.rsi
+    sprite: _LP/Clothing/Socks/Socks/SocksShort/white.rsi
     layers:
     - state: icon
       color: "#FFFFFF"
   - type: Clothing
-    sprite: _NewParadise/Clothing/Socks/Socks/SocksShort/white.rsi
+    sprite: _LP/Clothing/Socks/Socks/SocksShort/white.rsi
     clothingVisuals:
       socks:
       - state: equipped-SOCKS
@@ -895,12 +895,12 @@
   description:
   components:
   - type: Sprite
-    sprite: _NewParadise/Clothing/Socks/Socks/SocksShort/white.rsi
+    sprite: _LP/Clothing/Socks/Socks/SocksShort/white.rsi
     layers:
     - state: icon
       color: "#EE1511"
   - type: Clothing
-    sprite: _NewParadise/Clothing/Socks/Socks/SocksShort/white.rsi
+    sprite: _LP/Clothing/Socks/Socks/SocksShort/white.rsi
     clothingVisuals:
       socks:
       - state: equipped-SOCKS
@@ -913,12 +913,12 @@
   description:
   components:
   - type: Sprite
-    sprite: _NewParadise/Clothing/Socks/Socks/SocksShort/white.rsi
+    sprite: _LP/Clothing/Socks/Socks/SocksShort/white.rsi
     layers:
     - state: icon
       color: "#77F3B7"
   - type: Clothing
-    sprite: _NewParadise/Clothing/Socks/Socks/SocksShort/white.rsi
+    sprite: _LP/Clothing/Socks/Socks/SocksShort/white.rsi
     clothingVisuals:
       socks:
       - state: equipped-SOCKS
@@ -931,12 +931,12 @@
   description:
   components:
   - type: Sprite
-    sprite: _NewParadise/Clothing/Socks/Socks/SocksShort/white.rsi
+    sprite: _LP/Clothing/Socks/Socks/SocksShort/white.rsi
     layers:
     - state: icon
       color: "#FBC72D"
   - type: Clothing
-    sprite: _NewParadise/Clothing/Socks/Socks/SocksShort/white.rsi
+    sprite: _LP/Clothing/Socks/Socks/SocksShort/white.rsi
     clothingVisuals:
       socks:
       - state: equipped-SOCKS
@@ -951,12 +951,12 @@
   description:
   components:
   - type: Sprite
-    sprite: _NewParadise/Clothing/Socks/Socks/SocksThigh/white.rsi
+    sprite: _LP/Clothing/Socks/Socks/SocksThigh/white.rsi
     layers:
     - state: icon
       color: "#0C0C0C"
   - type: Clothing
-    sprite: _NewParadise/Clothing/Socks/Socks/SocksThigh/white.rsi
+    sprite: _LP/Clothing/Socks/Socks/SocksThigh/white.rsi
     clothingVisuals:
       socks:
       - state: equipped-SOCKS
@@ -969,12 +969,12 @@
   description:
   components:
   - type: Sprite
-    sprite: _NewParadise/Clothing/Socks/Socks/SocksThigh/white.rsi
+    sprite: _LP/Clothing/Socks/Socks/SocksThigh/white.rsi
     layers:
     - state: icon
       color: "#52AECC"
   - type: Clothing
-    sprite: _NewParadise/Clothing/Socks/Socks/SocksThigh/white.rsi
+    sprite: _LP/Clothing/Socks/Socks/SocksThigh/white.rsi
     clothingVisuals:
       socks:
       - state: equipped-SOCKS
@@ -987,12 +987,12 @@
   description:
   components:
   - type: Sprite
-    sprite: _NewParadise/Clothing/Socks/Socks/SocksThigh/white.rsi
+    sprite: _LP/Clothing/Socks/Socks/SocksThigh/white.rsi
     layers:
     - state: icon
       color: "#A17229"
   - type: Clothing
-    sprite: _NewParadise/Clothing/Socks/Socks/SocksThigh/white.rsi
+    sprite: _LP/Clothing/Socks/Socks/SocksThigh/white.rsi
     clothingVisuals:
       socks:
       - state: equipped-SOCKS
@@ -1005,12 +1005,12 @@
   description:
   components:
   - type: Sprite
-    sprite: _NewParadise/Clothing/Socks/Socks/SocksThigh/white.rsi
+    sprite: _LP/Clothing/Socks/Socks/SocksThigh/white.rsi
     layers:
     - state: icon
       color: "#6FBC22"
   - type: Clothing
-    sprite: _NewParadise/Clothing/Socks/Socks/SocksThigh/white.rsi
+    sprite: _LP/Clothing/Socks/Socks/SocksThigh/white.rsi
     clothingVisuals:
       socks:
       - state: equipped-SOCKS
@@ -1023,12 +1023,12 @@
   description:
   components:
   - type: Sprite
-    sprite: _NewParadise/Clothing/Socks/Socks/SocksThigh/white.rsi
+    sprite: _LP/Clothing/Socks/Socks/SocksThigh/white.rsi
     layers:
     - state: icon
       color: "#B3B3B3"
   - type: Clothing
-    sprite: _NewParadise/Clothing/Socks/Socks/SocksThigh/white.rsi
+    sprite: _LP/Clothing/Socks/Socks/SocksThigh/white.rsi
     clothingVisuals:
       socks:
       - state: equipped-SOCKS
@@ -1041,12 +1041,12 @@
   description:
   components:
   - type: Sprite
-    sprite: _NewParadise/Clothing/Socks/Socks/SocksThigh/white.rsi
+    sprite: _LP/Clothing/Socks/Socks/SocksThigh/white.rsi
     layers:
     - state: icon
       color: "#944DFE"
   - type: Clothing
-    sprite: _NewParadise/Clothing/Socks/Socks/SocksThigh/white.rsi
+    sprite: _LP/Clothing/Socks/Socks/SocksThigh/white.rsi
     clothingVisuals:
       socks:
       - state: equipped-SOCKS
@@ -1059,12 +1059,12 @@
   description:
   components:
   - type: Sprite
-    sprite: _NewParadise/Clothing/Socks/Socks/SocksThigh/white.rsi
+    sprite: _LP/Clothing/Socks/Socks/SocksThigh/white.rsi
     layers:
     - state: icon
       color: "#BE273E"
   - type: Clothing
-    sprite: _NewParadise/Clothing/Socks/Socks/SocksThigh/white.rsi
+    sprite: _LP/Clothing/Socks/Socks/SocksThigh/white.rsi
     clothingVisuals:
       socks:
       - state: equipped-SOCKS
@@ -1077,12 +1077,12 @@
   description:
   components:
   - type: Sprite
-    sprite: _NewParadise/Clothing/Socks/Socks/SocksThigh/white.rsi
+    sprite: _LP/Clothing/Socks/Socks/SocksThigh/white.rsi
     layers:
     - state: icon
       color: "#FF8C19"
   - type: Clothing
-    sprite: _NewParadise/Clothing/Socks/Socks/SocksThigh/white.rsi
+    sprite: _LP/Clothing/Socks/Socks/SocksThigh/white.rsi
     clothingVisuals:
       socks:
       - state: equipped-SOCKS
@@ -1095,12 +1095,12 @@
   description:
   components:
   - type: Sprite
-    sprite: _NewParadise/Clothing/Socks/Socks/SocksThigh/white.rsi
+    sprite: _LP/Clothing/Socks/Socks/SocksThigh/white.rsi
     layers:
     - state: icon
       color: "#FFFFFF"
   - type: Clothing
-    sprite: _NewParadise/Clothing/Socks/Socks/SocksThigh/white.rsi
+    sprite: _LP/Clothing/Socks/Socks/SocksThigh/white.rsi
     clothingVisuals:
       socks:
       - state: equipped-SOCKS
@@ -1113,12 +1113,12 @@
   description:
   components:
   - type: Sprite
-    sprite: _NewParadise/Clothing/Socks/Socks/SocksThigh/white.rsi
+    sprite: _LP/Clothing/Socks/Socks/SocksThigh/white.rsi
     layers:
     - state: icon
       color: "#EE1511"
   - type: Clothing
-    sprite: _NewParadise/Clothing/Socks/Socks/SocksThigh/white.rsi
+    sprite: _LP/Clothing/Socks/Socks/SocksThigh/white.rsi
     clothingVisuals:
       socks:
       - state: equipped-SOCKS
@@ -1131,12 +1131,12 @@
   description:
   components:
   - type: Sprite
-    sprite: _NewParadise/Clothing/Socks/Socks/SocksThigh/white.rsi
+    sprite: _LP/Clothing/Socks/Socks/SocksThigh/white.rsi
     layers:
     - state: icon
       color: "#77F3B7"
   - type: Clothing
-    sprite: _NewParadise/Clothing/Socks/Socks/SocksThigh/white.rsi
+    sprite: _LP/Clothing/Socks/Socks/SocksThigh/white.rsi
     clothingVisuals:
       socks:
       - state: equipped-SOCKS
@@ -1149,12 +1149,12 @@
   description:
   components:
   - type: Sprite
-    sprite: _NewParadise/Clothing/Socks/Socks/SocksThigh/white.rsi
+    sprite: _LP/Clothing/Socks/Socks/SocksThigh/white.rsi
     layers:
     - state: icon
       color: "#FBC72D"
   - type: Clothing
-    sprite: _NewParadise/Clothing/Socks/Socks/SocksThigh/white.rsi
+    sprite: _LP/Clothing/Socks/Socks/SocksThigh/white.rsi
     clothingVisuals:
       socks:
       - state: equipped-SOCKS
@@ -1169,7 +1169,7 @@
   description:
   components:
   - type: Sprite
-    sprite: _NewParadise/Clothing/Socks/striped_knee.rsi
+    sprite: _LP/Clothing/Socks/striped_knee.rsi
 
 - type: entity
   parent: LPPClothingUnderwearSocksBase
@@ -1178,7 +1178,7 @@
   description:
   components:
   - type: Sprite
-    sprite: _NewParadise/Clothing/Socks/striped_thigh.rsi
+    sprite: _LP/Clothing/Socks/striped_thigh.rsi
 
 
 #---------------------ThinKnee----------------------
@@ -1189,12 +1189,12 @@
   description:
   components:
   - type: Sprite
-    sprite: _NewParadise/Clothing/Socks/ThinKnee/white.rsi
+    sprite: _LP/Clothing/Socks/ThinKnee/white.rsi
     layers:
     - state: icon
       color: "#0C0C0C"
   - type: Clothing
-    sprite: _NewParadise/Clothing/Socks/ThinKnee/white.rsi
+    sprite: _LP/Clothing/Socks/ThinKnee/white.rsi
     clothingVisuals:
       socks:
       - state: equipped-SOCKS
@@ -1207,12 +1207,12 @@
   description:
   components:
   - type: Sprite
-    sprite: _NewParadise/Clothing/Socks/ThinKnee/white.rsi
+    sprite: _LP/Clothing/Socks/ThinKnee/white.rsi
     layers:
     - state: icon
       color: "#52AECC"
   - type: Clothing
-    sprite: _NewParadise/Clothing/Socks/ThinKnee/white.rsi
+    sprite: _LP/Clothing/Socks/ThinKnee/white.rsi
     clothingVisuals:
       socks:
       - state: equipped-SOCKS
@@ -1225,12 +1225,12 @@
   description:
   components:
   - type: Sprite
-    sprite: _NewParadise/Clothing/Socks/ThinKnee/white.rsi
+    sprite: _LP/Clothing/Socks/ThinKnee/white.rsi
     layers:
     - state: icon
       color: "#A17229"
   - type: Clothing
-    sprite: _NewParadise/Clothing/Socks/ThinKnee/white.rsi
+    sprite: _LP/Clothing/Socks/ThinKnee/white.rsi
     clothingVisuals:
       socks:
       - state: equipped-SOCKS
@@ -1243,12 +1243,12 @@
   description:
   components:
   - type: Sprite
-    sprite: _NewParadise/Clothing/Socks/ThinKnee/white.rsi
+    sprite: _LP/Clothing/Socks/ThinKnee/white.rsi
     layers:
     - state: icon
       color: "#6FBC22"
   - type: Clothing
-    sprite: _NewParadise/Clothing/Socks/ThinKnee/white.rsi
+    sprite: _LP/Clothing/Socks/ThinKnee/white.rsi
     clothingVisuals:
       socks:
       - state: equipped-SOCKS
@@ -1261,12 +1261,12 @@
   description:
   components:
   - type: Sprite
-    sprite: _NewParadise/Clothing/Socks/ThinKnee/white.rsi
+    sprite: _LP/Clothing/Socks/ThinKnee/white.rsi
     layers:
     - state: icon
       color: "#B3B3B3"
   - type: Clothing
-    sprite: _NewParadise/Clothing/Socks/ThinKnee/white.rsi
+    sprite: _LP/Clothing/Socks/ThinKnee/white.rsi
     clothingVisuals:
       socks:
       - state: equipped-SOCKS
@@ -1279,12 +1279,12 @@
   description:
   components:
   - type: Sprite
-    sprite: _NewParadise/Clothing/Socks/ThinKnee/white.rsi
+    sprite: _LP/Clothing/Socks/ThinKnee/white.rsi
     layers:
     - state: icon
       color: "#944DFE"
   - type: Clothing
-    sprite: _NewParadise/Clothing/Socks/ThinKnee/white.rsi
+    sprite: _LP/Clothing/Socks/ThinKnee/white.rsi
     clothingVisuals:
       socks:
       - state: equipped-SOCKS
@@ -1297,12 +1297,12 @@
   description:
   components:
   - type: Sprite
-    sprite: _NewParadise/Clothing/Socks/ThinKnee/white.rsi
+    sprite: _LP/Clothing/Socks/ThinKnee/white.rsi
     layers:
     - state: icon
       color: "#BE273E"
   - type: Clothing
-    sprite: _NewParadise/Clothing/Socks/ThinKnee/white.rsi
+    sprite: _LP/Clothing/Socks/ThinKnee/white.rsi
     clothingVisuals:
       socks:
       - state: equipped-SOCKS
@@ -1315,12 +1315,12 @@
   description:
   components:
   - type: Sprite
-    sprite: _NewParadise/Clothing/Socks/ThinKnee/white.rsi
+    sprite: _LP/Clothing/Socks/ThinKnee/white.rsi
     layers:
     - state: icon
       color: "#FF8C19"
   - type: Clothing
-    sprite: _NewParadise/Clothing/Socks/ThinKnee/white.rsi
+    sprite: _LP/Clothing/Socks/ThinKnee/white.rsi
     clothingVisuals:
       socks:
       - state: equipped-SOCKS
@@ -1333,12 +1333,12 @@
   description:
   components:
   - type: Sprite
-    sprite: _NewParadise/Clothing/Socks/ThinKnee/white.rsi
+    sprite: _LP/Clothing/Socks/ThinKnee/white.rsi
     layers:
     - state: icon
       color: "#FFFFFF"
   - type: Clothing
-    sprite: _NewParadise/Clothing/Socks/ThinKnee/white.rsi
+    sprite: _LP/Clothing/Socks/ThinKnee/white.rsi
     clothingVisuals:
       socks:
       - state: equipped-SOCKS
@@ -1351,12 +1351,12 @@
   description:
   components:
   - type: Sprite
-    sprite: _NewParadise/Clothing/Socks/ThinKnee/white.rsi
+    sprite: _LP/Clothing/Socks/ThinKnee/white.rsi
     layers:
     - state: icon
       color: "#EE1511"
   - type: Clothing
-    sprite: _NewParadise/Clothing/Socks/ThinKnee/white.rsi
+    sprite: _LP/Clothing/Socks/ThinKnee/white.rsi
     clothingVisuals:
       socks:
       - state: equipped-SOCKS
@@ -1369,12 +1369,12 @@
   description:
   components:
   - type: Sprite
-    sprite: _NewParadise/Clothing/Socks/ThinKnee/white.rsi
+    sprite: _LP/Clothing/Socks/ThinKnee/white.rsi
     layers:
     - state: icon
       color: "#77F3B7"
   - type: Clothing
-    sprite: _NewParadise/Clothing/Socks/ThinKnee/white.rsi
+    sprite: _LP/Clothing/Socks/ThinKnee/white.rsi
     clothingVisuals:
       socks:
       - state: equipped-SOCKS
@@ -1387,12 +1387,12 @@
   description:
   components:
   - type: Sprite
-    sprite: _NewParadise/Clothing/Socks/ThinKnee/white.rsi
+    sprite: _LP/Clothing/Socks/ThinKnee/white.rsi
     layers:
     - state: icon
       color: "#FBC72D"
   - type: Clothing
-    sprite: _NewParadise/Clothing/Socks/ThinKnee/white.rsi
+    sprite: _LP/Clothing/Socks/ThinKnee/white.rsi
     clothingVisuals:
       socks:
       - state: equipped-SOCKS
@@ -1407,12 +1407,12 @@
   description:
   components:
   - type: Sprite
-    sprite: _NewParadise/Clothing/Socks/ThinThigh/white.rsi
+    sprite: _LP/Clothing/Socks/ThinThigh/white.rsi
     layers:
     - state: icon
       color: "#0C0C0C"
   - type: Clothing
-    sprite: _NewParadise/Clothing/Socks/ThinThigh/white.rsi
+    sprite: _LP/Clothing/Socks/ThinThigh/white.rsi
     clothingVisuals:
       socks:
       - state: equipped-SOCKS
@@ -1425,12 +1425,12 @@
   description:
   components:
   - type: Sprite
-    sprite: _NewParadise/Clothing/Socks/ThinThigh/white.rsi
+    sprite: _LP/Clothing/Socks/ThinThigh/white.rsi
     layers:
     - state: icon
       color: "#52AECC"
   - type: Clothing
-    sprite: _NewParadise/Clothing/Socks/ThinThigh/white.rsi
+    sprite: _LP/Clothing/Socks/ThinThigh/white.rsi
     clothingVisuals:
       socks:
       - state: equipped-SOCKS
@@ -1443,12 +1443,12 @@
   description:
   components:
   - type: Sprite
-    sprite: _NewParadise/Clothing/Socks/ThinThigh/white.rsi
+    sprite: _LP/Clothing/Socks/ThinThigh/white.rsi
     layers:
     - state: icon
       color: "#A17229"
   - type: Clothing
-    sprite: _NewParadise/Clothing/Socks/ThinThigh/white.rsi
+    sprite: _LP/Clothing/Socks/ThinThigh/white.rsi
     clothingVisuals:
       socks:
       - state: equipped-SOCKS
@@ -1461,12 +1461,12 @@
   description:
   components:
   - type: Sprite
-    sprite: _NewParadise/Clothing/Socks/ThinThigh/white.rsi
+    sprite: _LP/Clothing/Socks/ThinThigh/white.rsi
     layers:
     - state: icon
       color: "#6FBC22"
   - type: Clothing
-    sprite: _NewParadise/Clothing/Socks/ThinThigh/white.rsi
+    sprite: _LP/Clothing/Socks/ThinThigh/white.rsi
     clothingVisuals:
       socks:
       - state: equipped-SOCKS
@@ -1479,12 +1479,12 @@
   description:
   components:
   - type: Sprite
-    sprite: _NewParadise/Clothing/Socks/ThinThigh/white.rsi
+    sprite: _LP/Clothing/Socks/ThinThigh/white.rsi
     layers:
     - state: icon
       color: "#B3B3B3"
   - type: Clothing
-    sprite: _NewParadise/Clothing/Socks/ThinThigh/white.rsi
+    sprite: _LP/Clothing/Socks/ThinThigh/white.rsi
     clothingVisuals:
       socks:
       - state: equipped-SOCKS
@@ -1497,12 +1497,12 @@
   description:
   components:
   - type: Sprite
-    sprite: _NewParadise/Clothing/Socks/ThinThigh/white.rsi
+    sprite: _LP/Clothing/Socks/ThinThigh/white.rsi
     layers:
     - state: icon
       color: "#944DFE"
   - type: Clothing
-    sprite: _NewParadise/Clothing/Socks/ThinThigh/white.rsi
+    sprite: _LP/Clothing/Socks/ThinThigh/white.rsi
     clothingVisuals:
       socks:
       - state: equipped-SOCKS
@@ -1515,12 +1515,12 @@
   description:
   components:
   - type: Sprite
-    sprite: _NewParadise/Clothing/Socks/ThinThigh/white.rsi
+    sprite: _LP/Clothing/Socks/ThinThigh/white.rsi
     layers:
     - state: icon
       color: "#BE273E"
   - type: Clothing
-    sprite: _NewParadise/Clothing/Socks/ThinThigh/white.rsi
+    sprite: _LP/Clothing/Socks/ThinThigh/white.rsi
     clothingVisuals:
       socks:
       - state: equipped-SOCKS
@@ -1533,12 +1533,12 @@
   description:
   components:
   - type: Sprite
-    sprite: _NewParadise/Clothing/Socks/ThinThigh/white.rsi
+    sprite: _LP/Clothing/Socks/ThinThigh/white.rsi
     layers:
     - state: icon
       color: "#FF8C19"
   - type: Clothing
-    sprite: _NewParadise/Clothing/Socks/ThinThigh/white.rsi
+    sprite: _LP/Clothing/Socks/ThinThigh/white.rsi
     clothingVisuals:
       socks:
       - state: equipped-SOCKS
@@ -1551,12 +1551,12 @@
   description:
   components:
   - type: Sprite
-    sprite: _NewParadise/Clothing/Socks/ThinThigh/white.rsi
+    sprite: _LP/Clothing/Socks/ThinThigh/white.rsi
     layers:
     - state: icon
       color: "#FFFFFF"
   - type: Clothing
-    sprite: _NewParadise/Clothing/Socks/ThinThigh/white.rsi
+    sprite: _LP/Clothing/Socks/ThinThigh/white.rsi
     clothingVisuals:
       socks:
       - state: equipped-SOCKS
@@ -1569,12 +1569,12 @@
   description:
   components:
   - type: Sprite
-    sprite: _NewParadise/Clothing/Socks/ThinThigh/white.rsi
+    sprite: _LP/Clothing/Socks/ThinThigh/white.rsi
     layers:
     - state: icon
       color: "#EE1511"
   - type: Clothing
-    sprite: _NewParadise/Clothing/Socks/ThinThigh/white.rsi
+    sprite: _LP/Clothing/Socks/ThinThigh/white.rsi
     clothingVisuals:
       socks:
       - state: equipped-SOCKS
@@ -1587,12 +1587,12 @@
   description:
   components:
   - type: Sprite
-    sprite: _NewParadise/Clothing/Socks/ThinThigh/white.rsi
+    sprite: _LP/Clothing/Socks/ThinThigh/white.rsi
     layers:
     - state: icon
       color: "#77F3B7"
   - type: Clothing
-    sprite: _NewParadise/Clothing/Socks/ThinThigh/white.rsi
+    sprite: _LP/Clothing/Socks/ThinThigh/white.rsi
     clothingVisuals:
       socks:
       - state: equipped-SOCKS
@@ -1605,12 +1605,12 @@
   description:
   components:
   - type: Sprite
-    sprite: _NewParadise/Clothing/Socks/ThinThigh/white.rsi
+    sprite: _LP/Clothing/Socks/ThinThigh/white.rsi
     layers:
     - state: icon
       color: "#FBC72D"
   - type: Clothing
-    sprite: _NewParadise/Clothing/Socks/ThinThigh/white.rsi
+    sprite: _LP/Clothing/Socks/ThinThigh/white.rsi
     clothingVisuals:
       socks:
       - state: equipped-SOCKS

@@ -49,7 +49,11 @@ namespace Content.Shared.Humanoid
         RArm,
         LArm,
         RHand,
-
+        // LP edit start
+        Underwear,
+        Breast,
+        Socks,
+        // LP edit end
         LHand,
         RLeg,
         LLeg,

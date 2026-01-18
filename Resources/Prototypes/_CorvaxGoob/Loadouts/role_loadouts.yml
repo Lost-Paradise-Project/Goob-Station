@@ -16,6 +16,11 @@
   - Animals
   - SurvivalMedical
   - GroupSpeciesBreathToolMedical
+  # LP edit start
+  - LPunderwearloadout
+  - LPsocksloadout
+  - LPbraloadout
+  # LP edit end
 
 - type: roleLoadout
   id: JobWardenHelper
@@ -37,6 +42,11 @@
   - WardenEnvirohelm
   - WardenEnvirosuit
   - WardenEnvirogloves
+  # LP edit start
+  - LPunderwearloadout
+  - LPsocksloadout
+  - LPbraloadout
+  # LP edit end
 
 - type: roleLoadout
   id: JobPilot
@@ -57,3 +67,8 @@
   - SecurityOfficerEnvirohelm
   - SecurityOfficerEnvirosuit
   - SecurityOfficerEnvirogloves
+  # LP edit start
+  - LPunderwearloadout
+  - LPsocksloadout
+  - LPbraloadout
+  # LP edit end

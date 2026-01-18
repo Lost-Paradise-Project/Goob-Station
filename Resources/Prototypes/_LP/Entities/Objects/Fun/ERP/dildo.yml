@@ -174,7 +174,7 @@
     sprite: _LP/Objects/Fun/ERP/Dildo/polydildo_big.rsi
     heldPrefix: dildo
   - type: Clothing
-    sprite: _NewParadise/Objects/Fun/ERP/Dildo/polydildo_big.rsi
+    sprite: _LP/Objects/Fun/ERP/Dildo/polydildo_big.rsi
     clothingVisuals:
       head:
         - state: equipped-HELMET
@@ -187,14 +187,14 @@
   description:
   components:
   - type: Sprite
-    sprite: _NewParadise/Objects/Fun/ERP/Dildo/polydildo_med.rsi
+    sprite: _LP/Objects/Fun/ERP/Dildo/polydildo_med.rsi
     state: polydildo_med
     scale: 1.0, 1.0
   - type: Item
-    sprite: _NewParadise/Objects/Fun/ERP/Dildo/polydildo_med.rsi
+    sprite: _LP/Objects/Fun/ERP/Dildo/polydildo_med.rsi
     heldPrefix: dildo
   - type: Clothing
-    sprite: _NewParadise/Objects/Fun/ERP/Dildo/polydildo_med.rsi
+    sprite: _LP/Objects/Fun/ERP/Dildo/polydildo_med.rsi
     clothingVisuals:
       head:
         - state: equipped-HELMET
@@ -207,15 +207,15 @@
   description:
   components:
   - type: Sprite
-    sprite: _NewParadise/Objects/Fun/ERP/Dildo/polydildo_small.rsi
+    sprite: _LP/Objects/Fun/ERP/Dildo/polydildo_small.rsi
     state: polydildo_small
     scale: 1.0, 1.0
     # map: [ "enum.DamageStateVisualLayers.Base" ]
   - type: Item
-    sprite: _NewParadise/Objects/Fun/ERP/Dildo/polydildo_small.rsi
+    sprite: _LP/Objects/Fun/ERP/Dildo/polydildo_small.rsi
     heldPrefix: dildo
   - type: Clothing
-    sprite: _NewParadise/Objects/Fun/ERP/Dildo/polydildo_small.rsi
+    sprite: _LP/Objects/Fun/ERP/Dildo/polydildo_small.rsi
     clothingVisuals:
       head:
         - state: equipped-HELMET

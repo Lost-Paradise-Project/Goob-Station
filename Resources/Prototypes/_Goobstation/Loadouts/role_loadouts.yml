@@ -110,6 +110,11 @@
   - NanotrasenRepresentativeEnvirohelm
   - NanotrasenRepresentativeEnvirosuit
   - NanotrasenRepresentativeEnvirogloves
+  # LP edit start
+  - LPunderwearloadout
+  - LPsocksloadout
+  - LPbraloadout
+  # LP edit end
 
 - type: roleLoadout
   id: JobBlueshieldOfficer
@@ -131,6 +136,11 @@
   - BlueshieldOfficerEnvirosuit
   - BlueshieldOfficerEnvirogloves
   - BlueshieldOfficerGloves
+  # LP edit start
+  - LPunderwearloadout
+  - LPsocksloadout
+  - LPbraloadout
+  # LP edit end
 
 - type: roleLoadout
   id: JobNanotrasenCareerTrainer
@@ -152,6 +162,11 @@
   - CentComOfficerEnvirohelm
   - CentComOfficerEnvirosuit
   - CentComOfficerEnvirogloves
+  # LP edit start
+  - LPunderwearloadout
+  - LPsocksloadout
+  - LPbraloadout
+  # LP edit end
 
 - type: roleLoadout
   id: RoleSurvivalNukieHonkops
@@ -180,6 +195,11 @@
   - ScientistEnvirohelm
   - ScientistEnvirosuit
   - ScientistEnvirogloves
+  # LP edit start
+  - LPunderwearloadout
+  - LPsocksloadout
+  - LPbraloadout
+  # LP edit end
 
 - type: roleLoadout
   id: JobBrigmedic
@@ -204,6 +224,11 @@
   - BrigmedicEnvirohelm
   - BrigmedicEnvirosuit
   - BrigmedicEnvirogloves
+  # LP edit start
+  - LPunderwearloadout
+  - LPsocksloadout
+  - LPbraloadout
+  # LP edit end
 
 - type: roleLoadout
   id: JobRadioHost
@@ -219,6 +244,11 @@
   - ServiceWorkerEnvirohelm
   - ServiceWorkerEnvirosuit
   - ServiceWorkerEnvirogloves
+  # LP edit start
+  - LPunderwearloadout
+  - LPsocksloadout
+  - LPbraloadout
+  # LP edit end
 
 # gives plasmaman a plasma breathing tank
 # other species get nothing
@@ -269,3 +299,8 @@
    - VirologyEnvirohelm
    - VirologyEnvirosuit
    - VirologyEnvirogloves
+  # LP edit start
+   - LPunderwearloadout
+   - LPsocksloadout
+   - LPbraloadout
+  # LP edit end

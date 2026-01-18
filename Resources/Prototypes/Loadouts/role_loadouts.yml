@@ -135,6 +135,11 @@
   - CaptainEnvirosuit
   - CaptainEnvirogloves
   - CaptainGloves
+  # LP edit start
+  - LPunderwearloadout
+  - LPsocksloadout
+  - LPbraloadout
+  # LP edit end
 
 - type: roleLoadout
   id: JobHeadOfPersonnel
@@ -156,6 +161,12 @@
   - HoPEnvirosuit
   - HoPEnvirogloves
   - HoPGloves
+  # LP edit start
+  - LPunderwearloadout
+  - LPsocksloadout
+  - LPbraloadout
+  # LP edit end
+
 # Silicons
 - type: roleLoadout
   id: JobBorg
@@ -189,6 +200,11 @@
   - AssistantEnvirohelm
   - AssistantEnvirosuit
   - AssistantEnvirogloves
+  # LP edit start
+  - LPunderwearloadout
+  - LPsocksloadout
+  - LPbraloadout
+  # LP edit end
 
 - type: roleLoadout
   id: JobBartender
@@ -208,6 +224,11 @@
   - BartenderEnvirohelm
   - BartenderEnvirosuit
   - BartenderEnvirogloves
+  # LP edit start
+  - LPunderwearloadout
+  - LPsocksloadout
+  - LPbraloadout
+  # LP edit end
 
 - type: roleLoadout
   id: JobServiceWorker
@@ -225,6 +246,11 @@
   - ServiceWorkerEnvirohelm
   - ServiceWorkerEnvirosuit
   - ServiceWorkerEnvirogloves
+  # LP edit start
+  - LPunderwearloadout
+  - LPsocksloadout
+  - LPbraloadout
+  # LP edit end
 
 - type: roleLoadout
   id: JobChef
@@ -245,6 +271,11 @@
   - ChefEnvirohelm
   - ChefEnvirosuit
   - ChefEnvirogloves
+  # LP edit start
+  - LPunderwearloadout
+  - LPsocksloadout
+  - LPbraloadout
+  # LP edit end
 
 - type: roleLoadout
   id: JobLibrarian
@@ -262,6 +293,11 @@
   - LibrarianEnvirohelm
   - LibrarianEnvirosuit
   - LibrarianEnvirogloves
+  # LP edit start
+  - LPunderwearloadout
+  - LPsocksloadout
+  - LPbraloadout
+  # LP edit end
 
 - type: roleLoadout
   id: JobLawyer
@@ -280,6 +316,11 @@
   - LawyerEnvirohelm
   - LawyerEnvirosuit
   - LawyerEnvirogloves
+  # LP edit start
+  - LPunderwearloadout
+  - LPsocksloadout
+  - LPbraloadout
+  # LP edit end
 
 - type: roleLoadout
   id: JobChaplain
@@ -301,6 +342,11 @@
   - ChaplainEnvirohelm
   - ChaplainEnvirosuit
   - ChaplainEnvirogloves
+  # LP edit start
+  - LPunderwearloadout
+  - LPsocksloadout
+  - LPbraloadout
+  # LP edit end
 
 - type: roleLoadout
   id: JobJanitor
@@ -322,6 +368,11 @@
   - JanitorEnvirohelm
   - JanitorEnvirosuit
   - JanitorEnvirogloves
+  # LP edit start
+  - LPunderwearloadout
+  - LPsocksloadout
+  - LPbraloadout
+  # LP edit end
 
 - type: roleLoadout
   id: JobBotanist
@@ -341,6 +392,11 @@
   - BotanistEnvirohelm
   - BotanistEnvirosuit
   - BotanistEnvirogloves
+  # LP edit start
+  - LPunderwearloadout
+  - LPsocksloadout
+  - LPbraloadout
+  # LP edit end
 
 - type: roleLoadout
   id: JobClown
@@ -361,6 +417,11 @@
   - ClownEnvirohelm
   - ClownEnvirosuit
   - ClownEnvirogloves
+  # LP edit start
+  - LPunderwearloadout
+  - LPsocksloadout
+  - LPbraloadout
+  # LP edit end
 
 - type: roleLoadout
   id: JobMime
@@ -383,6 +444,11 @@
   - MimeEnvirosuit
   - MimeEnvirogloves
   - MimeGloves
+  # LP edit start
+  - LPunderwearloadout
+  - LPsocksloadout
+  - LPbraloadout
+  # LP edit end
 
 - type: roleLoadout
   id: JobMusician
@@ -402,6 +468,11 @@
   - MusicianEnvirohelm
   - MusicianEnvirosuit
   - MusicianEnvirogloves
+  # LP edit start
+  - LPunderwearloadout
+  - LPsocksloadout
+  - LPbraloadout
+  # LP edit end
 
 # Cargo
 - type: roleLoadout
@@ -424,6 +495,11 @@
   - QuartermasterEnvirohelm
   - QuartermasterEnvirosuit
   - QuartermasterEnvirogloves
+  # LP edit start
+  - LPunderwearloadout
+  - LPsocksloadout
+  - LPbraloadout
+  # LP edit end
 
 - type: roleLoadout
   id: JobCargoTechnician
@@ -444,6 +520,11 @@
   - CargoTechnicianEnvirohelm
   - CargoTechnicianEnvirosuit
   - CargoTechnicianEnvirogloves
+  # LP edit start
+  - LPunderwearloadout
+  - LPsocksloadout
+  - LPbraloadout
+  # LP edit end
 
 - type: roleLoadout
   id: JobSalvageSpecialist
@@ -463,6 +544,11 @@
   - SalvageEnvirohelm
   - SalvageEnvirosuit
   - SalvageEnvirogloves
+  # LP edit start
+  - LPunderwearloadout
+  - LPsocksloadout
+  - LPbraloadout
+  # LP edit end
 
 # Engineering
 - type: roleLoadout
@@ -484,6 +570,11 @@
   - ChiefEngineerEnvirohelm
   - ChiefEngineerEnvirosuit
   - ChiefEngineerEnvirogloves
+  # LP edit start
+  - LPunderwearloadout
+  - LPsocksloadout
+  - LPbraloadout
+  # LP edit end
 
 - type: roleLoadout
   id: JobTechnicalAssistant
@@ -500,6 +591,11 @@
   - TechnicalAssistantEnvirohelm
   - TechnicalAssistantEnvirosuit
   - TechnicalAssistantEnvirogloves
+  # LP edit start
+  - LPunderwearloadout
+  - LPsocksloadout
+  - LPbraloadout
+  # LP edit end
 
 - type: roleLoadout
   id: JobStationEngineer
@@ -520,6 +616,11 @@
   - StationEngineerEnvirohelm
   - StationEngineerEnvirosuit
   - StationEngineerEnvirogloves
+  # LP edit start
+  - LPunderwearloadout
+  - LPsocksloadout
+  - LPbraloadout
+  # LP edit end
 
 - type: roleLoadout
   id: JobAtmosphericTechnician
@@ -539,6 +640,11 @@
   - AtmosEnvirohelm
   - AtmosEnvirosuit
   - AtmosEnvirogloves
+  # LP edit start
+  - LPunderwearloadout
+  - LPsocksloadout
+  - LPbraloadout
+  # LP edit end
 
 # Science
 - type: roleLoadout
@@ -562,6 +668,11 @@
   - ResearchDirectorEnvirosuit
   - ResearchDirectorEnvirohelm
   - ResearchDirectorEnvirogloves
+  # LP edit start
+  - LPunderwearloadout
+  - LPsocksloadout
+  - LPbraloadout
+  # LP edit end
 
 - type: roleLoadout
   id: JobScientist
@@ -585,6 +696,11 @@
   - ScientistEnvirohelm
   - ScientistEnvirosuit
   - ScientistEnvirogloves
+  # LP edit start
+  - LPunderwearloadout
+  - LPsocksloadout
+  - LPbraloadout
+  # LP edit end
 
 - type: roleLoadout
   id: JobResearchAssistant
@@ -602,6 +718,11 @@
   - ResearchAssistantEnvirohelm
   - ResearchAssistantEnvirosuit
   - ResearchAssistantEnvirogloves
+  # LP edit start
+  - LPunderwearloadout
+  - LPsocksloadout
+  - LPbraloadout
+  # LP edit end
 
 # Security
 - type: roleLoadout
@@ -626,6 +747,11 @@
   - HeadofSecurityEnvirosuit
   - HeadofSecurityEnvirogloves
   - HeadofSecurityGloves
+  # LP edit start
+  - LPunderwearloadout
+  - LPsocksloadout
+  - LPbraloadout
+  # LP edit end
 
 - type: roleLoadout
   id: JobWarden
@@ -648,6 +774,11 @@
   - WardenEnvirohelm
   - WardenEnvirosuit
   - WardenEnvirogloves
+  # LP edit start
+  - LPunderwearloadout
+  - LPsocksloadout
+  - LPbraloadout
+  # LP edit end
 
 - type: roleLoadout
   id: JobSecurityOfficer
@@ -671,6 +802,11 @@
   - SecurityOfficerEnvirohelm
   - SecurityOfficerEnvirosuit
   - SecurityOfficerEnvirogloves
+  # LP edit start
+  - LPunderwearloadout
+  - LPsocksloadout
+  - LPbraloadout
+  # LP edit end
 
 - type: roleLoadout
   id: JobDetective
@@ -692,6 +828,11 @@
   - DetectiveEnvirosuit
   - DetectiveEnvirogloves
   - DetectiveGloves
+  # LP edit start
+  - LPunderwearloadout
+  - LPsocksloadout
+  - LPbraloadout
+  # LP edit end
 
 - type: roleLoadout
   id: JobSecurityCadet
@@ -710,6 +851,11 @@
   - SecurityCadetEnvirohelm
   - SecurityCadetEnvirosuit
   - SecurityCadetEnvirogloves
+  # LP edit start
+  - LPunderwearloadout
+  - LPsocksloadout
+  - LPbraloadout
+  # LP edit end
 
 # Medical
 - type: roleLoadout
@@ -734,6 +880,11 @@
   - ChiefMedicalOfficerEnvirohelm
   - ChiefMedicalOfficerEnvirosuit
   - ChiefMedicalOfficerEnvirogloves
+  # LP edit start
+  - LPunderwearloadout
+  - LPsocksloadout
+  - LPbraloadout
+  # LP edit end
 
 - type: roleLoadout
   id: JobMedicalDoctor
@@ -757,6 +908,11 @@
   - MedicalDoctorEnvirohelm
   - MedicalDoctorEnvirosuit
   - MedicalDoctorEnvirogloves
+  # LP edit start
+  - LPunderwearloadout
+  - LPsocksloadout
+  - LPbraloadout
+  # LP edit end
 
 - type: roleLoadout
   id: JobMedicalIntern
@@ -774,6 +930,11 @@
   - MedicalInternEnvirohelm
   - MedicalInternEnvirosuit
   - MedicalInternEnvirogloves
+  # LP edit start
+  - LPunderwearloadout
+  - LPsocksloadout
+  - LPbraloadout
+  # LP edit end
 
 - type: roleLoadout
   id: JobChemist
@@ -795,6 +956,11 @@
   - ChemistEnvirohelm
   - ChemistEnvirosuit
   - ChemistEnvirogloves
+  # LP edit start
+  - LPunderwearloadout
+  - LPsocksloadout
+  - LPbraloadout
+  # LP edit end
 
 - type: roleLoadout
   id: JobParamedic
@@ -817,6 +983,11 @@
   - ParamedicEnvirohelm
   - ParamedicEnvirosuit
   - ParamedicEnvirogloves
+  # LP edit start
+  - LPunderwearloadout
+  - LPsocksloadout
+  - LPbraloadout
+  # LP edit end
 
 # Wildcards
 - type: roleLoadout
@@ -836,6 +1007,11 @@
   - ZookeeperEnvirohelm
   - ZookeeperEnvirosuit
   - ZookeeperEnvirogloves
+  # LP edit start
+  - LPunderwearloadout
+  - LPsocksloadout
+  - LPbraloadout
+  # LP edit end
 
 - type: roleLoadout
   id: JobReporter
@@ -854,6 +1030,11 @@
   - ReporterEnvirohelm
   - ReporterEnvirosuit
   - ReporterEnvirogloves
+  # LP edit start
+  - LPunderwearloadout
+  - LPsocksloadout
+  - LPbraloadout
+  # LP edit end
 
 - type: roleLoadout
   id: JobPsychologist
@@ -871,6 +1052,11 @@
   - PsychologistEnvirohelm
   - PsychologistEnvirosuit
   - PsychologistEnvirogloves
+  # LP edit start
+  - LPunderwearloadout
+  - LPsocksloadout
+  - LPbraloadout
+  # LP edit end
 
 - type: roleLoadout
   id: JobBoxer
@@ -888,6 +1074,11 @@
   # Goobstation - EE Plasmeme Change.
   - BoxerEnvirohelm
   - BoxerEnvirosuit
+  # LP edit start
+  - LPunderwearloadout
+  - LPsocksloadout
+  - LPbraloadout
+  # LP edit end
 
 # These loadouts are used for non-crew spawns, like off-station antags and event mobs
 # They will be used without player configuration, thus they will only ever apply what is forced by MinLimit

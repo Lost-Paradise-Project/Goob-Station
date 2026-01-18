@@ -250,8 +250,13 @@
     - map: [ "enum.HumanoidVisualLayers.RArm" ]
     - map: [ "enum.HumanoidVisualLayers.LLeg" ]
     - map: [ "enum.HumanoidVisualLayers.RLeg" ]
+    # LP edit start
+    - map: [ "breast" ]
+    - map: [ "underwear" ]
     - map: [ "enum.HumanoidVisualLayers.LFoot" ]
     - map: [ "enum.HumanoidVisualLayers.RFoot" ]
+    - map: [ "socks" ]
+    # LP edit end
     - map: [ "enum.HumanoidVisualLayers.LHand" ]  # Hands below jumpsuit since its bigger-than-usual sprite and this allows jumpsuits to have better-looking sleeves
     - map: [ "enum.HumanoidVisualLayers.RHand" ]
     - map: [ "enum.HumanoidVisualLayers.Tail" ]   # Tail changed to be below outerclothing and above limbs
@@ -374,8 +379,13 @@
     - map: [ "enum.HumanoidVisualLayers.RArm" ]
     - map: [ "enum.HumanoidVisualLayers.LLeg" ]
     - map: [ "enum.HumanoidVisualLayers.RLeg" ]
+      # LP edit start
+    - map: [ "breast" ]
+    - map: [ "underwear" ]
     - map: [ "enum.HumanoidVisualLayers.LFoot" ]
     - map: [ "enum.HumanoidVisualLayers.RFoot" ]
+    - map: [ "socks" ]
+      # LP edit end
     - map: [ "enum.HumanoidVisualLayers.LHand" ]  # Hands below jumpsuit since its bigger-than-usual sprite and this allows jumpsuits to have better-looking sleeves
     - map: [ "enum.HumanoidVisualLayers.RHand" ]
     - map: [ "enum.HumanoidVisualLayers.Tail" ]   # Tail changed to be below outerclothing and above limbs
