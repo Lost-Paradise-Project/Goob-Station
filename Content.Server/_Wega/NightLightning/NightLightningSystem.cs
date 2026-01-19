@@ -119,7 +119,7 @@ public sealed class NightLightningSystem : EntitySystem
         DateTime currentTime = DateTime.Now;
         if (_cfg.GetCVar(WegaCVars.PartyEnabled))
             return currentTime.Hour >= 0;
-        return currentTime.Hour >= 19 || currentTime.Hour < 5;
+        return currentTime.Hour >= 22 || currentTime.Hour < 8;
     }
 
     private void OnComponentStartup(EntityUid uid, NightLightningComponent component, ComponentStartup ev)
