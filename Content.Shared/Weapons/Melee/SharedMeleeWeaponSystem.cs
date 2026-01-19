@@ -138,7 +138,7 @@ using Content.Shared.Damage.Systems;
 using Content.Shared.Database;
 using Content.Goobstation.Maths.FixedPoint;
 using Content.Shared._Shitmed.Targeting;
-using Content.Shared._Wega.Dirt;
+using Content.Shared._Wega.Dirt; // Corvax-Wega-ToggleClothing
 using Content.Shared.Coordinates;
 using Content.Shared.Hands;
 using Content.Shared.Hands.Components;

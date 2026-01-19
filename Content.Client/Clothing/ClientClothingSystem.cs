@@ -39,7 +39,7 @@ using System.Linq;
 using Content.Client.DisplacementMap;
 using Content.Client.Inventory;
 using Content.Goobstation.Common.Clothing;
-using Content.Shared._Wega.Dirt.Components;
+using Content.Shared._Wega.Dirt.Components; // Corvax-Wega-ToggleClothing
 using Content.Shared.Clothing;
 using Content.Shared.Clothing.Components;
 using Content.Shared.Clothing.EntitySystems;

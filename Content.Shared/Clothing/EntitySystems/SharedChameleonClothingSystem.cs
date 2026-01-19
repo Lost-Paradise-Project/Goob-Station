@@ -29,7 +29,7 @@ using Robust.Shared.Prototypes;
 using Robust.Shared.Timing;
 using Robust.Shared.Utility;
 using System.Linq;
-using Content.Shared._Wega.Dirt.Components;
+using Content.Shared._Wega.Dirt.Components; // Corvax-Wega-ToggleClothing
 
 namespace Content.Shared.Clothing.EntitySystems;
 
