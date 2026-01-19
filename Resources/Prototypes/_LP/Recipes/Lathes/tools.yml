@@ -1,0 +1,15 @@
+- type: latheRecipe
+  id: LPRNDInducerRecipe
+  result: LPRNDInducer
+  completetime: 8
+  materials:
+    Steel: 1000
+    Plastic: 100
+
+- type: latheRecipe
+  id: LPEngiInducerRecipe
+  result: LPEngiInducer
+  completetime: 8
+  materials:
+    Steel: 1000
+    Plastic: 100

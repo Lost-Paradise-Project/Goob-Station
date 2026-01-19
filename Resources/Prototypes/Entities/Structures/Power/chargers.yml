@@ -155,6 +155,11 @@
           tags:
           - PowerCell
           - PowerCellSmall
+      # ADT-tweak-start
+        blacklist:
+          tags:
+          - ADTMegaCell
+      # ADT-tweak-end
 
 - type: entity
   parent: [ BaseItemRecharger, ConstructibleMachine ]
@@ -280,6 +285,7 @@
         blacklist:
           tags:
           - PotatoBattery
+          - ADTMegaCell # ADT-Tweak
           - WizardWand # Goobstation
           components:  # Goobstation
           - MaterialEnergy
