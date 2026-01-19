@@ -111,7 +111,8 @@
   - type: StaticPrice
     price: 750
   - type: StealTarget
-    stealGroup: ClothingShoesBootsMagAdv  - type: Magboots # Corvax-Wega-AdvMagboots
+    stealGroup: ClothingShoesBootsMagAdv
+  - type: Magboots # Corvax-Wega-AdvMagboots
     disabledAutoOff: true # Corvax-Wega-AdvMagboots
 
 - type: entity
