@@ -88,3 +88,7 @@ flavor_text = true
 
 [biomass]
 easy_mode = false
+
+[wega]
+night_light_enabled = true
+party_enabled = false
