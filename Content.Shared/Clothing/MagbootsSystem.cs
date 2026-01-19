@@ -107,7 +107,8 @@ public sealed class SharedMagbootsSystem : EntitySystem
         SubscribeLocalEvent<MagbootsComponent, InventoryRelayedEvent<IsWeightlessEvent>>(OnIsWeightless);
 
         SubscribeLocalEvent<GravityChangedEvent>(OnGravityChanged); // Corvax-Wega-AdvMagboots
-        SubscribeLocalEvent<MagbootsUserComponent, EntParentChangedMessage>(OnMagbootsParentChanged); // Corvax-Wega-AdvMagboots
+        SubscribeLocalEvent<MagbootsUserComponent, EntParentChangedMessage>(
+            OnMagbootsParentChanged); // Corvax-Wega-AdvMagboots
     }
 
     private void OnToggled(Entity<MagbootsComponent> ent, ref ItemToggledEvent args)
@@ -179,13 +180,19 @@ public sealed class SharedMagbootsSystem : EntitySystem
 
             var shouldBeActive = !args.HasGravity;
             if (_toggle.IsActivated(uid) != shouldBeActive)
+            {
+                if (!shouldBeActive && magboots.DisabledAutoOff)
+                    return;
+
                 _toggle.Toggle(uid, container.Owner);
+            }
         }
     }
 
     private void OnMagbootsParentChanged(Entity<MagbootsUserComponent> ent, ref EntParentChangedMessage args)
     {
-        if (!_inventory.TryGetSlotEntity(ent, "shoes", out var worn) || !HasComp<MagbootsComponent>(worn))
+        if (!_inventory.TryGetSlotEntity(ent, "shoes", out var worn) ||
+            !TryComp<MagbootsComponent>(worn, out var magboots))
             return;
 
         if (args.Transform.GridUid == null)
@@ -195,7 +202,12 @@ public sealed class SharedMagbootsSystem : EntitySystem
 
         var shouldBeActive = !hasGravity;
         if (_toggle.IsActivated(worn.Value) != shouldBeActive)
+        {
+            if (!shouldBeActive && magboots.DisabledAutoOff)
+                return;
+
             _toggle.Toggle(worn.Value, ent);
+        }
+        // Corvax-Wega-AdvMagboots-end
     }
-    // Corvax-Wega-AdvMagboots-end
 }
