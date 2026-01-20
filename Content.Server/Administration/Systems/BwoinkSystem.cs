@@ -871,13 +871,6 @@ namespace Content.Server.Administration.Systems
                     adminPrefix = $"[bold]\\[{bwoinkParams.RoleName}\\][/bold] ";
             }
 
-            // If role color is enabled and exists, use it, otherwise use the discord reply color
-            if (_config.GetCVar(GoobCVars.DiscordReplyColor) != string.Empty && bwoinkParams.FromWebhook)
-                adminColor = _config.GetCVar(GoobCVars.DiscordReplyColor);
-
-            if (_config.GetCVar(GoobCVars.UseDiscordRoleColor) && bwoinkParams.RoleColor is not null)
-                adminColor = bwoinkParams.RoleColor;
-
             if (!bwoinkParams.FromWebhook
                 && _config.GetCVar(GoobCVars.UseAdminOOCColorInBwoinks)
                 && bwoinkParams.SenderAdmin is not null)
@@ -896,12 +889,14 @@ namespace Content.Server.Administration.Systems
                     bwoinkText = $"[color={sponsorColor}]{bwoinkParams.SenderName}[/color]";    //ставим цвет нику игрока, если спонсор
             }
 #endif
-
-            if (_config.GetCVar(CCVars.AhelpAdminPrefix) && bwoinkParams.SenderAdmin is not null && bwoinkParams.SenderAdmin.Title is not null)
-            {
-                adminPrefix = $"[bold][color={adminColor}]\\[{bwoinkParams.SenderAdmin.Title}\\][/color][/bold] "; // LOP edit
-            }
             //LP edit end
+
+            // If role color is enabled and exists, use it, otherwise use the discord reply color
+            if (_config.GetCVar(GoobCVars.DiscordReplyColor) != string.Empty && bwoinkParams.FromWebhook)
+                adminColor = _config.GetCVar(GoobCVars.DiscordReplyColor);
+
+            if (_config.GetCVar(GoobCVars.UseDiscordRoleColor) && bwoinkParams.RoleColor is not null)
+                adminColor = bwoinkParams.RoleColor;
 
             if (bwoinkParams.SenderAdmin is not null)
             {
