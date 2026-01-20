@@ -29,4 +29,4 @@
     - ADTMegaCellHyperRecipe
   position: 1,-10 # LP Edit
   technologyPrerequisites:
-  - LPInducer # LP Edit
+  - LPPInducer # LP Edit
