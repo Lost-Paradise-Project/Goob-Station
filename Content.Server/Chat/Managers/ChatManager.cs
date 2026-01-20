@@ -201,6 +201,7 @@ using Robust.Shared.Utility;
 // using Content.Server._RMC14.LinkAccount; // RMC - Patreon // CorvaxGoob-Coins
 // using Content.Server._RMC14.LinkAccount; CorvaxGoob-Coins
 using Content.Corvax.Interfaces.Shared; // RMC - Patreon
+using Content.Server._LP.Sponsors;
 
 namespace Content.Server.Chat.Managers;
 
@@ -209,13 +210,6 @@ namespace Content.Server.Chat.Managers;
 /// </summary>
 internal sealed partial class ChatManager : IChatManager
 {
-    private static readonly Dictionary<string, string> PatronOocColors = new()
-    {
-        // I had plans for multiple colors and those went nowhere so...
-        { "nuclear_operative", "#aa00ff" },
-        { "syndicate_agent", "#aa00ff" },
-        { "revolutionary", "#aa00ff" }
-    };
 
     [Dependency] private readonly IReplayRecordingManager _replay = default!;
     [Dependency] private readonly IServerNetManager _netManager = default!;
@@ -243,7 +237,6 @@ internal sealed partial class ChatManager : IChatManager
 
     public void Initialize()
     {
-        IoCManager.Instance!.TryResolveType(out _sponsorsManager); // CorvaxGoob-Sponsors
         _netManager.RegisterNetMessage<MsgChatMessage>();
         _netManager.RegisterNetMessage<MsgDeleteChatMessagesBy>();
 
@@ -269,10 +262,10 @@ internal sealed partial class ChatManager : IChatManager
         DispatchServerAnnouncement(Loc.GetString(val ? "chat-manager-admin-ooc-chat-enabled-message" : "chat-manager-admin-ooc-chat-disabled-message"));
     }
 
-        public void DeleteMessagesBy(NetUserId uid)
-        {
-            if (!_players.TryGetValue(uid, out var user))
-                return;
+    public void DeleteMessagesBy(NetUserId uid)
+    {
+        if (!_players.TryGetValue(uid, out var user))
+            return;
 
         var msg = new MsgDeleteChatMessagesBy { Key = user.Key, Entities = user.Entities };
         _netManager.ServerSendToAll(msg);
@@ -441,7 +434,9 @@ internal sealed partial class ChatManager : IChatManager
         if (_adminManager.HasAdminFlag(player, AdminFlags.NameColor))
         {
             var prefs = _preferencesManager.GetPreferences(player.UserId);
+#if !LP
             colorOverride = prefs.AdminOOCColor;
+#endif
         }
 
         /* CorvaxGoob-Revert : DB conflicts
@@ -467,12 +462,30 @@ internal sealed partial class ChatManager : IChatManager
         }
         */
 
-        // CorvaxGoob-Sponsors-Start
-        if (_sponsorsManager != null && _sponsorsManager.TryGetServerOocColor(player.UserId, out var oocColor))
+        //LP edit start
+#if LP
+        if (IoCManager.Resolve<SponsorsManager>().TryGetInfo(player.UserId, out var sponsorData) && sponsorData.Tier > 0)
         {
-            wrappedMessage = Loc.GetString("chat-manager-send-ooc-patron-wrap-message", ("patronColor", oocColor), ("playerName", player.Name), ("message", FormattedMessage.EscapeText(message)));
+            wrappedMessage = Loc.GetString("chat-manager-send-ooc-patron-wrap-message", ("patronColor", sponsorData.OOCColor), ("playerName", player.Name), ("message", FormattedMessage.EscapeText(message)));
         }
-        // CorvaxGoob-Sponsors-End
+
+        var adminData = _adminManager.GetAdminData(player);
+        if (adminData != null && sponsorData != null && sponsorData.Tier > 0)
+        {
+            var title = adminData.Title ?? "Admin";
+            var prefs = _preferencesManager.GetPreferences(player.UserId);
+            wrappedMessage = Loc.GetString(
+                "chat-manager-send-ooc-admin-sponsor-wrap-message", ("adminColor", prefs.AdminOOCColor), ("adminTitle", title), ("patronColor", sponsorData.OOCColor), ("playerName", player.Name), ("message", FormattedMessage.EscapeText(message)));
+        }
+        else if (adminData != null)
+        {
+            var title = adminData.Title ?? "Admin";
+            var prefs = _preferencesManager.GetPreferences(player.UserId);
+            wrappedMessage = Loc.GetString(
+                "chat-manager-send-ooc-admin-wrap-message", ("adminTitle", title), ("adminColor", prefs.AdminOOCColor), ("playerName", player.Name), ("message", FormattedMessage.EscapeText(message)));
+        }
+#endif
+        //LP edit end
 
         //TODO: player.Name color, this will need to change the structure of the MsgChatMessage
         ChatMessageToAll(ChatChannel.OOC, message, wrappedMessage, EntityUid.Invalid, hideChat: false, recordReplay: true, colorOverride: colorOverride, author: player.UserId);
@@ -489,9 +502,28 @@ internal sealed partial class ChatManager : IChatManager
         }
 
         var clients = _adminManager.ActiveAdmins.Select(p => p.Channel);
-        var wrappedMessage = Loc.GetString("chat-manager-send-admin-chat-wrap-message",
-                                        ("adminChannelName", Loc.GetString("chat-manager-admin-channel-name")),
-                                        ("playerName", player.Name), ("message", FormattedMessage.EscapeText(message)));
+        var wrappedMessage = String.Empty;  //LP edit
+
+        //LP edit start
+        var adminData = _adminManager.GetAdminData(player);
+#if LP
+        if (adminData != null && IoCManager.Resolve<SponsorsManager>().TryGetInfo(player.UserId, out var sponsorData) && sponsorData != null && sponsorData.Tier > 0)
+        {
+            var title = adminData.Title ?? "Admin";
+            var prefs = _preferencesManager.GetPreferences(player.UserId);
+            wrappedMessage = Loc.GetString(
+                "chat-manager-send-admin-chat-patron-wrap-message", ("adminChannelName", Loc.GetString("chat-manager-admin-channel-name")), ("adminColor", prefs.AdminOOCColor), ("adminTitle", title), ("patronColor", sponsorData.OOCColor), ("playerName", player.Name), ("message", FormattedMessage.EscapeText(message)));
+        }
+        else
+#endif
+            if (adminData != null)
+            {
+                var title = adminData.Title ?? "Admin";
+                var prefs = _preferencesManager.GetPreferences(player.UserId);
+                wrappedMessage = Loc.GetString(
+                    "chat-manager-send-admin-chat-wrap-message", ("adminChannelName", Loc.GetString("chat-manager-admin-channel-name")), ("adminTitle", title), ("adminColor", prefs.AdminOOCColor), ("playerName", player.Name), ("message", FormattedMessage.EscapeText(message)));
+            }
+        //LP edit end
 
         foreach (var client in clients)
         {
