@@ -7,3 +7,5 @@
       playSound: false
   - type: TriggerOnSpawn
   - type: DeleteOnTrigger
+  - type: TimedDespawn
+    lifetime: 5
