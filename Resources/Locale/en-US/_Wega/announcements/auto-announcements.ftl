@@ -1,22 +1,11 @@
-auto-announcements-title = Автоматическая система "Текна"
+auto-announcements-title = Automatic system "Tekna"
 auto-announcements-night-enabled =
-    Тема: Переход на ночной режим освещения
-    Уважаемые сотрудники и пользователи станции { $station }!
-    Система освещения станции переходит в ночной режим. Специальные датчики автоматически регулируют уровень освещенности для обеспечения комфортных и безопасных условий.
-    Если вы заметите какие-либо сбои или неудобства, пожалуйста, сообщите об этом через службу поддержки.
-    С уважением,
-    Автоматическая система "Текна"
+    Dear { $station } staff!
+    The station's lighting system has switched to night mode. Special sensors automatically adjust the lighting level to ensure comfortable and safe conditions.
 auto-announcements-night-disabled =
-    Тема: Отключение системы ночного освещения
-    Уважаемые сотрудники и пользователи станции { $station }!
-    Система ночного освещения станции была отключена. В связи с этим, с текущего момента автоматическое обновление уровня освещенности будет прекращено в полном объеме.
-    Если возникнут какие-либо вопросы или проблемы, пожалуйста, обращайтесь в службу поддержки.
-    С уважением,
-    Автоматическая система "Текна"
+    Dear { $station } staff!
+    The station's nighttime lighting system has been disabled. As a result, automatic lighting level updates will cease completely from now on.
 auto-announcements-holiday-mode =
-    Тема: Переход на праздничный режим освещения
-    Уважаемые сотрудники и пользователи станции { $station }!
-    Система освещения станции переходит в праздничный режим. В честь предстоящих праздников уровень освещенности будет переключен на празничный, чтобы создать атмосферу праздника и радости на всей территории станции.
-    Мы надеемся, что это добавит настроения и сделает ваше пребывание на станции еще более комфортным. Если у вас возникнут вопросы или предложения, пожалуйста, сообщите об этом через службу поддержки.
-    С уважением,
-    Автоматическая система "Текна"
+    Dear { $station } staff!
+    The station's lighting system is switching to holiday mode. In honor of the upcoming holidays, the lighting level will be switched to festive levels to create a festive and joyful atmosphere throughout the station.
+    We hope this will add to the atmosphere and make your stay at the station even more comfortable.
