@@ -72,10 +72,13 @@ namespace Content.Server.GameTicking
                 jObject["name"] = _baseServer.ServerName;
                 jObject["map"] = _gameMapManager.GetSelectedMap()?.MapName;
                 jObject["round_id"] = _gameTicker.RoundId;
-                jObject["players"] = _cfg.GetCVar(CCVars.AdminsCountInReportedPlayerCount)
+                jObject["players"] =
 #if LP
+                    _cfg.GetCVar(CCVars.AdminsCountInReportedPlayerCount)
                     ? _joinQueue.ActualPlayersCount
                     : _joinQueue.ActualPlayersCount - _adminManager.ActiveAdmins.Count()
+#else
+                    _playerManager.PlayerCount;
 #endif
                 ;   //LP edit (не трогайте если не надо)
 
