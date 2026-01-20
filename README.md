@@ -1,10 +1,10 @@
-<p align="center"> <img alt="Space Station 14" width="880" height="300" src="https://raw.githubusercontent.com/space-wizards/asset-dump/de329a7898bb716b9d5ba9a0cd07f38e61f1ed05/github-logo.svg" /></p>
+<p align="center"><img src="https://raw.githubusercontent.com/Lost-Paradise-Project/Goob-Station/master/Resources/Textures/_LP/Logo/splashlogo.png" width="512px" /></p>
 
-CorvaxGoob - это активно модифицируемый и основывающийся форк от всем изестного репозитория Goob Station, направленный на его перевод и создание собственного контента.
+Lost Paradise - это активно модифицируемый и основывающийся форк от всем известного репозитория Goob Station, направленный на его перевод и создание собственного контента.
 
 ## Ссылки
 
-[Наш Discord](https://discord.station14.ru) | [Наша Вики](https://wiki.station14.ru) | [Steam](https://store.steampowered.com/app/1255460/Space_Station_14/) | [Клиент без Steam](https://spacestation14.io/about/nightlies/) | [Основной репозиторий](https://github.com/space-wizards/space-station-14) | [Основной репозиторий Goob Station](https://github.com/Goob-Station/Goob-Station)
+[Сайт](https://wiki.lost-paradise.space) | [Discord](https://wiki.lost-paradise.space/discord) | [Steam](https://store.steampowered.com/app/1255460/Space_Station_14/) | [Клиент без Steam](https://spacestation14.io/about/nightlies/) | [Основной репозиторий](https://github.com/space-wizards/space-station-14) | [Основной репозиторий Goob Station](https://github.com/Goob-Station/Goob-Station)
 
 ## Документация
 
@@ -30,3 +30,13 @@ CorvaxGoob - это активно модифицируемый и основы�
 Большинство медиа-активов лицензированы по [CC-BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/), если не указано иное. Информация о лицензии и авторских правах для активов находится в файле метаданных. [Пример](https://github.com/space-wizards/space-station-14/blob/master/Resources/Textures/Objects/Tools/crowbar.rsi/meta.json).
 
 Обратите внимание, что некоторые активы лицензированы по некоммерческой лицензии [CC-BY-NC-SA 3.0](https://creativecommons.org/licenses/by-nc-sa/3.0/) или аналогичным некоммерческим лицензиям, и их необходимо удалить, если вы планируете использовать этот проект в коммерческих целях.
+
+## Заимствованный контент
+
+Тут будет указан контент который был позаимствован у других проектов Lost Paradise'ом
+
+| Папка | Исходный репозиторий                   | Лицензия |
+|-------|----------------------------------------|----------|
+| _Wega | https://github.com/wega-team/ss14-wega | GPL 3.0  |
+
+![Alt](https://repobeats.axiom.co/api/embed/811c0a4cac5ddceca87059b0aaed6f78f254749c.svg "Repobeats analytics image")

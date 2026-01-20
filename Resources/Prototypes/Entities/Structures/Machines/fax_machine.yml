@@ -178,7 +178,7 @@
         map: [ "base" ]
         color: "#bfe3ff"
   - type: FaxMachine
-    name: "Central Command"
+    name: "ЦентКомм" # LP edit
     notifyAdmins: true
     receiveAllStationGoals: true # CorvaxGoob-StationGoal
 
@@ -194,7 +194,7 @@
         map: [ "base" ]
         color: "#a3a3a3"
   - type: FaxMachine
-    name: "ERR*?*%!"
+    name: "ОШИ*?*%!" # LP edit
     responsePings: false
     notifyAdmins: true
   - type: Emagged
@@ -207,7 +207,7 @@
   suffix: NukeCodes
   components:
     - type: FaxMachine
-      name: "Captain's Office"
+      name: "Офис Капитана" # LP edit
       receiveNukeCodes: true
       receiveStationGoal: true # CorvaxGoob-StationGoal
     - type: StealTarget

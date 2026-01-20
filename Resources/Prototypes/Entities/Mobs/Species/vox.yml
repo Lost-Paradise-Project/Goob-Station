@@ -204,9 +204,14 @@
     - map: [ "enum.HumanoidVisualLayers.LArm" ]
     - map: [ "enum.HumanoidVisualLayers.RLeg" ]
     - map: [ "enum.HumanoidVisualLayers.LLeg" ]
-    - map: [ "jumpsuit" ]
+      # LP edit start
+    - map: [ "breast" ]
+    - map: [ "underwear" ]
     - map: [ "enum.HumanoidVisualLayers.LFoot" ]
     - map: [ "enum.HumanoidVisualLayers.RFoot" ]
+    - map: [ "socks" ]
+    - map: [ "jumpsuit" ]
+      # LP edit end
     - map: [ "enum.HumanoidVisualLayers.LHand" ]
     - map: [ "enum.HumanoidVisualLayers.RHand" ]
     - map: [ "gloves" ]
@@ -250,6 +255,18 @@
   - type: Inventory
     speciesId: vox
     displacements:
+      # LP edit start
+      socks:
+        sizeMaps:
+          32:
+            sprite: Mobs/Species/Vox/displacement.rsi
+            state: shoes
+      underwear:
+        sizeMaps:
+          32:
+            sprite: Mobs/Species/Vox/displacement.rsi
+            state: jumpsuit
+      # LP edit end
       jumpsuit:
         sizeMaps:
           32:
@@ -290,7 +307,7 @@
           32:
             sprite: Mobs/Species/Vox/displacement.rsi
             state: shoes
-      outerClothing: # Goob 
+      outerClothing: # Goob
         sizeMaps:
           32:
             sprite: Mobs/Species/Vox/displacement.rsi
@@ -395,6 +412,18 @@
   - type: Inventory
     speciesId: vox
     displacements:
+      # LP edit start
+      socks:
+        sizeMaps:
+          32:
+            sprite: Mobs/Species/Vox/displacement.rsi
+            state: shoes
+      underwear:
+        sizeMaps:
+          32:
+            sprite: Mobs/Species/Vox/displacement.rsi
+            state: jumpsuit
+      # LP edit end
       jumpsuit:
         sizeMaps:
           32:

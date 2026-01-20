@@ -11,12 +11,15 @@
 
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
+using Content.Shared.Random.Helpers; // Goobstation
 using Robust.Shared.Player;
 using Robust.Shared.Random;
 using Robust.Shared.Utility;
 
 namespace Content.Server.Antag;
-public sealed class AntagSelectionPlayerPool(List<List<ICommonSession>> orderedPools)
+
+// Goobstation
+public sealed class AntagSelectionPlayerPool (List<Dictionary<ICommonSession, float>> orderedPools)
 {
     public bool TryPickAndTake(IRobustRandom random, [NotNullWhen(true)] out ICommonSession? session)
     {

@@ -120,10 +120,6 @@ marking-LegProstheticLeftMoth-prosthetic = Prosthetic (Left Leg)
 marking-LegTwistingLeftMoth = Scar (Twisted Left Leg)
 marking-LegTwistingLeftMoth-twisting = Twisted Scar (Left)
 
-# UndergarmentBottom
-
-# UndergarmentTop
-
 # LFoot
 
 marking-FootChimeraLeftMoth = Moth Left Foot (Chimera)

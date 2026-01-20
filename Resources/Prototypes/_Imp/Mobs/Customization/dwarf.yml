@@ -195,10 +195,6 @@
     state: constellation
   shader: unshaded
 
-# UndergarmentBottom
-
-# UndergarmentTop
-
 # LFoot
 
 - type: marking

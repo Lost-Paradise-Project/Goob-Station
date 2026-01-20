@@ -114,10 +114,6 @@ marking-MycenaArmGlow-mycena = Mycena
 
 # LLeg
 
-# UndergarmentBottom
-
-# UndergarmentTop
-
 # LFoot
 
 # RFoot

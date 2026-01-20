@@ -193,6 +193,8 @@ using Robust.Shared.Physics.Systems;
 using Robust.Shared.Utility;
 using Direction = Robust.Shared.Maths.Direction;
 using Content.Client._CorvaxGoob.TTS;
+using Content.Goobstation.Common.Barks;
+using Content.Goobstation.Common.CCVar;
 using Content.Shared._CorvaxGoob; // CorvaxGoob-TTS
 using Content.Client._LP.Sponsors;  //LP edit
 
@@ -387,12 +389,11 @@ namespace Content.Client.Lobby.UI
             // Goob Station
             #region Barks
 
-            // CorvaxGoob-Revert : DB conflicts
-/*            if (configurationManager.GetCVar(GoobCVars.BarksEnabled))
+            if (configurationManager.GetCVar(GoobCVars.BarksEnabled))
             {
                 BarksContainer.Visible = true;
                 InitializeBarkVoice();
-            }*/
+            }
 
             #endregion
 
@@ -404,15 +405,15 @@ namespace Content.Client.Lobby.UI
                 SetSpecies(_species[args.Id].ID);
                 UpdateHairPickers();
                 OnSkinColorOnValueChanged();
-                // UpdateHeightWidthSliders(); // Goobstation: port EE height/width sliders // CorvaxGoob-Clearing
+                UpdateHeightWidthSliders(); // Goobstation: port EE height/width sliders
             };
 
-            /*// begin Goobstation: port EE height/width sliders
+            // begin Goobstation: port EE height/width sliders
             #region Height and Width
 
             var prototype = _species.Find(x => x.ID == Profile?.Species) ?? _species.First();
 
-            UpdateHeightWidthSliders(); // CorvaxGoob-Clearing
+            UpdateHeightWidthSliders();
             UpdateDimensions(SliderUpdate.Both);
 
             HeightSlider.OnValueChanged += _ => UpdateDimensions(SliderUpdate.Height);
@@ -433,7 +434,7 @@ namespace Content.Client.Lobby.UI
             };
 
             #endregion Height and Width
-            // end Goobstation: port EE height/width sliders*/
+            // end Goobstation: port EE height/width sliders
 
             #region Skin
 
@@ -1044,13 +1045,12 @@ namespace Content.Client.Lobby.UI
             UpdateSaveButton();
             UpdateMarkings();
             UpdateTTSVoicesControls(); // CorvaxGoob-TTS
-            // CorvaxGoob-Revert : DB conflicts
-            // UpdateBarkVoice(); // Goob Station - Barks
+            UpdateBarkVoice(); // Goob Station - Barks
             UpdateHairPickers();
             UpdateCMarkingsHair();
             UpdateCMarkingsFacialHair();
-            // UpdateHeightWidthSliders(); // Goobstation: port EE height/width sliders // CorvaxGoob-Clearing
-            // UpdateWeight(); // Goobstation: port EE height/width sliders // CorvaxGoob-Clearing
+            UpdateHeightWidthSliders(); // Goobstation: port EE height/width sliders
+            UpdateWeight(); // Goobstation: port EE height/width sliders
 
             RefreshAntags();
             RefreshJobs();
@@ -1545,14 +1545,13 @@ namespace Content.Client.Lobby.UI
             UpdateSexControls(); // update sex for new species
             UpdateSpeciesGuidebookIcon();
             ReloadPreview();
-            /*
-            // begin Goobstation: port EE height/width sliders // CorvaxGoob-Clearing
+            // begin Goobstation: port EE height/width sliders
             UpdateBarkVoice(); // Goob Station - Barks
             // begin Goobstation: port EE height/width sliders
             // Changing species provides inaccurate sliders without these
             UpdateHeightWidthSliders();
             UpdateWeight();
-            // end Goobstation: port EE height/width sliders */
+            // end Goobstation: port EE height/width sliders
         }
 
         private void SetName(string newName)
@@ -1572,7 +1571,7 @@ namespace Content.Client.Lobby.UI
             SetDirty();
         }
 
-        /*// begin Goobstation: port EE height/width sliders // CorvaxGoob-Clearing
+        // begin Goobstation: port EE height/width sliders
         private void SetProfileHeight(float height)
         {
             Profile = Profile?.WithHeight(height);
@@ -1586,12 +1585,12 @@ namespace Content.Client.Lobby.UI
             ReloadProfilePreview();
             IsDirty = true;
         }
-        // end Goobstation: port EE height/width sliders*/
-        // private void SetBarkVoice(BarkPrototype newVoice)
-        // {
-        //     Profile = Profile?.WithBarkVoice(newVoice);
-        //     IsDirty = true;
-        // }
+        // end Goobstation: port EE height/width sliders
+        private void SetBarkVoice(BarkPrototype newVoice)
+        {
+            Profile = Profile?.WithBarkVoice(newVoice);
+            IsDirty = true;
+        }
         // Goob Station - End
 
         public bool IsDirty
@@ -1808,7 +1807,7 @@ namespace Content.Client.Lobby.UI
             SpawnPriorityButton.SelectId((int) Profile.SpawnPriority);
         }
 
-        /*// begin Goobstation: port EE height/width sliders // CorvaxGoob-Clearing
+        // begin Goobstation: port EE height/width sliders
         private void UpdateHeightWidthSliders()
         {
             if (Profile is null)
@@ -1907,7 +1906,7 @@ namespace Content.Client.Lobby.UI
             // SpriteViewW.InvalidateMeasure();
             SpriteView.InvalidateMeasure();
         }
-        // end Goobstation: port EE height/width sliders*/
+        // end Goobstation: port EE height/width sliders
 
         private void UpdateHairPickers()
         {

@@ -96,6 +96,7 @@
 
 using Content.Server._CorvaxGoob.Skills;
 using Content.Server._LP.Sponsors;      //LP edit
+using Content.Server._Goobstation.Antag;
 using Content.Server.Antag.Components;
 using Content.Server.Chat.Managers;
 using Content.Server.GameTicking;
@@ -151,6 +152,7 @@ public sealed partial class AntagSelectionSystem : GameRuleSystem<AntagSelection
     [Dependency] private readonly TransformSystem _transform = default!;
     [Dependency] private readonly EntityWhitelistSystem _whitelist = default!;
     [Dependency] private readonly InventorySystem _inventory = default!; // Goobstation
+    [Dependency] private readonly LastRolledAntagManager _lastRolled = default!; // Goobstation
     [Dependency] private readonly PlayTimeTrackingManager _playTime = default!; // Goobstation
     [Dependency] private readonly SkillsSystem _skills = default!; // CorvaxGoob-Skills
     [Dependency] private readonly ISharedAdminLogManager _adminLogger = default!;
@@ -350,7 +352,7 @@ public sealed partial class AntagSelectionSystem : GameRuleSystem<AntagSelection
     }
 
     // Goobstation
-/*    public Dictionary<ICommonSession, float> ToWeightsDict(IList<ICommonSession> pool)
+    public Dictionary<ICommonSession, float> ToWeightsDict(IList<ICommonSession> pool)
     {
         Dictionary<ICommonSession, float> weights = new();
 
@@ -363,7 +365,7 @@ public sealed partial class AntagSelectionSystem : GameRuleSystem<AntagSelection
         }
 
         return weights;
-    }*/
+    }
 
     /// <summary>
     /// Chooses antagonists from the given selection of players
@@ -475,6 +477,16 @@ public sealed partial class AntagSelectionSystem : GameRuleSystem<AntagSelection
 
         if (!IsSessionValid(ent, session, def) || !IsEntityValid(session?.AttachedEntity, def))
             return false;
+
+        // Goobstation
+        if (session != null)
+        {
+            try // tests die without this
+            {
+                _lastRolled.SetLastRolled(session.UserId, _playTime.GetOverallPlaytime(session));
+            }
+            catch { }
+        }
 
         if (onlyPreSelect && session != null)
         {
@@ -651,7 +663,7 @@ public sealed partial class AntagSelectionSystem : GameRuleSystem<AntagSelection
             }
         }
 
-        return new AntagSelectionPlayerPool(new() { preferredList, fallbackList });
+        return new AntagSelectionPlayerPool(new() { ToWeightsDict(preferredList), ToWeightsDict(fallbackList) }); // Goobstation
     }
 
     /// <summary>

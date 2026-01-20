@@ -19,8 +19,6 @@ jobs:
   changelog:
     runs-on: self-hosted
     if: github.event.pull_request.merged == true
-    permissions:
-      contents: write
     steps:
       - name: Checkout Master
         uses: actions/checkout@v3

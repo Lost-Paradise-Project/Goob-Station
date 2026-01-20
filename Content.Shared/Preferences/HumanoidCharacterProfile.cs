@@ -134,9 +134,8 @@ namespace Content.Shared.Preferences
         public string Voice { get; set; } = SharedHumanoidAppearanceSystem.DefaultVoice;
         // CorvaxGoob-TTS-End
 
-        // CorvaxGoob-Revert : DB conflicts
-        // [DataField] // Goob Station - Barks
-        // public ProtoId<BarkPrototype> BarkVoice { get; set; } = SharedHumanoidAppearanceSystem.DefaultBarkVoice; // Goob Station - Barks
+        [DataField] // Goob Station - Barks
+        public ProtoId<BarkPrototype> BarkVoice { get; set; } = SharedHumanoidAppearanceSystem.DefaultBarkVoice; // Goob Station - Barks
 
         [DataField]
         public int Age { get; set; } = 18;
@@ -146,6 +145,15 @@ namespace Content.Shared.Preferences
 
         [DataField]
         public Gender Gender { get; private set; } = Gender.Male;
+
+        // begin Goobstation: port EE height/width sliders
+        [DataField]
+        public float Height { get; private set; }
+
+        [DataField]
+        public float Width { get; private set; }
+        // end Goobstation: port EE height/width sliders
+
 
         /// <summary>
         /// <see cref="Appearance"/>
@@ -190,6 +198,8 @@ namespace Content.Shared.Preferences
             string flavortext,
             string species,
             string voice, // CorvaxGoob-TTS
+            float height, // Goobstation: port EE height/width sliders
+            float width, // Goobstation: port EE height/width sliders
             int age,
             Sex sex,
             Gender gender,
@@ -199,13 +209,15 @@ namespace Content.Shared.Preferences
             PreferenceUnavailableMode preferenceUnavailable,
             HashSet<ProtoId<AntagPrototype>> antagPreferences,
             HashSet<ProtoId<TraitPrototype>> traitPreferences,
-            Dictionary<string, RoleLoadout> loadouts)
-            // ProtoId<BarkPrototype> barkVoice) // Goob Station - Barks // CorvaxGoob-Revert : DB conflicts
+            Dictionary<string, RoleLoadout> loadouts,
+            ProtoId<BarkPrototype> barkVoice) // Goob Station - Barks
         {
             Name = name;
             FlavorText = flavortext;
             Species = species;
             Voice = voice; // CorvaxGoob-TTS
+            Height = height; // Goobstation: port EE height/width sliders
+            Width = width; // Goobstation: port EE height/width sliders
             Age = age;
             Sex = sex;
             Gender = gender;
@@ -216,7 +228,7 @@ namespace Content.Shared.Preferences
             _antagPreferences = antagPreferences;
             _traitPreferences = traitPreferences;
             _loadouts = loadouts;
-            // BarkVoice = barkVoice; // Goob Station - Barks // CorvaxGoob-Revert : DB conflicts
+            BarkVoice = barkVoice; // Goob Station - Barks
 
             var hasHighPrority = false;
             foreach (var (key, value) in _jobPriorities)
@@ -239,6 +251,8 @@ namespace Content.Shared.Preferences
                 other.FlavorText,
                 other.Species,
                 other.Voice, // CorvaxGoob-TTS
+                other.Height, // Goobstation: port EE height/width sliders
+                other.Width, // Goobstation: port EE height/width sliders
                 other.Age,
                 other.Sex,
                 other.Gender,
@@ -248,8 +262,8 @@ namespace Content.Shared.Preferences
                 other.PreferenceUnavailable,
                 new HashSet<ProtoId<AntagPrototype>>(other.AntagPreferences),
                 new HashSet<ProtoId<TraitPrototype>>(other.TraitPreferences),
-                new Dictionary<string, RoleLoadout>(other.Loadouts))
-                // other.BarkVoice) // Goob Station - Barks // CorvaxGoob-Revert : DB conflicts
+                new Dictionary<string, RoleLoadout>(other.Loadouts),
+                other.BarkVoice) // Goob Station - Barks
         {
         }
 
@@ -317,13 +331,12 @@ namespace Content.Shared.Preferences
                 .Where(o => CanHaveVoice(o, sex)).ToArray()
             ).ID;
             // CorvaxGoob-TTS-End
-            // CorvaxGoob-Revert : DB conflicts
             // Goob Station - Barks Start
-            // var barkvoiceId = random.Pick(prototypeManager
-            //     .EnumeratePrototypes<BarkPrototype>()
-            //     .Where(o => o.RoundStart && (o.SpeciesWhitelist is null || o.SpeciesWhitelist.Contains(species)))
-            //     .ToArray()
-            // );
+            var barkvoiceId = random.Pick(prototypeManager
+                .EnumeratePrototypes<BarkPrototype>()
+                .Where(o => o.RoundStart && (o.SpeciesWhitelist is null || o.SpeciesWhitelist.Contains(species)))
+                .ToArray()
+            );
             //  Goob Station - Barks End
 
             var gender = Gender.Epicene;
@@ -349,8 +362,10 @@ namespace Content.Shared.Preferences
                 Gender = gender,
                 Species = species,
                 Voice = voiceId, // CorvaxGoob-TTS
+                Width = width, // Goobstation: port EE height/width sliders
+                Height = height, // Goobstation: port EE height/width sliders
                 Appearance = HumanoidCharacterAppearance.Random(species, sex),
-                // BarkVoice = barkvoiceId, // Goob Station - Barks // CorvaxGoob-Revert : DB conflicts
+                BarkVoice = barkvoiceId, // Goob Station - Barks
             };
         }
 
@@ -384,6 +399,17 @@ namespace Content.Shared.Preferences
             return new(this) { Species = species };
         }
 
+        // begin Goobstation: port EE height/width sliders
+        public HumanoidCharacterProfile WithHeight(float height)
+        {
+            return new(this) { Height = height };
+        }
+        public HumanoidCharacterProfile WithWidth(float width)
+        {
+            return new(this) { Width = width };
+        }
+        // end Goobstation: port EE height/width sliders
+
         // CorvaxGoob-TTS-Start
         public HumanoidCharacterProfile WithVoice(string voice)
         {
@@ -401,13 +427,12 @@ namespace Content.Shared.Preferences
             return new(this) { SpawnPriority = spawnPriority };
         }
 
-        // CorvaxGoob-Revert : DB conflicts
-/*        // Goob Station - Barks Start
+        // Goob Station - Barks Start
         public HumanoidCharacterProfile WithBarkVoice(BarkPrototype barkVoice)
         {
             return new(this) { BarkVoice = barkVoice };
         }
-        // Goob Station - Barks End*/
+        // Goob Station - Barks End
 
         public HumanoidCharacterProfile WithJobPriorities(IEnumerable<KeyValuePair<ProtoId<JobPrototype>, JobPriority>> jobPriorities)
         {
@@ -568,9 +593,9 @@ namespace Content.Shared.Preferences
             if (Sex != other.Sex) return false;
             if (Gender != other.Gender) return false;
             if (Species != other.Species) return false;
-            // if (Height != other.Height) return false; // Goobstation: port EE height/width sliders // CorvaxGoob-Clearing
-            // if (Width != other.Width) return false; // Goobstation: port EE height/width sliders // CorvaxGoob-Clearing
-            // if (BarkVoice != other.BarkVoice) return false; // Goob Station - Barks // CorvaxGoob-Clearing
+            if (Height != other.Height) return false; // Goobstation: port EE height/width sliders
+            if (Width != other.Width) return false; // Goobstation: port EE height/width sliders
+            if (BarkVoice != other.BarkVoice) return false; // Goob Station - Barks
             if (PreferenceUnavailable != other.PreferenceUnavailable) return false;
             if (SpawnPriority != other.SpawnPriority) return false;
             if (!_jobPriorities.SequenceEqual(other._jobPriorities)) return false;
@@ -669,6 +694,16 @@ namespace Content.Shared.Preferences
                 flavortext = FormattedMessage.RemoveMarkupOrThrow(FlavorText);
             }
 
+            // begin Goobstation: port EE height/width sliders
+            var height = Height;
+            if (speciesPrototype != null)
+                height = Math.Clamp(Height, speciesPrototype.MinHeight, speciesPrototype.MaxHeight);
+
+            var width = Width;
+            if (speciesPrototype != null)
+                width = Math.Clamp(Width, speciesPrototype.MinWidth, speciesPrototype.MaxWidth);
+            // end Goobstation: port EE height/width sliders
+
             var appearance = HumanoidCharacterAppearance.EnsureValid(Appearance, Species, Sex, sponsorPrototypes); // CorvaxGoob-Sponsors
 
             var prefsUnavailableMode = PreferenceUnavailable switch
@@ -718,8 +753,8 @@ namespace Content.Shared.Preferences
             Name = name;
             FlavorText = flavortext;
             Age = age;
-            // Height = height; // Goobstation: port EE height/width sliders // CorvaxGoob-Clearing
-            // Width = width; // Goobstation: port EE height/width sliders // CorvaxGoob-Clearing
+            Height = height; // Goobstation: port EE height/width sliders
+            Width = width; // Goobstation: port EE height/width sliders
             Sex = sex;
             Gender = gender;
             Appearance = appearance;
@@ -843,13 +878,13 @@ namespace Content.Shared.Preferences
             hashCode.Add(Name);
             hashCode.Add(FlavorText);
             hashCode.Add(Species);
-            // hashCode.Add(Height); // Goobstation: port EE height/width sliders // CorvaxGoob-Clearing
-            // hashCode.Add(Width); // Goobstation: port EE height/width sliders // CorvaxGoob-Clearing
+            hashCode.Add(Height); // Goobstation: port EE height/width sliders
+            hashCode.Add(Width); // Goobstation: port EE height/width sliders
             hashCode.Add(Age);
             hashCode.Add((int) Sex);
             hashCode.Add((int) Gender);
             hashCode.Add(Appearance);
-            // hashCode.Add(BarkVoice); // Goob Station - Barks // CorvaxGoob-Revert : DB conflicts
+            hashCode.Add(BarkVoice); // Goob Station - Barks
             hashCode.Add((int) SpawnPriority);
             hashCode.Add((int) PreferenceUnavailable);
             return hashCode.ToHashCode();

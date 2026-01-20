@@ -38,8 +38,10 @@
   id: MobResomiSprites
   sprites:
     Head: MobResomiHead
-    Hair: MobHumanoidAnyMarking
-    FacialHair: MobHumanoidAnyMarking
+    # LP edit start
+#    Hair: MobHumanoidAnyMarking
+#    FacialHair: MobHumanoidAnyMarking
+    # LP edit end
     Snout: MobHumanoidAnyMarking
     Chest: MobResomiChest
     Groin: MobResomiGroin
@@ -59,9 +61,14 @@
 - type: markingPoints
   id: MobResomiMarkingLimits
   points:
+    # LP edit start
     Hair:
-      points: 1
+      points: 0
       required: false
+    FacialHair:
+      points: 0
+      required: false
+    # LP edit end
     Snout:
       points: 1
       required: false
@@ -77,12 +84,6 @@
       required: false
     Chest:
       points: 10
-      required: false
-    Underwear:
-      points: 1
-      required: false
-    Undershirt:
-      points: 1
       required: false
     RightLeg:
       points: 2

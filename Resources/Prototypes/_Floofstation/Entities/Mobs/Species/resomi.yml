@@ -82,7 +82,20 @@
           state: inHand
   - type: Inventory
     speciesId: resomi
+    templateId: resomi # LP edit
     displacements:
+      # LP edit start
+      socks:
+        sizeMaps:
+          32:
+            sprite: _Floofstation/Mobs/Species/Resomi/displacement.rsi
+            state: feet
+      underwear:
+        sizeMaps:
+          32:
+            sprite: _Floofstation/Mobs/Species/Resomi/displacement.rsi
+            state: jumpsuit
+      # LP edit end
       jumpsuit:
         sizeMaps:
           32:
@@ -144,6 +157,18 @@
             sprite: _Floofstation/Mobs/Species/Resomi/displacement.rsi
             state: belt
     femaleDisplacements: # Goobstation - splitting up the genders broke displacements, apparently it won't just apply the same displacement to both genders :|
+      # LP edit start
+      socks:
+        sizeMaps:
+          32:
+            sprite: _Floofstation/Mobs/Species/Resomi/displacement.rsi
+            state: feet
+      underwear:
+        sizeMaps:
+          32:
+            sprite: _Floofstation/Mobs/Species/Resomi/displacement.rsi
+            state: jumpsuit
+      # LP edit end
       jumpsuit:
         sizeMaps:
           32:
@@ -250,8 +275,13 @@
     - map: [ "enum.HumanoidVisualLayers.RArm" ]
     - map: [ "enum.HumanoidVisualLayers.LLeg" ]
     - map: [ "enum.HumanoidVisualLayers.RLeg" ]
+    # LP edit start
+    - map: [ "breast" ]
+    - map: [ "underwear" ]
     - map: [ "enum.HumanoidVisualLayers.LFoot" ]
     - map: [ "enum.HumanoidVisualLayers.RFoot" ]
+    - map: [ "socks" ]
+    # LP edit end
     - map: [ "enum.HumanoidVisualLayers.LHand" ]  # Hands below jumpsuit since its bigger-than-usual sprite and this allows jumpsuits to have better-looking sleeves
     - map: [ "enum.HumanoidVisualLayers.RHand" ]
     - map: [ "enum.HumanoidVisualLayers.Tail" ]   # Tail changed to be below outerclothing and above limbs
@@ -302,7 +332,20 @@
           state: inHand
   - type: Inventory
     speciesId: resomi
+    templateId: resomi # LP edit
     displacements:
+      # LP edit start
+      socks:
+        sizeMaps:
+          32:
+            sprite: _Floofstation/Mobs/Species/Resomi/displacement.rsi
+            state: feet
+      underwear:
+        sizeMaps:
+          32:
+            sprite: _Floofstation/Mobs/Species/Resomi/displacement.rsi
+            state: jumpsuit
+      # LP edit end
       jumpsuit:
         sizeMaps:
           32:
@@ -374,8 +417,13 @@
     - map: [ "enum.HumanoidVisualLayers.RArm" ]
     - map: [ "enum.HumanoidVisualLayers.LLeg" ]
     - map: [ "enum.HumanoidVisualLayers.RLeg" ]
+      # LP edit start
+    - map: [ "breast" ]
+    - map: [ "underwear" ]
     - map: [ "enum.HumanoidVisualLayers.LFoot" ]
     - map: [ "enum.HumanoidVisualLayers.RFoot" ]
+    - map: [ "socks" ]
+      # LP edit end
     - map: [ "enum.HumanoidVisualLayers.LHand" ]  # Hands below jumpsuit since its bigger-than-usual sprite and this allows jumpsuits to have better-looking sleeves
     - map: [ "enum.HumanoidVisualLayers.RHand" ]
     - map: [ "enum.HumanoidVisualLayers.Tail" ]   # Tail changed to be below outerclothing and above limbs

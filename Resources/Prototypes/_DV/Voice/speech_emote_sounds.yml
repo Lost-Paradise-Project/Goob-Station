@@ -49,8 +49,8 @@
       collection: HarpyPurrs
     Ring:
       collection: HarpyRings
-    Pew:
-      collection: HarpyPews
+#    Pew:
+#      collection: HarpyPews
     Bang:
       collection: HarpyBangs
     Beep:
@@ -133,8 +133,8 @@
       collection: HarpyPurrs
     Ring:
       collection: HarpyRings
-    Pew:
-      collection: HarpyPews
+#    Pew:
+#      collection: HarpyPews
     Bang:
       collection: HarpyBangs
     Beep:

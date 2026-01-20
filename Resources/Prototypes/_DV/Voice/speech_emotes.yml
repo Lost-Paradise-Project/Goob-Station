@@ -22,28 +22,38 @@
   blacklist:
     components:
     - BorgChassis
-  chatMessages: [rings.]
+  chatMessages: [звенит.] # LP edit
   chatTriggers:
     - ring
     - rings
     - ringing
     - ringed
+    # LP edit start
+    - звенит
+    - звенит.
+    - звенит!
+    # LP edit end
 
-- type: emote
-  id: Pew
-  name: Pew
-  category: Vocal
-  icon: _Goobstation/Interface/Emotes/pew.png
-  whitelist:
-    tags:
-    - HarpyEmotes
-  blacklist:
-    components:
-    - BorgChassis
-  chatMessages: [pews.]
-  chatTriggers:
-    - pew
-    - pews
+#- type: emote
+#  id: Pew
+#  name: Pew
+#  category: Vocal
+#  icon: _Goobstation/Interface/Emotes/pew.png
+#  whitelist:
+#    tags:
+#    - HarpyEmotes
+#  blacklist:
+#    components:
+#    - BorgChassis
+#  chatMessages: [чирикает.] # LP edit
+#  chatTriggers:
+#    - pew
+#    - pews
+#    # LP edit start
+#    - чирикает
+#    - чирикает.
+#    - чирикает!
+#    # LP edit end
 
 - type: emote
   id: Bang
@@ -56,12 +66,17 @@
   blacklist:
     components:
     - BorgChassis
-  chatMessages: [bangs.]
+  chatMessages: [стреляет.] # LP edit
   chatTriggers:
     - bangs
     - bang
     - banging
     - banged
+    # LP edit start
+    - стреляет
+    - стреляет.
+    - стреляет!
+    # LP edit end
 
 #- type: emote
 #  id: Beep
@@ -84,12 +99,17 @@
   blacklist:
     components:
     - BorgChassis
-  chatMessages: [revs.]
+  chatMessages: [ревёт.] # LP edit
   chatTriggers:
     - revs
     - rev
     - revving
     - revved
+    # LP edit start
+    - ревёт.
+    - ревёт
+    - ревёт!
+    # LP edit end
 
 #- type: emote
 #  id: Click
@@ -112,12 +132,17 @@
   blacklist:
     components:
     - BorgChassis
-  chatMessages: [caws.]
+  chatMessages: [каркает.] # LP edit
   chatTriggers:
     - caws
     - caw
     - cawing
     - cawed
+    # LP edit start
+    - каркает
+    - каркает.
+    - каркает!
+    # LP edit end
 
 #Vulpkanin
 - type: emote
@@ -132,12 +157,17 @@
   blacklist:
     components:
     - BorgChassis
-  chatMessages: [barks.]
+  chatMessages: [гавкает.] # LP edit
   chatTriggers:
     - bark
     - barks
     - barked
     - barking
+    # LP edit start
+    - гавкает
+    - гавкает.
+    - гавкает!
+    # LP edit end
 
 - type: emote
   id: Snarl
@@ -151,12 +181,17 @@
   blacklist:
     components:
     - BorgChassis
-  chatMessages: [snarls.]
+  chatMessages: [храпит.] # LP edit
   chatTriggers:
     - snarl
     - snarls
     - snarled
     - snarling
+    # LP edit start
+    - храпит
+    - храпит.
+    - храпит!
+    # LP edit end
 
 - type: emote
   id: Whine
@@ -170,12 +205,17 @@
   blacklist:
     components:
     - BorgChassis
-  chatMessages: [whines.]
+  chatMessages: [скулит.] # LP edit
   chatTriggers:
     - whine
     - whines
     - whined
     - whining
+    # LP edit start
+    - скулит
+    - скулит.
+    - скулит!
+    # LP edit end
 
 - type: emote
   id: Howl
@@ -189,12 +229,17 @@
   blacklist:
     components:
     - BorgChassis
-  chatMessages: [howls.]
+  chatMessages: [воет.] # LP edit
   chatTriggers:
     - howl
     - howls
     - howling
     - howled
+    # LP edit start
+    - воет
+    - воет.
+    - воет!
+    # LP edit end
 
 - type: emote
   id: Awoo
@@ -208,12 +253,23 @@
   blacklist:
     components:
     - BorgChassis
-  chatMessages: [awoos.]
+  chatMessages: [авукает.] # LP edit
   chatTriggers:
     - awoo
     - awoos
     - awooing
     - awooed
+    # LP edit start
+    - аву
+    - авуу
+    - авукает
+    - аву!
+    - авуу!
+    - авукает!
+    - аву.
+    - авуу.
+    - авукает.
+    # LP edit end
 
 # Feroxi
 - type: emote
@@ -227,7 +283,7 @@
   blacklist:
     components:
     - BorgChassis
-  chatMessages: [gnashes.]
+  chatMessages: [скрежет зубами.]
   chatTriggers:
     - gnash
     - gnashes
@@ -249,3 +305,11 @@
     - gnashed her teeth
     - gnashed his teeth
     - gnashed its teeth
+    # LP edit start
+    - скрежет
+    - скрежет зубами
+    - скрежет!
+    - скрежет зубами!
+    - скрежет.
+    - скрежет зубами.
+    # LP edit end

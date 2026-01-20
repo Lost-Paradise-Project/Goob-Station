@@ -83,34 +83,6 @@ marking-ArachnidLLegSegments = Segmented Leg (Left)
 marking-ArachnidLLegSegments-segments1 = Thigh
 marking-ArachnidLLegSegments-segments2 = Shin
 
-# UndergarmentBottom
-
-# UndergarmentTop
-
-marking-UndergarmentTopBinderA = Binder
-marking-UndergarmentTopBinderA-binder = Binder
-
-marking-UndergarmentTopTanktopA = Tanktop
-marking-UndergarmentTopTanktopA-tanktop = Tanktop
-
-marking-UndershirtBraSportsA = Bra (Sports)
-marking-UndershirtBraSportsA-sports = Bra
-
-marking-UndershirtBraStraplessA = Bra (Strapless)
-marking-UndershirtBraStraplessA-strapless = Bra
-
-marking-UndershirtDefaultA = Undershirt
-marking-UndershirtDefaultA-undershirt = Undershirt
-
-marking-UndershirtGrossSleevelessA = Tanktop (Gross)
-marking-UndershirtGrossSleevelessA-grosssleeveless = Tanktop
-
-marking-UndershirtNanotrasenA = Undershirt (Nanotrasen)
-marking-UndershirtNanotrasenA-nanotrasen = Undershirt
-
-marking-UndershirtRolledA = Undershirt (Cropped)
-marking-UndershirtRolledA-rolledundershirt = Undershirt
-
 # LFoot
 
 # RFoot

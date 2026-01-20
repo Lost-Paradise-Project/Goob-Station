@@ -395,14 +395,15 @@ namespace Content.Server.Database
                 loadouts[role.RoleName] = loadout;
             }
 
-            // CorvaxGoob-Revert : DB conflicts
-            // var barkVoice = profile.BarkVoice ?? SharedHumanoidAppearanceSystem.DefaultBarkVoice; // Goob Station - Barks
+            var barkVoice = profile.BarkVoice ?? SharedHumanoidAppearanceSystem.DefaultBarkVoice; // Goob Station - Barks
 
             return new HumanoidCharacterProfile(
                 profile.CharacterName,
                 profile.FlavorText,
                 profile.Species,
                 voice, // CorvaxGoob-TTS
+                profile.Height, // Goobstation: port EE height/width sliders
+                profile.Width, // Goobstation: port EE height/width sliders
                 profile.Age,
                 sex,
                 gender,
@@ -421,8 +422,8 @@ namespace Content.Server.Database
                 (PreferenceUnavailableMode) profile.PreferenceUnavailable,
                 antags.ToHashSet(),
                 traits.ToHashSet(),
-                loadouts
-                // barkVoice // Goob Station - Barks // CorvaxGoob-Revert : DB conflicts
+                loadouts,
+                barkVoice // Goob Station - Barks
             );
         }
 
@@ -441,6 +442,8 @@ namespace Content.Server.Database
             profile.FlavorText = humanoid.FlavorText;
             profile.Species = humanoid.Species;
             profile.Voice = humanoid.Voice; // CorvaxGoob-TTS
+            profile.Height = humanoid.Height; // Goobstation: port EE height/width sliders
+            profile.Width = humanoid.Width; // Goobstation: port EE height/width sliders
             profile.Age = humanoid.Age;
             profile.Sex = humanoid.Sex.ToString();
             profile.Gender = humanoid.Gender.ToString();
@@ -474,8 +477,7 @@ namespace Content.Server.Database
                         .Select(t => new Trait { TraitName = t })
             );
 
-            // CorvaxGoob-Revert : DB conflicts
-            // profile.BarkVoice = humanoid.BarkVoice; // Goob Station - Barks
+            profile.BarkVoice = humanoid.BarkVoice; // Goob Station - Barks
 
             profile.Loadouts.Clear();
 
@@ -581,7 +583,7 @@ namespace Content.Server.Database
             ImmutableArray<ImmutableArray<byte>>? modernHWIds,
             bool includeUnbanned);
 
-        public abstract Task AddServerBanAsync(ServerBanDef serverBan);
+        public abstract Task<ServerBanDef> AddServerBanAsync(ServerBanDef serverBan);
         public abstract Task AddServerUnbanAsync(ServerUnbanDef serverUnban);
 
         public async Task EditServerBan(int id, string reason, NoteSeverity severity, DateTimeOffset? expiration, Guid editedBy, DateTimeOffset editedAt)
@@ -829,6 +831,29 @@ namespace Content.Server.Database
                 new DateTimeOffset(NormalizeDatabaseTime(player.LastSeenTime)),
                 player.LastSeenAddress,
                 player.LastSeenHWId);
+        }
+
+
+        public async Task<TimeSpan> GetLastRolledAntag(NetUserId userId) // Goobstation
+        {
+            await using var db = await GetDb();
+            TimeSpan? lastRolled = await db.DbContext.Player
+                .Where(dbPlayer => dbPlayer.UserId == userId)
+                .Select(dbPlayer => dbPlayer.LastRolledAntag)
+                .SingleOrDefaultAsync();
+
+            return lastRolled ?? TimeSpan.Zero;
+        }
+
+        public async Task<bool> SetLastRolledAntag(NetUserId userId, TimeSpan to) // Goobstation
+        {
+            await using var db = await GetDb();
+            var dbPlayer = await db.DbContext.Player.Where(dbPlayer => dbPlayer.UserId == userId).SingleOrDefaultAsync();
+            if (dbPlayer == null)
+                return false;
+            dbPlayer.LastRolledAntag = to;
+            await db.DbContext.SaveChangesAsync();
+            return true;
         }
 
         #endregion

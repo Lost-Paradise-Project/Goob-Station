@@ -106,13 +106,12 @@ public sealed partial class AudioTab : Control
             CCCVars.AnnouncementsSound,
             SliderVolumeAnnouncements);
         // CorvaxGoob-Announcements-Volume-End
-        
-        // CorvaxGoob-Revert : DB conflicts
+
         // Goob Station - Barks-start
-        // Control.AddOptionPercentSlider(
-        //     GoobCVars.BarksVolume,
-        //     SliderVolumeBarks,
-        //     scale: ContentAudioSystem.BarksMultiplier);
+        Control.AddOptionPercentSlider(
+             GoobCVars.BarksVolume,
+             SliderVolumeBarks,
+             scale: ContentAudioSystem.BarksMultiplier);
         // Goob Station - Barks-end
 
         Control.AddOptionPercentSlider(

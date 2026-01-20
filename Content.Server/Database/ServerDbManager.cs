@@ -179,7 +179,7 @@ namespace Content.Server.Database
             ImmutableArray<ImmutableArray<byte>>? modernHWIds,
             bool includeUnbanned = true);
 
-        Task AddServerBanAsync(ServerBanDef serverBan);
+        Task<ServerBanDef> AddServerBanAsync(ServerBanDef serverBan);
         Task AddServerUnbanAsync(ServerUnbanDef serverBan);
 
         public Task EditServerBan(
@@ -273,6 +273,8 @@ namespace Content.Server.Database
             ImmutableTypedHwid? hwId);
         Task<PlayerRecord?> GetPlayerRecordByUserName(string userName, CancellationToken cancel = default);
         Task<PlayerRecord?> GetPlayerRecordByUserId(NetUserId userId, CancellationToken cancel = default);
+        Task<bool> SetLastRolledAntag(NetUserId userId, TimeSpan to); // Goobstation
+        Task<TimeSpan> GetLastRolledAntag(NetUserId userId); // Goobstation
         #endregion
 
         #region Connection Logs
@@ -647,7 +649,7 @@ namespace Content.Server.Database
             return RunDbCommand(() => _db.GetServerBansAsync(address, userId, hwId, modernHWIds, includeUnbanned));
         }
 
-        public Task AddServerBanAsync(ServerBanDef serverBan)
+        public Task<ServerBanDef> AddServerBanAsync(ServerBanDef serverBan)
         {
             DbWriteOpsMetric.Inc();
             return RunDbCommand(() => _db.AddServerBanAsync(serverBan));
@@ -750,6 +752,18 @@ namespace Content.Server.Database
         {
             DbReadOpsMetric.Inc();
             return RunDbCommand(() => _db.GetPlayerRecordByUserId(userId, cancel));
+        }
+
+        public Task<TimeSpan> GetLastRolledAntag(NetUserId userId) // Goobstation
+        {
+            DbReadOpsMetric.Inc();
+            return RunDbCommand(() => _db.GetLastRolledAntag(userId));
+        }
+
+        public Task<bool> SetLastRolledAntag(NetUserId userId, TimeSpan to) // Goobstation
+        {
+            DbReadOpsMetric.Inc();
+            return RunDbCommand(() => _db.SetLastRolledAntag(userId, to));
         }
 
         public Task<int> AddConnectionLogAsync(

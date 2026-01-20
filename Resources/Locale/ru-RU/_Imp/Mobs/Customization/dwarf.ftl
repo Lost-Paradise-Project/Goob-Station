@@ -46,12 +46,6 @@ marking-DwarfConstellationRLeg-constellation = Созвездие на ноге 
 marking-DwarfConstellationLLeg = Созвездие на ноге (левая)
 marking-DwarfConstellationLLeg-constellation = Созвездие на ноге (левая)
 
-# UndergarmentBottom
-
-
-# UndergarmentTop
-
-
 # LFoot
 
 marking-DwarfConstellationLFoot = Созвездие на стопе (левая)

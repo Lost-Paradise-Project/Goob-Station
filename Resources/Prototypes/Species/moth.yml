@@ -46,8 +46,6 @@
     Head: MobMothHead
     Face: MobHumanoidAnyMarking
     Snout: MobHumanoidAnyMarking
-    Underwear: MobHumanoidAnyMarking
-    Undershirt: MobHumanoidAnyMarking
     Chest: MobMothChest
     Groin: MobMothGroin
     HeadTop: MobHumanoidAnyMarking
@@ -98,12 +96,6 @@
       required: false
     Chest:
       points: 8
-      required: false
-    Underwear:
-      points: 1
-      required: false
-    Undershirt:
-      points: 1
       required: false
     RightLeg:
       points: 2

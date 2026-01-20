@@ -95,12 +95,6 @@ marking-LegProstheticLeftMoth-prosthetic = Протез (Левая нога)
 marking-LegTwistingLeftMoth = Шрам (Крученая левая нога)
 marking-LegTwistingLeftMoth-twisting = Крученый шрам (Левая нога)
 
-# UndergarmentBottom
-
-
-# UndergarmentTop
-
-
 # LFoot
 
 marking-FootChimeraLeftMoth = Левая ступня моли (Химера)

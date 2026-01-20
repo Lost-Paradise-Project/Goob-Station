@@ -114,7 +114,7 @@ public sealed class BanPanelEui : BaseEui
         switch (msg)
         {
             case BanPanelEuiStateMsg.CreateBanRequest r:
-                BanPlayer(r.Player, r.IpAddress, r.UseLastIp, r.Hwid, r.UseLastHwid, r.Minutes, r.Severity, r.Reason, r.Roles, r.Erase);
+                BanPlayer(r.Player, r.IpAddress, r.UseLastIp, r.Hwid, r.UseLastHwid, r.Minutes, r.Severity, r.Reason, r.Roles);
                 break;
             case BanPanelEuiStateMsg.GetPlayerInfoRequest r:
                 ChangePlayer(r.PlayerUsername);
@@ -122,7 +122,8 @@ public sealed class BanPanelEui : BaseEui
         }
     }
 
-    private async void BanPlayer(string? target, string? ipAddressString, bool useLastIp, ImmutableTypedHwid? hwid, bool useLastHwid, uint minutes, NoteSeverity severity, string reason, IReadOnlyCollection<string>? roles, bool erase)
+    private async void BanPlayer(string? target, string? ipAddressString, bool useLastIp, ImmutableTypedHwid? hwid,
+        bool useLastHwid, uint minutes, NoteSeverity severity, string reason, IReadOnlyCollection<string>? roles)
     {
         if (!_admins.HasAdminFlag(Player, AdminFlags.Ban))
         {
@@ -151,9 +152,9 @@ public sealed class BanPanelEui : BaseEui
             }
 
             if (hidInt == 0)
-                hidInt = (uint) (ipAddress.AddressFamily == AddressFamily.InterNetworkV6 ? Ipv6_CIDR : Ipv4_CIDR);
+                hidInt = (uint)(ipAddress.AddressFamily == AddressFamily.InterNetworkV6 ? Ipv6_CIDR : Ipv4_CIDR);
 
-            addressRange = (ipAddress, (int) hidInt);
+            addressRange = (ipAddress, (int)hidInt);
         }
 
         var targetUid = target is not null ? PlayerId : null;
@@ -184,37 +185,27 @@ public sealed class BanPanelEui : BaseEui
         if (roles?.Count > 0)
         {
             var now = DateTimeOffset.UtcNow;
-            foreach (var role in roles)
+            Dictionary<string, int> banids = new();
+            foreach (var job in roles)
             {
-                if (_prototypeManager.HasIndex<JobPrototype>(role))
+                if (_prototypeManager.HasIndex<JobPrototype>(job))
                 {
-                    _banManager.CreateRoleBan(targetUid, target, Player.UserId, addressRange, targetHWid, role, minutes, severity, reason, now);
+                    var bid = await _banManager.CreateRoleBan(targetUid, target, Player.UserId, null, targetHWid, job, minutes, severity, reason, now);
+                    banids.Add(job.ToString(), bid);
                 }
                 else
                 {
-                    _sawmill.Warning($"{Player.Name} ({Player.UserId}) tried to issue a job ban with an invalid job: {role}");
+                    _sawmill.Warning($"{Player.Name} ({Player.UserId}) tried to issue a job ban with an invalid job: {job}");
                 }
             }
+            _banManager.WebhookUpdateRoleBans(targetUid, target, Player.UserId, null, targetHWid, minutes, severity, reason, now, banids);
 
             Close();
             return;
         }
 
-        if (erase &&
-            targetUid != null)
-        {
-            try
-            {
-                if (_entities.TrySystem(out AdminSystem? adminSystem))
-                    adminSystem.Erase(targetUid.Value);
-            }
-            catch (Exception e)
-            {
-                _sawmill.Error($"Error while erasing banned player:\n{e}");
-            }
-        }
-
-        _banManager.CreateServerBan(targetUid, target, Player.UserId, addressRange, targetHWid, minutes, severity, reason);
+        var banid = await _banManager.CreateServerBan(targetUid, target, Player.UserId, addressRange, targetHWid, minutes, severity, reason);
+        _banManager.WebhookUpdateBans(targetUid, target, Player.UserId, addressRange, targetHWid, minutes, severity, reason, DateTimeOffset.UtcNow, banid); // BanWebhook
 
         Close();
     }

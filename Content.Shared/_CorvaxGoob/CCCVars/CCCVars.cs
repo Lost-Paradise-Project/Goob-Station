@@ -103,7 +103,7 @@ public sealed class CCCVars
         CVarDef.Create("hud.offer_mode_indicators_point_show", true, CVar.ARCHIVE | CVar.CLIENTONLY);
 
     public static readonly CVarDef<bool> CombatModeSoundEnabled =
-        CVarDef.Create("audio.combat_mode_sound_enabled", true, CVar.ARCHIVE | CVar.CLIENTONLY);
+        CVarDef.Create("audio.combat_mode_sound_enabled", false, CVar.ARCHIVE | CVar.CLIENTONLY); // LP edit
 
     /// <summary>
     /// Default volume setting of announcements sound.
