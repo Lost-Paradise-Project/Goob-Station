@@ -1,4 +1,4 @@
-﻿injector-fabticator-label-beaker = Мензурка:
+injector-fabticator-label-beaker = Мензурка:
 injector-fabticator-button-eject = Извлечь
 injector-fabticator-no-beaker = Мензурка не вставлена
 injector-fabticator-label-transfer-reagents = Перенос реагентов:
