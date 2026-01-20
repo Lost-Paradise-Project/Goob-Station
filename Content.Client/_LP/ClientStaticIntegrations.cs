@@ -18,7 +18,7 @@ public static class SponsorSimpleManager
     {
 #if LP
         if (IoCManager.Resolve<SponsorsManager>().TryGetInfo(out var sponsorInfo))
-            return sponsorInfo.CharacterName;   //Здесь хранится NetUserId, а не имя. опасно менять из-за json
+            return sponsorInfo.UUID;   //Здесь хранится NetUserId, а не имя. опасно менять из-за json
 #endif
         return "";
     }

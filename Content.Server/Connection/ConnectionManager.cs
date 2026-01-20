@@ -528,10 +528,17 @@ namespace Content.Server.Connection
             var wasInGame = EntitySystem.TryGet<GameTicker>(out var ticker) &&
                             ticker.PlayerGameStatuses.TryGetValue(userId, out var status) &&
                             status == PlayerGameStatus.JoinedGame;
-            var isSponsor = SponsorSimpleManager.GetTier(userId) > 2;   //LP edit
+            //LP edit start
+            var isSponsor = SponsorSimpleManager.GetTier(userId) > 2;
+            var havePriority = false;
+#if LP
+            if (IoCManager.Resolve<SponsorsManager>().TryGetInfo(userId, out var sponsorInfo))
+                havePriority = sponsorInfo.HavePriorityJoin;
+#endif
+            //LP edit end
             return adminBypass ||
                    wasInGame ||
-                   isSponsor;   //LP edit
+                   isSponsor || havePriority;   //LP edit
         }
         // CorvaxGoob-Queue-End
     }

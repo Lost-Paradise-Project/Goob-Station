@@ -1483,7 +1483,7 @@ namespace Content.Server.Database
         public int Tier { get; set; }
         public string OOCColor { get; set; } = "#00FF00";
         public bool HavePriorityJoin { get; set; } = false;
-        public string AllowedMarkings { get; set; } = null!;
+        public string AllowedMarkings { get; set; } = String.Empty;
         public int ExtraSlots { get; set; } = 0;
         //public DateTime ExpireDate {get;set;}
         public bool AllowJob { get; set; } = false;

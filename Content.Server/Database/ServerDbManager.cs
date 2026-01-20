@@ -466,7 +466,7 @@ namespace Content.Server.Database
 #if LP
         #region Sponsors
         Task<Sponsor?> GetSponsorInfo(NetUserId userId, CancellationToken cancel = default);
-        Task<Sponsor[]?> GetSponsorList(CancellationToken cancel = default);
+        Task<Sponsor[]> GetSponsorList(CancellationToken cancel = default);
         #endregion
 #endif
     }
@@ -1178,7 +1178,7 @@ namespace Content.Server.Database
             return await _db.GetSponsorInfo(userId);
         }
 
-        public async Task<Sponsor[]?> GetSponsorList(CancellationToken cancel = default)
+        public async Task<Sponsor[]> GetSponsorList(CancellationToken cancel = default)
         {
             DbReadOpsMetric.Inc();
             return await _db.GetSponsorList();

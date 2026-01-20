@@ -40,7 +40,7 @@ public static class SponsorSimpleManager
     {
 #if LP
         if (IoCManager.Resolve<SponsorsManager>().TryGetInfo(netId, out var sponsorInfo))
-            return sponsorInfo.CharacterName;
+            return sponsorInfo.UUID;
 #endif
         return "";
     }
