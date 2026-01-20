@@ -11,7 +11,7 @@
     - ADTMegaCellRechargerCircuitboardRecipe
     - ADTMegaCellSmallRecipe
     - ADTMegaCellMediumRecipe
-  position: 1,-7 # LP Edit
+  position: 1,-8 # LP Edit
   technologyPrerequisites:
   - AdvancedPowercells
 
@@ -27,6 +27,6 @@
   recipeUnlocks:
     - ADTMegaCellHighRecipe
     - ADTMegaCellHyperRecipe
-  position: 1,-9 # LP Edit
+  position: 1,-10 # LP Edit
   technologyPrerequisites:
   - LPInducer # LP Edit

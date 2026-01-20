@@ -10,6 +10,6 @@
   recipeUnlocks:
     - LPPRNDInducerRecipe
     - LPPEngiInducerRecipe
-  position: 1,-8
+  position: 1,-9
   technologyPrerequisites:
   - ADTMegaCells
