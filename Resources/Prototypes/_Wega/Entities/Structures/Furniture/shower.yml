@@ -8,6 +8,7 @@
   - type: Clickable
   - type: InteractionOutline
   - type: Physics
+    canCollide: False
     bodyType: Dynamic
   - type: Sprite
     noRot: true
