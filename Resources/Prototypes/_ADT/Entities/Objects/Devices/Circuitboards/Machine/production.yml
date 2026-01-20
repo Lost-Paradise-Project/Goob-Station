@@ -11,8 +11,7 @@
       prototype: ADTMegaCellRecharger
       stackRequirements:
         Manipulator: 5
-        Copper: 10
-        Gold: 6
+        Gold: 20
         Cable: 5
     - type: PhysicalComposition
       materialComposition:
