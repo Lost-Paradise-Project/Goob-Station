@@ -73,8 +73,11 @@ namespace Content.Server.GameTicking
                 jObject["map"] = _gameMapManager.GetSelectedMap()?.MapName;
                 jObject["round_id"] = _gameTicker.RoundId;
                 jObject["players"] = _cfg.GetCVar(CCVars.AdminsCountInReportedPlayerCount)
+#if LP
                     ? _joinQueue.ActualPlayersCount
-                    : _joinQueue.ActualPlayersCount - _adminManager.ActiveAdmins.Count();   //LP edit (не трогайте если не надо)
+                    : _joinQueue.ActualPlayersCount - _adminManager.ActiveAdmins.Count()
+#endif
+                ;   //LP edit (не трогайте если не надо)
 
                 jObject["soft_max_players"] = _cfg.GetCVar(CCVars.SoftMaxPlayers);
                 jObject["panic_bunker"] = _cfg.GetCVar(CCVars.PanicBunkerEnabled);
