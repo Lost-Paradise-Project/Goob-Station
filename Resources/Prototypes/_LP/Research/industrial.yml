@@ -1,5 +1,5 @@
 - type: technology
-  id: LPInducer
+  id: LPPInducer
   name: research-technology-inducer
   icon:
     sprite: _LP/Objects/Tools/inducer-rnd.rsi
@@ -8,8 +8,8 @@
   tier: 2
   cost: 10000
   recipeUnlocks:
-    - LPRNDInducerRecipe
-    - LPEngiInducerRecipe
+    - LPPRNDInducerRecipe
+    - LPPEngiInducerRecipe
   position: 1,-8
   technologyPrerequisites:
   - ADTMegaCells

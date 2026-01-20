@@ -1,6 +1,6 @@
 - type: entity
   parent: BaseItem
-  id: LPEngiInducer
+  id: LPPEngiInducer
   name: inducer
   description: A device for wirelessly transferring energy from a battery to other devices.
   suffix: Empty, Engineering
@@ -12,12 +12,12 @@
     size: Small
   - type: Inducer
     availableTransferRates:
-    - 500
-    - 2500
-    - 5000
     - 7500
-    transferRate: 500
-    transferDelay: 1
+    - 10000
+    - 12000
+    - 15000
+    transferRate: 7500
+    transferDelay: 2.5
     maxDistance: 3
   - type: PowerCellSlot
     cellSlotId: inducer_power_cell_slot
@@ -43,8 +43,8 @@
   - type: Appearance
 
 - type: entity
-  parent: LPEngiInducer
-  id: LPEngiInducerBattery
+  parent: LPPEngiInducer
+  id: LPPEngiInducerBattery
   name: inducer
   description: A device for wirelessly transferring energy from a battery to other devices.
   suffix: Battery, Engineering
@@ -55,8 +55,8 @@
         startingItem: ADTMegaCellMedium
 
 - type: entity
-  parent: LPEngiInducer
-  id: LPRNDInducer
+  parent: LPPEngiInducer
+  id: LPPRNDInducer
   name: inducer
   description: A device for wirelessly transferring energy from a battery to other devices.
   suffix: Empty, RND
@@ -66,9 +66,9 @@
     state: icon
   - type: Inducer
     availableTransferRates:
-    - 900
-    transferRate: 900
-    transferDelay: 0.09
+    - 3750
+    transferRate: 3750
+    transferDelay: 1
     maxDistance: 6
   - type: ItemMapper
     mapLayers:
@@ -79,8 +79,8 @@
     sprite: _LP/Objects/Tools/inducer-rnd.rsi
 
 - type: entity
-  parent: LPRNDInducer
-  id: LPRNDInducerBattery
+  parent: LPPRNDInducer
+  id: LPPRNDInducerBattery
   name: inducer
   description: A device for wirelessly transferring energy from a battery to other devices.
   suffix: Battery, RND

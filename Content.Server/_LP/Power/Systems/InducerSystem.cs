@@ -87,7 +87,7 @@ public sealed class InducerSystem : EntitySystem
         if (!TryComp<BatteryComponent>(slot.Item.Value, out var sourceBattery))
             return;
 
-        var energyToTransfer = component.TransferRate * component.TransferDelay;
+        var energyToTransfer = component.TransferRate;
         energyToTransfer = Math.Min(energyToTransfer, sourceBattery.CurrentCharge);
 
         var freeSpace = targetBattery.MaxCharge - targetBattery.CurrentCharge;
