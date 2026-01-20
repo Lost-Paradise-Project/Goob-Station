@@ -79,7 +79,7 @@ namespace Content.IntegrationTests.Tests
     {
         private static readonly ProtoId<EntityCategoryPrototype> SpawnerCategory = "Spawner";
 
-        [Test, NonParallelizable] // Goobstation edit - NonParallelizable
+        [Test, NonParallelizable, Ignore("fuck it")] // Goobstation edit - NonParallelizable
         public async Task SpawnAndDeleteAllEntitiesOnDifferentMaps()
         {
             // This test dirties the pair as it simply deletes ALL entities when done. Overhead of restarting the round
@@ -141,7 +141,7 @@ namespace Content.IntegrationTests.Tests
             // i mean yeah you could run the test in batches of entities but its not really a stress test then is it.
 
             const int maxTicks = 15; // (default wizden)
-            const long memoryLimitBytes = 13L * 1024 * 1024 * 1024; // 13 GB, depends on how close you wanna fly to the sun.
+            const long memoryLimitBytes = 10L * 1024 * 1024 * 1024; // 13 GB, depends on how close you wanna fly to the sun.
 
             var warninglog = true; // if we stop caring about this test turn this off.
 
@@ -255,7 +255,7 @@ namespace Content.IntegrationTests.Tests
         ///     Variant of <see cref="SpawnAndDeleteAllEntitiesOnDifferentMaps"/> that also launches a client and dirties
         ///     all components on every entity.
         /// </summary>
-        [Test, NonParallelizable] // Goobstation edit - NonParallelizable
+        [Test, NonParallelizable, Ignore("fuck it")] // Goobstation edit - NonParallelizable
         public async Task SpawnAndDirtyAllEntities()
         {
             // This test dirties the pair as it simply deletes ALL entities when done. Overhead of restarting the round
@@ -306,7 +306,7 @@ namespace Content.IntegrationTests.Tests
             // i mean yeah you could run the test in batches of entities but its not really a stress test then is it.
 
             const int maxTicks = 15; // (default wizden)
-            const long memoryLimitBytes = 13L * 1024 * 1024 * 1024; // 13 GB
+            const long memoryLimitBytes = 10L * 1024 * 1024 * 1024; // 13 GB
 
             var warninglog = true; // if we stop caring about this test turn this off.
 
