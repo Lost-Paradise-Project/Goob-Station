@@ -12,7 +12,7 @@ namespace Content.Goobstation.Client.Polls.UI;
 [GenerateTypedNameReferences]
 public sealed partial class PollVotingWindow : FancyWindow
 {
-    [Dependency] private readonly PollManager _pollManager = default!;
+    // [Dependency] private readonly PollManager _pollManager = default!;
 
     public PollVotingWindow()
     {
@@ -21,11 +21,11 @@ public sealed partial class PollVotingWindow : FancyWindow
 
         RefreshButton.OnPressed += _ => RefreshPolls();
 
-        _pollManager.OnActivePollsUpdated += HandlePollsUpdated;
-        _pollManager.OnPollUpdated += HandlePollUpdated;
-        _pollManager.OnPollClosed += HandlePollClosed;
-        _pollManager.OnVoteResponse += HandleVoteResponse;
-        _pollManager.OnPollDetailsReceived += HandlePollDetailsReceived;
+        // _pollManager.OnActivePollsUpdated += HandlePollsUpdated;
+        // _pollManager.OnPollUpdated += HandlePollUpdated;
+        // _pollManager.OnPollClosed += HandlePollClosed;
+        // _pollManager.OnVoteResponse += HandleVoteResponse;
+        // _pollManager.OnPollDetailsReceived += HandlePollDetailsReceived;
 
         RefreshPolls();
     }
@@ -36,18 +36,18 @@ public sealed partial class PollVotingWindow : FancyWindow
 
         if (disposing)
         {
-            _pollManager.OnActivePollsUpdated -= HandlePollsUpdated;
-            _pollManager.OnPollUpdated -= HandlePollUpdated;
-            _pollManager.OnPollClosed -= HandlePollClosed;
-            _pollManager.OnVoteResponse -= HandleVoteResponse;
-            _pollManager.OnPollDetailsReceived -= HandlePollDetailsReceived;
+            // _pollManager.OnActivePollsUpdated -= HandlePollsUpdated;
+            // _pollManager.OnPollUpdated -= HandlePollUpdated;
+            // _pollManager.OnPollClosed -= HandlePollClosed;
+            // _pollManager.OnVoteResponse -= HandleVoteResponse;
+            // _pollManager.OnPollDetailsReceived -= HandlePollDetailsReceived;
         }
     }
 
     private void RefreshPolls()
     {
         StatusLabel.Text = Loc.GetString("poll-voting-window-loading");
-        _pollManager.RequestActivePolls();
+        // _pollManager.RequestActivePolls();
     }
 
     private void HandlePollsUpdated(List<PollData> polls)
@@ -85,9 +85,9 @@ public sealed partial class PollVotingWindow : FancyWindow
         .ThenBy(p => p.PollId);
         foreach (var poll in sortedPolls)
         {
-            _pollManager.RequestPollDetails(poll.PollId);
-            var pollControl = new PollControl(poll, _pollManager);
-            PollsList.AddChild(pollControl);
+            // _pollManager.RequestPollDetails(poll.PollId);
+            // var pollControl = new PollControl(poll, _pollManager);
+            // PollsList.AddChild(pollControl);
         }
     }
 
@@ -97,8 +97,8 @@ public sealed partial class PollVotingWindow : FancyWindow
         {
             if (child is PollControl pollControl && pollControl.PollId == poll.PollId)
             {
-                var votes = _pollManager.GetPlayerVotes(poll.PollId);
-                pollControl.UpdateWithNewData(poll, votes);
+                // var votes = _pollManager.GetPlayerVotes(poll.PollId);
+                // pollControl.UpdateWithNewData(poll, votes);
                 pollControl.EnableVoting();
                 break;
             }
@@ -147,7 +147,7 @@ public sealed partial class PollVotingWindow : FancyWindow
 
 public sealed class PollControl : BoxContainer
 {
-    private readonly PollManager _pollManager;
+    // private readonly PollManager _pollManager;
     private PollData _poll;
     private List<PollVoteData> _playerVotes = [];
     private readonly Dictionary<int, CheckBox> _optionCheckBoxes = [];
@@ -159,8 +159,8 @@ public sealed class PollControl : BoxContainer
     public PollControl(PollData poll, PollManager pollManager)
     {
         _poll = poll;
-        _pollManager = pollManager;
-        _playerVotes = _pollManager.GetPlayerVotes(_poll.PollId);
+        // _pollManager = pollManager;
+        // _playerVotes = _pollManager.GetPlayerVotes(_poll.PollId);
 
         Orientation = LayoutOrientation.Vertical;
         SeparationOverride = 0;
@@ -375,12 +375,12 @@ public sealed class PollControl : BoxContainer
                             opt.VoteCount--;
                     }
 
-                    if (args.Pressed)
-                        _pollManager.CastVote(_poll.PollId, optionId);
-                    else
-                        _pollManager.RemoveVote(_poll.PollId, optionId);
+                    // if (args.Pressed)
+                        // _pollManager.CastVote(_poll.PollId, optionId);
+                    // else
+                        // _pollManager.RemoveVote(_poll.PollId, optionId);
 
-                    _playerVotes = _pollManager.GetPlayerVotes(_poll.PollId);
+                    // _playerVotes = _pollManager.GetPlayerVotes(_poll.PollId);
                     RebuildUIOptimistically();
                 };
 
@@ -422,9 +422,9 @@ public sealed class PollControl : BoxContainer
                     if (newOpt != null)
                         newOpt.VoteCount++;
 
-                    _pollManager.CastVote(_poll.PollId, optionId);
+                    // _pollManager.CastVote(_poll.PollId, optionId);
 
-                    _playerVotes = _pollManager.GetPlayerVotes(_poll.PollId);
+                    // _playerVotes = _pollManager.GetPlayerVotes(_poll.PollId);
                     RebuildUIOptimistically();
                 };
 
