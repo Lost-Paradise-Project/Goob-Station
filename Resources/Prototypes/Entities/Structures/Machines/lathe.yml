@@ -535,6 +535,9 @@
     # CorvaxGoob Packs
     - BodyBagsDynamic # AdvancedBodyBags
   - type: EmagLatheRecipes
+    emagStaticPacks:
+    # CorvaxGoob Packs
+    - SyndicateBodyBagsStatic # AdvancedBodyBag
     emagDynamicPacks:
     - SecurityAmmo
     - SecurityExplosives
@@ -545,8 +548,6 @@
     - SecurityWeaponsGoob
     - RestraintTechnology
     - MiningWeapons
-    # CorvaxGoob Packs
-    - SyndicateBodyBagsStatic # AdvancedBodyBag
 
 - type: entity
   id: ProtolatheHyperConvection
