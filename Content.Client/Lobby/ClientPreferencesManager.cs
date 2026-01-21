@@ -40,7 +40,6 @@ namespace Content.Client.Lobby
         [Dependency] private readonly IClientNetManager _netManager = default!;
         [Dependency] private readonly IBaseClient _baseClient = default!;
         [Dependency] private readonly IPlayerManager _playerManager = default!;
-        private ISharedSponsorsManager? _sponsorsManager; // CorvaxGoob-Sponsors
 
         public event Action? OnServerDataLoaded;
 
@@ -49,7 +48,6 @@ namespace Content.Client.Lobby
 
         public void Initialize()
         {
-            IoCManager.Instance!.TryResolveType(out _sponsorsManager); // CorvaxGoob-Sponsors
             _netManager.RegisterNetMessage<MsgPreferencesAndSettings>(HandlePreferencesAndSettings);
             _netManager.RegisterNetMessage<MsgUpdateCharacter>();
             _netManager.RegisterNetMessage<MsgSelectCharacter>();
@@ -86,7 +84,7 @@ namespace Content.Client.Lobby
         {
             var collection = IoCManager.Instance!;
             // CorvaxGoob-Sponsors-Start
-            var sponsorPrototypes = _sponsorsManager?.GetClientPrototypes().ToArray() ?? [];
+            var sponsorPrototypes = SponsorSimpleManager.GetMarkings().ToArray();    //LP edit только маркинги
             profile.EnsureValid(_playerManager.LocalSession!, collection, sponsorPrototypes, SponsorSimpleManager.GetTier(), SponsorSimpleManager.GetUUID());   //LP edit
             // CorvaxGoob-Sponsors-End
             var characters = new Dictionary<int, ICharacterProfile>(Preferences.Characters) { [slot] = profile };
@@ -102,7 +100,7 @@ namespace Content.Client.Lobby
         public void CreateCharacter(ICharacterProfile profile)
         {
             var characters = new Dictionary<int, ICharacterProfile>(Preferences.Characters);
-            var lowest = Enumerable.Range(0, Settings.MaxCharacterSlots)
+            var lowest = Enumerable.Range(0, Settings.MaxCharacterSlots + SponsorSimpleManager.GetMaxCharacterSlots())
                 .Except(characters.Keys)
                 .FirstOrNull();
 

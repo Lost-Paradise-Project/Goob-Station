@@ -45,4 +45,10 @@ public static class SponsorSimpleManager
         return "";
     }
 
+    public static int GetMaxCharacterSlots(NetUserId netId)
+    {
+        var tier = GetTier(netId);
+        return 5 * tier;    // за каждый уровень + 5 слотов
+    }
+
 }

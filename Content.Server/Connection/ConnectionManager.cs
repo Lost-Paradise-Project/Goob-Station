@@ -398,24 +398,7 @@ namespace Content.Server.Connection
                             ("reason", Loc.GetString("panic-bunker-account-reason-overall", ("minutes", minOverallMinutes)))), null);
                 }
 
-                // CorvaxGoob-VPNGuard-Start
-                if (_vpnGuardMgr == null) // "lazyload" because of problems with dependency resolve order
-                    IoCManager.Instance!.TryResolveType(out _vpnGuardMgr);
-
-                var denyVpn = false;
-                if (_cfg.GetCVar(CCCVars.PanicBunkerDenyVPN) && _vpnGuardMgr is not null)
-                {
-                    denyVpn = await _vpnGuardMgr!.IsConnectionVpn(e.IP.Address);
-                    if (denyVpn)
-                    {
-                        return (ConnectionDenyReason.Panic,
-                            Loc.GetString("panic-bunker-account-denied-reason",
-                                ("reason", Loc.GetString("panic-bunker-account-reason-vpn"))), null);
-                    }
-                }
-                // CorvaxGoob-VPNGuard-End
-
-                if (!validAccountAge || !haveMinOverallTime || denyVpn) // Corvax-VPNGuard
+                if (!validAccountAge || !haveMinOverallTime)    //LP edit
                 {
                     return (ConnectionDenyReason.Panic, Loc.GetString("panic-bunker-account-denied"), null);
                 }

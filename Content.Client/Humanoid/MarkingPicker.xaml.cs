@@ -11,6 +11,7 @@
 // SPDX-License-Identifier: MIT
 
 using System.Linq;
+using Content.Client._LP.Sponsors;      //LP edit
 using Content.Corvax.Interfaces.Shared;
 using Content.Shared._CorvaxGoob;
 using Content.Shared.Humanoid;
@@ -34,7 +35,6 @@ public sealed partial class MarkingPicker : Control
     [Dependency] private readonly MarkingManager _markingManager = default!;
     [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
     [Dependency] private readonly IEntityManager _entityManager = default!;
-    private ISharedSponsorsManager? _sponsorsManager; // CorvaxGoob-Sponsors
 
     private readonly SpriteSystem _sprite;
 
@@ -142,7 +142,6 @@ public sealed partial class MarkingPicker : Control
     {
         RobustXamlLoader.Load(this);
         IoCManager.InjectDependencies(this);
-        IoCManager.Instance!.TryResolveType(out _sponsorsManager); // CorvaxGoob-Sponsors
 
         _sprite = _entityManager.System<SpriteSystem>();
 
@@ -237,6 +236,11 @@ public sealed partial class MarkingPicker : Control
             GetMarkingName(m).ToLower().Contains(filter.ToLower())
         ).OrderBy(p => Loc.GetString(GetMarkingName(p)));
 
+        //LP edit start
+        var sponsorTier = SponsorSimpleManager.GetTier();
+        var sponsorMarkings = SponsorSimpleManager.GetMarkings();   // старая версия неоптимизирована была
+        //LP edit ednt
+
         foreach (var marking in sortedMarkings)
         {
             if (_currentMarkings.TryGetMarking(_selectedMarkingCategory, marking.ID, out _))
@@ -250,8 +254,8 @@ public sealed partial class MarkingPicker : Control
             // Corvax-Sponsors-End
             item.Metadata = marking;
             // CorvaxGoob-Sponsors-Start
-            if (marking.SponsorOnly && _sponsorsManager != null)
-                item.Disabled = !_sponsorsManager.GetClientPrototypes().Contains(marking.ID);
+            if (marking.SponsorOnly && sponsorTier < 3)     //LP edit
+                item.Disabled = !sponsorMarkings.Contains(marking.ID);   //LP edit
             // CorvaxGoob-Sponsors-End
         }
 

@@ -618,7 +618,7 @@ namespace Content.Shared.Preferences
             }
 
             // CorvaxGoob-Sponsors-Start: Reset to human if player not sponsor
-            if (speciesPrototype.SponsorOnly && !sponsorPrototypes.Contains(Species.Id))
+            if (speciesPrototype.SponsorOnly && sponsorTier < 4)    //LP edit
             {
                 Species = SharedHumanoidAppearanceSystem.DefaultSpecies;
                 speciesPrototype = prototypeManager.Index(Species);

@@ -342,7 +342,7 @@ namespace Content.Server.Preferences.Managers
             msg.Preferences = prefsData.Prefs;
             msg.Settings = new GameSettings
             {
-                MaxCharacterSlots = GetMaxUserCharacterSlots(session.UserId) // CorvaxGoob-Sponsors
+                MaxCharacterSlots = GetMaxUserCharacterSlots(session.UserId) + SponsorSimpleManager.GetMaxCharacterSlots(session.UserId) // CorvaxGoob-Sponsors //LP edit
             };
             _netManager.ServerSendMessage(msg, session.Channel);
         }
