@@ -10,9 +10,7 @@ on:
     paths:
       - 'RobustToolbox'
 
-concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: true
+
 
 jobs:
   this_aint_right:
