@@ -8,7 +8,9 @@ namespace Content.Client._LP.Sponsors;
 /// </summary>
 public static class SponsorSimpleManager
 {
+#if LP
     private static SponsorsManager manager => IoCManager.Resolve<SponsorsManager>();
+#endif
     public static int GetTier()
     {
 #if LP
