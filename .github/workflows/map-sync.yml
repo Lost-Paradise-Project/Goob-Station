@@ -8,7 +8,7 @@ on:
 
 jobs:
   sync-maps:
-    if: ${{ secrets.MAPS_URL_SYNC }} != ''
+    if: ${{ vars.SECRETSLINK != '' }}
     runs-on: ubuntu-latest
     steps:
     - name: Send Sync Request
