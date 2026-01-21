@@ -7,10 +7,12 @@ using Robust.Shared.Utility;
 namespace Content.Shared.Preferences.Loadouts.Effects;
 
 /// <summary>
-/// Only sponsor that have it can select this loadout
+/// Only player with correct uuid can select this loadout
 /// </summary>
-public sealed partial class SponsorLoadoutEffect : LoadoutEffect
+public sealed partial class UUIDLoadoutEffect : LoadoutEffect
 {
+    [DataField("UUID", required: true)]
+    public string UUID = default!;
     public override bool Validate(HumanoidCharacterProfile profile,
         RoleLoadout loadout,
         LoadoutPrototype proto, // Corvax-Sponsors
@@ -26,26 +28,12 @@ public sealed partial class SponsorLoadoutEffect : LoadoutEffect
         if (session == null)
             return true;
 
-        if (sponsorTier < 3)    //LP edit - любые лодауты спонсорам 3+ уровня
+        if (uuid.ToLower() != UUID.ToLower())
         {
             reason = FormattedMessage.FromMarkupOrThrow(Loc.GetString("loadout-sponsor-only"));
             return false;
         }
 
         return true;
-    }
-
-    public List<string> GetPrototypes(ICommonSession session, IDependencyCollection collection)
-    {
-        if (!collection.TryResolveType<ISharedSponsorsManager>(out var sponsorsManager))
-            return new List<string>();
-
-        var net = collection.Resolve<INetManager>();
-
-        if (net.IsClient)
-            return sponsorsManager.GetClientPrototypes();
-
-        sponsorsManager.TryGetServerPrototypes(session.UserId, out var props);
-        return props ?? [];
     }
 }

@@ -33,7 +33,7 @@ public sealed partial class GroupLoadoutEffect : LoadoutEffect
         var reasons = new List<string>();
         foreach (var effect in effectsProto.Effects)
         {
-            if (effect.Validate(profile, loadout, proto, session, collection, out reason)) // CorvaxGoob-Sponsors
+            if (effect.Validate(profile, loadout, proto, session, collection, out reason, sponsorTier, uuid)) // CorvaxGoob-Sponsors
                 continue;
 
             reasons.Add(reason.ToMarkup());
