@@ -1,7 +1,6 @@
 - type: vendingMachineInventory
   id: NascaVendingMachineServitorInventory
   startingInventory:
-    LPPUnathiWraps: 3
     LPPClothingUnderBeeKnee: 3
     LPPClothingUnderBeeNorm: 3
     LPPClothingUnderBeeThigh: 3

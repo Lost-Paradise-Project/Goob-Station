@@ -44,7 +44,8 @@
   - type: Clothing
     sprite: _LP/Clothing/Gloves/CombatNitrile.rsi
   - type: Fiber
-    fiberMaterial: lppfibers-nitrile-insulative
+    fiberMaterial: fibers-insulative
+    fiberColor: fibers-black
   - type: FingerprintMask
   - type: Insulated
 
