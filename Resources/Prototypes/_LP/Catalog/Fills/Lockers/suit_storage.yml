@@ -5,7 +5,6 @@
   components:
   - type: StorageFill
     contents:
-        - id: NFTankO2N2EqualFilled
         - id: LPPClothingOuterHardsuitUpgradedMining
         - id: ClothingMaskGasExplorer
         - id: JetpackMiniFilled
@@ -18,24 +17,10 @@
   components:
   - type: StorageFill
     contents:
-        - id: NFTankO2N2EqualFilled
         - id: LPPClothingOuterHardsuitMiksuit
         - id: ClothingMaskGasExplorer
         - id: JetpackMiniFilled
         - id: LPPClothingShoesBootsMagHunter
-
-- type: entity
-  id: LPPSuitStorageAcientHos
-  parent: SuitStorageBase
-  suffix: Granite
-  components:
-  - type: StorageFill
-    contents:
-        - id: NFTankO2N2EqualFilled
-        - id: LPPClothingOuterHardsuitAcientHos
-        - id: ClothingMaskGasSecurity
-        - id: JetpackMiniFilled
-        - id: ClothingShoesBootsMag
 
 - type: entity
   id: LPPSuitStorageHunter
@@ -44,22 +29,8 @@
   components:
   - type: StorageFill
     contents:
-        - id: NFTankO2N2EqualFilled
         - id: LPPClothingOuterHardsuitHunter
         - id: ClothingMaskGasExplorer
-        - id: JetpackMiniFilled
-        - id: LPPClothingShoesBootsMagHunter
-
-- type: entity
-  id: LPPSuitStoragePilotSecurity
-  parent: SuitStorageBase
-  suffix: Stormgrad
-  components:
-  - type: StorageFill
-    contents:
-        - id: NFTankO2N2EqualFilled
-        - id: LPPClothingOuterHardsuitPilotSecurity
-        - id: ClothingMaskGasSecurity
         - id: JetpackMiniFilled
         - id: LPPClothingShoesBootsMagHunter
 
@@ -70,7 +41,6 @@
   components:
   - type: StorageFill
     contents:
-        - id: NFTankO2N2EqualFilled
         - id: LPPClothingOuterHardsuitCombatAlternative
         - id: ClothingMaskGasSecurity
         - id: JetpackMiniFilled
@@ -83,7 +53,6 @@
   components:
   - type: StorageFill
     contents:
-        - id: NFTankO2N2EqualFilled
         - id: LPPClothingOuterHardsuitNPZ
         - id: LPPClothingMaskNPZGasmask
         - id: JetpackBlueFilled

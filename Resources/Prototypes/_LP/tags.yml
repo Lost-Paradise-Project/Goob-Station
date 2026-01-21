@@ -21,3 +21,9 @@
 
 - type: Tag
   id: socks
+
+- type: Tag
+  id: MagazineRiflePredsedatel
+
+- type: Tag
+  id: CoatRack # Вешалка

@@ -92,6 +92,3 @@
         Slash: 0.95
         Piercing: 0.95
         Heat: 0.95
-  - type: StaticPrice
-    price: 150
-    vendPrice: 9000

@@ -90,8 +90,6 @@
     steps: 1
     zeroVisible: true
   - type: Appearance
-  - type: StaticPrice
-    vendPrice: 81500
 
 - type: entity
   name: STG-144

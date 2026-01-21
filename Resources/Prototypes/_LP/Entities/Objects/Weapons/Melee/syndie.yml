@@ -61,6 +61,3 @@
     - suitStorage
   - type: Prying
     pryPowered: true
-  - type: StaticPrice
-    price: 150
-    vendPrice: 21500

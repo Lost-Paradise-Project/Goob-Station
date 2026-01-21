@@ -56,18 +56,25 @@
     maxCharge: 750
     startingCharge: 750
   - type: ProjectileBatteryAmmoProvider
+  - type: ProjectileBatteryAmmoProvider
     proto: BulletDisabler
     fireCost: 50
-  - type: EnergyGun
-    fireModes:
-    - proto: BulletDisabler
-      fireCost: 50
-      name: дизейблер
-      state: disabler
-    - proto: BulletLaserLow
-      fireCost: 75
-      name: летальный
-      state: lethal
+  - type: AmmoSelector
+    prototypes:
+      - BulletDisabler
+      - BulletEnergyGunLaser
+  - type: UserInterface
+    interfaces:
+      enum.AmmoSelectorUiKey.Key:
+        type: AmmoSelectorMenuBoundUserInterface
+  - type: ActivatableUI
+    inHandsOnly: true
+    key: enum.AmmoSelectorUiKey.Key
+  - type: ItemToggle
+    activated: true
+    onActivate: false
+    onUse: false
+    wieldToggle: false
   - type: MagazineVisuals
     magState: mag
     steps: 5

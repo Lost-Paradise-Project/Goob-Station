@@ -6,9 +6,6 @@
   components:
   - type: Sprite
     sprite: _LP/Clothing/Back/Backpacks/upgbacpacks.rsi
-  - type: StaticPrice
-    price: 150
-    vendPrice: 11500
 
 - type: entity
   parent: ClothingBackpack
@@ -21,6 +18,3 @@
   - type: Storage
     grid:
     - 0,0,7,3
-  - type: StaticPrice
-    price: 150
-    vendPrice: 1500

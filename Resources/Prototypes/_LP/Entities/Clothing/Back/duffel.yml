@@ -12,6 +12,3 @@
   - type: ClothingSpeedModifier
     walkModifier: 1.0
     sprintModifier: 1.0
-  - type: StaticPrice
-    price: 150
-    vendPrice: 19500

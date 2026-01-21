@@ -46,7 +46,7 @@
       tags:
         - CartridgeMagnum
         - SpeedLoaderMagnum
-    proto: CartridgePistol45
+    proto: CartridgeMagnum
     capacity: 8
     chambers: [ True, True, True, True, True, True, True, True ]
     ammoSlots: [ null, null, null, null, null, null, null, null ]

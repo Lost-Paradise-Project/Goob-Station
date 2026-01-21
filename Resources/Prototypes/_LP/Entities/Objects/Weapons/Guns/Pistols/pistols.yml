@@ -137,9 +137,6 @@
     - suitStorage
   - type: UseDelay
     delay: 1
-  - type: StaticPrice
-    price: 150
-    vendPrice: 25500
 
 - type: entity
   name: auto pistol "MARS"
@@ -161,10 +158,10 @@
       path: /Audio/Weapons/Guns/Gunshots/sniper.ogg
   - type: BallisticAmmoProvider
     capacity: 7
-    proto: NFCartridgePistol45
+    proto: CartridgeMagnum
     whitelist:
       tags:
-      - NFCartridgePistol45
+      - CartridgeMagnum
   - type: Clothing
     sprite: _LP/Objects/Weapons/Guns/Pistols/magnumer.rsi
     quickEquip: false
@@ -180,6 +177,3 @@
     containers:
       ballistic-ammo: !type:Container
         ents: []
-  - type: StaticPrice
-    price: 500
-    vendPrice: 20500

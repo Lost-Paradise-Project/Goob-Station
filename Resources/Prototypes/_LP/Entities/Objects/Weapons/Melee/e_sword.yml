@@ -68,9 +68,6 @@
         shader: unshaded
   - type: IgniteOnMeleeHit
     fireStacks: 0.5
-  - type: StaticPrice
-    price: 150
-    vendPrice: 80000
   - type: MeleeRequiresWield
 
 - type: entity

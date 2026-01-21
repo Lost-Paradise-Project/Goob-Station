@@ -14,9 +14,6 @@
         Blunt: 0.9
         Slash: 0.85
         Heat: 0.95
-  - type: StaticPrice
-    price: 1500
-    vendPrice: 21500
 
 - type: entity
   parent: ClothingBeltStorageBase
@@ -34,6 +31,3 @@
   - type: ClothingSpeedModifier
     walkModifier: 0.9
     sprintModifier: 0.9
-  - type: StaticPrice
-    price: 1500
-    vendPrice: 21500

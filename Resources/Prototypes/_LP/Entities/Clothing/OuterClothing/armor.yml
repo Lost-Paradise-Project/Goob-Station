@@ -28,9 +28,6 @@
     reflectProb: 0.9
     reflects:
       - Energy
-  - type: StaticPrice
-    price: 100
-    vendPrice: 17000
 
 - type: entity
   parent: [ClothingOuterHardsuitBase, AllowSuitStorageClothing]
@@ -58,9 +55,6 @@
   - type: ClothingSpeedModifier
     walkModifier: 1
     sprintModifier: 1
-  - type: StaticPrice
-    price: 50
-    vendPrice: 45000
   - type: TemperatureProtection
     heatingCoefficient: 0.95
     coolingCoefficient: 0.7
@@ -91,9 +85,6 @@
   - type: ClothingSpeedModifier
     walkModifier: 1
     sprintModifier: 1
-  - type: StaticPrice
-    price: 35
-    vendPrice: 42000
   - type: TemperatureProtection
     heatingCoefficient: 0.95
     coolingCoefficient: 0.7
@@ -126,9 +117,6 @@
   - type: ToggleableClothing
     clothingPrototypes:
       head:  LPPClothingHeadHelmetSwat
-  - type: StaticPrice
-    price: 65
-    vendPrice: 40000
   - type: TemperatureProtection
     heatingCoefficient: 0.95
     coolingCoefficient: 0.7
