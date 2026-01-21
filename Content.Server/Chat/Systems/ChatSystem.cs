@@ -152,13 +152,12 @@ using Robust.Shared.Random;
 using Robust.Shared.Replays;
 using Robust.Shared.Utility;
 using System.Collections.Immutable; // Goobstation - Starlight collective mind port
-using System.Collections.Immutable; // Goobstation - Starlight collective mind port
-using System.Globalization;
 using System.Globalization;
 using System.Linq;
-using System.Linq;
 using System.Text;
-using System.Text;
+#if LP
+using Content.Server._LP.Sponsors;
+#endif
 
 namespace Content.Server.Chat.Systems;
 
@@ -983,6 +982,13 @@ public sealed partial class ChatSystem : SharedChatSystem
         var wrappedMessage = Loc.GetString("chat-manager-entity-looc-wrap-message",
             ("entityName", name),
             ("message", FormattedMessage.EscapeText(message)));
+
+#if LP
+        if (IoCManager.Resolve<SponsorsManager>().TryGetInfo(player.UserId, out var sponsorData) && sponsorData.Tier > 0)
+        {
+            wrappedMessage = Loc.GetString("chat-manager-entity-looc-patron-wrap-message", ("patronColor", sponsorData.OOCColor), ("playerName", player.Name), ("message", FormattedMessage.EscapeText(message)));
+        }
+#endif
 
         SendInVoiceRange(
             ChatChannel.LOOC,

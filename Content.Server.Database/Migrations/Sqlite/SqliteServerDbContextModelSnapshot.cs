@@ -917,12 +917,10 @@ namespace Content.Server.Database.Migrations.Sqlite
                         .HasColumnType("TEXT")
                         .HasColumnName("species");
 
-                    // Corvax-TTS-Start
                     b.Property<string>("Voice")
                         .IsRequired()
                         .HasColumnType("TEXT")
                         .HasColumnName("voice");
-                    // Corvax-TTS-End
 
                     b.HasKey("Id")
                         .HasName("PK_profile");
@@ -1341,6 +1339,45 @@ namespace Content.Server.Database.Migrations.Sqlite
                         .IsUnique();
 
                     b.ToTable("server_unban", (string)null);
+                });
+
+            modelBuilder.Entity("Content.Server.Database.Sponsor", b =>
+                {
+                    b.Property<Guid>("UserId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("TEXT")
+                        .HasColumnName("user_id");
+
+                    b.Property<bool>("AllowJob")
+                        .HasColumnType("INTEGER")
+                        .HasColumnName("allow_job");
+
+                    b.Property<string>("AllowedMarkings")
+                        .IsRequired()
+                        .HasColumnType("TEXT")
+                        .HasColumnName("allowed_markings");
+
+                    b.Property<int>("ExtraSlots")
+                        .HasColumnType("INTEGER")
+                        .HasColumnName("extra_slots");
+
+                    b.Property<bool>("HavePriorityJoin")
+                        .HasColumnType("INTEGER")
+                        .HasColumnName("have_priority_join");
+
+                    b.Property<string>("OOCColor")
+                        .IsRequired()
+                        .HasColumnType("TEXT")
+                        .HasColumnName("ooccolor");
+
+                    b.Property<int>("Tier")
+                        .HasColumnType("INTEGER")
+                        .HasColumnName("tier");
+
+                    b.HasKey("UserId")
+                        .HasName("PK_sponsors");
+
+                    b.ToTable("sponsors", (string)null);
                 });
 
             modelBuilder.Entity("Content.Server.Database.Trait", b =>

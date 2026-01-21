@@ -1,4 +1,5 @@
-﻿using Content.Server.Hands.Systems;
+﻿using Content.Server._LP.Sponsors;      //LP edit
+using Content.Server.Hands.Systems;
 using Content.Server.Preferences.Managers;
 using Content.Shared._EinsteinEngines.Silicon.IPC;
 using Content.Shared.Access.Components;
@@ -130,7 +131,7 @@ public sealed class OutfitSystem : EntitySystem
             {
                 // If they don't have a loadout for the role, make a default one
                 roleLoadout = new RoleLoadout(jobProtoId);
-                roleLoadout.SetDefault(profile, session, _prototypeManager);
+                roleLoadout.SetDefault(profile, session, _prototypeManager, sponsorTier: SponsorSimpleManager.GetTier(target), uuid: SponsorSimpleManager.GetUUID(target));    //LP edit
             }
 
             // Equip the target with the job loadout

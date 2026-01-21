@@ -10,9 +10,7 @@ on:
   schedule:
     - cron: '0 8 * * *'
 
-concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: true
+
 
 jobs:
   benchmark:

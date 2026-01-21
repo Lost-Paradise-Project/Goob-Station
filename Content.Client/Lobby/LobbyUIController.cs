@@ -83,6 +83,7 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
 using System.Linq;
+using Content.Client._LP.Sponsors;  //LP edit
 using Content.Client.Guidebook;
 using Content.Client.Humanoid;
 using Content.Client.Inventory;
@@ -571,7 +572,7 @@ public sealed class LobbyUIController : UIController, IOnStateEntered<LobbyState
 
             if (_prototypeManager.HasIndex<RoleLoadoutPrototype>(LoadoutSystem.GetJobPrototype(job.ID)))
             {
-                var loadout = humanoid.GetLoadoutOrDefault(LoadoutSystem.GetJobPrototype(job.ID), _playerManager.LocalSession, humanoid.Species, EntityManager, _prototypeManager);
+                var loadout = humanoid.GetLoadoutOrDefault(LoadoutSystem.GetJobPrototype(job.ID), _playerManager.LocalSession, humanoid.Species, EntityManager, _prototypeManager, SponsorSimpleManager.GetTier(), SponsorSimpleManager.GetUUID()); //LP edit
                 GiveDummyLoadout(dummyEnt, loadout);
             }
         }

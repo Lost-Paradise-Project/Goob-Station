@@ -196,6 +196,7 @@ using Content.Client._CorvaxGoob.TTS;
 using Content.Goobstation.Common.Barks;
 using Content.Goobstation.Common.CCVar;
 using Content.Shared._CorvaxGoob; // CorvaxGoob-TTS
+using Content.Client._LP.Sponsors;  //LP edit
 
 namespace Content.Client.Lobby.UI
 {
@@ -912,6 +913,11 @@ namespace Content.Client.Lobby.UI
 
             AntagList.AddChild(new Label { Text = Loc.GetString("humanoid-profile-editor-antag-roll-before-jobs") }); // Goobstation
 
+            //LP edit start
+            var uuid = SponsorSimpleManager.GetUUID();
+            var sponsorTier = SponsorSimpleManager.GetTier();
+            //LP edit end
+
             foreach (var antag in _prototypeManager.EnumeratePrototypes<AntagPrototype>().OrderBy(a => Loc.GetString(a.Name)))
             {
                 if (!antag.SetPreference)
@@ -934,7 +940,7 @@ namespace Content.Client.Lobby.UI
                 selector.Select(Profile?.AntagPreferences.Contains(antag.ID) == true ? 0 : 1);
 
                 var requirements = _entManager.System<SharedRoleSystem>().GetAntagRequirement(antag);
-                if (!_requirements.CheckRoleRequirements(requirements, (HumanoidCharacterProfile?) _preferencesManager.Preferences?.SelectedCharacter, out var reason))
+                if (!_requirements.CheckRoleRequirements(requirements, (HumanoidCharacterProfile?) _preferencesManager.Preferences?.SelectedCharacter, out var reason, sponsorTier, uuid))  //LP edit
                 {
                     selector.LockRequirements(reason);
                     Profile = Profile?.WithAntagPreference(antag.ID, false);
@@ -1126,6 +1132,10 @@ namespace Content.Client.Lobby.UI
                 ("humanoid-profile-editor-job-priority-high-button", (int) JobPriority.High),
             };
 
+            //LP edit start
+            var uuid = SponsorSimpleManager.GetUUID();
+            var sponsorTier = SponsorSimpleManager.GetTier();
+            //LP edit end
             foreach (var department in departments)
             {
                 var departmentName = Loc.GetString(department.Name);
@@ -1198,7 +1208,7 @@ namespace Content.Client.Lobby.UI
                     icon.Texture = _sprite.Frame0(jobIcon.Icon);
                     selector.Setup(items, job.LocalizedName, 200, job.LocalizedDescription, icon, job.Guides);
 
-                    if (!_requirements.IsAllowed(job, (HumanoidCharacterProfile?) _preferencesManager.Preferences?.SelectedCharacter, out var reason))
+                    if (!_requirements.IsAllowed(job, (HumanoidCharacterProfile?) _preferencesManager.Preferences?.SelectedCharacter, out var reason, sponsorTier, uuid))   //LP edit
                     {
                         selector.LockRequirements(reason);
                     }
@@ -1266,7 +1276,7 @@ namespace Content.Client.Lobby.UI
                             if (loadout == null)
                             {
                                 loadout = new RoleLoadout(roleLoadoutProto.ID);
-                                loadout.SetDefault(Profile, _playerManager.LocalSession, _prototypeManager);
+                                loadout.SetDefault(Profile, _playerManager.LocalSession, _prototypeManager, sponsorTier: SponsorSimpleManager.GetTier(), uuid: SponsorSimpleManager.GetUUID());    //LP edit
                             }
 
                             OpenLoadout(job, loadout, roleLoadoutProto);
@@ -2057,7 +2067,7 @@ namespace Content.Client.Lobby.UI
 
             try
             {
-                var profile = _entManager.System<HumanoidAppearanceSystem>().FromStream(file, _playerManager.LocalSession!);
+                var profile = _entManager.System<HumanoidAppearanceSystem>().FromStream(file, _playerManager.LocalSession!, SponsorSimpleManager.GetMarkings(), SponsorSimpleManager.GetTier(), SponsorSimpleManager.GetUUID());    //LP edit
                 var oldProfile = Profile;
                 SetProfile(profile, CharacterSlot);
 

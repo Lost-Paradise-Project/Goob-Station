@@ -152,12 +152,12 @@ public sealed class StationSpawningSystem : SharedStationSpawningSystem
     /// <remarks>
     /// This only spawns the character, and does none of the mind-related setup you'd need for it to be playable.
     /// </remarks>
-    public EntityUid? SpawnPlayerCharacterOnStation(EntityUid? station, ProtoId<JobPrototype>? job, HumanoidCharacterProfile? profile, StationSpawningComponent? stationSpawning = null)
+    public EntityUid? SpawnPlayerCharacterOnStation(EntityUid? station, ProtoId<JobPrototype>? job, HumanoidCharacterProfile? profile, StationSpawningComponent? stationSpawning = null, int sponsorTier = 0, string uuid = "") //LP edit
     {
         if (station != null && !Resolve(station.Value, ref stationSpawning))
             throw new ArgumentException("Tried to use a non-station entity as a station!", nameof(station));
 
-        var ev = new PlayerSpawningEvent(job, profile, station);
+        var ev = new PlayerSpawningEvent(job, profile, station, sponsorTier, uuid); //LP edit
 
         RaiseLocalEvent(ev);
         DebugTools.Assert(ev.SpawnResult is { Valid: true } or null);
@@ -183,7 +183,10 @@ public sealed class StationSpawningSystem : SharedStationSpawningSystem
         ProtoId<JobPrototype>? job,
         HumanoidCharacterProfile? profile,
         EntityUid? station,
-        EntityUid? entity = null)
+        EntityUid? entity = null,
+        int sponsorTier = 0,    //LP edit
+        string uuid = ""        //LP edit
+        )
     {
         _prototypeManager.TryIndex(job ?? string.Empty, out var prototype);
         RoleLoadout? loadout = null;
@@ -199,7 +202,7 @@ public sealed class StationSpawningSystem : SharedStationSpawningSystem
             if (loadout == null)
             {
                 loadout = new RoleLoadout(jobLoadout);
-                loadout.SetDefault(profile, _actors.GetSession(entity), _prototypeManager);
+                loadout.SetDefault(profile, _actors.GetSession(entity), _prototypeManager, false, sponsorTier, uuid); //LP edit
             }
         }
 
@@ -342,10 +345,17 @@ public sealed class PlayerSpawningEvent : EntityEventArgs
     /// </summary>
     public readonly EntityUid? Station;
 
-    public PlayerSpawningEvent(ProtoId<JobPrototype>? job, HumanoidCharacterProfile? humanoidCharacterProfile, EntityUid? station)
+    //LP edit start
+    public readonly int sponsorTier;
+    public readonly string uuid;
+    //LP edit end
+
+    public PlayerSpawningEvent(ProtoId<JobPrototype>? job, HumanoidCharacterProfile? humanoidCharacterProfile, EntityUid? station, int tier = 0, string uid = "")   //LP edit
     {
         Job = job;
         HumanoidCharacterProfile = humanoidCharacterProfile;
         Station = station;
+        sponsorTier = tier;
+        uuid = uid;
     }
 }
