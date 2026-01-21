@@ -64,8 +64,10 @@ namespace Content.Server.Preferences.Managers
         [Dependency] private readonly IDependencyCollection _dependencies = default!;
         [Dependency] private readonly ILogManager _log = default!;
         [Dependency] private readonly UserDbDataManager _userDb = default!;
-        private ISharedSponsorsManager? _sponsors; // CorvaxGoob-Sponsors
         [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
+#if LP
+        [Dependency] private readonly SponsorsManager _sponsors = default!;
+#endif
 
         // Cache player prefs on the server so we don't need as much async hell related to them.
         private readonly Dictionary<NetUserId, PlayerPrefData> _cachedPlayerPrefs =
@@ -77,7 +79,6 @@ namespace Content.Server.Preferences.Managers
 
         public void Init()
         {
-            IoCManager.Instance!.TryResolveType(out _sponsors); // CorvaxGoob-Sponsors
             _netManager.RegisterNetMessage<MsgPreferencesAndSettings>();
             _netManager.RegisterNetMessage<MsgSelectCharacter>(HandleSelectCharacterMessage);
             _netManager.RegisterNetMessage<MsgUpdateCharacter>(HandleUpdateCharacterMessage);
@@ -144,9 +145,7 @@ namespace Content.Server.Preferences.Managers
             var session = _playerManager.GetSessionById(userId);
 
             // CorvaxGoob-Sponsors-Start
-            var sponsorPrototypes = _sponsors != null && _sponsors.TryGetServerPrototypes(session.UserId, out var prototypes)
-                ? prototypes.ToArray()
-                : [];
+            var sponsorPrototypes = SponsorSimpleManager.GetMarkings(userId).ToArray();
             profile.EnsureValid(session, _dependencies, sponsorPrototypes, SponsorSimpleManager.GetTier(userId), SponsorSimpleManager.GetUUID(userId));   //LP edit
             // CorvaxGoob-Sponsors-End
 
@@ -266,6 +265,9 @@ namespace Content.Server.Preferences.Managers
         // Should only be called via UserDbDataManager.
         public async Task LoadData(ICommonSession session, CancellationToken cancel)
         {
+#if LP
+            await _sponsors.WaitForSponsorInfoLoaded(session.UserId);
+#endif
             if (!ShouldStorePrefs(session.Channel.AuthType))
             {
                 // Don't store data for guests.
@@ -296,13 +298,11 @@ namespace Content.Server.Preferences.Managers
                     //LP edit start
                     var sponsorTier = SponsorSimpleManager.GetTier(session.UserId);
                     var uuid = SponsorSimpleManager.GetUUID(session.UserId);
+                    var sponsorPrototypes = SponsorSimpleManager.GetMarkings(session.UserId).ToArray();
                     //LP edit end
 
                     foreach (var (_, profile) in prefs.Characters)
                     {
-                        var sponsorPrototypes = _sponsors != null && _sponsors.TryGetServerPrototypes(session.UserId, out var prototypes)
-                            ? prototypes.ToArray()
-                            : [];
                         profile.EnsureValid(session, collection, sponsorPrototypes, sponsorTier, uuid);   //LP edit
                     }
                     // CorvaxGoob-Sponsors-End
@@ -325,15 +325,13 @@ namespace Content.Server.Preferences.Managers
             //LP edit start
             var sponsorTier = SponsorSimpleManager.GetTier(session.UserId);
             var uuid = SponsorSimpleManager.GetUUID(session.UserId);
+            var sponsorPrototypes = SponsorSimpleManager.GetMarkings(session.UserId).ToArray();
             //LP edit end
 
             // Corvax-Sponsors-Start: Remove sponsor markings from expired sponsors
             var collection = IoCManager.Instance!;
             foreach (var (_, profile) in prefsData.Prefs.Characters)
             {
-                var sponsorPrototypes = _sponsors != null && _sponsors.TryGetServerPrototypes(session.UserId, out var prototypes)
-                    ? prototypes.ToArray()
-                    : [];
                 profile.EnsureValid(session, collection, sponsorPrototypes, sponsorTier, uuid);   //LP edit
             }
             // Corvax-Sponsors-End
@@ -342,7 +340,7 @@ namespace Content.Server.Preferences.Managers
             msg.Preferences = prefsData.Prefs;
             msg.Settings = new GameSettings
             {
-                MaxCharacterSlots = GetMaxUserCharacterSlots(session.UserId) + SponsorSimpleManager.GetMaxCharacterSlots(session.UserId) // CorvaxGoob-Sponsors //LP edit
+                MaxCharacterSlots = GetMaxUserCharacterSlots(session.UserId) // CorvaxGoob-Sponsors
             };
             _netManager.ServerSendMessage(msg, session.Channel);
         }
@@ -361,7 +359,7 @@ namespace Content.Server.Preferences.Managers
         private int GetMaxUserCharacterSlots(NetUserId userId)
         {
             var maxSlots = _cfg.GetCVar(CCVars.GameMaxCharacterSlots);
-            var extraSlots = _sponsors?.GetServerExtraCharSlots(userId) ?? 0;
+            var extraSlots = SponsorSimpleManager.GetMaxCharacterSlots(userId); //LP edit
             return maxSlots + extraSlots;
         }
         // CorvaxGoob-Sponsors-End
@@ -429,7 +427,7 @@ namespace Content.Server.Preferences.Managers
             // Clean up preferences in case of changes to the game,
             // such as removed jobs still being selected.
 
-            var sponsorPrototypes = _sponsors != null && _sponsors.TryGetServerPrototypes(session.UserId, out var prototypes) ? prototypes.ToArray() : []; // CorvaxGoob-Sponsors
+            var sponsorPrototypes = SponsorSimpleManager.GetMarkings(session.UserId).ToArray(); // LP edit
 
             return new PlayerPreferences(prefs.Characters.Select(p =>
             {

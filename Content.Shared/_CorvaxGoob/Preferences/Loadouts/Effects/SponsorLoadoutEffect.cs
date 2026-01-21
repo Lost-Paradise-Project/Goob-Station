@@ -34,18 +34,4 @@ public sealed partial class SponsorLoadoutEffect : LoadoutEffect
 
         return true;
     }
-
-    public List<string> GetPrototypes(ICommonSession session, IDependencyCollection collection)
-    {
-        if (!collection.TryResolveType<ISharedSponsorsManager>(out var sponsorsManager))
-            return new List<string>();
-
-        var net = collection.Resolve<INetManager>();
-
-        if (net.IsClient)
-            return sponsorsManager.GetClientPrototypes();
-
-        sponsorsManager.TryGetServerPrototypes(session.UserId, out var props);
-        return props ?? [];
-    }
 }

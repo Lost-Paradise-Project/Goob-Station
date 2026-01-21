@@ -199,20 +199,20 @@ public sealed partial class RoleLoadout : IEquatable<RoleLoadout>
             }
 
             // CorvaxGoob-Loadouts-Start
-            if (collection.TryResolveType<ISharedLoadoutsManager>(out var loadoutsManager) && group.Id == "Inventory")
-            {
-                var prototypes = new List<string>();
-                if (netManager.IsClient)
-                {
-                    prototypes = loadoutsManager.GetClientPrototypes();
-                }
-                else if (session != null && loadoutsManager.TryGetServerPrototypes(session.UserId, out var protos))
-                {
-                    prototypes = protos;
-                }
+            // if (collection.TryResolveType<ISharedLoadoutsManager>(out var loadoutsManager) && group.Id == "Inventory")   //LP edit отключено из-за отсутствия
+            // {
+            //     var prototypes = new List<string>();
+            //     if (netManager.IsClient)
+            //     {
+            //         prototypes = loadoutsManager.GetClientPrototypes();
+            //     }
+            //     else if (session != null && loadoutsManager.TryGetServerPrototypes(session.UserId, out var protos))
+            //     {
+            //         prototypes = protos;
+            //     }
 
-                groupProto.Loadouts.AddRange(prototypes.Select(id => (ProtoId<LoadoutPrototype>) id));
-            }
+            //     groupProto.Loadouts.AddRange(prototypes.Select(id => (ProtoId<LoadoutPrototype>) id));
+            // }
             // CorvaxGoob-Loadouts-End
 
             var loadouts = groupLoadouts[..Math.Min(groupLoadouts.Count, groupProto.MaxLimit)];

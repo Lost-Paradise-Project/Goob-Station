@@ -221,7 +221,6 @@ internal sealed partial class ChatManager : IChatManager
     [Dependency] private readonly INetConfigurationManager _netConfigManager = default!;
     [Dependency] private readonly IEntityManager _entityManager = default!;
     [Dependency] private readonly PlayerRateLimitManager _rateLimitManager = default!;
-    private ISharedSponsorsManager? _sponsorsManager; // CorvaxGoob-Sponsors
     [Dependency] private readonly ISharedPlayerManager _player = default!;
     //[Dependency] private readonly LinkAccountManager _linkAccount = default!; // RMC - Patreon // CorvaxGoob-Coins
 

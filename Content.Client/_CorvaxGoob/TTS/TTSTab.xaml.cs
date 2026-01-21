@@ -162,11 +162,12 @@ public sealed partial class TTSTab : Control
 
     private bool CanUseVoice(TTSVoicePrototype voice)
     {
-        if (!voice.SponsorOnly)
-            return true;
+        // if (!voice.SponsorOnly)
+        //     return true;
 
-        var sponsorsManager = IoCManager.Resolve<ISharedSponsorsManager>();
-        return sponsorsManager?.GetClientPrototypes().Contains(voice.ID) == true;
+        // var sponsorsManager = IoCManager.Resolve<ISharedSponsorsManager>();
+        // return sponsorsManager?.GetClientPrototypes().Contains(voice.ID) == true;
+        return true;    //LP edit заглушка
     }
 
     public void UpdateControls(HumanoidCharacterProfile? profile, Sex sex)

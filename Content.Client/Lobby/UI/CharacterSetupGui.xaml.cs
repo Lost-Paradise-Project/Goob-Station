@@ -74,11 +74,11 @@ namespace Content.Client.Lobby.UI
             _cfg.OnValueChanged(CCVars.SeeOwnNotes, p => AdminRemarksButton.Visible = p, true);
 
             // CorvaxGoob-Sponsors-Start
-            if (IoCManager.Instance!.TryResolveType<ISponsorWindowCreator>(out var creator))
-            {
-                SponsorButton.Visible = true;
-                SponsorButton.OnPressed += _ => creator.OpenWindow();
-            }
+            // if (IoCManager.Instance!.TryResolveType<ISponsorWindowCreator>(out var creator)) //LP edit отключено из-за отсутствия
+            // {
+            //     SponsorButton.Visible = true;
+            //     SponsorButton.OnPressed += _ => creator.OpenWindow();
+            // }
             // CorvaxGoob-Sponsors-End
         }
 

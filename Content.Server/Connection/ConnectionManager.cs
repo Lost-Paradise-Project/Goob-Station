@@ -173,7 +173,6 @@ namespace Content.Server.Connection
         [Dependency] private readonly IChatManager _chatManager = default!;
         [Dependency] private readonly IHttpClientHolder _http = default!;
         [Dependency] private readonly IAdminManager _adminManager = default!;
-        private IServerVPNGuardManager? _vpnGuardMgr; // Corvax-VPNGuard
 
         private GameTicker? _ticker; // CorvaxGoob-Queue
         private ISawmill _sawmill = default!;

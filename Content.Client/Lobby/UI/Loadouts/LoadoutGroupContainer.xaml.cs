@@ -86,10 +86,10 @@ public sealed partial class LoadoutGroupContainer : BoxContainer
 
         // CorvaxGoob-Loadouts-Start
         var groupLoadouts = _groupProto.Loadouts;
-        if (collection.TryResolveType<ISharedLoadoutsManager>(out var loadoutsManager) && _groupProto.ID == "Inventory")
-        {
-            groupLoadouts = loadoutsManager.GetClientPrototypes().Select(id => (ProtoId<LoadoutPrototype>) id).ToList();
-        }
+        // if (collection.TryResolveType<ISharedLoadoutsManager>(out var loadoutsManager) && _groupProto.ID == "Inventory") //LP edit отключено из-за отсутствия
+        // {
+        //     groupLoadouts = loadoutsManager.GetClientPrototypes().Select(id => (ProtoId<LoadoutPrototype>) id).ToList();
+        // }
         // CorvaxGoob-Loadouts-End
 
         // Get all loadout prototypes for this group.

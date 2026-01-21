@@ -30,7 +30,7 @@ public sealed partial class UUIDLoadoutEffect : LoadoutEffect
 
         if (uuid.ToLower() != UUID.ToLower())
         {
-            reason = FormattedMessage.FromMarkupOrThrow(Loc.GetString("loadout-sponsor-only"));
+            reason = FormattedMessage.FromMarkupOrThrow(Loc.GetString("loadout-uuid-only"));
             return false;
         }
 

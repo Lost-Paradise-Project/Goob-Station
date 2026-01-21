@@ -2,15 +2,20 @@ using Robust.Shared.Network;
 using Content.Shared.Mind;
 using Robust.Shared.GameObjects;
 using Robust.Shared.Player;
+using Content.Shared.Humanoid.Markings;
+using System.Linq;
 
 namespace Content.Server._LP.Sponsors;
 
 public static class SponsorSimpleManager
 {
+#if LP
+    private static SponsorsManager manager => IoCManager.Resolve<SponsorsManager>();
+#endif
     public static int GetTier(NetUserId netId)
     {
 #if LP
-        if (IoCManager.Resolve<SponsorsManager>().TryGetInfo(netId, out var sponsorInfo))
+        if (manager.TryGetInfo(netId, out var sponsorInfo))
             return sponsorInfo.Tier;
 #endif
         return 0;
@@ -39,10 +44,28 @@ public static class SponsorSimpleManager
     public static string GetUUID(NetUserId netId)
     {
 #if LP
-        if (IoCManager.Resolve<SponsorsManager>().TryGetInfo(netId, out var sponsorInfo))
+        if (manager.TryGetInfo(netId, out var sponsorInfo))
             return sponsorInfo.UUID;
 #endif
         return "";
+    }
+
+    public static List<string> GetMarkings(NetUserId netId)
+    {
+        List<string> marks = new();
+#if LP
+        if (manager.TryGetInfo(netId, out var sponsorInfo))
+        {
+            var sponsorTier = sponsorInfo.Tier;
+            if (sponsorTier >= 3)
+            {
+                var sponsormarks = IoCManager.Resolve<MarkingManager>().Markings.Select((a, _) => a.Value).Where(a => a.SponsorOnly == true).Select((a, _) => a.ID).ToList();
+                sponsormarks.AddRange(sponsorInfo.AllowedMarkings.AsEnumerable());
+                marks.AddRange(sponsormarks);
+            }
+        }
+#endif
+        return marks;
     }
 
     public static int GetMaxCharacterSlots(NetUserId netId)

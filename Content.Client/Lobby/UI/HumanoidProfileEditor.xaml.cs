@@ -2067,7 +2067,7 @@ namespace Content.Client.Lobby.UI
 
             try
             {
-                var profile = _entManager.System<HumanoidAppearanceSystem>().FromStream(file, _playerManager.LocalSession!, SponsorSimpleManager.GetTier(), SponsorSimpleManager.GetUUID());    //LP edit
+                var profile = _entManager.System<HumanoidAppearanceSystem>().FromStream(file, _playerManager.LocalSession!, SponsorSimpleManager.GetMarkings(), SponsorSimpleManager.GetTier(), SponsorSimpleManager.GetUUID());    //LP edit
                 var oldProfile = Profile;
                 SetProfile(profile, CharacterSlot);
 
