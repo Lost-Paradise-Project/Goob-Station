@@ -197,6 +197,7 @@ using Content.Goobstation.Common.Barks;
 using Content.Goobstation.Common.CCVar;
 using Content.Shared._CorvaxGoob; // CorvaxGoob-TTS
 using Content.Client._LP.Sponsors;  //LP edit
+using Content.Shared._ERPModule.Data; // LP edit
 
 namespace Content.Client.Lobby.UI
 {
@@ -358,6 +359,18 @@ namespace Content.Client.Lobby.UI
             };
 
             #endregion Sex
+
+            // LP edit start
+            #region ERP-MODULE
+
+            ErpStatusButton.OnItemSelected += args =>
+            {
+                ErpStatusButton.SelectId(args.Id);
+                SetErpStatus((ErpStatus) args.Id);
+            };
+
+            #endregion
+            // LP edit end
 
             #region Age
 
@@ -662,7 +675,23 @@ namespace Content.Client.Lobby.UI
 
             UpdateSpeciesGuidebookIcon();
             IsDirty = false;
+            // LP edit start
+            _cfgManager.OnValueChanged(ErpCVars.EroticPanelEnabled,
+                UpdateErpControlsVisibility,
+                true);
+            // LP edit end
         }
+
+        // LP edit start
+        #region ERP-MODULE
+
+        private void UpdateErpControlsVisibility(bool obj)
+        {
+            ERPStatusContainer.Visible = obj;
+        }
+
+        #endregion
+        // LP edit end
 
         /// <summary>
         /// Refreshes the flavor text editor status.
@@ -1051,6 +1080,7 @@ namespace Content.Client.Lobby.UI
             UpdateCMarkingsFacialHair();
             UpdateHeightWidthSliders(); // Goobstation: port EE height/width sliders
             UpdateWeight(); // Goobstation: port EE height/width sliders
+            UpdateErpStatusControls(); // LP edit
 
             RefreshAntags();
             RefreshJobs();
@@ -1066,6 +1096,17 @@ namespace Content.Client.Lobby.UI
             }
         }
 
+        // LP edit start
+        #region ERP-MODULE
+
+        private void SetErpStatus(ErpStatus newErp)
+        {
+            Profile = Profile?.WithErpStatus(newErp);
+            SetDirty();
+        }
+
+        #endregion
+        // LP edit end
 
         /// <summary>
         /// A slim reload that only updates the entity itself and not any of the job entities, etc.
@@ -1542,6 +1583,7 @@ namespace Content.Client.Lobby.UI
             RefreshJobs();
             // In case there's species restrictions for loadouts
             RefreshLoadouts();
+            UpdateErpStatusControls(); // LP edit
             UpdateSexControls(); // update sex for new species
             UpdateSpeciesGuidebookIcon();
             ReloadPreview();
@@ -1592,6 +1634,46 @@ namespace Content.Client.Lobby.UI
             IsDirty = true;
         }
         // Goob Station - End
+
+        // LP edit start
+        #region ERP-MODULE
+
+        private void UpdateErpStatusControls()
+        {
+            if (Profile == null)
+                return;
+
+            const ErpStatus defaultStatus = ErpStatus.Ask;
+
+            ErpStatusButton.Clear();
+
+            var statusLabels = new Dictionary<ErpStatus, string>
+            {
+                { ErpStatus.Yes, Loc.GetString("humanoid-profile-editor-erp-yes-text") },
+                { ErpStatus.Ask, Loc.GetString("humanoid-profile-editor-erp-ask-text") },
+                { ErpStatus.No, Loc.GetString("humanoid-profile-editor-erp-no-text") }
+            };
+
+            foreach (var status in Enum.GetValues<ErpStatus>())
+            {
+                if (statusLabels.TryGetValue(status, out var label))
+                {
+                    ErpStatusButton.AddItem(label, (int)status);
+                }
+            }
+
+            if (Enum.IsDefined(Profile.ErpStatus))
+            {
+                ErpStatusButton.SelectId((int)Profile.ErpStatus);
+            }
+            else
+            {
+                ErpStatusButton.SelectId((int)defaultStatus);
+            }
+        }
+
+        #endregion
+        // LP edit end
 
         public bool IsDirty
         {

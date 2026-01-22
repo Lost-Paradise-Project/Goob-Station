@@ -515,6 +515,7 @@
   - type: Sprinter # Goobstation
   - type: MindControllable # Goobstation
   - type: VisibleContraband # Goobstation
+  - type: ERPBounder # LP edit
 
 - type: entity
   save: false
