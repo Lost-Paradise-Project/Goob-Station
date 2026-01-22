@@ -59,7 +59,7 @@
   - type: AltFireMelee # Frontier
     attackType: Light # Frontier
   - type: UpgradeableGun
-    maxUpgradeCapacity: 200
+    maxUpgradeCapacity: 80
     whitelist:
       tags:
       - PKAUpgrade
@@ -127,7 +127,7 @@
     maxOffset: 4 # Frontier
     pvsIncrease: 0.5 # Frontier
   - type: UpgradeableGun
-    maxUpgradeCapacity: 200
+    maxUpgradeCapacity: 40
     whitelist:
       tags:
       - PKAUpgrade
@@ -194,7 +194,7 @@
     maxOffset: 1.5 # Frontier
     pvsIncrease: 0.15 # Frontier
   - type: UpgradeableGun
-    maxUpgradeCapacity: 200
+    maxUpgradeCapacity: 40
     whitelist:
       tags:
       - PKAUpgrade
@@ -255,7 +255,7 @@
   - type: AltFireMelee # Frontier
     attackType: Light # Frontier
   - type: UpgradeableGun
-    maxUpgradeCapacity: 200
+    maxUpgradeCapacity: 40
     whitelist:
       tags:
       - PKAUpgrade
@@ -309,7 +309,7 @@
   - type: AltFireMelee # Frontier
     attackType: Light # Frontier
   - type: UpgradeableGun
-    maxUpgradeCapacity: 200
+    maxUpgradeCapacity: 100
     whitelist:
       tags:
       - PKAUpgrade
