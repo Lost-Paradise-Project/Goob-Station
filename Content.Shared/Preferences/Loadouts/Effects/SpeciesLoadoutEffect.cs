@@ -22,7 +22,10 @@ public sealed partial class SpeciesLoadoutEffect : LoadoutEffect
     public bool Inverted = false; // Goobstation - EE Plasmeme Change.
 
     public override bool Validate(HumanoidCharacterProfile profile, RoleLoadout loadout, LoadoutPrototype proto, ICommonSession? session, IDependencyCollection collection, // CorvaxGoob-Sponsors
-        [NotNullWhen(false)] out FormattedMessage? reason)
+        [NotNullWhen(false)] out FormattedMessage? reason,
+        int sponsorTier = 0,    //LP edit
+        string uuid = ""        //LP edit
+    )
     {
         if (Species.Contains(profile.Species) ^ Inverted) // Goobstation - EE Plasmeme Change.
         {

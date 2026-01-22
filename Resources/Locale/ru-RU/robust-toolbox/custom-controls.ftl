@@ -10,3 +10,17 @@ entity-spawn-window-override-menu-tooltip = Перезапись размеще�
 ## Console
 
 console-line-edit-placeholder = Введите сюда команду
+
+## TileSpawnWindow
+
+tile-spawn-window-title = Поставить тайлы
+tile-spawn-window-mirror-button-text = Отразить тайлы
+
+## OutputPanel
+
+output-panel-scroll-down-button-text = Опустить вниз
+
+## Common Used
+
+window-erase-button-text = Стереть
+

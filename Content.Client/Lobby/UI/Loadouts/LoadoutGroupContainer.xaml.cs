@@ -17,6 +17,7 @@ using Robust.Client.UserInterface.XAML;
 using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
 using System.Linq;
+using Content.Client._LP.Sponsors;  //LP edit
 
 namespace Content.Client.Lobby.UI.Loadouts;
 
@@ -85,10 +86,10 @@ public sealed partial class LoadoutGroupContainer : BoxContainer
 
         // CorvaxGoob-Loadouts-Start
         var groupLoadouts = _groupProto.Loadouts;
-        if (collection.TryResolveType<ISharedLoadoutsManager>(out var loadoutsManager) && _groupProto.ID == "Inventory")
-        {
-            groupLoadouts = loadoutsManager.GetClientPrototypes().Select(id => (ProtoId<LoadoutPrototype>) id).ToList();
-        }
+        // if (collection.TryResolveType<ISharedLoadoutsManager>(out var loadoutsManager) && _groupProto.ID == "Inventory") //LP edit отключено из-за отсутствия
+        // {
+        //     groupLoadouts = loadoutsManager.GetClientPrototypes().Select(id => (ProtoId<LoadoutPrototype>) id).ToList();
+        // }
         // CorvaxGoob-Loadouts-End
 
         // Get all loadout prototypes for this group.
@@ -239,7 +240,7 @@ public sealed partial class LoadoutGroupContainer : BoxContainer
 
         var pressed = selected.Any(e => e.Prototype == proto.ID);
 
-        var enabled = loadout.IsValid(profile, session, proto.ID, collection, out var reason);
+        var enabled = loadout.IsValid(profile, session, proto.ID, collection, out var reason, SponsorSimpleManager.GetTier(), SponsorSimpleManager.GetUUID());  //LP edit
 
         var cont = new LoadoutContainer(proto, !enabled, reason);
 

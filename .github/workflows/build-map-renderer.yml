@@ -23,9 +23,7 @@ on:
     types: [ opened, reopened, synchronize, ready_for_review ]
     branches: [ master, staging, stable ]
 
-concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: true
+
 
 jobs:
   build:

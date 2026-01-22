@@ -1,4 +1,5 @@
-﻿using Content.Server.Clothing.Systems;
+﻿using Content.Server._LP.Sponsors;  //LP edit
+using Content.Server.Clothing.Systems;
 using Content.Server.Preferences.Managers;
 using Content.Shared.Clothing;
 using Content.Shared.Clothing.Components;
@@ -100,7 +101,7 @@ public sealed class ChameleonControllerSystem : SharedChameleonControllerSystem
             return;
 
         defaultRoleLoadout = new RoleLoadout(jobProtoId);
-        defaultRoleLoadout.SetDefault(profile, null, _proto); // only sets the default if the player has no loadout
+        defaultRoleLoadout.SetDefault(profile, null, _proto, sponsorTier: SponsorSimpleManager.GetTier(userId), uuid: SponsorSimpleManager.GetUUID(userId)); // only sets the default if the player has no loadout  //LP edit
     }
 
     private void ChameleonControllerOutfitItemSelected(Entity<ChameleonClothingComponent> ent, ref InventoryRelayedEvent<ChameleonControllerOutfitSelectedEvent> args)

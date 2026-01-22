@@ -8,6 +8,7 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
 using System.Linq;
+using Content.Client._LP.Sponsors;  //LP edit
 using Content.Corvax.Interfaces.Shared;
 using Content.Shared._CorvaxGoob;
 using Content.Shared.Humanoid.Markings;
@@ -24,7 +25,6 @@ public sealed partial class SingleMarkingPicker : BoxContainer
 {
     [Dependency] private readonly MarkingManager _markingManager = default!;
     [Dependency] private readonly IEntityManager _entityManager = default!;
-    private ISharedSponsorsManager? _sponsorsManager; // CorvaxGoob-Sponsors
 
     private readonly SpriteSystem _sprite;
 
@@ -138,7 +138,6 @@ public sealed partial class SingleMarkingPicker : BoxContainer
     {
         RobustXamlLoader.Load(this);
         IoCManager.InjectDependencies(this);
-        IoCManager.Instance!.TryResolveType(out _sponsorsManager); // CorvaxGoob-Sponsors
 
         _sprite = _entityManager.System<SpriteSystem>();
         MarkingList.OnItemSelected += SelectMarking;
@@ -204,6 +203,11 @@ public sealed partial class SingleMarkingPicker : BoxContainer
             GetMarkingName(m.Value).ToLower().Contains(filter.ToLower())
         ).OrderBy(p => Loc.GetString($"marking-{p.Key}"));
 
+        //LP edit start
+        var sponsorTier = SponsorSimpleManager.GetTier();
+        var sponsorMarkings = SponsorSimpleManager.GetMarkings();
+        //LP edit ednt
+
         foreach (var (id, marking) in sortedMarkings)
         {
             var item = MarkingList.AddItem(Loc.GetString($"marking-{id}"), _sprite.Frame0(marking.Sprites[0]));
@@ -211,8 +215,8 @@ public sealed partial class SingleMarkingPicker : BoxContainer
             // CorvaxGoob-Sponsors-Start
             if (marking.SponsorOnly)
                 item.Text += SponsorUtils.GetSponsorOnlySuffix();
-            if (marking.SponsorOnly && _sponsorsManager != null)
-                item.Disabled = !_sponsorsManager.GetClientPrototypes().Contains(marking.ID);
+            if (marking.SponsorOnly && sponsorTier < 3)
+                item.Disabled = !sponsorMarkings.Contains(marking.ID);
             // CorvaxGoob-Sponsors-End
 
             if (_markings[Slot].MarkingId == id)

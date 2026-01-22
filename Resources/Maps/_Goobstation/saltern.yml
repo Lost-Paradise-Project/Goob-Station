@@ -53570,6 +53570,13 @@ entities:
     - type: Transform
       pos: -23.5,39.5
       parent: 2
+- proto: PlushieAtmosian
+  entities:
+  - uid: 8281
+    components:
+    - type: Transform
+      pos: 44.47201,25.696434
+      parent: 2
 - proto: PlushieCarp
   entities:
   - uid: 8282

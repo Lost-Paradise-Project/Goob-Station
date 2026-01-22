@@ -142,6 +142,9 @@ using Robust.Shared.Network;
 using Robust.Shared.Player;
 using Robust.Shared.Timing;
 using Robust.Shared.Utility;
+#if LP
+using Content.Server._LP.Sponsors;
+#endif
 
 namespace Content.Server.Administration.Systems
 {
@@ -228,7 +231,7 @@ namespace Content.Server.Administration.Systems
             SubscribeNetworkEvent<BwoinkClientTypingUpdated>(OnClientTypingUpdated);
             SubscribeLocalEvent<RoundRestartCleanupEvent>(_ => _activeConversations.Clear());
 
-        	_rateLimit.Register(
+            _rateLimit.Register(
                 RateLimitKey,
                 new RateLimitRegistration(CCVars.AhelpRateLimitPeriod,
                     CCVars.AhelpRateLimitCount,
@@ -469,7 +472,7 @@ namespace Content.Server.Administration.Systems
             {
                 // TODO: Ideally, CVar validation during setting should be better integrated
                 Log.Warning("Webhook URL does not appear to be valid. Using anyways...");
-                await GetWebhookData(url); // Frontier - Support for Custom URLS, we still want to see if theres Webhook data available
+                _webhookData = await GetWebhookData(url); // Frontier - Support for Custom URLS, we still want to see if theres Webhook data available //LP edit
                 return;
             }
 
@@ -480,7 +483,7 @@ namespace Content.Server.Administration.Systems
             }
 
             // Fire and forget
-            await GetWebhookData(url); // Frontier - Support for Custom URLS
+            _webhookData = await GetWebhookData(url); // Frontier - Support for Custom URLS //LP edit
         }
 
         private async Task<WebhookData?> GetWebhookData(string url)
@@ -603,8 +606,22 @@ namespace Content.Server.Administration.Systems
             // Otherwise patch (edit) it
             if (existingEmbed.Id == null)
             {
-                var request = await _httpClient.PostAsync($"{_webhookUrl}?wait=true",
-                    new StringContent(JsonSerializer.Serialize(payload), Encoding.UTF8, "application/json"));
+                //LP edit start
+                HttpResponseMessage request;
+                try
+                {
+                    request = await _httpClient.PostAsync($"{_webhookUrl}?wait=true",
+                        new StringContent(JsonSerializer.Serialize(payload), Encoding.UTF8, "application/json"));
+                }
+                catch (Exception ex)
+                {
+                    _sawmill.Log(LogLevel.Error,
+                        $"Webhook POST failed (network / refused) for user {userId}: {ex.Message}\n{ex}");
+                    _relayMessages.Remove(userId);
+                    _processingChannels.Remove(userId); // Frontier: Very Basic "Retry" logic, There might be times were Source or Target have temporarily network issues.
+                    return;
+                }
+                //LP edit end
 
                 var content = await request.Content.ReadAsStringAsync();
                 if (!request.IsSuccessStatusCode)
@@ -612,6 +629,7 @@ namespace Content.Server.Administration.Systems
                     _sawmill.Log(LogLevel.Error,
                         $"Discord returned bad status code when posting message (perhaps the message is too long?): {request.StatusCode}\nResponse: {content}");
                     _relayMessages.Remove(userId);
+                    _processingChannels.Remove(userId); // LP edit
                     return;
                 }
 
@@ -628,8 +646,22 @@ namespace Content.Server.Administration.Systems
             }
             else
             {
-                var request = await _httpClient.PatchAsync($"{_webhookUrl}/messages/{existingEmbed.Id}",
-                    new StringContent(JsonSerializer.Serialize(payload), Encoding.UTF8, "application/json"));
+                //LP edit start
+                HttpResponseMessage request;
+                try
+                {
+                    request = await _httpClient.PatchAsync($"{_webhookUrl}/messages/{existingEmbed.Id}",
+                        new StringContent(JsonSerializer.Serialize(payload), Encoding.UTF8, "application/json"));
+                }
+                catch (Exception ex)
+                {
+                    _sawmill.Log(LogLevel.Error,
+                        $"Webhook PATCH failed (network / refused) for user {userId} (will discard current embed state): {ex.Message}\n{ex}");
+                    _relayMessages.Remove(userId);
+                    _processingChannels.Remove(userId); // Frontier: Very Basic "Retry" logic, There might be times were Source or Target have temporarily network issues.
+                    return;
+                }
+                //LP edit end
 
                 if (!request.IsSuccessStatusCode)
                 {
@@ -637,6 +669,7 @@ namespace Content.Server.Administration.Systems
                     _sawmill.Log(LogLevel.Error,
                         $"Discord returned bad status code when patching message (perhaps the message is too long?): {request.StatusCode}\nResponse: {content}");
                     _relayMessages.Remove(userId);
+                    _processingChannels.Remove(userId); //LP edit
                     return;
                 }
             }
@@ -665,14 +698,29 @@ namespace Content.Server.Administration.Systems
 
                     payload = GeneratePayload(message.ToString(), existingEmbed.Username, userId, existingEmbed.CharacterName);
 
-                    var request = await _httpClient.PostAsync($"{_onCallUrl}?wait=true",
-                        new StringContent(JsonSerializer.Serialize(payload), Encoding.UTF8, "application/json"));
-
-                    var content = await request.Content.ReadAsStringAsync();
-                    if (!request.IsSuccessStatusCode)
+                    //LP edit start
+                    HttpResponseMessage request;
+                    try
                     {
-                        _sawmill.Log(LogLevel.Error, $"Discord returned bad status code when posting relay message (perhaps the message is too long?): {request.StatusCode}\nResponse: {content}");
+                        request = await _httpClient.PostAsync($"{_onCallUrl}?wait=true",
+                            new StringContent(JsonSerializer.Serialize(payload), Encoding.UTF8, "application/json"));
                     }
+                    catch (Exception ex)
+                    {
+                        _sawmill.Log(LogLevel.Error,
+                            $"On-call webhook POST failed (network / refused) for user {userId}: {ex.Message}\n{ex}");
+                        request = null!;
+                    }
+
+                    if (request != null)
+                    {
+                        var content = await request.Content.ReadAsStringAsync();
+                        if (!request.IsSuccessStatusCode)
+                        {
+                            _sawmill.Log(LogLevel.Error, $"Webhook returned bad status code when posting relay message (perhaps the message is too long?): {request.StatusCode}\nResponse: {content}"); // Frontier: Discord<Webhook
+                        }
+                    }
+                    //LP edit end
                 }
             }
             else
@@ -811,6 +859,7 @@ namespace Content.Server.Administration.Systems
             var adminColor = _config.GetCVar(GoobCVars.AdminBwoinkColor);
             var adminPrefix = "";
             var bwoinkText = $"{bwoinkParams.SenderName}";
+            string sponsorColor = adminColor;   // LOP edit
 
             //Getting an administrator position
             if (_config.GetCVar(CCVars.AhelpAdminPrefix))
@@ -822,6 +871,26 @@ namespace Content.Server.Administration.Systems
                     adminPrefix = $"[bold]\\[{bwoinkParams.RoleName}\\][/bold] ";
             }
 
+            if (!bwoinkParams.FromWebhook
+                && _config.GetCVar(GoobCVars.UseAdminOOCColorInBwoinks)
+                && bwoinkParams.SenderAdmin is not null)
+            {
+                var prefs = _preferencesManager.GetPreferences(bwoinkParams.SenderId);
+                adminColor = prefs.AdminOOCColor.ToHex();
+                sponsorColor = adminColor;  //LP edit
+            }
+
+            //LP edit start
+#if LP
+            if (IoCManager.Resolve<SponsorsManager>().TryGetInfo(bwoinkParams.SenderId, out var sponsorInfo) && sponsorInfo.Tier > 0)
+            {
+                sponsorColor = sponsorInfo.OOCColor;
+                if (!bwoinkParams.FromWebhook)
+                    bwoinkText = $"[color={sponsorColor}]{bwoinkParams.SenderName}[/color]";    //ставим цвет нику игрока, если спонсор
+            }
+#endif
+            //LP edit end
+
             // If role color is enabled and exists, use it, otherwise use the discord reply color
             if (_config.GetCVar(GoobCVars.DiscordReplyColor) != string.Empty && bwoinkParams.FromWebhook)
                 adminColor = _config.GetCVar(GoobCVars.DiscordReplyColor);
@@ -829,27 +898,19 @@ namespace Content.Server.Administration.Systems
             if (_config.GetCVar(GoobCVars.UseDiscordRoleColor) && bwoinkParams.RoleColor is not null)
                 adminColor = bwoinkParams.RoleColor;
 
-            if (!bwoinkParams.FromWebhook
-                && _config.GetCVar(GoobCVars.UseAdminOOCColorInBwoinks)
-                && bwoinkParams.SenderAdmin is not null)
-            {
-                var prefs = _preferencesManager.GetPreferences(bwoinkParams.SenderId);
-                adminColor = prefs.AdminOOCColor.ToHex();
-            }
-
             if (bwoinkParams.SenderAdmin is not null)
             {
                 if (bwoinkParams.SenderAdmin.Flags ==
                     AdminFlags.Adminhelp) // Mentor. Not full admin. That's why it's colored differently.
-                    bwoinkText = $"[color=purple]{adminPrefix}{bwoinkParams.SenderName}[/color]";
+                    bwoinkText = $"[color=purple]{adminPrefix}[/color][color={sponsorColor}]{bwoinkParams.SenderName}[/color]"; //LP edit
                 else if (bwoinkParams.FromWebhook || bwoinkParams.SenderAdmin.HasFlag(AdminFlags.Adminhelp)) // Frontier: anything sent via webhooks are from an admin.
-                    bwoinkText = $"[color={adminColor}]{adminPrefix}{bwoinkParams.SenderName}[/color]";
+                    bwoinkText = $"[color={adminColor}]{adminPrefix}[/color][color={sponsorColor}]{bwoinkParams.SenderName}[/color]";   //LP edit
             }
 
             if (bwoinkParams.FromWebhook)
                 bwoinkText = $"{_config.GetCVar(GoobCVars.DiscordReplyPrefix)}{bwoinkText}";
 
-            bwoinkText = $"{(bwoinkParams.Message.AdminOnly ? Loc.GetString("bwoink-message-admin-only") : !bwoinkParams.Message.PlaySound ? Loc.GetString("bwoink-message-silent") : "")} {bwoinkText}: {escapedText}";
+            bwoinkText = $"{(bwoinkParams.Message.AdminOnly ? Loc.GetString("bwoink-message-admin-only") : !bwoinkParams.Message.PlaySound ? Loc.GetString("bwoink-message-silent") : "")}{(bwoinkParams.FromWebhook ? Loc.GetString("bwoink-message-discord") : "")} {bwoinkText}: {escapedText}"; // LP edit
 
             // If it's not an admin / admin chooses to keep the sound and message is not an admin only message, then play it.
             var playSound = (bwoinkParams.SenderAdmin == null || bwoinkParams.Message.PlaySound) && !bwoinkParams.Message.AdminOnly;
