@@ -15,6 +15,11 @@
   - type: ToggleableClothing
     clothingPrototypes:
       head: LPPHelmetPajamsSharkPink
+  - type: ContainerContainer
+    containers:
+      toggleable-clothing: !type:ContainerSlot {}
+      storagebase: !type:Container
+        ents: []
 
 - type: entity
   parent: ClothingHeadBase
@@ -48,6 +53,11 @@
   - type: ToggleableClothing
     clothingPrototypes:
       head: LPPHelmetPajamsSharkBlue
+  - type: ContainerContainer
+    containers:
+      toggleable-clothing: !type:ContainerSlot {}
+      storagebase: !type:Container
+        ents: []
 
 - type: entity
   parent: ClothingHeadBase
@@ -81,6 +91,11 @@
   - type: ToggleableClothing
     clothingPrototypes:
       head: LPPHelmetPajamsSharkGray
+  - type: ContainerContainer
+    containers:
+      toggleable-clothing: !type:ContainerSlot {}
+      storagebase: !type:Container
+        ents: []
 
 - type: entity
   parent: ClothingHeadBase
