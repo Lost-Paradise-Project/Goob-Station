@@ -1,7 +1,7 @@
 ﻿using Robust.Client.GameObjects;
 using Content.Shared._Wega.Mining.Components;
 
-namespace Content.Client.Mining.Visualizers
+namespace Content.Client._Wega.Mining
 {
     public sealed class MiningServerVisualizerSystem : VisualizerSystem<MiningServerVisualsComponent>
     {

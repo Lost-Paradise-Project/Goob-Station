@@ -57,15 +57,7 @@
             </BoxContainer>
         </BoxContainer>
 
-        <customControls:HSeparator StyleClasses="LowDivider" Margin="0 0 0 10"/>
-
-        <BoxContainer Orientation="Vertical" VerticalExpand="False" Margin="10">
-            <controls:StripeBack>
-                <Label Text="{Loc 'mining-console-servers'}" HorizontalAlignment="Center" StyleClasses="LabelSubText" Margin="0 4"/>
-            </controls:StripeBack>
-        </BoxContainer>
-
-        <customControls:HSeparator StyleClasses="LowDivider" Margin="0 0 0 10"/>
+        <customControls:HSeparator StyleClasses="LowDivider" Margin="0 0 0 10"/>\
 
         <BoxContainer Orientation="Vertical" VerticalExpand="False" Margin="10">
             <controls:StripeBack>
