@@ -108,37 +108,3 @@
       coefficients:
         Blunt: 0.85
         Slash: 0.85
-
-- type: entity
-  parent: ClothingOuterWinterCoat
-  id: LPPOuterClothingGarfield
-  name: Garfield's costume
-  description: It's soft and smells of hate for Mondays.
-  components:
-  - type: Sprite
-    sprite: _LP/Clothing/OuterClothing/Coats/garfield/costume.rsi
-  - type: Clothing
-    sprite: _LP/Clothing/OuterClothing/Coats/garfield/costume.rsi
-  - type: ToggleableClothing
-    clothingPrototypes:
-      head:  LPPHelmetGarfiled
-  - type: ContainerContainer
-    containers:
-      toggleable-clothing: !type:ContainerSlot {}
-      storagebase: !type:Container
-        ents: []
-  - type: Food
-    requiresSpecialDigestion: true
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        maxVol: 30
-        reagents:
-        - ReagentId: Fiber
-          Quantity: 30
-  - type: Tag
-    tags:
-    - ClothMade
-    - WhitelistChameleon
-  - type: StaticPrice
-    price: 50

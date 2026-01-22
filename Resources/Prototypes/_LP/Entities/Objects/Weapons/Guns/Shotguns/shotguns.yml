@@ -12,7 +12,7 @@
     capacity: 7
   - type: Gun
     soundGunshot:
-      path: /Audio/Corvax/Weapons/Guns/Gunshots/shotgun_alt.ogg
+      path: /Audio/_Harmony/Weapons/Guns/Gunshots/hushpup_fire.ogg
     fireRate: 1.75
 
 - type: entity
