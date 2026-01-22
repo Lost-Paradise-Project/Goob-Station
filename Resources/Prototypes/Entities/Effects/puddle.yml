@@ -300,6 +300,7 @@
     triggerGroups: # Goobstation
       types:
       - SlipTile
+  - type: DirtSource # Corvax-Wega-Dirtable
   - type: Drink
     delay: 3
     transferAmount: 1

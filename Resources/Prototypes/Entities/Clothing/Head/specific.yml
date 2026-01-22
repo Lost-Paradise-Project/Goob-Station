@@ -26,6 +26,11 @@
       interfaces:
         enum.ChameleonUiKey.Key:
           type: ChameleonBoundUserInterface
+    # Corvax-Wega-Dirtable-start
+    - type: Dirtable
+      dirtState: beret
+      equippedDirtState: equipped-beret
+    # Corvax-Wega-Dirtable-end
 
 - type: entity
   parent: ClothingHeadHatFedoraBrown

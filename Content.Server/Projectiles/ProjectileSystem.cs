@@ -74,6 +74,7 @@ using Content.Shared.Damage;
 using Content.Shared.Database;
 using Content.Goobstation.Maths.FixedPoint;
 using Content.Shared._Shitmed.Targeting;
+using Content.Shared._Wega.Dirt; // Corvax-Wega-ToggleClothing
 using Content.Shared.Projectiles;
 using Robust.Shared.Physics.Events;
 using Robust.Shared.Player;
@@ -89,6 +90,7 @@ public sealed class ProjectileSystem : SharedProjectileSystem
     [Dependency] private readonly GunSystem _guns = default!;
     [Dependency] private readonly SharedCameraRecoilSystem _sharedCameraRecoil = default!;
     [Dependency] private readonly SharedTransformSystem _xform = default!;
+    [Dependency] private readonly SharedDirtSystem _dirt = default!; // Corvax-Wega-Dirtable
 
     public override void Initialize()
     {
@@ -142,6 +144,8 @@ public sealed class ProjectileSystem : SharedProjectileSystem
 
         if (modifiedDamage is not null && Exists(component.Shooter))
         {
+            _dirt.AddBloodDirtFromDamage(target, component.Shooter.Value, modifiedDamage, true); // Corvax-Wega-Dirtable
+
             if (modifiedDamage.AnyPositive() && !deleted)
             {
                 _color.RaiseEffect(Color.Red, new List<EntityUid> { target }, Filter.Pvs(target, entityManager: EntityManager));

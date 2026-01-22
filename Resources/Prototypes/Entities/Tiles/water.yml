@@ -94,6 +94,7 @@
   - type: TileEntityEffect
     effects:
     - !type:ExtinguishReaction
+    - !type:WashDirtReaction # Corvax-Wega-Dirtable
   # Goobstation - fishing
   - type: FishingSpot
     fishList: !type:NestedSelector

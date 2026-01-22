@@ -138,6 +138,7 @@ using Content.Shared.Damage.Systems;
 using Content.Shared.Database;
 using Content.Goobstation.Maths.FixedPoint;
 using Content.Shared._Shitmed.Targeting;
+using Content.Shared._Wega.Dirt; // Corvax-Wega-ToggleClothing
 using Content.Shared.Coordinates;
 using Content.Shared.Hands;
 using Content.Shared.Hands.Components;
@@ -200,6 +201,7 @@ public abstract class SharedMeleeWeaponSystem : EntitySystem
     [Dependency] private   readonly INetConfigurationManager _config = default!;
     [Dependency] private   readonly SharedStaminaSystem _stamina = default!;
     [Dependency] private   readonly TagSystem _tag = default!;
+    [Dependency] private readonly SharedDirtSystem _dirt = default!; // Corvax-Wega-Dirtable
 
     //Goob - Shove
     private float _shoveRange;
@@ -759,6 +761,7 @@ public abstract class SharedMeleeWeaponSystem : EntitySystem
 
         if (damageResult is {Empty: false})
         {
+            _dirt.AddBloodDirtFromDamage(target.Value, user, damageResult); // Corvax-Wega-Dirtable
             // If the target has stamina and is taking blunt damage, they should also take stamina damage based on their blunt to stamina factor
             if (damageResult.DamageDict.TryGetValue("Blunt", out var bluntDamage))
             {
@@ -940,6 +943,7 @@ public abstract class SharedMeleeWeaponSystem : EntitySystem
 
             if (damageResult != null && damageResult.GetTotal() > FixedPoint2.Zero)
             {
+                _dirt.AddBloodDirtFromDamage(entity, user, damageResult); // Corvax-Wega-Dirtable
                 // If the target has stamina and is taking blunt damage, they should also take stamina damage based on their blunt to stamina factor
                 if (damageResult.DamageDict.TryGetValue("Blunt", out var bluntDamage))
                 {

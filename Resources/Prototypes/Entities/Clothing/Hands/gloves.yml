@@ -174,6 +174,10 @@
     fiberMaterial: fibers-leather
     fiberColor: fibers-blue
   - type: FingerprintMask
+  # Corvax-Wega-Dirtable-start
+  - type: Dirtable
+    dirtState: capgloves
+  # Corvax-Wega-Dirtable-end
 
 - type: entity
   parent: ClothingHandsGlovesBoxingRed

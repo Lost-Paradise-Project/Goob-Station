@@ -50,6 +50,16 @@
       - Chest
       - Groin
     modifiers: {}
+  # Corvax-Wega-Dirtable-start
+  - type: Damageable
+    damageContainer: Clothing
+  - type: Reactive
+    reactions:
+    - reagents: [Water, SpaceCleaner]
+      methods: [Touch]
+      effects:
+      - !type:WashDirtReaction
+  # Corvax-Wega-Dirtable-end
 
 - type: entity
   abstract: true
