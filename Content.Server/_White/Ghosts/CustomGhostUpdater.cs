@@ -32,7 +32,7 @@ public sealed class CustomGhostUpdater : EntitySystem
         if (!_playerManager.TryGetSessionByUsername(ev.uuid, out var player))
             return;
 
-        if (!_proto.TryIndex(protoId, out var proto))
+        if (!_proto.TryIndex<CustomGhostPrototype>(protoId, out var proto))
             return;
 
         if (!proto.CanUse(player, SponsorSimpleManager.GetTier(player.UserId))) //LP edit

@@ -7,7 +7,7 @@ namespace Content.Shared._White.CustomGhostSystem;
 
 public sealed class ChangeCustomGhostMsg : NetMessage
 {
-    public ProtoId<CustomGhostPrototype> id;
+    public string id = "";
     public string uuid = "";
 
     public override MsgGroups MsgGroup => MsgGroups.Command;
