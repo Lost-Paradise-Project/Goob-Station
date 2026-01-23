@@ -103,3 +103,5 @@
   - HolopadMachineCircuitboard
   - TeslaCoilCircuitboard
   - RadiationCollectorCircuitboard
+  - MiningServerCircuitboard # Corvax-Wega-Mining
+  - MiningMonitoringComputerCircuitboard # Corvax-Wega-Mining
