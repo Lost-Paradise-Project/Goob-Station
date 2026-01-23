@@ -7,6 +7,7 @@ using Robust.Server.Player;
 using Robust.Shared.Player;
 using Content.Shared.Players;
 using Content.Server._LP.Sponsors;
+using Robust.Shared.Serialization;
 
 namespace Content.Server._LP.CustomGhostSystem;   //LP edit: сделано в дополнение к wwdp customghosts
 
@@ -29,18 +30,17 @@ public sealed class CustomGhostUpdater : EntitySystem
     private void OnCustomGhostCheck(ChangeCustomGhostMsg ev)
     {
         var protoId = ev.id;
-        if (!_playerManager.TryGetSessionByUsername(ev.uuid, out var player))
-            return;
+        var player = (NetUserId) Guid.Parse(ev.uuid);
 
         if (!_proto.TryIndex<CustomGhostPrototype>(protoId, out var proto))
             return;
 
-        if (!proto.CanUse(player, SponsorSimpleManager.GetTier(player.UserId))) //LP edit
+        if (!proto.CanUse(_playerManager.GetSessionById(player), SponsorSimpleManager.GetTier(player))) //LP edit
             return;
 
 
-        _db.SaveGhostTypeAsync(player.UserId, protoId);
-        var prefs = _prefMan.GetPreferences(player.UserId);
+        _db.SaveGhostTypeAsync(player, protoId);
+        var prefs = _prefMan.GetPreferences(player);
         prefs.CustomGhost = protoId;
     }
 }
