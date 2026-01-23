@@ -30,7 +30,6 @@ lathe-category-wood = Деревянная
 lathe-category-marble = Marble
 # Science
 lathe-category-mechs = Мехи
-lathe-category-modules = Модули
 lathe-category-robotics = Робототехника
 # Security TechFab
 lathe-category-ammo = Боеприпасы

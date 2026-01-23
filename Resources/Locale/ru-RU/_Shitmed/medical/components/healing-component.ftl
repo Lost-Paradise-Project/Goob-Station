@@ -3,7 +3,6 @@ cant-heal-damage-container-rebell = Вы не можете помочь { $targe
 rebell-medical-item-stop-bleeding-fully = Вы полностью остановили кровотечение.
 rebell-medical-item-stop-bleeding-partially = Вы частично остановили кровотечение.
 missing-body-part = Часть тела отсутствует.
-does-not-exist-rebell = Отсутствует эта часть тела.
 puts-on-a-tourniquet = { CAPITALIZE($user) } накладывает жгут на { $part }.
 takes-off-a-tourniquet = { CAPITALIZE($user) } снимает жгут с { $part }.
 take-off-tourniquet = Снять жгут с { $part }

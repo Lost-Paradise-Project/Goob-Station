@@ -19,3 +19,6 @@ alerts-modsuit-power-desc = Displays the current power level of your modsuit. Lo
 
 alerts-centered-name = Centered
 alerts-centered-desc = You feel in touch with your roots. Specifically the roots that keep you centered on tiles.
+
+alerts-disgust-name = [color=yellow]Отвращение[/color]
+alerts-disgust-desc = Вам не очень хорошо...

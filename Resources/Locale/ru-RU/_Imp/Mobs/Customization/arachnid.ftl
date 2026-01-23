@@ -75,7 +75,6 @@ marking-ArachnidLLegSegments = Сегментированная нога (лев
 marking-ArachnidLLegSegments-segments1 = Бедро
 marking-ArachnidLLegSegments-segments2 = Голень
 
-
 # LFoot
 
 

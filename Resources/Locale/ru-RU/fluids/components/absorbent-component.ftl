@@ -1,7 +1,6 @@
 mopping-system-target-container-empty = В { $target } пусто!
 mopping-system-target-container-empty-water = В { $target } нет воды!
 mopping-system-puddle-space = В { $used } полно воды
-mopping-system-puddle-evaporate = { CAPITALIZE($target) } испаряется
 mopping-system-puddle-already-mopped = { CAPITALIZE($target) } уже вымыта.
 mopping-system-no-water = В { $used } нет воды!
 mopping-system-full = { CAPITALIZE($used) } заполнена!

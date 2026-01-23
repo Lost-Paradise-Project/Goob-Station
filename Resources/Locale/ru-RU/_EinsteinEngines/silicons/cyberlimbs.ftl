@@ -7,8 +7,6 @@
 marking-MobIPCHeadDefault = Монитор
 marking-MobIPCChestDefault = Шасси, Мужское
 marking-MobIPCChestFemaleDefault = Шасси, Женское
-marking-MobIPCTorsoDefault = Шасси, Мужское
-marking-MobIPCTorsoFemaleDefault = Шасси, Женское
 marking-MobIPCLArmDefault = Рука
 marking-MobIPCLHandDefault = Кисть
 marking-MobIPCLLegDefault = Нога

@@ -215,7 +215,6 @@ marking-VoxTailRaptor = Хищник
 marking-VoxTailRaptor-raptor = Хвост
 marking-VoxTailShort1 = Короткий (Вниз)
 marking-VoxTailShort1-short = Хвост
-marking-VoxTailShort-short = Хвост
 marking-VoxTailShort2 = Короткий (Вверх)
 marking-VoxTailShort2-short2 = Хвост
 marking-VoxTailSmallPlume = Малое перо

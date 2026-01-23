@@ -21,13 +21,6 @@
   minLimit: 0
   loadouts:
   - SurgeonScalpelLaser
-  
-- type: loadoutGroup
-  id: Inventory
-  name: loadout-group-inventory
-  minLimit: 0
-  maxLimit: 5
-  loadouts: []
 
 - type: loadoutGroup
   id: ChiefEngineerBackpack

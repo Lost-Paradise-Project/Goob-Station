@@ -15,7 +15,6 @@ surgery-popup-step-SurgeryStepCloseBones = { $user } закрывает кост
 surgery-popup-step-SurgeryStepSealBones = { $user } запечатывает кости { $part } у { $target }.
 surgery-popup-step-SurgeryStepSealSkull = { $user } запечатывает череп { $part } у { $target }.
 surgery-popup-step-SurgeryStepSealRibcage = { $user } запечатывает грудную клетку { $part } у { $target }.
-surgery-popup-step-SurgeryStepMendRibcage = { $user } восстанавливает грудную клетку на { $part } у { $target }.
 surgery-popup-step-SurgeryStepCloseIncision = { $user } зашивает разрез на { $part } у { $target }.
 surgery-popup-step-SurgeryStepInsertFeature = { $user } вставляет что-то в { $part } у { $target }!
 surgery-popup-procedure-SurgeryAttachHead-step-SurgeryStepInsertFeature = { $user } прикрепляет голову к { $part } у { $target }!

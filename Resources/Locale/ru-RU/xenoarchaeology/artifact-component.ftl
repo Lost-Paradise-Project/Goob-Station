@@ -1,8 +1,6 @@
 ### Verbs
 
 artifact-verb-make-always-active = Сделать артефакт постоянно активным
-cmd-parse-failure-unlocknode-arg-num = Неправильное количество аргументов
-cmd-parse-failure-unlocknode-invalid-entity = Указаное netEntity не является валидным узлом
 artifact-verb-activate = Активировать артефакт
 artifact-unlock-state-begin = Он начинает меняться странным образом...
 artifact-unlock-state-end-success = Он замедляется, визуально меняясь.

@@ -13,14 +13,6 @@ def find_top_level_dir(start_dir):
             print(f"Не удалось найти {marker_file} начиная с {start_dir}")
             exit(-1)
         current_dir = parent_dir
-def setup_logging():
-    log_filename = f"cleanup_{datetime.now().strftime('%Y%m%d_%H%M%S')}.log"
-    logging.basicConfig(filename=log_filename, level=logging.INFO,
-                        format='%(asctime)s - %(levelname)s - %(message)s')
-    console = logging.StreamHandler()
-    console.setLevel(logging.INFO)
-    logging.getLogger('').addHandler(console)
-    return log_filename
 
 def remove_empty_files_and_folders(path):
     removed_files = 0
@@ -53,9 +45,7 @@ if __name__ == "__main__":
     script_dir = os.path.dirname(os.path.abspath(__file__))
     main_folder = find_top_level_dir(script_dir)
     root_dir = os.path.join(main_folder, "Resources\\Locale")
-    log_file = setup_logging()
 
     logging.info(f"Начало очистки в директории: {root_dir}")
     files_removed, folders_removed = remove_empty_files_and_folders(root_dir)
     logging.info(f"Очистка завершена. Удалено файлов: {files_removed}, удалено папок: {folders_removed}")
-    print(f"Лог операций сохранен в файл: {log_file}")

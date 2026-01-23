@@ -127,10 +127,6 @@ selectable-set-blueshield-dragon-description =
     Иногда приходится замарать руки.
     Содержит в себя: книгу, способную обучить
     продвинутому боевому искусству Кунг-Фу.
-selectable-set-blueshield-cqc-name = Набор для ближнего боя
-selectable-set-blueshield-cqc-description =
-    Иногда нужно и руками поработать.
-    Содержит: книгу с продвинутыми уроками ближнего боя.
 selectable-set-blueshield-chester-name = Набор Честера
 selectable-set-blueshield-chester-description =
     Готовы поохотиться?

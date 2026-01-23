@@ -344,6 +344,11 @@ ghost-role-information-lost-challenge-cargo-technican-rules = You are not hostil
                                      You are allowed to remember knowledge about the game in general, such as how to cook, how to use objects, etc.
                                      You are absolutely [color=red]NOT[/color] allowed to remember, say, the name, appearance, etc. of your previous character.
 
+ghost-role-information-pirate-name = Космический пират
+ghost-role-information-pirate-description = Агх, дружище! Собирайте крутые трофеи, но старайтесь избегать службы безопасности и утилизаторов!
+ghost-role-information-pirate-captain-name = Капитан космических пиратов
+ghost-role-information-pirate-captain-description = Агх, дружище! Ты здесь главный, и тебе нужно разработать план, как заполучить эту сочную добычу с помощью крючка или мошенничества. Только постарайтесь избегать службы безопасности и утилизаторов!
+
 ghost-role-information-disaster-victim-name = Disaster Victim
 ghost-role-information-disaster-victim-description = You were rescued in an escape pod from another station that suffered a terrible fate. Perhaps you will be found and rescued.
 

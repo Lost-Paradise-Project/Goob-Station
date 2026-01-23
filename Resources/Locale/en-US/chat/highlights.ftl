@@ -19,6 +19,7 @@ highlights-detective = Detective, "Det", Security, "Sec"
 highlights-security-cadet = Security Cadet, Secoff, Cadet, Security, "Sec"
 highlights-security-officer = Security Officer, Secoff, Officer, Security, "Sec"
 highlights-warden = Warden, "Ward", Security, "Sec"
+highlights-brigmedic = Brigmedic
 
 # Cargo
 highlights-cargo-technician = Cargo Technician, Cargo Tech, "Cargo"
@@ -50,6 +51,7 @@ highlights-lawyer = Lawyer, Attorney
 highlights-librarian = Librarian, Library
 highlights-mime = Mime
 highlights-passenger = Passenger, Greytider, "Tider"
+highlights-assistant = Passenger, Greytider, "Tider"
 highlights-service-worker = Service Worker
 
 # Station-specific

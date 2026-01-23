@@ -1,7 +1,6 @@
 - type: roleLoadout
   id: JobSurgeon
   groups:
-  - Inventory
   - SurgeonHead
   - SurgeonJumpsuit
   - MedicalGloves
@@ -25,7 +24,6 @@
 - type: roleLoadout
   id: JobWardenHelper
   groups:
-  - Inventory
   - WardenHead
   - WardenJumpsuit
   - SecurityBackpack
@@ -51,7 +49,6 @@
 - type: roleLoadout
   id: JobPilot
   groups:
-  - Inventory
   - PilotHead
   - PilotJumpsuit
   - SecurityBackpack

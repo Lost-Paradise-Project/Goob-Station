@@ -92,7 +92,6 @@
   id: GlowstickRed
   components:
     - type: ExpendableLight
-      spentName: expendable-light-spent-red-glowstick-name
       glowColorLit: "#FF0000"
     - type: PointLight
       color: "#FF0000"
@@ -103,7 +102,6 @@
   id: GlowstickPurple
   components:
     - type: ExpendableLight
-      spentName: expendable-light-spent-purple-glowstick-name
       glowColorLit: "#FF00FF"
     - type: PointLight
       color: "#FF00FF"
@@ -114,7 +112,6 @@
   id: GlowstickYellow
   components:
     - type: ExpendableLight
-      spentName: expendable-light-spent-yellow-glowstick-name
       glowColorLit: "#FFFF00"
     - type: PointLight
       color: "#FFFF00"
@@ -125,7 +122,6 @@
   id: GlowstickBlue
   components:
     - type: ExpendableLight
-      spentName: expendable-light-spent-blue-glowstick-name
       glowColorLit: "#0000FF"
     - type: PointLight
       color: "#0000FF"

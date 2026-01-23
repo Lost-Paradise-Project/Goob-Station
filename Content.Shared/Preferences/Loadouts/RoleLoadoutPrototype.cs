@@ -57,12 +57,33 @@ public sealed partial class RoleLoadoutPrototype : IPrototype
     [DataField]
     public ProtoId<LocalizedDatasetPrototype>? NameDataset;
 
-    // Not required so people can set their names.
+    // LP edit start
+    [DataField("groups")]
+    private List<ProtoId<LoadoutGroupPrototype>> _groups = new();
+
+    private bool _initialized;
+
     /// <summary>
     /// Groups that comprise this role loadout.
     /// </summary>
-    [DataField]
-    public List<ProtoId<LoadoutGroupPrototype>> Groups = new();
+    public List<ProtoId<LoadoutGroupPrototype>> Groups
+    {
+        get
+        {
+            if (!_initialized)
+            {
+                _initialized = true;
+#if LP
+                if (!_groups.Contains("SponsorsClothing"))
+                {
+                    _groups.Add("SponsorsClothing");
+                }
+#endif
+            }
+            return _groups;
+        }
+    }
+    // LP edit end
 
     /// <summary>
     /// How many points are allotted for this role loadout prototype.

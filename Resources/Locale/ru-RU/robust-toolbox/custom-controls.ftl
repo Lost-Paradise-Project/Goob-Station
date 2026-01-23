@@ -23,4 +23,3 @@ output-panel-scroll-down-button-text = Опустить вниз
 ## Common Used
 
 window-erase-button-text = Стереть
-
