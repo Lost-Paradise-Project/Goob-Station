@@ -18,14 +18,14 @@
 
 - type: entity
   parent: ClothingHeadBase
-  id: LPPClothingHeadHelmetNPZ
-  name: NPZ Helmet
+  id: LPPClothingHeadHelmetOPZ
+  name: OPZ Helmet
   description: A sturdy helmet made of kevlar and plasteel, will protect against small-caliber bullets, as well as shrapnel.
   components:
   - type: Sprite
-    sprite: _LP/Clothing/Head/Helmets/NPZ/NPZhelm.rsi
+    sprite: _LP/Clothing/Head/Helmets/OPZ/OPZhelm.rsi
   - type: Clothing
-    sprite: _LP/Clothing/Head/Helmets/NPZ/NPZhelm.rsi
+    sprite: _LP/Clothing/Head/Helmets/OPZ/OPZhelm.rsi
   - type: Armor
     modifiers:
       coefficients:
@@ -34,15 +34,15 @@
         Piercing: 0.85
 
 - type: entity
-  parent: LPPClothingHeadHelmetNPZ
-  id: LPPClothingHeadHelmetNPZAssault
-  name: NPZ assault helmet
+  parent: LPPClothingHeadHelmetOPZ
+  id: LPPClothingHeadHelmetOPZAssault
+  name: OPZ assault helmet
   description: Robust helmet with additional armor on neck, pretty good for asaults.
   components:
   - type: Sprite
-    sprite: _LP/Clothing/Head/Helmets/NPZ/NPZassault.rsi
+    sprite: _LP/Clothing/Head/Helmets/OPZ/OPZassault.rsi
   - type: Clothing
-    sprite: _LP/Clothing/Head/Helmets/NPZ/NPZassault.rsi
+    sprite: _LP/Clothing/Head/Helmets/OPZ/OPZassault.rsi
 
 - type: entity
   parent: ClothingHeadEVAHelmetBase

@@ -170,16 +170,16 @@
 
 - type: entity
   parent: ClothingNeckBase
-  id: LPPClothingNeckShemagNPZ
-  name: NPZ shemag
-  description: A warm silk fabric that protects from dust and cold, as well as gives brutality and tacticool to the wearer. Now with the colors of NPZ!
+  id: LPPClothingNeckShemagOPZ
+  name: OPZ shemag
+  description: A warm silk fabric that protects from dust and cold, as well as gives brutality and tacticool to the wearer. Now with the colors of OPZ!
   components:
   - type: Sprite
-    sprite: _LP/Clothing/Neck/shemags/NPZdown.rsi
+    sprite: _LP/Clothing/Neck/shemags/OPZdown.rsi
   - type: Clothing
-    sprite: _LP/Clothing/Neck/shemags/NPZdown.rsi
+    sprite: _LP/Clothing/Neck/shemags/OPZdown.rsi
   - type: ToggleableClothing
-    clothingPrototype: LPPClothingMaskShemagNPZ
+    clothingPrototype: LPPClothingMaskShemagOPZ
     requiredSlot:
     - neck
     slot: mask
@@ -192,14 +192,14 @@
 
 - type: entity
   parent: ClothingMaskBase
-  id: LPPClothingMaskShemagNPZ
+  id: LPPClothingMaskShemagOPZ
   categories: [ HideSpawnMenu ]
-  name: NPZ shemag
+  name: OPZ shemag
   components:
   - type: Sprite
-    sprite: _LP/Clothing/Neck/shemags/NPZup.rsi
+    sprite: _LP/Clothing/Neck/shemags/OPZup.rsi
   - type: Clothing
-    sprite: _LP/Clothing/Neck/shemags/NPZup.rsi
+    sprite: _LP/Clothing/Neck/shemags/OPZup.rsi
   - type: IdentityBlocker
 
 - type: entity

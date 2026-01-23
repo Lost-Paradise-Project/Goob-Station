@@ -209,15 +209,15 @@
 
 - type: entity
   parent: ClothingHeadHardsuitBase
-  id: LPPClothingHeadHelmetScienceNPZ
+  id: LPPClothingHeadHelmetScienceOPZ
   categories: [ HideSpawnMenu ]
-  name: NPZ-34r
+  name: OPZ-34r
   description: The helmet from the spacesuit is quite useful and has built-in eye protection from welding.
   components:
   - type: Sprite
-    sprite: _LP/Clothing/OuterClothing/Hardsuits/NPZsciense/head.rsi
+    sprite: _LP/Clothing/OuterClothing/Hardsuits/OPZsciense/head.rsi
   - type: Clothing
-    sprite: _LP/Clothing/OuterClothing/Hardsuits/NPZsciense/head.rsi
+    sprite: _LP/Clothing/OuterClothing/Hardsuits/OPZsciense/head.rsi
   - type: BreathMask
   - type: EyeProtection
   - type: PressureProtection

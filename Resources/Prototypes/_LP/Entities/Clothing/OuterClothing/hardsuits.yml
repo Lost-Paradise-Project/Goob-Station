@@ -34,14 +34,14 @@
 
 - type: entity
   parent: [ClothingOuterHardsuitBase]
-  id: LPPClothingOuterHardsuitScienceNPZ
-  name: Hardsuit NPZ-34r - "Gelehrt"
-  description: A research spacesuit designed for the work of NPZ scientists, as well as technicians in outer space and harsh planetary conditions.
+  id: LPPClothingOuterHardsuitScienceOPZ
+  name: Hardsuit OPZ-34r - "Gelehrt"
+  description: A research spacesuit designed for the work of OPZ scientists, as well as technicians in outer space and harsh planetary conditions.
   components:
   - type: Sprite
-    sprite: _LP/Clothing/OuterClothing/Hardsuits/NPZsciense/body.rsi
+    sprite: _LP/Clothing/OuterClothing/Hardsuits/OPZsciense/body.rsi
   - type: Clothing
-    sprite: _LP/Clothing/OuterClothing/Hardsuits/NPZsciense/body.rsi
+    sprite: _LP/Clothing/OuterClothing/Hardsuits/OPZsciense/body.rsi
   - type: PressureProtection
     highPressureMultiplier: 0.1
     lowPressureMultiplier: 1000
@@ -66,7 +66,7 @@
   - type: HeldSpeedModifier
   - type: ToggleableClothing
     clothingPrototypes:
-      head: LPPClothingHeadHelmetScienceNPZ
+      head: LPPClothingHeadHelmetScienceOPZ
 
 - type: entity
   parent: [ClothingOuterHardsuitBase]

@@ -20,15 +20,15 @@
 
 - type: entity
   parent: ClothingShoesBootsMag
-  id: LPPClothingShoesBootsMagNPZ
-  name: NPZ magboots
+  id: LPPClothingShoesBootsMagOPZ
+  name: OPZ magboots
   description: Standardized magnetic boots from the military research forces of the Independent Government of Earth.
   components:
   - type: Sprite
-    sprite: _LP/Clothing/Shoes/Boots/NPZmagboots.rsi
+    sprite: _LP/Clothing/Shoes/Boots/OPZmagboots.rsi
     state: icon
   - type: Clothing
-    sprite: _LP/Clothing/Shoes/Boots/NPZmagboots.rsi
+    sprite: _LP/Clothing/Shoes/Boots/OPZmagboots.rsi
   - type: ClothingSpeedModifier
     walkModifier: 0.95
     sprintModifier: 0.95

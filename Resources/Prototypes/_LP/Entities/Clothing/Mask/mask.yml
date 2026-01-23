@@ -244,14 +244,14 @@
 
 - type: entity
   parent: ClothingMaskGasSwat
-  id: LPPClothingMaskNPZGasmask
-  name: NPZ special forces gas mask
+  id: LPPClothingMaskOPZGasmask
+  name: OPZ special forces gas mask
   description: An improved model of a special forces gas mask from distant corporate wars. It will be able to protect the face from various fragments. Eye protection from flash and welding is guaranteed.
   components:
   - type: Sprite
-    sprite: _LP/Clothing/Mask/NPZgas.rsi
+    sprite: _LP/Clothing/Mask/OPZgas.rsi
   - type: Clothing
-    sprite: _LP/Clothing/Mask/NPZgas.rsi
+    sprite: _LP/Clothing/Mask/OPZgas.rsi
   - type: Armor
     modifiers:
       coefficients:

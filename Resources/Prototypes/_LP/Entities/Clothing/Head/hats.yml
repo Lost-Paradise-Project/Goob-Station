@@ -33,8 +33,8 @@
 
 - type: entity
   parent: ClothingHeadBase
-  id: LPPClothingHeadHatBeretNPZ
-  name: NPZ Beret
+  id: LPPClothingHeadHatBeretOPZ
+  name: OPZ Beret
   description: Remember what you're fighting for. (For humanity, in case you've forgotten)
   components:
   - type: Sprite
@@ -44,9 +44,9 @@
 
 - type: entity
   parent: ClothingHeadBase
-  id: LPPClothingHeadHatCapNPZ
-  name: NPZ Cap
-  description: The cap of the representatives of the armed forces of the NPZ, strikes fear into the hearts of xenophiles, there is nothing more to say.
+  id: LPPClothingHeadHatCapOPZ
+  name: OPZ Cap
+  description: The cap of the representatives of the armed forces of the OPZ, strikes fear into the hearts of xenophiles, there is nothing more to say.
   components:
   - type: Sprite
     sprite: _LP/Clothing/Head/Hats/upgofficerhat.rsi

@@ -35,39 +35,39 @@
 
 - type: entity
   parent: ClothingNeckBase
-  id: LPPCloakLeaderNPZ
-  name: Cloak of NPZ leader
+  id: LPPCloakLeaderOPZ
+  name: Cloak of OPZ leader
   description: And don't let your cloak get dirty in the blood of xenos, washing is expensive, by the way.
   components:
     - type: Sprite
-      sprite: _LP/Clothing/Neck/NPZ/upgneckleader.rsi
+      sprite: _LP/Clothing/Neck/OPZ/upgneckleader.rsi
 
 - type: entity
   parent: ClothingNeckBase
-  id: LPPCloakNPZ
-  name: Cloak NPZ
+  id: LPPCloakOPZ
+  name: Cloak OPZ
   description: A cloak for stylish smashing in the wind while you humiliate the pathetic xenos.
   components:
     - type: Sprite
-      sprite: _LP/Clothing/Neck/NPZ/upgneck.rsi
+      sprite: _LP/Clothing/Neck/OPZ/upgneck.rsi
 
 - type: entity
   parent: ClothingNeckBase
-  id: LPPCloakAdmiralNPZ
-  name: Cloak of NPZ admiral
+  id: LPPCloakAdmiralOPZ
+  name: Cloak of OPZ admiral
   description: A cloak for pretentious throwing off to show everyone your medals and decorations!
   components:
     - type: Sprite
-      sprite: _LP/Clothing/Neck/NPZ/upgneckadmiral.rsi
+      sprite: _LP/Clothing/Neck/OPZ/upgneckadmiral.rsi
 
 - type: entity
   parent: ClothingNeckBase
-  id: LPPCloakMantleNPZ
-  name: Cape NPZ
+  id: LPPCloakMantleOPZ
+  name: Cape OPZ
   description: Are we in a hurry or are we acting stealthy?
   components:
     - type: Sprite
-      sprite: _LP/Clothing/Neck/NPZ/NPZmantle.rsi
+      sprite: _LP/Clothing/Neck/OPZ/OPZmantle.rsi
 
 - type: entity
   parent: ClothingNeckBase

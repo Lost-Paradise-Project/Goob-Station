@@ -53,8 +53,8 @@
 
 - type: entity
   parent: ClothingShoesMilitaryBase
-  id: LPPClothingShoesBootsNPZ
-  name: NPZ Boots
+  id: LPPClothingShoesBootsOPZ
+  name: OPZ Boots
   description: Strong boots for any difficult terrain.
   components:
   - type: Sprite

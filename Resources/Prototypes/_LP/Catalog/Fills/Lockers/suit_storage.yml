@@ -47,13 +47,13 @@
         - id: LPPClothingShoesBootsMagHunter
 
 - type: entity
-  id: LPPSuitStorageNPZ
+  id: LPPSuitStorageOPZ
   parent: SuitStorageBase
   suffix: Soldat
   components:
   - type: StorageFill
     contents:
-        - id: LPPClothingOuterHardsuitNPZ
-        - id: LPPClothingMaskNPZGasmask
+        - id: LPPClothingOuterHardsuitOPZ
+        - id: LPPClothingMaskOPZGasmask
         - id: JetpackBlueFilled
-        - id: LPPClothingShoesBootsMagNPZ
+        - id: LPPClothingShoesBootsMagOPZ

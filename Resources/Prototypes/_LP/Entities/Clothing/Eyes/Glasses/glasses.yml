@@ -52,14 +52,14 @@
 
 - type: entity
   parent: [ClothingEyesBase, ShowSecurityIcons]
-  id: LPPClothingEyesGlassesAviatorNPZ
-  name: NPZ aviators
+  id: LPPClothingEyesGlassesAviatorOPZ
+  name: OPZ aviators
   description: Only for the most coolest guys in this sector.
   components:
   - type: Sprite
-    sprite: _LP/Clothing/Eyes/Glasses/NPZaviators.rsi
+    sprite: _LP/Clothing/Eyes/Glasses/OPZaviators.rsi
   - type: Clothing
-    sprite: _LP/Clothing/Eyes/Glasses/NPZaviators.rsi
+    sprite: _LP/Clothing/Eyes/Glasses/OPZaviators.rsi
   - type: FlashImmunity
   - type: EyeProtection
     protectionTime: 5

@@ -1,8 +1,8 @@
 - type: entity
   parent: ClothingHandsGlovesColorBlack
-  id: LPPClothingHandsGlovesNPZCombat
-  name: NPZ Battle gloves
-  description: Combat gloves of NPZ fighters, with aramid coating in the area of the knuckles, for maiming and knocking out the dope from the enemy.
+  id: LPPClothingHandsGlovesOPZCombat
+  name: OPZ Battle gloves
+  description: Combat gloves of OPZ fighters, with aramid coating in the area of the knuckles, for maiming and knocking out the dope from the enemy.
   components:
   - type: Sprite
     sprite: _LP/Clothing/Gloves/upgofficerhands.rsi

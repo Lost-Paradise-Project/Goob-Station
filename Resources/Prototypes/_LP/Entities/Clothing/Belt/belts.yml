@@ -1,13 +1,13 @@
 - type: entity
   parent: ClothingBeltStorageBase
-  id: LPPClothingBeltNPZWebbing
-  name: NPZ webbing
-  description: Dense durathread webbing in the colors of the NPZ troops.
+  id: LPPClothingBeltOPZWebbing
+  name: OPZ webbing
+  description: Dense durathread webbing in the colors of the OPZ troops.
   components:
   - type: Sprite
-    sprite: _LP/Clothing/Belt/NPZ.rsi
+    sprite: _LP/Clothing/Belt/OPZ.rsi
   - type: Clothing
-    sprite: _LP/Clothing/Belt/NPZ.rsi
+    sprite: _LP/Clothing/Belt/OPZ.rsi
   - type: Armor
     modifiers:
       coefficients:

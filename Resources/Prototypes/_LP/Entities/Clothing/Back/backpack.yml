@@ -1,7 +1,7 @@
 - type: entity
   parent: ClothingBackpackERTLeader
-  id: LPPClothingBackpackBackPackNPZ
-  name: NPZ backpack
+  id: LPPClothingBackpackBackPackOPZ
+  name: OPZ backpack
   description: It will contain everything you need.
   components:
   - type: Sprite
