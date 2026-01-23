@@ -82,11 +82,6 @@
           - Botany
           - Bunker
           - BluespaceHarvest
-          # Lost-Paradise goals
-          - BorgsForAI
-          - ReserveEnergy
-          - StationPreparation
-          - CorporateEvent
         - type: StationCargoShuttle
           path: /Maps/_CorvaxGoob/Stations/Silly/Shuttles/corvax_cargo_silly.yml
         - type: StationBlobConfig

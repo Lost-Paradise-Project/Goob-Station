@@ -90,11 +90,6 @@
           - Botany
           - Bunker
           - BluespaceHarvest
-          # Lost-Paradise goals
-          - BorgsForAI
-          - ReserveEnergy
-          - StationPreparation
-          - CorporateEvent
         - type: StationBlobConfig
           stageBegin: 40
           stageCritical: 500

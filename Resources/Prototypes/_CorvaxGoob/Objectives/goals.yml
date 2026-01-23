@@ -79,26 +79,6 @@
   id: Bunker
   text: station-goal-bunker
 
-# Lost-Paradise goals
-- type: stationGoal
-  id: BorgsForAI
-  text: station-goal-borgs-for-ai
-
-- type: stationGoal
-  id: ReserveEnergy
-  text: station-goal-reserv-energy
-  minPlayers: 20
-
-- type: stationGoal
-  id: StationPreparation
-  text: station-goal-podgotovka-k-stroike
-  minPlayers: 10
-
-- type: stationGoal
-  id: CorporateEvent
-  text: station-goal-podgotovka-k-korporativu
-  minPlayers: 10
-
 # Special goals
 - type: stationGoal
   id: FrameRepair

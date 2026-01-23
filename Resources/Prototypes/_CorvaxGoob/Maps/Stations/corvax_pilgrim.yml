@@ -91,11 +91,6 @@
           - Theatre
           - Botany
           - BluespaceHarvest
-          # Lost-Paradise goals
-          - BorgsForAI
-          - ReserveEnergy
-          - StationPreparation
-          - CorporateEvent
         - type: StationBlobConfig
           stageBegin: 40
           stageCritical: 700

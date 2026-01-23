@@ -85,11 +85,6 @@
           - ShuttleSrv
           - Bunker
           - BluespaceHarvest
-          # Lost-Paradise goals
-          - BorgsForAI
-          - ReserveEnergy
-          - StationPreparation
-          - CorporateEvent
         - type: StationBlobConfig
           stageBegin: 20
           stageCritical: 300
