@@ -1,10 +1,4 @@
 - type: entity
-  parent: ShowSecurityIcons
-  id: LPPShowSecurityIcons
-  abstract: true
-  categories: [ HideSpawnMenu ]
-
-- type: entity
   parent: [ClothingEyesBase, ShowSecurityIcons]
   id: LPPNPZEyehud
   name: NPZ HUD
