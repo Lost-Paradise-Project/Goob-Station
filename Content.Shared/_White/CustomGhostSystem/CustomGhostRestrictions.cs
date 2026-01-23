@@ -179,15 +179,14 @@ public sealed partial class PlaytimeDepartmentRestriction : CustomGhostRestricti
 [DataDefinition]
 public sealed partial class SponsorRestriction : CustomGhostRestriction
 {
-    [DataField("sponsorTier", required: true)]
-    public int tier = new();
+    [DataField("tier", required: true)]
+    public int tier = 1;    //LP по умолчанию всегда спонсор
 
     public override bool HideOnFail => true;
 
     public override bool CanUse(ICommonSession player, [NotNullWhen(false)] out string? failReason, int sponsorTier = 0, string uuid = "")
     {
         failReason = null;
-
         if (tier <= sponsorTier)
             return true;
 

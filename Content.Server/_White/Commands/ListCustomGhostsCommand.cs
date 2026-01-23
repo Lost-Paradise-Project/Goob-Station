@@ -1,3 +1,4 @@
+using Content.Server._LP.Sponsors;
 using Content.Server.Database;
 using Content.Server.Players.PlayTimeTracking;
 using Content.Server.Preferences.Managers;
@@ -54,7 +55,7 @@ public sealed class ListCustomGhostsCommand : IConsoleCommand
             if (proto.Restrictions is not null)
                 foreach (var restriction in proto.Restrictions)
                 {
-                    if (restriction.CanUse(player, out _))
+                    if (restriction.CanUse(player, out _, SponsorSimpleManager.GetTier(player.UserId))) //LP edit
                         continue;
                     if (restriction.HideOnFail)
                         goto skipPrototype; // wojaks_pointing.png

@@ -5,5 +5,5 @@ namespace Content.Shared._White.CCVar;
 public sealed partial class WhiteCVars
 {
     public static readonly CVarDef<bool> PremiumActive =
-    CVarDef.Create("white.funny_features_enabled", false, CVar.CLIENT | CVar.ARCHIVE);
+    CVarDef.Create("white.funny_features_enabled", true, CVar.CLIENT | CVar.ARCHIVE);
 }
