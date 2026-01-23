@@ -7,6 +7,7 @@
 # SPDX-License-Identifier: AGPL-3.0-or-later
 
 - type: entity
+  categories: [ HideSpawnMenu ]
   id: WoundBase
   abstract: true
   components:
@@ -18,6 +19,7 @@
         ents: [ ]
 
 - type: entity
+  categories: [ HideSpawnMenu ]
   id: Blunt
   parent: WoundBase
   components:
@@ -57,6 +59,7 @@
     severityThreshold: 8
 
 - type: entity
+  categories: [ HideSpawnMenu ]
   id: Piercing
   parent: WoundBase
   components:
@@ -96,6 +99,7 @@
     scalingSpeed: 0.5
 
 - type: entity
+  categories: [ HideSpawnMenu ]
   id: ArmorPiercing
   parent: WoundBase
   components:
@@ -130,6 +134,7 @@
     severityThreshold: 5
 
 - type: entity
+  categories: [ HideSpawnMenu ]
   id: Slash
   parent: WoundBase
   components:
@@ -164,6 +169,7 @@
     scalingSpeed: 1.7
 
 - type: entity
+  categories: [ HideSpawnMenu ]
   id: Heat
   parent: WoundBase
   components:
@@ -197,9 +203,9 @@
     severityThreshold: 3
 
 - type: entity
+  categories: [ HideSpawnMenu ]
   id: Ion
   parent: WoundBase
-  categories: [ HideSpawnMenu ]
   components:
   - type: Wound
     damageType: Ion
@@ -229,6 +235,7 @@
     multiplier: 0.6
 
 - type: entity
+  categories: [ HideSpawnMenu ]
   id: Cold
   parent: WoundBase
   components:
@@ -253,6 +260,7 @@
     multiplier: 0.75 # it hurts
 
 - type: entity
+  categories: [ HideSpawnMenu ]
   id: Holy
   parent: WoundBase
   components:
@@ -275,6 +283,7 @@
     multiplier: 0.77
 
 - type: entity
+  categories: [ HideSpawnMenu ]
   id: Shock
   parent: WoundBase
   components:
@@ -300,6 +309,7 @@
     multiplier: 0.7
 
 - type: entity
+  categories: [ HideSpawnMenu ]
   id: Cellular
   parent: WoundBase
   components:
@@ -328,6 +338,7 @@
     multiplier: 0.32
 
 - type: entity
+  categories: [ HideSpawnMenu ]
   id: Caustic
   parent: WoundBase
   components:
@@ -353,6 +364,7 @@
     multiplier: 0.12
 
 - type: entity
+  categories: [ HideSpawnMenu ]
   id: Radiation
   parent: WoundBase
   components:
@@ -382,6 +394,7 @@
     multiplier: 0.12
 
 - type: entity
+  categories: [ HideSpawnMenu ]
   id: Poison
   parent: WoundBase
   components:
@@ -407,30 +420,35 @@
     multiplier: 0.7
 
 - type: entity
+  categories: [ HideSpawnMenu ]
   id: BoneDamage
   components:
   - type: Trauma
     traumaType: BoneDamage
 
 - type: entity
+  categories: [ HideSpawnMenu ]
   id: OrganDamage
   components:
   - type: Trauma
     traumaType: OrganDamage
 
 - type: entity
+  categories: [ HideSpawnMenu ]
   id: VeinsDamage
   components:
   - type: Trauma
     traumaType: VeinsDamage
 
 - type: entity
+  categories: [ HideSpawnMenu ]
   id: NerveDamage
   components:
   - type: Trauma
     traumaType: NerveDamage
 
 - type: entity
+  categories: [ HideSpawnMenu ]
   id: Dismemberment
   components:
   - type: Trauma
