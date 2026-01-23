@@ -1,7 +1,7 @@
 - type: entity
   parent: [ClothingEyesBase, ShowSecurityIcons]
   id: LPPOPZEyehud
-  name: OPZ OPZ
+  name: OPZ HUD
   description: The HUD of the OPZ, with built-in additional elements such as protection from bright flashes, as well as, in connection with the latest cooperation measures between the OPZ and NT, the built-in database of NanoTraisen to identify ranks and criminals at the corporation's facilities.
   components:
   - type: Sprite
