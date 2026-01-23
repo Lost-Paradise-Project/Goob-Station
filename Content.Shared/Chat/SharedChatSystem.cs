@@ -55,7 +55,10 @@ public abstract class SharedChatSystem : EntitySystem
     public const char OOCPrefix = '[';
     public const char EmotesPrefix = '%'; // CorvaxGoob-Localization
     public const char EmotesAltPrefix = '*';
+    // LP edit start
+    public const char HiddenEmotesPrefix = ')';
     public const char AdminPrefix = ']';
+    // LP edit end
     public const char WhisperPrefix = ',';
     public const char TelepathicPrefix = '='; //Nyano - Summary: Adds the telepathic channel's prefix.
     // CorvaxGoob-TTS-Start
@@ -446,6 +449,7 @@ public enum InGameICChatType : byte // Einstein Engines - Make InGameIIChatType 
 {
     Speak,
     Emote,
+    HiddenEmote, // LP edit
     Whisper,
     Telepathic, // Goobstation Change
     CollectiveMind // Goobstation - Starlight collective mind port

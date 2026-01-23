@@ -57,6 +57,7 @@
   - BoozeDispenserMachineCircuitboard
   - SodaDispenserMachineCircuitboard
   - PrinterDocMachineCircuitboard # Corvax-Goob-PrinterDoc
+  - WashingMachineCircuitboard # Corvax-Wega-Dirtable
 
 ## Dynamic
 

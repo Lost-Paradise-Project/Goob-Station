@@ -43,3 +43,8 @@
           Slash: 0.9
           Heat: 0.8
       showArmorOnExamine: false
+    # Corvax-Wega-Dirtable-start
+    - type: Dirtable
+      dirtState: armor
+      equippedDirtState: equipped-armor
+    # Corvax-Wega-Dirtable-end

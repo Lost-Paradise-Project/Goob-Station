@@ -252,6 +252,11 @@
     - Snout
     - HeadTop
     - HeadSide
+  # Corvax-Wega-Dirtable-start
+  - type: Dirtable
+    dirtState: helmet
+    equippedDirtState: equipped-helmet
+  # Corvax-Wega-Dirtable-end
 
 - type: entity
   abstract: true
@@ -315,6 +320,11 @@
     - HeadTop
     - HeadSide
   - type: FaceHuggerBlocker # Goobstation
+  # Corvax-Wega-Dirtable-start
+  - type: Dirtable
+    dirtState: helmet
+    equippedDirtState: equipped-helmet
+  # Corvax-Wega-Dirtable-end
 
 - type: entity
   abstract: true
@@ -372,6 +382,11 @@
   - type: BatterySelfRecharger
     autoRecharge: true
     autoRechargeRate: 2 #recharge of 2 makes total drain 1w / s so max charge is 1:1 with time. Time to fully charge should be 5 minutes. Having recharge gives light an extended flicker period which gives you some warning to return to light area.
+  # Corvax-Wega-Dirtable-start
+  - type: Dirtable
+    dirtState: helmet
+    equippedDirtState: equipped-helmet
+  # Corvax-Wega-Dirtable-end
 
 - type: entity
   abstract: true
@@ -402,3 +417,8 @@
     - Hair
     - HeadTop
     - HeadSide
+  # Corvax-Wega-Dirtable-start
+  - type: Dirtable
+    dirtState: winterhood
+    equippedDirtState: equipped-winterhood
+  # Corvax-Wega-Dirtable-end

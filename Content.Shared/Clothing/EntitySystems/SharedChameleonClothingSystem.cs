@@ -29,6 +29,7 @@ using Robust.Shared.Prototypes;
 using Robust.Shared.Timing;
 using Robust.Shared.Utility;
 using System.Linq;
+using Content.Shared._Wega.Dirt.Components; // Corvax-Wega-ToggleClothing
 
 namespace Content.Shared.Clothing.EntitySystems;
 
@@ -118,6 +119,19 @@ public abstract class SharedChameleonClothingSystem : EntitySystem
         {
             _clothingSystem.CopyVisuals(uid, otherClothing, clothing);
         }
+
+        // Corvax-Wega-Dirtable-start
+        // dirtable logic
+        if (TryComp(uid, out DirtableComponent? dirtable) &&
+            proto.TryGetComponent("Dirtable", out DirtableComponent? protoDirtable))
+        {
+            dirtable.DirtSpritePath = protoDirtable.DirtSpritePath;
+            dirtable.DirtState = protoDirtable.DirtState;
+            dirtable.FoldingDirtState = protoDirtable.FoldingDirtState;
+            dirtable.EquippedDirtState = protoDirtable.EquippedDirtState;
+            Dirty(uid, dirtable);
+        }
+        // Corvax-Wega-Dirtable-end
 
         // appearance data logic
         if (TryComp(uid, out AppearanceComponent? appearance) &&

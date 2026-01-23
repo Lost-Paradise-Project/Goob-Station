@@ -189,6 +189,11 @@
     knockdownTimeDelta: -2
   - type: StaminaResistance # Goobstation
     damageCoefficient: 0.7
+  # Corvax-Wega-Dirtable-start
+  - type: Dirtable
+    dirtState: armor
+    equippedDirtState: equipped-armor
+  # Corvax-Wega-Dirtable-end
 
 #Standard armor vest, allowed for security and bartenders
 - type: entity
