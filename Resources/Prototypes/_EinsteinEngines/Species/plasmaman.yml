@@ -1,5 +1,6 @@
 - type: species
   id: Plasmaman
+  sponsorOnly: true # LP edit
   name: species-name-plasmaman
   roundStart: true
   prototype: MobPlasmaman

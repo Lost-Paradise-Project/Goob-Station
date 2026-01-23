@@ -283,6 +283,9 @@ accent-dwarf-words-147 = СБ
 accent-dwarf-words-replace-147 = стража
 accent-dwarf-words-148 = a
 accent-dwarf-words-replace-148 = ae
+
+# Corvax-Goob-DwarfAccent-end
+
 # Corvax-Goob-DwarfAccent-start
 accent-dwarf-words-149 = спасибо
 accent-dwarf-words-replace-149 = благодарствую
@@ -388,6 +391,3 @@ accent-dwarf-words-199 = психолог
 accent-dwarf-words-replace-199 = мозгоправ
 accent-dwarf-words-200 = кирку
 accent-dwarf-words-replace-200 = кайло
-
-# Corvax-Goob-DwarfAccent-end
-

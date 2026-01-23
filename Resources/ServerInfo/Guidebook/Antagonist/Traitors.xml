@@ -61,7 +61,7 @@ SPDX-License-Identifier: AGPL-3.0-or-later
   - Умереть славной смертью.
   - Украсть у Капитана [color=#a4885c]ID карту[/color].
   <Box>
-    <GuideEntityEmbed Entity="CaptainIDCard" Caption="ID карта капитана"/>
+    <GuideEntityEmbed Entity="CaptainIDCard" Caption="ID-карта капитана"/>
   </Box>
 
   Покупки, которые вы делаете, должны помогать вам в выполнении целей. Некоторое снаряжение может быть бесполезным, и вам придётся выбирать между скрытностью и громкой игрой.

@@ -33,7 +33,7 @@ ent-BaseUplinkRadio350TC = { ent-BaseUplinkRadio }
     .suffix = 350 TC, LoneOps
     .desc = { ent-BaseUplinkRadio.desc }
 ent-BaseUplinkRadioDebug = { ent-BaseUplinkRadio }
-    .suffix = DEBUG, аплинк синдиката
+    .suffix = ДЕБАГ, аплинк синдиката
     .desc = { ent-BaseUplinkRadio.desc }
 
 # Corvax-HiddenDesc-End

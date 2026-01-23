@@ -45,6 +45,44 @@ martial-arts-action-receiver = {$name} hit you with {$move}
 martial-arts-fail-prone = You can't use this combo while lying down!
 martial-arts-fail-target-down = You can't use this combo on downed targets!
 martial-arts-fail-target-standing = You can't use this combo on standing targets!
+# Capoeira
+martial-arts-combo-PushKick = толчковым ударом ногой
+martial-arts-combo-CircleKick = круговым ударом ногой
+martial-arts-combo-SweepKick = ударом-сметанием
+martial-arts-combo-SpinKick = ударом с разворота
+martial-arts-combo-KickUp = ударом с подъёма
+# SleepingCarp
+martial-arts-combo-SleepingCarpGnashingTeeth = скрежетом зубов
+martial-arts-combo-SleepingCarpKneeHaul = киль-холом
+martial-arts-combo-SleepingCarpCrashingWaves = ударом разбивающих волн
+# CQC
+martial-arts-combo-CQCSlam = ударом о землю
+martial-arts-combo-CQCKick = пинком
+martial-arts-combo-CQCRestrain = удержанием
+martial-arts-combo-CQCPressure = давлением
+martial-arts-combo-CQCConsecutive = серией ударов
+martial-arts-combo-NeckSnap = переломом шеи
+martial-arts-combo-LegSweep = подсечкой
+# KungFuDragon
+martial-arts-combo-DragonClaw = когтем дракона
+martial-arts-combo-DragonTail = хвостом дракона
+martial-arts-combo-DragonStrike = ударом дракона
+# HellRip
+martial-arts-combo-DropKick = ударом с разворота
+martial-arts-combo-HeadRip = отвалом бошки
+martial-arts-combo-TearDown = срывом
+martial-arts-combo-Slam = адским ударом
+# CorporateJudo
+martial-arts-combo-JudoDiscombobulate = оглушением
+martial-arts-combo-JudoEyePoke = ударом пальцами в глаза
+martial-arts-combo-JudoThrow = броском дзюдо
+martial-arts-combo-JudoArmbar = захватом руки рычагом
+martial-arts-combo-JudoWheelThrow = колесом
+# Ninjutsu
+martial-arts-combo-BiteTheDust = канув в пыли
+martial-arts-combo-DirtyKill = грязным убийством
+martial-arts-combo-Assassinate = умерщвлением
+martial-arts-combo-Ninjutsu-Takedown = захватом ниндзюцу
 capoeira-fail-low-velocity = You are too slow to perform this combo!
 ninjutsu-fail-loss-of-surprise = Your intentions are known! Cannot perform this move!
 

@@ -31,6 +31,7 @@ cargo-console-menu-categories-label = Categories:{" "}
 cargo-console-menu-search-bar-placeholder = Search
 cargo-console-menu-requests-label = Requests
 cargo-console-menu-orders-label = Orders
+cargo-console-menu-order-reason-description = Reason: { $reason }
 cargo-console-menu-order-row-title = {$productName} (x{$orderAmount} for {$orderPrice}$)
 cargo-console-menu-populate-orders-cargo-order-row-product-name-text = Requested by: {$orderRequester} from [color={$accountColor}]{$account}[/color]
 cargo-console-menu-order-row-product-description = Reason: {$orderReason}

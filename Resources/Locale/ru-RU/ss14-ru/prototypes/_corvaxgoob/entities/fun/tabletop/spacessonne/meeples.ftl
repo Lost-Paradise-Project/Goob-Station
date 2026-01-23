@@ -1,6 +1,6 @@
 ent-CarcMeepleBase = мипл
     .desc = Маленькая фигурка гуманоидной формы для настольных игр. Сделана из дерева.
-    .suffix = DEBUG
+    .suffix = ДЕБАГ
 ent-CarcMeepleRed = мипл
     .suffix = Красный
     .desc = { ent-CarcMeepleBase.desc }

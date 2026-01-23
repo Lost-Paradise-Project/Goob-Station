@@ -67,7 +67,6 @@ research-technology-faux-astro-tiles = Искусственная астропл
 research-technology-audio-visual-communication = А/В коммуникация
 research-technology-advanced-cleaning = Продвинутая уборка
 research-technology-meat-manipulation = Манипулирование мясом
-research-technology-launcher-syringe = Шприцемёт
 research-technology-honk-mech = Мех Х.О.Н.К.
 research-technology-advanced-spray = Продвинутые спреи
 research-technology-clowning-utilities = Клоунские принадлежности

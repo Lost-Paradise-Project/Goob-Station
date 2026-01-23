@@ -1,1 +1,2 @@
-ui-options-combat-mode-sound = Entering/Exiting Combat Mode Sound
+ui-options-combat-mode-sound = Звук перехода в Боевой Режим
+ui-options-announcements-sounds = Громкость звуковых объявлений
