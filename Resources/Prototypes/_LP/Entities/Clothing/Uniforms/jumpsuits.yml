@@ -2,7 +2,6 @@
   parent: ClothingUniformBase
   id: LPPCargotechjean
   name: Techjean
-  description:
   components:
   - type: Sprite
     sprite: _LP/Clothing/Uniforms/Cargo/cargotechjean.rsi
@@ -13,7 +12,6 @@
   parent: ClothingUniformBase
   id: LPPGorkaCargo
   name: Gorka
-  description:
   components:
   - type: Sprite
     sprite: _LP/Clothing/Uniforms/Cargo/gorka_cargo.rsi

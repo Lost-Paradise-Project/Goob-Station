@@ -2,7 +2,6 @@
   parent: ClothingUniformBase
   id: LPPCargoBlackSkirt
   name: BlackSkirt
-  description:
   components:
   - type: Sprite
     sprite: _LP/Clothing/Uniforms/Cargo/cargo_black_skirt.rsi
@@ -13,7 +12,6 @@
   parent: ClothingUniformBase
   id: LPPSkirtleneckCargo
   name: Skirtleneck
-  description:
   components:
   - type: Sprite
     sprite: _LP/Clothing/Uniforms/Cargo/skirtleneck.rsi

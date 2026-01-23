@@ -27,7 +27,6 @@
   parent: LPPSoftToysToys
   id: LPPAxolotl
   name: Axolotl
-  description:
   components:
   - type: Sprite
     state: axolotl
@@ -51,7 +50,6 @@
   parent: LPPSoftToysToys
   id: LPPCorgi
   name: Corgi
-  description:
   components:
   - type: Sprite
     state: corgi
@@ -75,7 +73,6 @@
   parent: LPPSoftToysToys
   id: LPPDeer
   name: Deer
-  description:
   components:
   - type: Sprite
     state: deer
@@ -99,7 +96,6 @@
   parent: LPPSoftToysToys
   id: LPPMedihound
   name: Medihound
-  description:
   components:
   - type: Sprite
     state: medihound

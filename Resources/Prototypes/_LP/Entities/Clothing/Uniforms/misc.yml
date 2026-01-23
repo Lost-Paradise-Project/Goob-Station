@@ -2,7 +2,6 @@
   parent: ClothingUniformBase
   id: LPPDeckerJumpsuit
   name: decker jumpsuit
-  description:
   components:
   - type: Sprite
     sprite: _LP/Clothing/Uniforms/Costume/decker_jumpsuit.rsi

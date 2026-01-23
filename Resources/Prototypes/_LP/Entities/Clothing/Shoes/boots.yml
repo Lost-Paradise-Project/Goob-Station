@@ -2,7 +2,6 @@
   parent: ClothingShoesBaseButcherable
   id: LPPGlowShoes
   name: glow shoes
-  description:
   components:
   - type: Sprite
     sprite: _LP/Clothing/Shoes/Boots/glow_shoes.rsi
@@ -13,7 +12,6 @@
   parent: ClothingShoesBaseButcherable
   id: LPPIceboots
   name: iceboots
-  description:
   components:
   - type: Sprite
     sprite: _LP/Clothing/Shoes/Boots/iceboots.rsi

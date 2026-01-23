@@ -2,7 +2,6 @@
   parent: ClothingNeckBase
   id: LPPBestMedic
   name: best medic
-  description:
   components:
     - type: Sprite
       sprite: _LP/Clothing/Neck/Cloaks/best_medic.rsi

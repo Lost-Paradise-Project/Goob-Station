@@ -8,9 +8,17 @@
     sprite: _LP/Clothing/Neck/shemags/greendown.rsi
   - type: Clothing
     sprite: _LP/Clothing/Neck/shemags/greendown.rsi
-  # - type: ToggleableClothing
-  #   clothingPrototypes:
-  #     mask: LPPClothingMaskShemagGreen
+  - type: ToggleableClothing
+    clothingPrototype: LPPClothingMaskShemagGreen
+    requiredSlot:
+    - neck
+    slot: mask
+  - type: ContainerContainer
+    containers:
+      toggleable-clothing: !type:Container
+        showEnts: False
+        occludes: True
+        ents: []
 
 - type: entity
   parent: ClothingMaskBase
@@ -34,9 +42,17 @@
     sprite: _LP/Clothing/Neck/shemags/reddown.rsi
   - type: Clothing
     sprite: _LP/Clothing/Neck/shemags/reddown.rsi
-  # - type: ToggleableClothing
-  #   clothingPrototypes:
-  #     mask: LPPClothingMaskShemagRed
+  - type: ToggleableClothing
+    clothingPrototype: LPPClothingMaskShemagRed
+    requiredSlot:
+    - neck
+    slot: mask
+  - type: ContainerContainer
+    containers:
+      toggleable-clothing: !type:Container
+        showEnts: False
+        occludes: True
+        ents: []
 
 - type: entity
   parent: ClothingMaskBase
@@ -60,9 +76,17 @@
     sprite: _LP/Clothing/Neck/shemags/bluedown.rsi
   - type: Clothing
     sprite: _LP/Clothing/Neck/shemags/bluedown.rsi
-  # - type: ToggleableClothing
-  #   clothingPrototypes:
-  #     mask: LPPClothingMaskShemagBlue
+  - type: ToggleableClothing
+    clothingPrototype: LPPClothingMaskShemagBlue
+    requiredSlot:
+    - neck
+    slot: mask
+  - type: ContainerContainer
+    containers:
+      toggleable-clothing: !type:Container
+        showEnts: False
+        occludes: True
+        ents: []
 
 - type: entity
   parent: ClothingMaskBase
@@ -86,9 +110,17 @@
     sprite: _LP/Clothing/Neck/shemags/browndown.rsi
   - type: Clothing
     sprite: _LP/Clothing/Neck/shemags/browndown.rsi
-  # - type: ToggleableClothing
-  #   clothingPrototypes:
-  #     mask: LPPClothingMaskShemagBrown
+  - type: ToggleableClothing
+    clothingPrototype: LPPClothingMaskShemagBrown
+    requiredSlot:
+    - neck
+    slot: mask
+  - type: ContainerContainer
+    containers:
+      toggleable-clothing: !type:Container
+        showEnts: False
+        occludes: True
+        ents: []
 
 - type: entity
   parent: ClothingMaskBase
@@ -112,9 +144,17 @@
     sprite: _LP/Clothing/Neck/shemags/purpledown.rsi
   - type: Clothing
     sprite: _LP/Clothing/Neck/shemags/purpledown.rsi
-  # - type: ToggleableClothing
-  #   clothingPrototypes:
-  #     mask: LPPClothingMaskShemagPurple
+  - type: ToggleableClothing
+    clothingPrototype: LPPClothingMaskShemagPurple
+    requiredSlot:
+    - neck
+    slot: mask
+  - type: ContainerContainer
+    containers:
+      toggleable-clothing: !type:Container
+        showEnts: False
+        occludes: True
+        ents: []
 
 - type: entity
   parent: ClothingMaskBase
@@ -138,9 +178,17 @@
     sprite: _LP/Clothing/Neck/shemags/NPZdown.rsi
   - type: Clothing
     sprite: _LP/Clothing/Neck/shemags/NPZdown.rsi
-  # - type: ToggleableClothing
-  #   clothingPrototypes:
-  #     mask: LPPClothingMaskShemagNPZ
+  - type: ToggleableClothing
+    clothingPrototype: LPPClothingMaskShemagNPZ
+    requiredSlot:
+    - neck
+    slot: mask
+  - type: ContainerContainer
+    containers:
+      toggleable-clothing: !type:Container
+        showEnts: False
+        occludes: True
+        ents: []
 
 - type: entity
   parent: ClothingMaskBase
@@ -164,9 +212,17 @@
     sprite: _LP/Clothing/Neck/shemags/whitedown.rsi
   - type: Clothing
     sprite: _LP/Clothing/Neck/shemags/whitedown.rsi
-  # - type: ToggleableClothing
-  #   clothingPrototypes:
-  #     mask: LPPClothingMaskShemagWhite
+  - type: ToggleableClothing
+    clothingPrototype: LPPClothingMaskShemagWhite
+    requiredSlot:
+    - neck
+    slot: mask
+  - type: ContainerContainer
+    containers:
+      toggleable-clothing: !type:Container
+        showEnts: False
+        occludes: True
+        ents: []
 
 - type: entity
   parent: ClothingMaskBase

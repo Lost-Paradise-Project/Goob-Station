@@ -18,7 +18,6 @@
   parent: LPPClothingUnderwearSocksBase
   id: LPPClothingUnderBeeKnee
   name: bee knee
-  description:
   components:
   - type: Sprite
     sprite: _LP/Clothing/Socks/bee_knee.rsi
