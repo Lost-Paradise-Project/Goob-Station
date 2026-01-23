@@ -63,3 +63,10 @@ Entries:
   id: 5614
   time: '2026-01-22T20:24:14.0000000+00:00'
   url: https://github.com/Lost-Paradise-Project/Goob-Station/pull/18
+- author: Inari
+  changes:
+    - type: Add
+      message: Добавлена система кастомных призраков
+  id: 5615
+  time: '2026-01-23T15:45:05.0000000+00:00'
+  url: https://github.com/Lost-Paradise-Project/Goob-Station/pull/20
