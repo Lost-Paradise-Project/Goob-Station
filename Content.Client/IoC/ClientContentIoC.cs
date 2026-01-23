@@ -151,6 +151,17 @@ using Content.Shared.Administration.Managers;
 using Content.Shared.Chat;
 using Content.Shared.Players.PlayTimeTracking;
 using Content.Shared.Players.RateLimiting;
+// LP edit start
+#if LP
+using Content.Client._LP.Sponsors;
+using Content.Client._NC.DiscordAuth;
+using Content.Client.PClient._NC.JoinQueue;
+#endif
+// LP edit end
+
+#if LP
+using Content.Client._ERPModule.Services;
+#endif
 
 namespace Content.Client.IoC
 {
@@ -192,6 +203,14 @@ namespace Content.Client.IoC
             collection.Register<LinkAccountManager>(); // RMC14
             CorvaxGoob-Coins-end */
             collection.Register<ClientsidePlaytimeTrackingManager>();
+            // LP edit start
+#if LP
+            collection.Register<SponsorsManager>();
+            collection.Register<DiscordAuthManager>();
+            collection.Register<JoinQueueManager>();
+            collection.Register<CustomInteractionService, CustomInteractionService>(true);
+#endif
+            // LP edit end
         }
     }
 }

@@ -197,6 +197,11 @@
         Aerial: -0.2
       chanceMultipliers:
         Aerial: 0.5
+  # Corvax-Wega-Dirtable-start
+  - type: Dirtable
+    dirtState: gasmask
+    equippedDirtState: equipped-gasmask
+  # Corvax-Wega-Dirtable-end
 
 - type: entity
   parent: [ClothingMaskGas, BaseSecurityContraband]
@@ -470,6 +475,11 @@
   - type: HideLayerClothing
     slots:
     - Snout
+  # Corvax-Wega-Dirtable-start
+  - type: Dirtable
+    dirtState: clown
+    equippedDirtState: equipped-clown
+  # Corvax-Wega-Dirtable-end
 
 - type: entity
   parent: ClothingMaskClown
@@ -545,6 +555,11 @@
   - type: HideLayerClothing
     slots:
     - Snout
+  # Corvax-Wega-Dirtable-start
+  - type: Dirtable
+    dirtState: mime
+    equippedDirtState: equipped-mime
+  # Corvax-Wega-Dirtable-end
 
 - type: entity
   parent: ClothingMaskPullableBase
@@ -580,6 +595,11 @@
         Aerial: -0.6
       chanceMultipliers:
         Aerial: 0.4
+  # Corvax-Wega-Dirtable-start
+  - type: Dirtable
+    dirtState: sterile
+    equippedDirtState: equipped-sterile
+  # Corvax-Wega-Dirtable-end
 
 - type: entity
   parent: ClothingMaskBase
@@ -957,6 +977,11 @@
     tags:
     - WhitelistChameleon
     - IPCMaskWearable # EE - IPCs
+  # Corvax-Wega-Dirtable-start
+  - type: Dirtable
+    dirtState: gaiter
+    equippedDirtState: equipped-gaiter
+  # Corvax-Wega-Dirtable-end
 
 - type: entity
   parent: ClothingMaskNeckGaiter

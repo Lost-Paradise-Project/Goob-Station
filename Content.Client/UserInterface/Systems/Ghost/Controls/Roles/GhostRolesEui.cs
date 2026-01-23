@@ -84,6 +84,7 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
 using System.Linq;
+using Content.Client._LP.Sponsors;  //LP edit
 using Content.Client.Eui;
 using Content.Client.Players.PlayTimeTracking;
 using Content.Shared.Eui;
@@ -181,6 +182,11 @@ namespace Content.Client.UserInterface.Systems.Ghost.Controls.Roles
             var groupedRoles = ghostState.GhostRoles.GroupBy(
                 role => (role.Name, role.Description)); //goobstation edit, less polluted ghost spawners menu
 
+            //LP edit start
+            var uuid = SponsorSimpleManager.GetUUID();
+            var sponsorTier = SponsorSimpleManager.GetTier();
+            //LP edit end
+
             // Add a new entry for each role group
             foreach (var group in groupedRoles)
             {
@@ -190,7 +196,8 @@ namespace Content.Client.UserInterface.Systems.Ghost.Controls.Roles
                 var hasAccess = requirementsManager.CheckRoleRequirements(
                     groupReq.Requirements, //goobstation edit, less polluted ghost spawners menu
                     null,
-                    out var reason);
+                    out var reason,
+                    sponsorTier, uuid); //LP edit
 
                 // Adding a new role
                 _window.AddEntry(name, description, hasAccess, reason, group, spriteSystem);

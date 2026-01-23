@@ -24,7 +24,10 @@ public abstract partial class LoadoutEffect
         LoadoutPrototype proto, // CorvaxGoob-Sponsors
         ICommonSession? session,
         IDependencyCollection collection,
-        [NotNullWhen(false)] out FormattedMessage? reason);
+        [NotNullWhen(false)] out FormattedMessage? reason,
+        int sponsorTier = 0,    //LP edit
+        string uuid = ""        //LP edit
+        );
 
     public virtual void Apply(RoleLoadout loadout) {}
 }

@@ -49,6 +49,7 @@
   - type: Construction # Frontier
     graph: FiresGraph # Frontier
     node: BonfireNode # Frontier
+  - type: NightLightBlocked # Corvax-Wega-NightLight
 
 - type: entity
   id: LegionnaireBonfire

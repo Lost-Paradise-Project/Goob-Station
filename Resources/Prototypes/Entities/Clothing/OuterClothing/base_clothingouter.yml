@@ -185,6 +185,11 @@
   - type: Tag
     tags:
       - WhitelistChameleon
+  # Corvax-Wega-Dirtable-start
+  - type: Dirtable
+    dirtState: evasuit
+    equippedDirtState: equipped-evasuit
+  # Corvax-Wega-Dirtable-end
 
 - type: entity
   abstract: true
@@ -204,6 +209,11 @@
         type: StorageBoundUserInterface
   - type: StaticPrice
     price: 70
+  # Corvax-Wega-Dirtable-start
+  - type: Dirtable
+    dirtState: coat
+    equippedDirtState: equipped-coat
+  # Corvax-Wega-Dirtable-end
 
 - type: entity
   abstract: true
@@ -364,6 +374,11 @@
   - type: HideClothingLayerClothing # Goobstation
     hiddenSlots:
     - jumpsuit
+  # Corvax-Wega-Dirtable-start
+  - type: Dirtable
+    dirtState: hardsuit
+    equippedDirtState: equipped-hardsuit
+  # Corvax-Wega-Dirtable-end
 
 - type: entity
   abstract: true
@@ -409,6 +424,11 @@
   - type: Tag
     tags:
     - PlasmamanSafe # EE Plasmeme Change
+  # Corvax-Wega-Dirtable-start
+  - type: Dirtable
+    dirtState: evasuit
+    equippedDirtState: equipped-evasuit
+  # Corvax-Wega-Dirtable-end
 
 - type: entity
   parent: ClothingOuterBase

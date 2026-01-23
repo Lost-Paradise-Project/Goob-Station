@@ -4,6 +4,7 @@
 //
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
+using Content.Client._LP.Sponsors;  //LP edit
 using Content.Client.Info;
 using Content.Client.Info.PlaytimeStats;
 using Content.Client.Resources;
@@ -73,11 +74,11 @@ namespace Content.Client.Lobby.UI
             _cfg.OnValueChanged(CCVars.SeeOwnNotes, p => AdminRemarksButton.Visible = p, true);
 
             // CorvaxGoob-Sponsors-Start
-            if (IoCManager.Instance!.TryResolveType<ISponsorWindowCreator>(out var creator))
-            {
-                SponsorButton.Visible = true;
-                SponsorButton.OnPressed += _ => creator.OpenWindow();
-            }
+            // if (IoCManager.Instance!.TryResolveType<ISponsorWindowCreator>(out var creator)) //LP edit отключено из-за отсутствия
+            // {
+            //     SponsorButton.Visible = true;
+            //     SponsorButton.OnPressed += _ => creator.OpenWindow();
+            // }
             // CorvaxGoob-Sponsors-End
         }
 
@@ -99,7 +100,7 @@ namespace Content.Client.Lobby.UI
 
             _createNewCharacterButton.ToolTip =
                 Loc.GetString("character-setup-gui-create-new-character-button-tooltip",
-                    ("maxCharacters", _preferencesManager.Settings!.MaxCharacterSlots));
+                    ("maxCharacters", _preferencesManager.Settings!.MaxCharacterSlots + SponsorSimpleManager.GetMaxCharacterSlots()));  //LP edit
 
             var selectedSlot = _preferencesManager.Preferences?.SelectedCharacterIndex;
 
@@ -125,7 +126,7 @@ namespace Content.Client.Lobby.UI
                 };
             }
 
-            _createNewCharacterButton.Disabled = numberOfFullSlots >= _preferencesManager.Settings.MaxCharacterSlots;
+            _createNewCharacterButton.Disabled = numberOfFullSlots >= _preferencesManager.Settings.MaxCharacterSlots + SponsorSimpleManager.GetMaxCharacterSlots(); //LP edit
             Characters.AddChild(_createNewCharacterButton);
         }
     }

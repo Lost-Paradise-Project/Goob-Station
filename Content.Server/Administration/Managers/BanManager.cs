@@ -44,6 +44,9 @@ using System.Text.Json.Nodes;
 using System.Text.Json.Serialization;
 using System.Text.RegularExpressions;
 using JetBrains.Annotations;
+#if LP
+using Content.Server._NC.DiscordAuth;
+#endif
 
 namespace Content.Server.Administration.Managers;
 
@@ -520,7 +523,7 @@ public sealed partial class BanManager : IBanManager, IPostInjectInit
             rolesString += $"\n> `#{banid}`: `{role}`";
 
         var mentions = new List<User> { };
-#if LOP
+#if LP
 
         if (targetDiscordId != null)
         {

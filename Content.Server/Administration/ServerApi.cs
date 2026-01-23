@@ -38,6 +38,7 @@ using Robust.Shared.Network;
 using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
+using Content.Server.Afk;   //LP edit
 
 namespace Content.Server.Administration;
 
@@ -73,6 +74,7 @@ public sealed partial class ServerApi : IPostInjectInit
     [Dependency] private readonly ILogManager _logManager = default!;
     [Dependency] private readonly IEntitySystemManager _entitySystemManager = default!;
     [Dependency] private readonly ILocalizationManager _loc = default!;
+    [Dependency] private readonly IAfkManager _afkManager = default!;   //LP edit
 
     private string _token = string.Empty;
     private ISawmill _sawmill = default!;
@@ -436,7 +438,7 @@ public sealed partial class ServerApi : IPostInjectInit
         }
 
         var serverBwoinkSystem = _entitySystemManager.GetEntitySystem<BwoinkSystem>();
-        var message = new SharedBwoinkSystem.BwoinkTextMessage(player.UserId, SharedBwoinkSystem.SystemUserId, body.Text);
+        var message = new SharedBwoinkSystem.BwoinkTextMessage(player.UserId, SharedBwoinkSystem.SystemUserId, body.Text, adminOnly: body.AdminOnly);   //LP edit
         serverBwoinkSystem.OnWebhookBwoinkTextMessage(message, body);
 
         // Respond with OK
@@ -533,7 +535,9 @@ public sealed partial class ServerApi : IPostInjectInit
                     UserId = player.UserId.UserId,
                     Name = player.Name,
                     IsAdmin = adminData != null,
-                    IsDeadminned = !adminData?.Active ?? false
+                    IsDeadminned = !adminData?.Active ?? false,
+                    IsStealth = adminData?.Stealth ?? false,            //LP edit
+                    IsAFK = _afkManager.IsAfk(player)                   //LP edit
                 });
             }
 
@@ -691,6 +695,7 @@ public sealed partial class ServerApi : IPostInjectInit
         public required bool WebhookUpdate { get; init; }
         public required string RoleName { get; init; }
         public required string RoleColor { get; init; }
+        public bool AdminOnly { get; init; }    //LP edit
     }
 
     #endregion
@@ -744,6 +749,8 @@ public sealed partial class ServerApi : IPostInjectInit
             public required string Name { get; init; }
             public required bool IsAdmin { get; init; }
             public required bool IsDeadminned { get; init; }
+            public required bool IsStealth { get; init; }   //LP edit
+            public required bool IsAFK { get; init; }       //LP edit
         }
 
         public sealed class MapInfo

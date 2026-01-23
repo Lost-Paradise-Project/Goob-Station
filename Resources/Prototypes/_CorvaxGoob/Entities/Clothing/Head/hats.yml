@@ -159,9 +159,14 @@
           Slash: 0.7
           Piercing: 0.7
           Heat: 0.8
+  # Corvax-Wega-Dirtable-start
+    - type: Dirtable
+      dirtState: hat
+      equippedDirtState: equipped-hat
+  # Corvax-Wega-Dirtable-end
 
 - type: entity
-  parent: ClothingHeadBase
+  parent: ClothingHeadBaseBeret # Corvax-Wega-Dirtable
   id: ClothingHeadHatBeretCentcomNaval
   name: naval beret
   description: A beret worn by those in the Nanotrasen Navy.
@@ -187,7 +192,7 @@
           Heat: 0.8
 
 - type: entity
-  parent: ClothingHeadBase
+  parent: ClothingHeadBaseBeret # Corvax-Wega-Dirtable
   id: ClothingHeadHatERTLeaderBeret
   name: leader beret
   description: A blue beret made of durathread with a genuine golden badge, denoting its owner as a Leader of ERT.
@@ -237,6 +242,11 @@
           Slash: 0.7
           Piercing: 0.7
           Heat: 0.8
+  # Corvax-Wega-Dirtable-start
+    - type: Dirtable
+      dirtState: hat
+      equippedDirtState: equipped-hat
+  # Corvax-Wega-Dirtable-end
 
 - type: entity
   parent: [ClothingHeadBase, BaseSecurityContraband]
@@ -263,6 +273,11 @@
           Slash: 0.7
           Piercing: 0.7
           Heat: 0.8
+  # Corvax-Wega-Dirtable-start
+    - type: Dirtable
+      dirtState: hat
+      equippedDirtState: equipped-hat
+  # Corvax-Wega-Dirtable-end
 
 - type: entity
   parent: ClothingHeadBase
@@ -317,7 +332,7 @@
         Heat: 0.8
 
 - type: entity
-  parent: ClothingHeadBase
+  parent: ClothingHeadBaseBeret # Corvax-Wega-Dirtable
   id: ClothingHeadHatBeretSecurityPilot
   name: pilot beret
   description: Black beret with a silver badge.
