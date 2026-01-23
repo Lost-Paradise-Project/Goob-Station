@@ -81,23 +81,28 @@ SPDX-License-Identifier: AGPL-3.0-or-later
                     <!-- Vertical Padding-->
                     <Control VerticalExpand="True" />
                     <!-- Left Bot Panel -->
-                    <!-- CorvaxGoob-Coins-start
-                    <PanelContainer VerticalAlignment="Bottom" HorizontalAlignment="Left"
-                                    Margin="0 75" StyleClasses="AngleRect">
-                        <RichTextLabel Name="LobbyMessageLabel" Access="Public" Margin="5" />
-                    </PanelContainer>
-                    CorvaxGoob-Coins-end -->
-                    <BoxContainer Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Bottom" SeparationOverride="4"> <!-- Goobstation - Lobby Background Credits -->
-                        <info:DevInfoBanner Name="DevInfoBanner" VerticalExpand="false" Margin="3 3 3 3" />
-                        <PanelContainer StyleClasses="AngleRect">
-                            <RichTextLabel Name="LobbySong" Access="Public" HorizontalAlignment="Center" />
+                    <!-- LP edit start: wwdp customghost-->
+                    <BoxContainer>
+                        <PanelContainer HorizontalAlignment="Left" VerticalAlignment="Bottom">
+                            <BoxContainer Orientation="Vertical" SeparationOverride="4" Margin="2">  <!-- wwdp edit start -->
+                                <BoxContainer Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Bottom" SeparationOverride="4" Margin="6,8,6,8">
+                                    <BoxContainer Name="CustomGhostsMenu"/>
+                                </BoxContainer>  
+                                <BoxContainer Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Bottom" SeparationOverride="4"> <!-- Goobstation - Lobby Background Credits -->
+                                    <info:DevInfoBanner Name="DevInfoBanner" VerticalExpand="false" Margin="3 3 3 3" />
+                                    <PanelContainer StyleClasses="AngleRect">
+                                        <RichTextLabel Name="LobbySong" Access="Public" HorizontalAlignment="Center" />
+                                    </PanelContainer>
+                                    <!-- Goobstation start -->
+                                    <PanelContainer StyleClasses="AngleRect">
+                                        <RichTextLabel Name="LobbyBackground" Access="Public" HorizontalAlignment="Center" />
+                                    </PanelContainer>
+                                    <!-- Goobstation end -->
+                                </BoxContainer>
+                            </BoxContainer>   <!-- wwdp edit end -->
                         </PanelContainer>
-                        <!-- Goobstation start -->
-                        <PanelContainer StyleClasses="AngleRect">
-                            <RichTextLabel Name="LobbyBackground" Access="Public" HorizontalAlignment="Center" />
-                        </PanelContainer>
-                        <!-- Goobstation end -->
                     </BoxContainer>
+                    <!--LP edit end-->
                 </Control>
                 <!-- Character setup state -->
                 <!-- This is injected on startup. Funky! -->

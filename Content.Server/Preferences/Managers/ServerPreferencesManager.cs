@@ -36,7 +36,6 @@ using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
-using Content.Corvax.Interfaces.Shared;
 using Content.Server._LP.Sponsors;      //LP edit
 using Content.Server.Database;
 using Content.Shared.CCVar;
@@ -48,6 +47,7 @@ using Robust.Shared.Network;
 using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
+using Content.Shared._White.CustomGhostSystem;
 
 namespace Content.Server.Preferences.Managers
 {
@@ -111,7 +111,7 @@ namespace Content.Server.Preferences.Managers
                 return;
             }
 
-            prefsData.Prefs = new PlayerPreferences(curPrefs.Characters, index, curPrefs.AdminOOCColor, curPrefs.ConstructionFavorites);
+            prefsData.Prefs = curPrefs.WithSlot(index); // WWDP EDIT
 
             if (ShouldStorePrefs(message.MsgChannel.AuthType))
             {
@@ -154,7 +154,7 @@ namespace Content.Server.Preferences.Managers
                 [slot] = profile
             };
 
-            prefsData.Prefs = new PlayerPreferences(profiles, slot, curPrefs.AdminOOCColor, curPrefs.ConstructionFavorites);
+            prefsData.Prefs = curPrefs.WithCharacters(profiles).WithSlot(slot); // WWDP EDIT
 
             if (ShouldStorePrefs(session.Channel.AuthType))
                 await _db.SaveCharacterSlotAsync(userId, profile, slot);
@@ -169,7 +169,7 @@ namespace Content.Server.Preferences.Managers
             }
 
             var curPrefs = prefsData.Prefs!;
-            prefsData.Prefs = new PlayerPreferences(curPrefs.Characters, curPrefs.SelectedCharacterIndex, curPrefs.AdminOOCColor, favorites);
+            prefsData.Prefs = new PlayerPreferences(curPrefs.Characters, curPrefs.SelectedCharacterIndex, curPrefs.AdminOOCColor, favorites, curPrefs.CustomGhost); //WWDP EDIT
 
             var session = _playerManager.GetSessionById(userId);
             if (ShouldStorePrefs(session.Channel.AuthType))
@@ -213,7 +213,7 @@ namespace Content.Server.Preferences.Managers
             var arr = new Dictionary<int, ICharacterProfile>(curPrefs.Characters);
             arr.Remove(slot);
 
-            prefsData.Prefs = new PlayerPreferences(arr, nextSlot ?? curPrefs.SelectedCharacterIndex, curPrefs.AdminOOCColor, curPrefs.ConstructionFavorites);
+            prefsData.Prefs = curPrefs.WithCharacters(arr).WithSlot(nextSlot ?? curPrefs.SelectedCharacterIndex); // WWDP EDIT 
 
             if (ShouldStorePrefs(message.MsgChannel.AuthType))
             {
@@ -254,7 +254,7 @@ namespace Content.Server.Preferences.Managers
             }
 
             var curPrefs = prefsData.Prefs!;
-            prefsData.Prefs = new PlayerPreferences(curPrefs.Characters, curPrefs.SelectedCharacterIndex, curPrefs.AdminOOCColor, validatedList);
+            prefsData.Prefs = new PlayerPreferences(curPrefs.Characters, curPrefs.SelectedCharacterIndex, curPrefs.AdminOOCColor, validatedList, curPrefs.CustomGhost); //WWDP EDIT
 
             if (ShouldStorePrefs(message.MsgChannel.AuthType))
             {
@@ -276,7 +276,7 @@ namespace Content.Server.Preferences.Managers
                     PrefsLoaded = true,
                     Prefs = new PlayerPreferences(
                         new[] { new KeyValuePair<int, ICharacterProfile>(0, HumanoidCharacterProfile.Random()) },
-                        0, Color.Transparent, [])
+                        0, Color.Transparent, [], "default") // WWDP EDIT
                 };
 
                 _cachedPlayerPrefs[session.UserId] = prefsData;
@@ -429,10 +429,16 @@ namespace Content.Server.Preferences.Managers
 
             var sponsorPrototypes = SponsorSimpleManager.GetMarkings(session.UserId).ToArray(); // LP edit
 
+            //LP edit start
+            ProtoId<CustomGhostPrototype> protoid = "default";
+            if (_prototypeManager.TryIndex<CustomGhostPrototype>(prefs.CustomGhost, out var ghostProto) && ghostProto.CanUse(session, SponsorSimpleManager.GetTier(session.UserId)))
+                protoid = prefs.CustomGhost;
+            //LP edit end
+
             return new PlayerPreferences(prefs.Characters.Select(p =>
             {
                 return new KeyValuePair<int, ICharacterProfile>(p.Key, p.Value.Validated(session, collection, sponsorPrototypes, SponsorSimpleManager.GetTier(session.UserId), SponsorSimpleManager.GetUUID(session.UserId)));  //LP edit
-            }), prefs.SelectedCharacterIndex, prefs.AdminOOCColor, prefs.ConstructionFavorites);
+            }), prefs.SelectedCharacterIndex, prefs.AdminOOCColor, prefs.ConstructionFavorites, protoid);// WWDP EDIT
         }
 
         public IEnumerable<KeyValuePair<NetUserId, ICharacterProfile>> GetSelectedProfilesForPlayers(

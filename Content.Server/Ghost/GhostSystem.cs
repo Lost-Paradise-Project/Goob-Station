@@ -130,6 +130,10 @@ using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using Robust.Shared.Timing;
+using System.Collections.Frozen;
+using Content.Server.Preferences.Managers;
+using Content.Shared._White.CustomGhostSystem;
+using Robust.Shared.Network;
 
 // Shitmed Change
 using Content.Shared.Body.Components;
@@ -171,6 +175,7 @@ namespace Content.Server.Ghost
         [Dependency] private readonly NameModifierSystem _nameMod = default!;
         [Dependency] private readonly GhostVisibilitySystem _ghostVisibility = default!;
         [Dependency] private readonly SharedBodySystem _bodySystem = default!; // Shitmed Change
+        [Dependency] private readonly IServerPreferencesManager _prefs = default!; // WWDP EDIT
         private EntityQuery<GhostComponent> _ghostQuery;
         private EntityQuery<PhysicsComponent> _physicsQuery;
 
@@ -217,7 +222,7 @@ namespace Content.Server.Ghost
             // If component not deleting they can see ghosts.
             if (ent.Comp.LifeStage <= ComponentLifeStage.Running)
             {
-                args.VisibilityMask |= (int)VisibilityFlags.Ghost;
+                args.VisibilityMask |= (int) VisibilityFlags.Ghost;
             }
         }
 
@@ -377,7 +382,7 @@ namespace Content.Server.Ghost
 
         private void OnGhostReturnToBodyRequest(GhostReturnToBodyRequest msg, EntitySessionEventArgs args)
         {
-            if (args.SenderSession.AttachedEntity is not {Valid: true} attached
+            if (args.SenderSession.AttachedEntity is not { Valid: true } attached
                 || !_ghostQuery.TryComp(attached, out var ghost)
                 || !ghost.CanReturnToBody
                 || !TryComp(attached, out ActorComponent? actor))
@@ -393,7 +398,7 @@ namespace Content.Server.Ghost
 
         private void OnGhostWarpsRequest(GhostWarpsRequestEvent msg, EntitySessionEventArgs args)
         {
-            if (args.SenderSession.AttachedEntity is not {Valid: true} entity
+            if (args.SenderSession.AttachedEntity is not { Valid: true } entity
                 || !_ghostQuery.HasComp(entity))
             {
                 Log.Warning($"User {args.SenderSession.Name} sent a {nameof(GhostWarpsRequestEvent)} without being a ghost.");
@@ -406,7 +411,7 @@ namespace Content.Server.Ghost
 
         private void OnGhostWarpToTargetRequest(GhostWarpToTargetRequestEvent msg, EntitySessionEventArgs args)
         {
-            if (args.SenderSession.AttachedEntity is not {Valid: true} attached
+            if (args.SenderSession.AttachedEntity is not { Valid: true } attached
                 || !_ghostQuery.HasComp(attached))
             {
                 Log.Warning($"User {args.SenderSession.Name} tried to warp to {msg.Target} without being a ghost.");
@@ -426,14 +431,14 @@ namespace Content.Server.Ghost
 
         private void OnGhostnadoRequest(GhostnadoRequestEvent msg, EntitySessionEventArgs args)
         {
-            if (args.SenderSession.AttachedEntity is not {} uid
+            if (args.SenderSession.AttachedEntity is not { } uid
                 || !_ghostQuery.HasComp(uid))
             {
                 Log.Warning($"User {args.SenderSession.Name} tried to ghostnado without being a ghost.");
                 return;
             }
 
-            if (_followerSystem.GetMostGhostFollowed() is not {} target)
+            if (_followerSystem.GetMostGhostFollowed() is not { } target)
                 return;
 
             WarpTo(uid, target);
@@ -470,7 +475,7 @@ namespace Content.Server.Ghost
         {
             foreach (var player in _player.Sessions)
             {
-                if (player.AttachedEntity is not {Valid: true} attached)
+                if (player.AttachedEntity is not { Valid: true } attached)
                     continue;
 
                 if (attached == except) continue;
@@ -580,7 +585,13 @@ namespace Content.Server.Ghost
                 return null;
             }
 
-            var ghost = SpawnAtPosition(GameTicker.ObserverPrototypeName, spawnPosition.Value);
+            // WWDP EDIT START
+            CustomGhostPrototype? customGhost = null;
+            if (IoCManager.Resolve<EntityManager>().TryGetComponent(mind, out ActorComponent? actorcomp) && actorcomp.PlayerSession.UserId is NetUserId userId) //LP edit вынужденый хардкод
+                customGhost = _prototypeManager.Index(_prefs.GetPreferences(userId).CustomGhost);
+
+            var ghost = SpawnAtPosition(customGhost?.GhostEntityPrototype ?? GameTicker.ObserverPrototypeName, spawnPosition.Value);
+            // WWDP EDIT END
             var ghostComponent = Comp<GhostComponent>(ghost);
 
             // Try setting the ghost entity name to either the character name or the player name.
@@ -588,7 +599,7 @@ namespace Content.Server.Ghost
             // However, that should rarely happen.
             if (!string.IsNullOrWhiteSpace(mind.Comp.CharacterName))
                 _metaData.SetEntityName(ghost, FormattedMessage.EscapeText(mind.Comp.CharacterName)); // Goob Sanitize Text
-            else if (mind.Comp.UserId is { } userId && _player.TryGetSessionById(userId, out var session))
+            else if (mind.Comp.UserId is NetUserId netId && _player.TryGetSessionById(netId, out var session))
                 _metaData.SetEntityName(ghost, FormattedMessage.EscapeText(session.Name)); // Goob Sanitize Text
 
             if (mind.Comp.TimeOfDeath.HasValue)
