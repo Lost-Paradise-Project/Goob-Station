@@ -1,4 +1,4 @@
-﻿Entries:
+Entries:
 - author: Evgencheg
   changes:
     - message: Начало начал!
@@ -45,3 +45,21 @@
       message: Добавлен бан-лог для дискорда через webhook.
   id: 5612
   time: '2026-01-15T12:16:38.0000000+00:00'
+- author: Evgencheg
+  changes:
+    - type: Add
+      message: Добавлена система загрязнения одежды!
+  id: 5613
+  time: '2026-01-22T14:48:26.0000000+00:00'
+  url: https://github.com/Lost-Paradise-Project/Goob-Station/pull/9
+- author: Evgencheg
+  changes:
+    - type: Add
+      message: Добавлена ерп панель!
+    - type: Add
+      message: Добавлен тет-а-тет чат в 1 тайл.
+    - type: Add
+      message: Добавлен ерп статус!
+  id: 5614
+  time: '2026-01-22T20:24:14.0000000+00:00'
+  url: https://github.com/Lost-Paradise-Project/Goob-Station/pull/18

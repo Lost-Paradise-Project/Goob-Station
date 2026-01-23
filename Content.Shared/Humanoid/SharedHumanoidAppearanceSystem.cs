@@ -220,6 +220,7 @@ public abstract class SharedHumanoidAppearanceSystem : EntitySystem
 
         targetHumanoid.Gender = sourceHumanoid.Gender;
 
+        targetHumanoid.ErpStatus = sourceHumanoid.ErpStatus; // LP edit
         if (TryComp<GrammarComponent>(target, out var grammar))
             _grammarSystem.SetGender((target, grammar), sourceHumanoid.Gender);
 
@@ -580,6 +581,7 @@ public abstract class SharedHumanoidAppearanceSystem : EntitySystem
         SetTTSVoice(uid, profile.Voice, humanoid); // CorvaxGoob-TTS
         SetBarkVoice(uid, profile.BarkVoice, humanoid); // Goob Station - Barks
 
+        humanoid.ErpStatus = profile.ErpStatus; // LP edit
         humanoid.Gender = profile.Gender;
         if (TryComp<GrammarComponent>(uid, out var grammar))
         {

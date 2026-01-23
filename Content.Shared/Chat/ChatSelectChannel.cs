@@ -55,6 +55,13 @@ namespace Content.Shared.Chat
         /// </summary>
         Emotes = ChatChannel.Emotes,
 
+        // LP edit start
+        /// <summary>
+        ///     HiddenEmotes
+        /// </summary>
+        HiddenEmotes = ChatChannel.HiddenEmotes,
+        // LP edit end
+
         // Goobstation - Starlight collective mind port
         /// <summary>
         ///     CollectiveMind

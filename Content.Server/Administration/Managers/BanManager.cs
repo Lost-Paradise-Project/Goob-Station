@@ -523,7 +523,7 @@ public sealed partial class BanManager : IBanManager, IPostInjectInit
             rolesString += $"\n> `#{banid}`: `{role}`";
 
         var mentions = new List<User> { };
-#if LOP
+#if LP
 
         if (targetDiscordId != null)
         {
