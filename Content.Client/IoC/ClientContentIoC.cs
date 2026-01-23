@@ -159,6 +159,10 @@ using Content.Client.PClient._NC.JoinQueue;
 #endif
 // LP edit end
 
+#if LP
+using Content.Client._ERPModule.Services;
+#endif
+
 namespace Content.Client.IoC
 {
     internal static class ClientContentIoC
@@ -204,6 +208,7 @@ namespace Content.Client.IoC
             collection.Register<SponsorsManager>();
             collection.Register<DiscordAuthManager>();
             collection.Register<JoinQueueManager>();
+            collection.Register<CustomInteractionService, CustomInteractionService>(true);
 #endif
             // LP edit end
         }

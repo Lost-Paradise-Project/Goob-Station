@@ -859,7 +859,7 @@ namespace Content.Server.Administration.Systems
             var adminColor = _config.GetCVar(GoobCVars.AdminBwoinkColor);
             var adminPrefix = "";
             var bwoinkText = $"{bwoinkParams.SenderName}";
-            string sponsorColor = adminColor;   // LOP edit
+            string sponsorColor = adminColor;   // LP edit
 
             //Getting an administrator position
             if (_config.GetCVar(CCVars.AhelpAdminPrefix))
