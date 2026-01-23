@@ -429,10 +429,16 @@ namespace Content.Server.Preferences.Managers
 
             var sponsorPrototypes = SponsorSimpleManager.GetMarkings(session.UserId).ToArray(); // LP edit
 
+            //LP edit start
+            ProtoId<CustomGhostPrototype> protoid = "default";
+            if (_prototypeManager.TryIndex<CustomGhostPrototype>(prefs.CustomGhost, out var ghostProto) && ghostProto.CanUse(session, SponsorSimpleManager.GetTier(session.UserId)))
+                protoid = prefs.CustomGhost;
+            //LP edit end
+
             return new PlayerPreferences(prefs.Characters.Select(p =>
             {
                 return new KeyValuePair<int, ICharacterProfile>(p.Key, p.Value.Validated(session, collection, sponsorPrototypes, SponsorSimpleManager.GetTier(session.UserId), SponsorSimpleManager.GetUUID(session.UserId)));  //LP edit
-            }), prefs.SelectedCharacterIndex, prefs.AdminOOCColor, prefs.ConstructionFavorites, _prototypeManager.TryIndex<CustomGhostPrototype>(prefs.CustomGhost, out var ghostProto) && ghostProto.CanUse(session, SponsorSimpleManager.GetTier(session.UserId)) ? prefs.CustomGhost : "default");// WWDP EDIT
+            }), prefs.SelectedCharacterIndex, prefs.AdminOOCColor, prefs.ConstructionFavorites, protoid);// WWDP EDIT
         }
 
         public IEnumerable<KeyValuePair<NetUserId, ICharacterProfile>> GetSelectedProfilesForPlayers(
