@@ -587,7 +587,7 @@ namespace Content.Server.Ghost
 
             // WWDP EDIT START
             CustomGhostPrototype? customGhost = null;
-            if (mind.Comp.UserId is NetUserId userId)
+            if (IoCManager.Resolve<EntityManager>().TryGetComponent(mind, out ActorComponent? actorcomp) && actorcomp.PlayerSession.UserId is NetUserId userId) //LP edit вынужденый хардкод
                 customGhost = _prototypeManager.Index(_prefs.GetPreferences(userId).CustomGhost);
 
             var ghost = SpawnAtPosition(customGhost?.GhostEntityPrototype ?? GameTicker.ObserverPrototypeName, spawnPosition.Value);
