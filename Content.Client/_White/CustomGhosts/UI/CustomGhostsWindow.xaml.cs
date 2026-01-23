@@ -43,10 +43,6 @@ public sealed partial class CustomGhostsWindow : DefaultWindow
         RobustXamlLoader.Load(this);
         IoCManager.InjectDependencies(this);
         _sprite = _entSys.GetEntitySystem<SpriteSystem>();
-        //LP edit end
-        //_netManager.RegisterNetMessage<ChangeCustomGhostMsg>();
-        //_netManager.RegisterNetMessage<CustomGhostAnswer>(OnCustomGhostAnswer);
-        //LP edit end
 
         _currentGhostProtoId = _pref.Preferences?.CustomGhost.Id ?? "default";
         ShowAllCheckBox.OnToggled += ToggleVisibility;

@@ -27,7 +27,7 @@ public sealed partial class UUIDRestriction : CustomGhostRestriction
         failReason = null;
 
         foreach (var testCkey in UUID)
-            if (testCkey.ToLower() == uuid) // I'd do a .Contains() here, but i want this check to be case independent, and the StringComparer.OrdinalIgnoreCase
+            if (testCkey.ToLower() == uuid.ToLower()) // I'd do a .Contains() here, but i want this check to be case independent, and the StringComparer.OrdinalIgnoreCase
                 return true;              // is not allowed by the sandbox because robusttoolbox maintainers are mentally disabled
 
         failReason = Loc.GetString("custom-ghost-fail-exclusive-ghost");
