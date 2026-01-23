@@ -4,6 +4,10 @@
   description: job-description-pilot
   playTimeTracker: JobPilot
   requirements:
+#LP edit start
+  - !type:AgeRequirement
+    requiredAge: 24
+#LP edit end
   - !type:DepartmentTimeRequirement
     department: Security
     time: 72000 #20 hrs

@@ -4,6 +4,10 @@
   description: job-description-surgeon
   playTimeTracker: JobSurgeon
   requirements:
+#LP edit start
+    - !type:AgeRequirement
+      requiredAge: 24
+#LP edit end
     - !type:DepartmentTimeRequirement
       department: Medical
       time: 54000 #15 hrs

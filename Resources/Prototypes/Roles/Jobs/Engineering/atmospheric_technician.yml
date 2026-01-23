@@ -65,6 +65,10 @@
   description: job-description-atmostech
   playTimeTracker: JobAtmosphericTechnician
   requirements:
+#LP edit start
+  - !type:AgeRequirement
+    requiredAge: 24
+#LP edit end
   - !type:DepartmentTimeRequirement
     department: Engineering
     time: 9000 #2.5 hrs

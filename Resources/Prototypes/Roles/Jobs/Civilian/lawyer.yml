@@ -71,6 +71,10 @@
   description: job-description-lawyer
   playTimeTracker: JobLawyer
   requirements:
+#LP edit start
+    - !type:AgeRequirement
+      requiredAge: 23
+#LP edit end
     - !type:OverallPlaytimeRequirement
       time: 9000 # 2.5 hrs
     - !type:SpeciesRequirement # CorvaxGoob-Species

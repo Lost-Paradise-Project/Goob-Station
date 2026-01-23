@@ -59,7 +59,7 @@
   canBeAntag: false
   requirements:
   - !type:AgeRequirement
-    requiredAge: 21
+    requiredAge: 40 #LP edit
   accessGroups:
   - AllAccess
   access:
@@ -104,7 +104,7 @@
   canBeAntag: true
   requirements:
   - !type:AgeRequirement
-    requiredAge: 21
+    requiredAge: 28 #LP edit
   accessGroups:
   - AllAccess
   access:
@@ -156,7 +156,7 @@
   canBeAntag: true
   requirements:
   - !type:AgeRequirement
-    requiredAge: 21
+    requiredAge: 26 #LP edit
   accessGroups:
   - AllAccess
   access:

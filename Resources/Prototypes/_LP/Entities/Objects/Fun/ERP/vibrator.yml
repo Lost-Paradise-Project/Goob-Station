@@ -2,7 +2,6 @@
   name: magicwand
   id: LPPMagicwand
   parent: LPPClothingUnderwearBase
-  description:
   components:
   - type: Sprite
     sprite: _LP/Objects/Fun/ERP/Vibrator/magicwand.rsi

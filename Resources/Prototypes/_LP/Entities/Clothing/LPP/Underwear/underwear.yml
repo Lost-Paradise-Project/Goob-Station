@@ -2274,3 +2274,84 @@
   components:
   - type: Sprite
     sprite: _LP/Clothing/Underwear/Command/cap.rsi
+
+- type: entity
+  parent: LPPClothingUnderwearBase
+  id: LPPKiniPantiesSyndicate
+  name: Syndicate panties
+  description:
+  components:
+  - type: Sprite
+    sprite: _LP/Clothing/Underwear/CoolStuff/panties_syndi-kini.rsi
+
+- type: entity
+  parent: LPPClothingUnderwearBase
+  id: LPPStrippedPantiesBlue
+  name: Stripped panties blue
+  description:
+  components:
+  - type: Sprite
+    sprite: _LP/Clothing/Underwear/CoolStuff/striped_panties_blue.rsi
+
+- type: entity
+  parent: LPPClothingUnderwearBase
+  id: LPPStrippedPantiesGreen
+  name: Stripped panties green
+  description:
+  components:
+  - type: Sprite
+    sprite: _LP/Clothing/Underwear/CoolStuff/striped_panties_green.rsi
+
+- type: entity
+  parent: LPPClothingUnderwearBase
+  id: LPPStrippedPantiesLightBrown
+  name: Stripped panties light brown
+  description:
+  components:
+  - type: Sprite
+    sprite: _LP/Clothing/Underwear/CoolStuff/striped_panties_lightbrown.rsi
+
+- type: entity
+  parent: LPPClothingUnderwearBase
+  id: LPPStrippedPantiesMaroon
+  name: Stripped panties maroon
+  description:
+  components:
+  - type: Sprite
+    sprite: _LP/Clothing/Underwear/CoolStuff/striped_panties_maroon.rsi
+
+- type: entity
+  parent: LPPClothingUnderwearBase
+  id: LPPStrippedPantiesPink
+  name: Stripped panties pink
+  description:
+  components:
+  - type: Sprite
+    sprite: _LP/Clothing/Underwear/CoolStuff/striped_panties_pink.rsi
+
+- type: entity
+  parent: LPPClothingUnderwearBase
+  id: LPPStrippedPantiesPurple
+  name: Stripped panties purple
+  description:
+  components:
+  - type: Sprite
+    sprite: _LP/Clothing/Underwear/CoolStuff/striped_panties_purple.rsi
+
+- type: entity
+  parent: LPPClothingUnderwearBase
+  id: LPPStrippedPantiesTacticalmaid
+  name: Stripped panties tactical maid
+  description:
+  components:
+  - type: Sprite
+    sprite: _LP/Clothing/Underwear/CoolStuff/striped_panties_tacticalmaid.rsi
+
+- type: entity
+  parent: LPPClothingUnderwearBase
+  id: LPPBoxerPantiesSyndicate
+  name: Syndicate boxer briefs
+  description:
+  components:
+  - type: Sprite
+    sprite: _LP/Clothing/Underwear/CoolStuff/syndicate_shorts.rsi

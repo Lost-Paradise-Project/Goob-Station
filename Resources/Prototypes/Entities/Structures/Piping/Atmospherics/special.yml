@@ -63,3 +63,8 @@
   - type: Tag
     tags:
       - SpreaderIgnore
+  # LP edit start
+  - type: Construction
+    graph: AtmosDeviceFanDirectional
+    node: AtmosDeviceFanDirectional
+  # LP edit end

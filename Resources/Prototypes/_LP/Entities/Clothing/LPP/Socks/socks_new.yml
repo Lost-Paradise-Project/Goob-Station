@@ -100,3 +100,138 @@
   - type: Sprite
     sprite: _LP/Clothing/Socks/New/pinklace.rsi
 
+- type: entity
+  parent: LPPClothingUnderwearSocksBase
+  id: LPPClothingUnderSocksKneeStrippedBlue
+  name: Blue stripped knee socks
+  components:
+  - type: Sprite
+    sprite: _LP/Clothing/Socks/CoolStuff/striped_knee_blue.rsi
+
+- type: entity
+  parent: LPPClothingUnderwearSocksBase
+  id: LPPClothingUnderSocksKneeStrippedGreen
+  name: Green stripped knee socks
+  components:
+  - type: Sprite
+    sprite: _LP/Clothing/Socks/CoolStuff/striped_knee_green.rsi
+
+- type: entity
+  parent: LPPClothingUnderwearSocksBase
+  id: LPPClothingUnderSocksKneeStrippedLightbrown
+  name: Light brown stripped knee socks
+  components:
+  - type: Sprite
+    sprite: _LP/Clothing/Socks/CoolStuff/striped_knee_lightbrown.rsi
+
+- type: entity
+  parent: LPPClothingUnderwearSocksBase
+  id: LPPClothingUnderSocksKneeStrippedMaroon
+  name: Maroon stripped knee socks
+  components:
+  - type: Sprite
+    sprite: _LP/Clothing/Socks/CoolStuff/striped_knee_maroon.rsi
+  
+- type: entity
+  parent: LPPClothingUnderwearSocksBase
+  id: LPPClothingUnderSocksKneeStrippedPink
+  name: Pink stripped knee socks
+  components:
+  - type: Sprite
+    sprite: _LP/Clothing/Socks/CoolStuff/striped_knee_pink.rsi
+
+- type: entity
+  parent: LPPClothingUnderwearSocksBase
+  id: LPPClothingUnderSocksKneeSStrippedPurple
+  name: Purple stripped knee socks
+  components:
+  - type: Sprite
+    sprite: _LP/Clothing/Socks/CoolStuff/striped_knee_purple.rsi
+
+- type: entity
+  parent: LPPClothingUnderwearSocksBase
+  id: LPPClothingUnderSocksSKneeStrippedTacticalmaid
+  name: Purple stripped socks
+  components:
+  - type: Sprite
+    sprite: _LP/Clothing/Socks/CoolStuff/striped_knee_tacticalmaid.rsi
+
+- type: entity
+  parent: LPPClothingUnderwearSocksBase
+  id: LPPClothingUnderSocksSKneeSyndicate
+  name: Syndicate socks
+  components:
+  - type: Sprite
+    sprite: _LP/Clothing/Socks/CoolStuff/syndicate_knee.rsi
+
+- type: entity
+  parent: LPPClothingUnderwearSocksBase
+  id: LPPClothingUnderSocksStrippedThighBlue
+  name: Blue stripped thigh socks
+  components:
+  - type: Sprite
+    sprite: _LP/Clothing/Socks/CoolStuff/striped_thigh_blue.rsi
+
+- type: entity
+  parent: LPPClothingUnderwearSocksBase
+  id: LPPClothingUnderSocksStrippedThighGreen
+  name: Green stripped thigh socks
+  components:
+  - type: Sprite
+    sprite: _LP/Clothing/Socks/CoolStuff/striped_thigh_green.rsi
+
+- type: entity
+  parent: LPPClothingUnderwearSocksBase
+  id: LPPClothingUnderSocksStrippedThighLightbrown
+  name: Light brown stripped thigh socks
+  components:
+  - type: Sprite
+    sprite: _LP/Clothing/Socks/CoolStuff/striped_thigh_lightbrown.rsi
+
+- type: entity
+  parent: LPPClothingUnderwearSocksBase
+  id: LPPClothingUnderSocksStrippedThighMaroon
+  name: Maroon stripped thigh socks
+  components:
+  - type: Sprite
+    sprite: _LP/Clothing/Socks/CoolStuff/striped_thigh_maroon.rsi
+
+- type: entity
+  parent: LPPClothingUnderwearSocksBase
+  id: LPPClothingUnderSocksStrippedThighPink
+  name: Pink stripped thigh socks
+  components:
+  - type: Sprite
+    sprite: _LP/Clothing/Socks/CoolStuff/striped_thigh_pink.rsi
+
+- type: entity
+  parent: LPPClothingUnderwearSocksBase
+  id: LPPClothingUnderSocksStrippedThighPurple
+  name: Purple stripped thigh socks
+  components:
+  - type: Sprite
+    sprite: _LP/Clothing/Socks/CoolStuff/striped_thigh_purple.rsi
+
+- type: entity
+  parent: LPPClothingUnderwearSocksBase
+  id: LPPClothingUnderSocksStrippedThighTacticalmaid
+  name: Tactical maid thigh socks
+  components:
+  - type: Sprite
+    sprite: _LP/Clothing/Socks/CoolStuff/striped_thigh_tacticalmaid.rsi
+
+- type: entity
+  parent: LPPClothingUnderwearSocksBase
+  id: LPPClothingUnderSocksThighSyndicate
+  name: Syndicate thigh socks
+  components:
+  - type: Sprite
+    sprite: _LP/Clothing/Socks/CoolStuff/syndicate_thigh.rsi
+
+- type: entity
+  parent: LPPClothingUnderwearSocksBase
+  id: LPPClothingUnderSocksNormSyndicate
+  name: Syndicate socks
+  components:
+  - type: Sprite
+    sprite: _LP/Clothing/Socks/CoolStuff/syndicate_norm.rsi

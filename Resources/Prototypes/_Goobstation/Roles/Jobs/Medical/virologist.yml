@@ -4,6 +4,10 @@
   description: job-description-virologist
   playTimeTracker: JobVirologist
   requirements:
+#LP edit start
+    - !type:AgeRequirement
+      requiredAge: 24
+#LP edit end
     - !type:DepartmentTimeRequirement
       department: Medical
       time: 14400 #4 hrs

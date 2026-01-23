@@ -1,0 +1,65 @@
+- type: entity
+  parent: ClothingHeadBase
+  id: LPPBDayCap
+  name: birthday cap
+  description: Happy birthday!
+  components:
+  - type: Sprite
+    sprite: _LP/Clothing/Head/Hats/birthday_cap.rsi
+  - type: Clothing
+    sprite: _LP/Clothing/Head/Hats/birthday_cap.rsi
+
+- type: entity
+  parent: ClothingHeadBase
+  id: LPPClothingHeadClownPomni
+  name: Clown Pomni Head
+  description: It's a pomni head
+  components:
+  - type: Sprite
+    sprite: _LP/Clothing/Head/Hats/clownPomni.rsi
+  - type: Clothing
+    sprite: _LP/Clothing/Head/Hats/clownPomni.rsi
+
+- type: entity
+  parent: ClothingHeadBase
+  id: LPPClothingHeadSecHat
+  name: security service's hat
+  description: black hat, to show who's the sherif.
+  components:
+  - type: Sprite
+    sprite: _LP/Clothing/Head/Hats/sec-hat.rsi
+  - type: Clothing
+    sprite: _LP/Clothing/Head/Hats/sec-hat.rsi
+
+- type: entity
+  parent: ClothingHeadBase
+  id: LPPClothingHeadHatBeretOPZ
+  name: OPZ Beret
+  description: Remember what you're fighting for. (For humanity, in case you've forgotten)
+  components:
+  - type: Sprite
+    sprite: _LP/Clothing/Head/Hats/upgberet.rsi
+  - type: Clothing
+    sprite: _LP/Clothing/Head/Hats/upgberet.rsi
+
+- type: entity
+  parent: ClothingHeadBase
+  id: LPPClothingHeadHatCapOPZ
+  name: OPZ Cap
+  description: The cap of the representatives of the armed forces of the OPZ, strikes fear into the hearts of xenophiles, there is nothing more to say.
+  components:
+  - type: Sprite
+    sprite: _LP/Clothing/Head/Hats/upgofficerhat.rsi
+  - type: Clothing
+    sprite: _LP/Clothing/Head/Hats/upgofficerhat.rsi
+
+- type: entity
+  parent: ClothingHeadBase
+  id: LPPClothingHeadHatMaid
+  name: Maid's cap
+  description: An item of clothing that is an integral part of any elite maid.
+  components:
+  - type: Sprite
+    sprite: _LP/Clothing/Head/Hats/maidencap.rsi
+  - type: Clothing
+    sprite: _LP/Clothing/Head/Hats/maidencap.rsi

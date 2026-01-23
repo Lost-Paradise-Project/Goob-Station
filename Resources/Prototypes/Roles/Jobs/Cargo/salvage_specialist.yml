@@ -74,6 +74,10 @@
   description: job-description-salvagespec
   playTimeTracker: JobSalvageSpecialist
   requirements:
+#LP edit start
+    - !type:AgeRequirement
+      requiredAge: 22
+#LP edit end
     - !type:DepartmentTimeRequirement
       department: Cargo
       time: 9000 # 2.5 hrs

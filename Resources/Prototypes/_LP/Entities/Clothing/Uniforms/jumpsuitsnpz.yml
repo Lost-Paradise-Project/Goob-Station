@@ -1,0 +1,66 @@
+﻿- type: entity
+  parent: ClothingUniformBase
+  id: LPPClothingUniformJumpsuitOperativeOPZ
+  name: OPZ operative jumpsuit
+  description: Trousers and sweater of refinery operatives, with additional Kevlar lining.
+  components:
+  - type: Sprite
+    sprite: _LP/Clothing/Uniforms/OPZ/upgcloth.rsi
+  - type: Clothing
+    sprite: _LP/Clothing/Uniforms/OPZ/upgcloth.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Piercing: 0.95
+
+- type: entity
+  parent: ClothingUniformBase
+  id: LPPClothingUniformJumpskirtMadienPNZ
+  name: OPZ maid's uniform
+  description: Created from the latest fabrics, the uniform is perfect for tactical cleaning of premises, and is also ideal for any figure.
+  components:
+  - type: Sprite
+    sprite: _LP/Clothing/Uniforms/OPZ/maidenOPZ.rsi
+  - type: Clothing
+    sprite: _LP/Clothing/Uniforms/OPZ/maidenOPZ.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Piercing: 0.95
+
+- type: entity
+  parent: ClothingUniformBase
+  id: LPPClothingUniformJumpsuitOverallsOPZ
+  name: OPZ technical jumpsuit
+  description: Sweater and trousers with straps, do not stain the shirt!
+  components:
+  - type: Sprite
+    sprite: _LP/Clothing/Uniforms/OPZ/OPZoverall.rsi
+  - type: Clothing
+    sprite: _LP/Clothing/Uniforms/OPZ/OPZoverall.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Heat: 0.9
+
+- type: entity
+  parent: ClothingUniformBase
+  id: LPPClothingUniformJumpsuitRepresentativeOPZ
+  name: OPZ Representative suit
+  description: Washed jeans with the most expensive shirt that you can find on the market, are you compensating for something?
+  components:
+  - type: Sprite
+    sprite: _LP/Clothing/Uniforms/OPZ/representive.rsi
+  - type: Clothing
+    sprite: _LP/Clothing/Uniforms/OPZ/representive.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: LPPClothingUniformJumpsuitCamoOPZ
+  name: OPZ urban camo
+  description: No, this is not a reference to some fanatics from Chernobyl.
+  components:
+  - type: Sprite
+    sprite: _LP/Clothing/Uniforms/OPZ/solider.rsi
+  - type: Clothing
+    sprite: _LP/Clothing/Uniforms/OPZ/solider.rsi

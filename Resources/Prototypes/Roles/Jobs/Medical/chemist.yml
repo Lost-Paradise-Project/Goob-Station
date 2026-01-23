@@ -66,6 +66,10 @@
   description: job-description-chemist
   playTimeTracker: JobChemist
   requirements:
+#LP edit start
+    - !type:AgeRequirement
+      requiredAge: 24
+#LP edit end
     - !type:DepartmentTimeRequirement
       department: Medical
       time: 18000 #5 hrs

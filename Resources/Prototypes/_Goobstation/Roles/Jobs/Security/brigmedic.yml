@@ -9,6 +9,10 @@
   description: job-description-brigmedic
   playTimeTracker: JobBrigmedic
   requirements:
+#LP edit start
+  - !type:AgeRequirement
+    requiredAge: 22
+#LP edit end
   - !type:DepartmentTimeRequirement
     department: Medical
     time: 18000 # 5 hrs

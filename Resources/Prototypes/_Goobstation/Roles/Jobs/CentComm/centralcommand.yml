@@ -63,8 +63,10 @@
   skills: # CorvaxGoob-Skills
   - All
   requirements:
+#LP edit start
     - !type:AgeRequirement
-      requiredAge: 21
+      requiredAge: 30
+#LP edit end
   accessGroups:
     - AllAccess
   access:
@@ -106,8 +108,10 @@
   skills: # CorvaxGoob-Skills
   - All
   requirements:
+#LP edit start
     - !type:AgeRequirement
-      requiredAge: 21
+      requiredAge: 26
+#LP edit end
   accessGroups:
     - AllAccess
   access:
@@ -150,8 +154,10 @@
   skills: # CorvaxGoob-Skills
   - All
   requirements:
+#LP edit start
     - !type:AgeRequirement
-      requiredAge: 21
+      requiredAge: 26
+#LP edit end
   accessGroups:
     - AllAccess
   access:
@@ -194,8 +200,10 @@
   skills: # CorvaxGoob-Skills
   - All
   requirements:
-  - !type:AgeRequirement
-    requiredAge: 21
+#LP edit start
+    - !type:AgeRequirement
+      requiredAge: 24
+#LP edit end
   accessGroups:
   - AllAccess
   access:
@@ -234,8 +242,10 @@
   skills: # CorvaxGoob-Skills
   - All
   requirements:
-  - !type:AgeRequirement
-    requiredAge: 21
+#LP edit start
+    - !type:AgeRequirement
+      requiredAge: 24
+#LP edit end
   accessGroups:
   - AllAccess
   access:

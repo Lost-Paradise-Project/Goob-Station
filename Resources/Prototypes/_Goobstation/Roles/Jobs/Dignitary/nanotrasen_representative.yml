@@ -103,7 +103,7 @@
       department: Command
       time: 180000  #50 hours
     - !type:AgeRequirement
-      requiredAge: 21
+      requiredAge: 24 #LP Edit
     - !type:SpeciesRequirement # Goob - None Felinid
       inverted: true
       species:

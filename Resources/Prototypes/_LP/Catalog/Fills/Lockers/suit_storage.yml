@@ -1,0 +1,59 @@
+- type: entity
+  id: LPPSuitStorageUpgradedMining
+  parent: SuitStorageBase
+  suffix: Kerateia
+  components:
+  - type: StorageFill
+    contents:
+        - id: LPPClothingOuterHardsuitUpgradedMining
+        - id: ClothingMaskGasExplorer
+        - id: JetpackMiniFilled
+        - id: LPPClothingShoesBootsMagHunter
+
+- type: entity
+  id: LPPSuitStorageMiksuit
+  parent: SuitStorageBase
+  suffix: Tamado
+  components:
+  - type: StorageFill
+    contents:
+        - id: LPPClothingOuterHardsuitMiksuit
+        - id: ClothingMaskGasExplorer
+        - id: JetpackMiniFilled
+        - id: LPPClothingShoesBootsMagHunter
+
+- type: entity
+  id: LPPSuitStorageHunter
+  parent: SuitStorageBase
+  suffix: Vadas
+  components:
+  - type: StorageFill
+    contents:
+        - id: LPPClothingOuterHardsuitHunter
+        - id: ClothingMaskGasExplorer
+        - id: JetpackMiniFilled
+        - id: LPPClothingShoesBootsMagHunter
+
+- type: entity
+  id: LPPSuitStorageCombatAlternative
+  parent: SuitStorageBase
+  suffix: Keshik
+  components:
+  - type: StorageFill
+    contents:
+        - id: LPPClothingOuterHardsuitCombatAlternative
+        - id: ClothingMaskGasSecurity
+        - id: JetpackMiniFilled
+        - id: LPPClothingShoesBootsMagHunter
+
+- type: entity
+  id: LPPSuitStorageOPZ
+  parent: SuitStorageBase
+  suffix: Soldat
+  components:
+  - type: StorageFill
+    contents:
+        - id: LPPClothingOuterHardsuitOPZ
+        - id: LPPClothingMaskOPZGasmask
+        - id: JetpackBlueFilled
+        - id: LPPClothingShoesBootsMagOPZ

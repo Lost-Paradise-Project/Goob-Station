@@ -136,6 +136,10 @@
   description: job-description-cmo
   playTimeTracker: JobChiefMedicalOfficer
   requirements:
+#LP edit start
+    - !type:AgeRequirement
+      requiredAge: 26
+#LP edit end
     - !type:RoleTimeRequirement
       role: JobChemist
       time: 18000 #5 hrs

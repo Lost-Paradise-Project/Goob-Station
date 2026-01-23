@@ -139,6 +139,10 @@
   description: job-description-captain
   playTimeTracker: JobCaptain
   requirements:
+#LP edit start
+    - !type:AgeRequirement
+      requiredAge: 26
+#LP edit end
     - !type:DepartmentTimeRequirement
       department: Engineering
       time: 14400 # 4 hours

@@ -4,6 +4,10 @@
   description: job-description-roboticist
   playTimeTracker: JobRoboticist
   requirements:
+#LP edit start
+    - !type:AgeRequirement
+      requiredAge: 22
+#LP edit end
     - !type:DepartmentTimeRequirement
       department: Science
       time: 14400 #4 hrs

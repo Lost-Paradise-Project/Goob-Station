@@ -135,6 +135,10 @@
   description: job-description-warden
   playTimeTracker: JobWarden
   requirements:
+#LP edit start
+    - !type:AgeRequirement
+      requiredAge: 24
+#LP edit end
     - !type:RoleTimeRequirement
       role: JobSecurityOfficer
       time: 18000 #5 hrs

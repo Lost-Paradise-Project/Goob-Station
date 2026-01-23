@@ -1,0 +1,10 @@
+- type: entity
+  parent: ClothingNeckBase
+  id: LPPClothingNeckMedBandage
+  name: med bandage
+  description: A bandage. Med bandage.
+  components:
+  - type: Sprite
+    sprite: _LP/Clothing/Neck/Bandage/med-hand-bandage.rsi
+  - type: Clothing
+    sprite: _LP/Clothing/Neck/Bandage/med-hand-bandage.rsi

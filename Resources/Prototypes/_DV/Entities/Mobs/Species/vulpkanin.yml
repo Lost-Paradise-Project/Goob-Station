@@ -60,6 +60,16 @@
           32:
             sprite: _CorvaxGoob/Mobs/Species/displacement.rsi
             state: shoes
+      socks:
+        sizeMaps:
+          32:
+            sprite: _CorvaxGoob/Mobs/Species/displacement.rsi
+            state: shoes
+      underwear:
+        sizeMaps:
+          32:
+            sprite: _CorvaxGoob/Mobs/Species/displacement.rsi
+            state: jumpsuit-female
     displacements:
       jumpsuit:
         sizeMaps:

@@ -45,7 +45,7 @@
   - All
   requirements:
   - !type:AgeRequirement
-    requiredAge: 21
+    requiredAge: 24 #LP edit
   - !type:SpeciesRequirement # Goob - None Felinid
     inverted: true
     species:

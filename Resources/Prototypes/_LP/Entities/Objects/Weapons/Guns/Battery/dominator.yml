@@ -1,0 +1,80 @@
+- type: entity
+  name: Dominator
+  parent: BaseWeaponBatterySmall
+  id: LPPWeaponLaserGun
+  description: The laser pistol of the security is warmly loved by connoisseurs of compactness and slaughter in one weapon.
+  components:
+  - type: Sprite
+    sprite: _LP/Objects/Weapons/Guns/Battery/dominator.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mode-disabler
+      shader: unshaded
+      map: [ "Firemode" ]
+    - state: mag-unshaded-4
+      map: ["enum.GunVisualLayers.MagUnshaded"]
+      shader: unshaded
+  - type: Clothing
+    quickEquip: false
+    slots:
+    - Back
+    - suitStorage
+    sprite: _LP/Objects/Weapons/Guns/Battery/dominator.rsi
+  - type: Gun
+    soundGunshot:
+      path: /Audio/_DV/Weapons/Guns/Gunshots/laser.ogg
+    soundEmpty:
+      path: /Audio/_DV/Weapons/Guns/Empty/dry_fire.ogg
+  - type: Battery
+    maxCharge: 1100
+    startingCharge: 1100
+  - type: ProjectileBatteryAmmoProvider
+    proto: BulletDetain
+    fireCost: 100
+  - type: AmmoSelector
+    prototypes:
+    - BulletEnergyGunClownshot
+    - BulletEnergyGunPulse
+    - BulletEnergyGunDetain
+    - BulletEnergyGunExecute
+    - BulletEnergyGunHotshot
+    - BulletEnergyGunSleepshot
+    - BulletEnergyGunBigshot
+  - type: UserInterface
+    interfaces:
+      enum.AmmoSelectorUiKey.Key:
+        type: AmmoSelectorMenuBoundUserInterface
+  - type: ActivatableUI
+    inHandsOnly: true
+    key: enum.AmmoSelectorUiKey.Key
+  - type: ItemToggle
+    activated: true
+    onActivate: false
+    onUse: false
+    wieldToggle: false
+  - type: Appearance
+  - type: Tag
+    tags:
+    - Sidearm
+  - type: RestrictById
+    restrictMelee: true
+    restrictRanged: true
+    isEmaggable: true
+  - type: TriggerOnVoiceIdLocked
+    keyPhrase: "lawbringer-phrase"
+    listenRange: 1
+    holderOnly: true
+  - type: AccessReader
+    access: [['Security']]
+  - type: ActiveListener
+  - type: ExplodeOnTrigger
+  - type: DropOnTrigger
+  - type: Explosive
+    explosionType: Default
+    maxIntensity: 2
+    intensitySlope: 1
+    totalIntensity: 2
+    canCreateVacuum: false
+    deleteAfterExplosion: false
+    repeatable: true

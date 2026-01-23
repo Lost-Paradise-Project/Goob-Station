@@ -1,0 +1,69 @@
+- type: entity
+  name: X-0 pulse energy pistol
+  parent: BaseWeaponBatterySmall
+  id: LPPWeaponHoSlaserPistol
+  description: A state of the art energy pistol.
+  components:
+  - type: Sprite
+    sprite: _LP/Objects/Weapons/Guns/Battery/hos-laser.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-unshaded-4
+      map: ["enum.GunVisualLayers.MagUnshaded"]
+      shader: unshaded
+  - type: Clothing
+    sprite: _LP/Objects/Weapons/Guns/Battery/hos-laser.rsi
+  - type: Gun
+    fireRate: 0.9
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/laser_cannon.ogg
+  - type: HitscanBatteryAmmoProvider
+    proto: Pulse
+    fireCost: 600
+  - type: Battery
+    maxCharge: 9000
+    startingCharge: 9000
+
+- type: entity
+  name: EM-1 Gauss
+  parent: BaseWeaponBattery
+  id: LPPWeaponEM1Gauss
+  description: Gauss gun that fires very small projectile in a very high speed.
+  components:
+  - type: Sprite
+    sprite: _LP/Objects/Weapons/Guns/Battery/gauss.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-unshaded-4
+      map: ["enum.GunVisualLayers.MagUnshaded"]
+      shader: unshaded
+  - type: Clothing
+    sprite: _LP/Objects/Weapons/Guns/Battery/gauss.rsi
+    quickEquip: false
+    slots:
+    - Back
+    - Suitstorage
+  - type: Gun
+    fireRate: 0.4
+    soundGunshot:
+      path: /Audio/_LP/Weapons/Guns/Gunshots/Gauss.ogg
+  - type: HitscanBatteryAmmoProvider
+    proto: LPPGauss
+    fireCost: 1200
+  - type: Battery
+    maxCharge: 3600
+    startingCharge: 3600
+  - type: Item
+    size: Large
+  - type: BatterySelfRecharger
+    autoRecharge: true
+    autoRechargeRate: 120
+  - type: MultiHandedItem
+  - type: EyeCursorOffset # Frontier
+    maxOffset: 7 # Frontier
+    pvsIncrease: 7 # Frontier

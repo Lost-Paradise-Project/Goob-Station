@@ -81,6 +81,10 @@
   description: job-description-paramedic
   playTimeTracker: JobParamedic
   requirements:
+#LP edit start
+  - !type:AgeRequirement
+    requiredAge: 24
+#LP edit end
   - !type:DepartmentTimeRequirement
     department: Medical
     time: 9000 #2.5 hrs

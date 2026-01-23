@@ -42,8 +42,10 @@
     - !type:DepartmentTimeRequirement
       department: Security
       time: 90000 # 25 hours
+#LP edit start
     - !type:AgeRequirement
-      requiredAge: 21
+      requiredAge: 26
+#LP edit end
     - !type:SpeciesRequirement # Goob - None Felinid
       inverted: true
       species:

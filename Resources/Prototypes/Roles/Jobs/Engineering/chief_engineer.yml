@@ -134,6 +134,10 @@
   description: job-description-ce
   playTimeTracker: JobChiefEngineer
   requirements:
+#LP edit start
+    - !type:AgeRequirement
+      requiredAge: 26
+#LP edit end
     - !type:RoleTimeRequirement
       role: JobAtmosphericTechnician
       time: 18000 #5 hrs

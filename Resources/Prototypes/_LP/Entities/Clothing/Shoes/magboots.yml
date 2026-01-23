@@ -1,0 +1,57 @@
+- type: entity
+  parent: ClothingShoesBootsMag
+  id: LPPClothingShoesBootsMagParamed
+  name: advanced magboots
+  description: Magnetic boots paramed, often used during extravehicular activity to ensure the user remains safely attached to the vehicle.
+  components:
+  - type: Sprite
+    sprite: _LP/Clothing/Shoes/Boots/para_magboots.rsi
+    state: icon
+  - type: Clothing
+    sprite: _LP/Clothing/Shoes/Boots/para_magboots.rsi
+  - type: ClothingSpeedModifier
+    walkModifier: 0.9
+    sprintModifier: 0.9
+  - type: NoSlip
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+    - HighRiskItem
+
+- type: entity
+  parent: ClothingShoesBootsMag
+  id: LPPClothingShoesBootsMagOPZ
+  name: OPZ magboots
+  description: Standardized magnetic boots from the military research forces of the Independent Government of Earth.
+  components:
+  - type: Sprite
+    sprite: _LP/Clothing/Shoes/Boots/OPZmagboots.rsi
+    state: icon
+  - type: Clothing
+    sprite: _LP/Clothing/Shoes/Boots/OPZmagboots.rsi
+  - type: ClothingSpeedModifier
+    walkModifier: 0.95
+    sprintModifier: 0.95
+  - type: NoSlip
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+
+- type: entity
+  parent: ClothingShoesBootsMag
+  id: LPPClothingShoesBootsMagHunter
+  name: magboots of carp hunter
+  description: Commercial magnetic boots for those who prefer to hunt in zero gravity or in low gravity.
+  components:
+  - type: Sprite
+    sprite: _LP/Clothing/Shoes/Boots/huntermagboots.rsi
+    state: icon
+  - type: Clothing
+    sprite: _LP/Clothing/Shoes/Boots/huntermagboots.rsi
+  - type: ClothingSpeedModifier
+    walkModifier: 0.9
+    sprintModifier: 0.9
+  - type: NoSlip
+  - type: Tag
+    tags:
+    - WhitelistChameleon

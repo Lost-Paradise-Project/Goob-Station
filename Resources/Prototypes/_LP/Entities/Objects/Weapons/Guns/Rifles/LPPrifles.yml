@@ -1,0 +1,495 @@
+- type: entity
+  name: ARG rifle
+  parent: BaseWeaponRifle
+  id: LPPWeaponRifleARG
+  description: Cheap rifle, went through many coflicts. Uses .20 caliber rifle cartridges.
+  components:
+  - type: Sprite
+    sprite: _LP/Objects/Weapons/Guns/Rifles/arg-rifle.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: _LP/Objects/Weapons/Guns/Rifles/arg-rifle.rsi
+  - type: Gun
+    fireRate: 3
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/hpistol.ogg
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        startingItem: MagazineRifle
+        insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - MagazineRifle
+      gun_chamber:
+        name: Chamber
+        startingItem: CartridgeRifle
+        priority: 1
+        whitelist:
+          tags:
+            - CartridgeRifle
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+
+- type: entity
+  name: HM-10
+  parent: BaseWeaponSubMachineGun
+  id: LPPWeaponRifleHM10
+  description: The old-style special forces assault rifle is not so relevant now, but it is still better than standard modern analogues. Uses .30 caliber rifle cartridges.
+  components:
+  - type: Sprite
+    sprite: _LP/Objects/Weapons/Guns/Rifles/old-rifle.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Gun
+    fireRate: 6
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/rifle2.ogg
+  - type: ChamberMagazineAmmoProvider
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        startingItem: MagazineLightRifle
+        insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - MagazineLightRifle
+      gun_chamber:
+        name: Chamber
+        startingItem: CartridgeLightRifle
+        priority: 1
+        whitelist:
+          tags:
+            - CartridgeLightRifle
+  - type: Clothing
+    sprite: _LP/Objects/Weapons/Guns/Rifles/old-rifle.rsi
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+
+- type: entity
+  name: STG-144
+  parent: BaseWeaponRifle
+  id: LPPWeaponRifleSTG144
+  description: The most common modification of the assault rifle for the troops of Elysium. Uses .30 caliber
+  components:
+  - type: Sprite
+    sprite: _LP/Objects/Weapons/Guns/Rifles/stg.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Gun
+    fireRate: 6
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/rifle2.ogg
+  - type: ChamberMagazineAmmoProvider
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        startingItem: MagazineLightRifle
+        insertSound: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - MagazineLightRifle
+      gun_chamber:
+        name: Chamber
+        startingItem: CartridgeLightRifle
+        priority: 1
+        whitelist:
+          tags:
+            - CartridgeLightRifle
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+
+- type: entity
+  name: BR-12A "Ravager"
+  parent: BaseWeaponSubMachineGun
+  id: LPPWeaponRifleBR12ARavager
+  description: Good bullpup system gun. Uses 5.56 rifle cartridges.
+  components:
+  - type: Sprite
+    sprite: _LP/Objects/Weapons/Guns/Rifles/ravager.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Gun
+    minAngle: 1
+    maxAngle: 12
+    fireRate: 7
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/rifle2.ogg
+  - type: ChamberMagazineAmmoProvider
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        startingItem: LPPMagazineRifleM4A1Lethal
+        insertSound: /Audio/_LP/Weapons/Guns/MagIn/M4A1_Magin.ogg
+        ejectSound: /Audio/_LP/Weapons/Guns/MagOut/M4A1_Magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - LPPMagazineM4A1
+      gun_chamber:
+        name: Chamber
+        startingItem: LPPCartridgeM4A1Lethal
+        priority: 1
+        whitelist:
+          tags:
+            - CartridgeM4A1
+  - type: Clothing
+    sprite: _LP/Objects/Weapons/Guns/Rifles/ravager.rsi
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+
+- type: entity
+  name: Waffle corp. MK-556 "Liberator"
+  parent: BaseWeaponSubMachineGun
+  id: LPPWeaponRifleMK556Liberator
+  description: Good classic system gun. Uses 5.56 rifle cartridges.
+  components:
+  - type: Sprite
+    sprite: _LP/Objects/Weapons/Guns/Rifles/liberator.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Gun
+    minAngle: 5
+    maxAngle: 20
+    fireRate: 5.5
+    soundGunshot:
+      path: /Audio/_LP/Weapons/Guns/Gunshots/ar15.ogg
+  - type: ChamberMagazineAmmoProvider
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        startingItem: LPPMagazineRifleM4A1Lethal
+        insertSound: /Audio/_LP/Weapons/Guns/MagIn/M4A1_Magin.ogg
+        ejectSound: /Audio/_LP/Weapons/Guns/MagOut/M4A1_Magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - LPPMagazineM4A1
+      gun_chamber:
+        name: Chamber
+        startingItem: LPPCartridgeM4A1Lethal
+        priority: 1
+        whitelist:
+          tags:
+            - CartridgeM4A1
+  - type: Clothing
+    sprite: _LP/Objects/Weapons/Guns/Rifles/liberator.rsi
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+  - type: Wieldable
+  - type: GunWieldBonus
+    minAngle: -3
+    maxAngle: -12
+
+- type: entity
+  name: LE-MAS
+  parent: BaseWeaponRifle
+  id: LPPWeaponRifleLemas
+  description: Bullpup rifle made by FRENCH *ugh*. Fires 3 bullets in hyperburst. Uses .20 ammo.
+  components:
+  - type: Sprite
+    sprite: _LP/Objects/Weapons/Guns/Rifles/le-mas.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: _LP/Objects/Weapons/Guns/Rifles/le-mas.rsi
+  - type: Gun
+    fireRate: 3.5
+    burstFireRate: 40
+    selectedMode: SemiAuto
+    availableModes:
+      - Burst
+      - SemiAuto
+    shotsPerBurst: 3
+    burstCooldown: 1
+    soundGunshot:
+      path: /Audio/_LP/Weapons/Guns/Gunshots/M4A1_Shot.ogg
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        startingItem: MagazineRifle
+        insertSound: /Audio/_LP/Weapons/Guns/MagIn/M4A1_Magin.ogg
+        ejectSound: /Audio/_LP/Weapons/Guns/MagOut/M4A1_Magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - MagazineRifle
+        whitelistFailPopup: gun-magazine-whitelist-fail
+      gun_chamber:
+        name: Chamber
+        startingItem: CartridgeRifle
+        priority: 1
+        whitelist:
+          tags:
+            - CartridgeRifle
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+  - type: Item
+    size: Large
+
+- type: entity
+  name: PA-DE-FAME
+  parent: BaseWeaponRifle
+  id: LPPWeaponRifleLemasciv
+  description: Unbullpup your bullpup. Civilian variant of LE-MAS rifle. It's a big bigger than the original one but it's also fires in hyperburst. Uses .20 ammo.
+  components:
+  - type: Sprite
+    sprite: _LP/Objects/Weapons/Guns/Rifles/le-massiv.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: _LP/Objects/Weapons/Guns/Rifles/le-massiv.rsi
+  - type: Gun
+    fireRate: 15
+    burstFireRate: 15
+    selectedMode: Burst
+    availableModes:
+      - Burst
+    shotsPerBurst: 2
+    burstCooldown: 1.1
+    soundGunshot:
+      path: /Audio/_LP/Weapons/Guns/Gunshots/M4A1_Shot.ogg
+  - type: Item
+    size: Huge
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        startingItem: MagazineRifle
+        insertSound: /Audio/_LP/Weapons/Guns/MagIn/M4A1_Magin.ogg
+        ejectSound: /Audio/_LP/Weapons/Guns/MagOut/M4A1_Magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - MagazineRifle
+        whitelistFailPopup: gun-magazine-whitelist-fail
+      gun_chamber:
+        name: Chamber
+        startingItem: CartridgeRifle
+        priority: 1
+        whitelist:
+          tags:
+            - CartridgeRifle
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+
+- type: entity
+  name: 6P68-2
+  parent: BaseWeaponRifle
+  id: LPPWeaponRifleAek
+  description: Second iteration of USSP experimental rifle. Famously used by USSP GRU specops . It can use .20 or .30 ammo and mags, also it has hyperburst firemode.
+  components:
+  - type: Sprite
+    sprite: _LP/Objects/Weapons/Guns/Rifles/aek.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: _LP/Objects/Weapons/Guns/Rifles/aek.rsi
+  - type: Gun
+    fireRate: 6
+    burstFireRate: 15
+    selectedMode: SemiAuto
+    availableModes:
+      - SemiAuto
+      - FullAuto
+      - Burst
+    shotsPerBurst: 2
+    burstCooldown: 0.8
+    soundGunshot:
+      path: /Audio/_LP/Weapons/Guns/Gunshots/aek.ogg
+  - type: Item
+    size: Huge
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        startingItem: MagazineLightRifle
+        insertSound: /Audio/_LP/Weapons/Guns/MagIn/M4A1_Magin.ogg
+        ejectSound: /Audio/_LP/Weapons/Guns/MagOut/M4A1_Magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - MagazineRifle
+            - MagazineLightRifle
+        whitelistFailPopup: gun-magazine-whitelist-fail
+      gun_chamber:
+        name: Chamber
+        startingItem: CartridgeLightRifle
+        priority: 1
+        whitelist:
+          tags:
+            - CartridgeLightRifle
+            - CartridgeRifle
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+
+- type: entity
+  id: LPPWeaponM1Garand
+  parent: [BaseWeaponRifle]
+  name: Rifle M1 Garand
+  description: A replica of the classic World War II rifle from XenoHuntingArmoury, using cartridges .30 hunting. Ping!
+  components:
+  - type: Sprite
+    sprite: _LP/Objects/Weapons/Guns/Rifles/garand.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: _LP/Objects/Weapons/Guns/Rifles/garand.rsi
+  - type: Gun
+    fireRate: 3
+    selectedMode: SemiAuto
+    availableModes:
+      - SemiAuto
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/sniper.ogg
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        startingItem: LPPMagazineRifleGarand
+        insertSound: /Audio/Weapons/Guns/MagIn/batrifle_magin.ogg
+        ejectSound: /Audio/_LP/Weapons/Guns/MagOut/garandping.ogg
+        priority: 1
+        whitelist:
+          tags:
+            - LPPMagazineGarand
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance
+  - type: ChamberMagazineAmmoProvider
+    autoEject: true
+
+- type: entity
+  id: LPPWeaponMarsRifle
+  parent: [BaseWeaponRifle]
+  name: Rifle XHA "Mars"
+  description: XenoHuntingArmoury hunting rifle using cartridges .30 hunting. An extremely popular model among planetary and space fauna hunters.
+  components:
+  - type: Sprite
+    sprite: _LP/Objects/Weapons/Guns/Snipers/marsrifle.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: _LP/Objects/Weapons/Guns/Snipers/marsrifle.rsi
+  - type: Gun
+    fireRate: 1
+    selectedMode: SemiAuto
+    availableModes:
+      - SemiAuto
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/sniper.ogg
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        startingItem: LPPMagazineRifleMars
+        insertSound: /Audio/Weapons/Guns/MagIn/batrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/batrifle_magout.ogg
+        priority: 1
+        whitelist:
+          tags:
+            - LPPMagazineMars
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance

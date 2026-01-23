@@ -2871,3 +2871,81 @@
     sprite: _LP/Clothing/Underwear/bra/LPPCutOutTop2.rsi
   - type: Clothing
     sprite: _LP/Clothing/Underwear/bra/LPPCutOutTop2.rsi
+#Новые приколдесы (крутые) //
+
+- type: entity
+  parent: LPPClothingBreastBase
+  id: LPPStrippedBraBlue
+  name: Blue stripped bra
+  description:
+  components:
+  - type: Sprite
+    sprite: _LP/Clothing/Breast/CoolStuff/striped_bra_blue.rsi
+  - type: Clothing
+    sprite: _LP/Clothing/Breast/CoolStuff/striped_bra_blue.rsi
+
+- type: entity
+  parent: LPPClothingBreastBase
+  id: LPPStrippedBraGreen
+  name: Green stripped bra
+  description:
+  components:
+  - type: Sprite
+    sprite: _LP/Clothing/Breast/CoolStuff/striped_bra_green.rsi
+  - type: Clothing
+    sprite: _LP/Clothing/Breast/CoolStuff/striped_bra_green.rsi
+
+- type: entity
+  parent: LPPClothingBreastBase
+  id: LPPStrippedBraLightBrown
+  name: Light brown stripped bra
+  description:
+  components:
+  - type: Sprite
+    sprite: _LP/Clothing/Breast/CoolStuff/striped_bra_lightbrown.rsi
+  - type: Clothing
+    sprite: _LP/Clothing/Breast/CoolStuff/striped_bra_lightbrown.rsi
+
+- type: entity
+  parent: LPPClothingBreastBase
+  id: LPPStrippedBraMaroon
+  name: Maroon stripped bra
+  description:
+  components:
+  - type: Sprite
+    sprite: _LP/Clothing/Breast/CoolStuff/striped_bra_maroon.rsi
+  - type: Clothing
+    sprite: _LP/Clothing/Breast/CoolStuff/striped_bra_maroon.rsi
+
+- type: entity
+  parent: LPPClothingBreastBase
+  id: LPPStrippedBraPink
+  name: Pink stripped bra
+  description:
+  components:
+  - type: Sprite
+    sprite: _LP/Clothing/Breast/CoolStuff/striped_bra_pink.rsi
+  - type: Clothing
+    sprite: _LP/Clothing/Breast/CoolStuff/striped_bra_pink.rsi
+
+- type: entity
+  parent: LPPClothingBreastBase
+  id: LPPStrippedBraPurple
+  name: Purple stripped bra
+  description:
+  components:
+  - type: Sprite
+    sprite: _LP/Clothing/Breast/CoolStuff/striped_bra_purple.rsi
+  - type: Clothing
+    sprite: _LP/Clothing/Breast/CoolStuff/striped_bra_purple.rsi
+
+- type: entity
+  parent: LPPClothingBreastBase
+  id: LPPStrippedBraTacticalmaid
+  name: Tactical maid bra
+  description:
+  components:
+  - type: Sprite
+    sprite: _LP/Clothing/Breast/CoolStuff/striped_bra_tacticalmaid.rsi
+  - type: Clothing
+    sprite: _LP/Clothing/Breast/CoolStuff/striped_bra_tacticalmaid.rsi

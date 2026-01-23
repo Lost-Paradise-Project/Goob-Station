@@ -137,6 +137,10 @@
   description: job-description-rd
   playTimeTracker: JobResearchDirector
   requirements:
+#LP edit start
+  - !type:AgeRequirement
+    requiredAge: 26
+#LP edit end
   - !type:RoleTimeRequirement
     role: JobScientist
     time: 21600 #6 hrs

@@ -89,6 +89,10 @@
   description: job-description-security
   playTimeTracker: JobSecurityOfficer
   requirements:
+#LP edit start
+    - !type:AgeRequirement
+      requiredAge: 22
+#LP edit end
     - !type:DepartmentTimeRequirement
       department: Security
       time: 9000 #2.5 hrs
