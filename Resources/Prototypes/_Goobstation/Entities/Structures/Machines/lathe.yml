@@ -25,11 +25,14 @@
   description: Prints equipment and circuitboards for use by engineering department.
   components:
   - type: Sprite
-    sprite: Structures/Machines/techfab.rsi
+    # LP Edit Start
+    sprite: _LP/Structures/Machines/engi_protolathe.rsi
+    snapCardinals: true
+    # LP Edit End
     layers:
     - state: icon
       map: ["enum.LatheVisualLayers.IsRunning"]
-    - state: engi
+    # - state: engi LP Edit
     - state: unlit
       shader: unshaded
       map: ["enum.PowerDeviceVisualLayers.Powered"]
@@ -41,7 +44,7 @@
     board: EngineeringTechFabCircuitboard
   - type: Lathe
     idleState: icon
-    runningState: icon
+    runningState: building # LP Edit
     staticPacks:
     - SharedBoardsStatic
     - EngineeringBoardsStatic
@@ -97,11 +100,14 @@
   description: Prints equipment and circuitboards for use by cargo department.
   components:
   - type: Sprite
-    sprite: Structures/Machines/techfab.rsi
+    # LP Edit Start
+    sprite: _LP/Structures/Machines/cargo_protolathe.rsi
+    snapCardinals: true
+    # LP Edit End
     layers:
     - state: icon
       map: ["enum.LatheVisualLayers.IsRunning"]
-    - state: cargo
+    # - state: cargo LP Edit
     - state: unlit
       shader: unshaded
       map: ["enum.PowerDeviceVisualLayers.Powered"]
@@ -113,7 +119,7 @@
     board: CargoTechFabCircuitboard
   - type: Lathe
     idleState: icon
-    runningState: icon
+    runningState: building # LP Edit
     staticPacks:
     - ToolsStatic
     - SharedBoardsStatic
@@ -164,11 +170,14 @@
   description: Prints equipment and circuitboards for use by science department.
   components:
   - type: Sprite
-    sprite: Structures/Machines/techfab.rsi
+    # LP Edit Start
+    sprite: _LP/Structures/Machines/rnd_protolathe.rsi
+    snapCardinals: true
+    # LP Edit End
     layers:
     - state: icon
       map: ["enum.LatheVisualLayers.IsRunning"]
-    - state: sci
+    # - state: sci LP Edit
     - state: unlit
       shader: unshaded
       map: ["enum.PowerDeviceVisualLayers.Powered"]
@@ -180,7 +189,7 @@
     board: ScienceTechFabCircuitboard
   - type: Lathe
     idleState: icon
-    runningState: icon
+    runningState: building # LP Edit
     staticPacks:
     - SharedBoardsStatic
     - EngineeringBoardsStatic
